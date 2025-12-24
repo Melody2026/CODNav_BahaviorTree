@@ -699,4 +699,5 @@ CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o: \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__type_support.hpp \
- /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/ysl/ros2_ws/COD_Serial/include/../include/message.h

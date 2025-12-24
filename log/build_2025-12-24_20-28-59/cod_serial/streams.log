@@ -1,0 +1,62 @@
+[0.662s] Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[0.884s] [ 33%] [32mBuilding CXX object CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o[0m
+[6.793s] In file included from [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:4[m[K:
+[6.794s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:20:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.794s]    20 | }[01;35m[Kgame_status_t[m[K;
+[6.794s]       |  [01;35m[K^~~~~~~~~~~~~[m[K
+[6.795s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:26:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.795s]    26 | }[01;35m[Kgame_result_t[m[K;
+[6.795s]       |  [01;35m[K^~~~~~~~~~~~~[m[K
+[6.795s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:43:14:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kuint16_t <unnamed struct>::reserved[m[K’
+[6.796s]    43 |     uint16_t [01;31m[Kreserved[m[K;
+[6.796s]       |              [01;31m[K^~~~~~~~[m[K
+[6.796s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:35:14:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kuint16_t <unnamed struct>::reserved[m[K’
+[6.796s]    35 |     uint16_t [01;36m[Kreserved[m[K;
+[6.796s]       |              [01;36m[K^~~~~~~~[m[K
+[6.797s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:46:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[6.797s]    46 |     uint16_t [01;31m[Kblue[m[K _base_HP;
+[6.797s]       |              [01;31m[K^~~~[m[K
+[6.797s]       |                  [32m[K;[m[K
+[6.801s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:46:19:[m[K [01;31m[Kerror: [m[K‘[01m[K_base_HP[m[K’ does not name a type
+[6.801s]    46 |     uint16_t blue [01;31m[K_base_HP[m[K;
+[6.801s]       |                   [01;31m[K^~~~~~~~[m[K
+[6.802s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:47:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.802s]    47 | }[01;35m[Kgame_robot_HP_t[m[K;
+[6.802s]       |  [01;35m[K^~~~~~~~~~~~~~~[m[K
+[6.803s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:54:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.803s]    54 | }[01;35m[Kevent_data_t[m[K;
+[6.803s]       |  [01;35m[K^~~~~~~~~~~~[m[K
+[6.803s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:62:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.804s]    62 | }[01;35m[Kreferee_warning_t[m[K;
+[6.804s]       |  [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[6.804s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:77:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.804s]    77 | }[01;35m[Krobot_status_t[m[K;
+[6.804s]       |  [01;35m[K^~~~~~~~~~~~~~[m[K
+[6.805s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:85:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.805s]    85 | }[01;35m[Krobot_pos_t[m[K;
+[6.805s]       |  [01;35m[K^~~~~~~~~~~[m[K
+[6.805s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:92:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.805s]    92 | }[01;35m[Khurt_data_t[m[K;
+[6.806s]       |  [01;35m[K^~~~~~~~~~~[m[K
+[6.806s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:101:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.807s]   101 | }[01;35m[Kshoot_data_t[m[K;
+[6.807s]       |  [01;35m[K^~~~~~~~~~~~[m[K
+[6.808s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:110:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.810s]   110 | }[01;35m[Kprojectile_allowance_t[m[K;
+[6.810s]       |  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.810s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:124:11:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat <unnamed struct>::reserved[m[K’
+[6.810s]   124 |     float [01;31m[Kreserved[m[K;
+[6.811s]       |           [01;31m[K^~~~~~~~[m[K
+[6.811s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:123:11:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat <unnamed struct>::reserved[m[K’
+[6.811s]   123 |     float [01;36m[Kreserved[m[K;
+[6.811s]       |           [01;36m[K^~~~~~~~[m[K
+[6.811s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:125:2:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.811s]   125 | }[01;35m[Kground_robot_position_t[m[K;
+[6.812s]       |  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.812s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:132:3:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpacked[m[K’ attribute ignored [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wattributes-Wattributes]8;;[m[K]
+[6.812s]   132 | } [01;35m[Ksentry_info_t[m[K;
+[6.812s]       |   [01;35m[K^~~~~~~~~~~~~[m[K
+[10.814s] gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:76: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+[10.815s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+[10.815s] gmake: *** [Makefile:146: all] Error 2
+[10.818s] Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '2': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12

@@ -3,6 +3,7 @@
 
 CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o
  /home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp
+ /home/ysl/ros2_ws/COD_Serial/include/message.h
  /home/ysl/ros2_ws/COD_Serial/include/uart_transporter.hpp
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__traits.hpp

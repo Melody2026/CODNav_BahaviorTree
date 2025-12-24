@@ -27,17 +27,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/COD_Serial/include/_packed.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/COD_Serial/include/message.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cod决策.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/colortxt/color_txt.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/include/colortxt/color_txt.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/uart_transporter.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/include/uart_transporter.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cod_serial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uart_transporter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/src/uart_transporter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/.cmake/api/v1/reply/index-2025-12-22T12-42-53-0780.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_serial" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_serial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_serial/colcon_build.rc" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/colcon_build.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/latest_build" beforeDir="false" afterPath="$PROJECT_DIR$/log/latest_build" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +113,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="" />
@@ -142,7 +149,7 @@
       <workItem from="1766318313704" duration="425000" />
       <workItem from="1766398546971" duration="9516000" />
       <workItem from="1766407415488" duration="2090000" />
-      <workItem from="1766572084659" duration="3000" />
+      <workItem from="1766572084659" duration="5614000" />
     </task>
     <servers />
   </component>

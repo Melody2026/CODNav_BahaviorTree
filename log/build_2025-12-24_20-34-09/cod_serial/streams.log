@@ -1,0 +1,96 @@
+[0.531s] Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[0.609s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.201s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.961s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.994s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.024s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.061s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.249s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.252s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.263s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.016s] -- Found rm_interfaces: 0.0.0 (/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake)
+[4.367s] -- Configuring done (3.8s)
+[4.400s] -- Generating done (0.0s)
+[4.412s] -- Build files have been written to: /home/ysl/ros2_ws/build/cod_serial
+[4.576s] [ 33%] [32mBuilding CXX object CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o[0m
+[5.225s] In file included from [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:4[m[K:
+[5.225s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:8:2:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #inclue; did you mean #include?
+[5.225s]     8 | #[01;31m[Kinclue[m[K <_packed.h>
+[5.226s]       |  [01;31m[K^~~~~~[m[K
+[5.226s]       |  [32m[Kinclude[m[K
+[11.776s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:11:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.776s]    11 | typedef [01;31m[K_packed[m[K struct
+[11.777s]       |         [01;31m[K^~~~~~~[m[K
+[11.781s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:17:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kgame_status_t[m[K’ does not name a type
+[11.782s]    17 | }[01;31m[Kgame_status_t[m[K;
+[11.782s]       |  [01;31m[K^~~~~~~~~~~~~[m[K
+[11.785s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:20:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.786s]    20 | typedef [01;31m[K_packed[m[K struct
+[11.786s]       |         [01;31m[K^~~~~~~[m[K
+[11.790s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:23:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kgame_result_t[m[K’ does not name a type
+[11.790s]    23 | }[01;31m[Kgame_result_t[m[K;
+[11.790s]       |  [01;31m[K^~~~~~~~~~~~~[m[K
+[11.795s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:26:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.795s]    26 | typedef [01;31m[K_packed[m[K struct
+[11.795s]       |         [01;31m[K^~~~~~~[m[K
+[11.802s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:44:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kgame_robot_HP_t[m[K’ does not name a type
+[11.803s]    44 | }[01;31m[Kgame_robot_HP_t[m[K;
+[11.803s]       |  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[11.808s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:47:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.808s]    47 | typedef [01;31m[K_packed[m[K struct
+[11.809s]       |         [01;31m[K^~~~~~~[m[K
+[11.816s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:51:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kevent_data_t[m[K’ does not name a type
+[11.816s]    51 | }[01;31m[Kevent_data_t[m[K;
+[11.817s]       |  [01;31m[K^~~~~~~~~~~~[m[K
+[11.821s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:54:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.822s]    54 | typedef [01;31m[K_packed[m[K struct
+[11.822s]       |         [01;31m[K^~~~~~~[m[K
+[11.829s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:59:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kreferee_warning_t[m[K’ does not name a type
+[11.829s]    59 | }[01;31m[Kreferee_warning_t[m[K;
+[11.829s]       |  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[11.834s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.835s]    62 | typedef [01;31m[K_packed[m[K struct
+[11.835s]       |         [01;31m[K^~~~~~~[m[K
+[11.841s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:74:2:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_status_t[m[K’ does not name a type
+[11.841s]    74 | }[01;31m[Krobot_status_t[m[K;
+[11.842s]       |  [01;31m[K^~~~~~~~~~~~~~[m[K
+[11.846s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:77:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.847s]    77 | typedef [01;31m[K_packed[m[K struct
+[11.847s]       |         [01;31m[K^~~~~~~[m[K
+[11.852s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:82:2:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_pos_t[m[K’ does not name a type
+[11.852s]    82 | }[01;31m[Krobot_pos_t[m[K;
+[11.853s]       |  [01;31m[K^~~~~~~~~~~[m[K
+[11.855s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.855s]    85 | typedef [01;31m[K_packed[m[K struct
+[11.856s]       |         [01;31m[K^~~~~~~[m[K
+[11.859s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:89:2:[m[K [01;31m[Kerror: [m[K‘[01m[Khurt_data_t[m[K’ does not name a type
+[11.859s]    89 | }[01;31m[Khurt_data_t[m[K;
+[11.859s]       |  [01;31m[K^~~~~~~~~~~[m[K
+[11.864s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:92:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.865s]    92 | typedef [01;31m[K_packed[m[K struct
+[11.865s]       |         [01;31m[K^~~~~~~[m[K
+[11.869s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:98:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kshoot_data_t[m[K’ does not name a type
+[11.869s]    98 | }[01;31m[Kshoot_data_t[m[K;
+[11.869s]       |  [01;31m[K^~~~~~~~~~~~[m[K
+[11.874s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:101:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.874s]   101 | typedef [01;31m[K_packed[m[K struct
+[11.874s]       |         [01;31m[K^~~~~~~[m[K
+[11.886s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:107:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kprojectile_allowance_t[m[K’ does not name a type
+[11.886s]   107 | }[01;31m[Kprojectile_allowance_t[m[K;
+[11.886s]       |  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.891s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:110:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.892s]   110 | typedef [01;31m[K_packed[m[K struct
+[11.892s]       |         [01;31m[K^~~~~~~[m[K
+[11.902s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:122:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kground_robot_position_t[m[K’ does not name a type
+[11.903s]   122 | }[01;31m[Kground_robot_position_t[m[K;
+[11.903s]       |  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.906s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:125:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_packed[m[K’ does not name a type
+[11.906s]   125 | typedef [01;31m[K_packed[m[K struct
+[11.906s]       |         [01;31m[K^~~~~~~[m[K
+[11.911s] [01m[K/home/ysl/ros2_ws/COD_Serial/include/../include/message.h:129:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksentry_info_t[m[K’ does not name a type
+[11.912s]   129 | } [01;31m[Ksentry_info_t[m[K;
+[11.912s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[17.252s] gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:76: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+[17.253s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+[17.253s] gmake: *** [Makefile:146: all] Error 2
+[17.255s] Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '2': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12

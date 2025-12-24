@@ -1,6 +1,7 @@
 #include "uart_transporter.hpp"
 #include <rclcpp/rclcpp.hpp>
 #include <rm_interfaces/msg/serial_receive_data.hpp>
+#include <../include/message.h>
 
 #include <vector>
 #include <thread>
@@ -12,6 +13,8 @@ struct SerialData
   uint8_t  hp = 0;
   uint8_t  zone_status = 0;
 };
+
+
 
 // ================= 串口解析类 =================
 class CODSerial
