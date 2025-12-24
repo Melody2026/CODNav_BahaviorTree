@@ -1,0 +1,1 @@
+/home/ysl/ros2_ws/rm_interfaces/msg/Armors.msg

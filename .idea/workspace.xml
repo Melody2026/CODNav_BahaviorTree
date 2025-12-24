@@ -8,8 +8,17 @@
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -18,15 +27,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/COD_Behavior/include/cod_behavior/tree_1_action.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COD_Behavior/src/tree_1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/COD_Behavior/test/test1_FullStatus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COD_Behavior/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Behavior/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COD_Behavior/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Behavior/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COD_Behavior/cod_bt/t1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Behavior/cod_bt/t1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COD_Behavior/include/cod_behavior/sentry_behavior_actions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Behavior/include/cod_behavior/sentry_behavior_actions.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COD_Behavior/src/sentry_behavior.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Behavior/src/sentry_behavior.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rm_interfaces/msg/JudgeSystemData.msg" beforeDir="false" afterPath="$PROJECT_DIR$/rm_interfaces/msg/JudgeSystemData.msg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cod决策.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/colortxt/color_txt.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/include/colortxt/color_txt.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/uart_transporter.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/include/uart_transporter.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cod_serial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uart_transporter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/COD_Serial/src/uart_transporter.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +47,28 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/COD_Behavior" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/include/cod_behavior/sentry_behavior_actions.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/include/cod_behavior/tree_1_action.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/src/CheckNavResult.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/src/sentry_behavior.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/src/tree_1.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/test/msgTest.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Behavior/test/test1_FullStatus.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Serial/include/uart_transporter.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/COD_Serial/src/uart_transporter.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.1" />
+    <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -52,24 +83,36 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;CMake 应用程序.cod_serial.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/COD_Serial" />
+      <recent name="$PROJECT_DIR$/COD_Behavior" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="" />
@@ -95,11 +138,20 @@
       <workItem from="1766053488750" duration="10005000" />
       <workItem from="1766140447898" duration="3137000" />
       <workItem from="1766215449653" duration="13065000" />
-      <workItem from="1766296863703" duration="5837000" />
+      <workItem from="1766296863703" duration="14102000" />
+      <workItem from="1766318313704" duration="425000" />
+      <workItem from="1766398546971" duration="9516000" />
+      <workItem from="1766407415488" duration="2090000" />
+      <workItem from="1766572084659" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>

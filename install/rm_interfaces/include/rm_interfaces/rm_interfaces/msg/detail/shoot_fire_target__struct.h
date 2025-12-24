@@ -1,0 +1,1 @@
+/home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__struct.h

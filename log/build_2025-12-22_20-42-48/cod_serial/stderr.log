@@ -1,0 +1,25 @@
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:12:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kint16[m[K’ does not name a type; did you mean ‘[01m[Kint16_t[m[K’?
+   12 |   [01;31m[Kint16[m[K hp = 0;
+      |   [01;31m[K^~~~~[m[K
+      |   [32m[Kint16_t[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:13:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kuint32[m[K’ does not name a type; did you mean ‘[01m[Kuint32_t[m[K’?
+   13 |   [01;31m[Kuint32[m[K zone_status = 0;
+      |   [01;31m[K^~~~~~[m[K
+      |   [32m[Kuint32_t[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:[m[K In member function ‘[01m[Kbool CODSerial::[01;32m[KparseFrame[m[K(SerialData&)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:45:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct SerialData[m[K’ has no member named ‘[01m[Khp[m[K’
+   45 |       out.[01;31m[Khp[m[K = rx_cache_[2];
+      |           [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:46:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct SerialData[m[K’ has no member named ‘[01m[Kzone_status[m[K’
+   46 |       out.[01;31m[Kzone_status[m[K = rx_cache_[3];
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:[m[K In member function ‘[01m[Kvoid CODSerialNode::[01;32m[Kloop[m[K()[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:98:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct SerialData[m[K’ has no member named ‘[01m[Khp[m[K’
+   98 |       msg.judge_system_data.hp = data.[01;31m[Khp[m[K;
+      |                                       [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:99:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct SerialData[m[K’ has no member named ‘[01m[Kzone_status[m[K’
+   99 |       msg.judge_system_data.zone_status = data.[01;31m[Kzone_status[m[K;
+      |                                                [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:76: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

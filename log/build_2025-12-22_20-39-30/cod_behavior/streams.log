@@ -1,0 +1,51 @@
+[0.490s] Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_behavior
+[0.888s] -- The C compiler identification is GNU 13.3.0
+[2.769s] -- The CXX compiler identification is GNU 13.3.0
+[4.662s] -- Detecting C compiler ABI info
+[5.524s] -- Detecting C compiler ABI info - done
+[5.546s] -- Check for working C compiler: /usr/bin/cc - skipped
+[5.546s] -- Detecting C compile features
+[5.546s] -- Detecting C compile features - done
+[5.921s] -- Detecting CXX compiler ABI info
+[6.849s] -- Detecting CXX compiler ABI info - done
+[6.866s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[6.866s] -- Detecting CXX compile features
+[6.867s] -- Detecting CXX compile features - done
+[6.877s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[7.170s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[7.299s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[7.427s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[8.027s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[8.068s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[8.114s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.157s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.347s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[8.357s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[8.542s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[9.349s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[9.755s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[10.385s] -- Found behaviortree_cpp: 4.8.2 (/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/share/behaviortree_cpp/cmake)
+[10.397s] -- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)
+[10.805s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[10.857s] -- Found rclcpp_action: 28.1.9 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[10.886s] -- Found rm_interfaces: 0.0.0 (/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake)
+[11.119s] -- Configuring done (10.6s)
+[11.197s] -- Generating done (0.1s)
+[11.214s] -- Build files have been written to: /home/ysl/ros2_ws/build/cod_behavior
+[11.238s] Invoked command in '/home/ysl/ros2_ws/build/cod_behavior' returned '0': CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_behavior
+[11.240s] Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_behavior -- -j12 -l12
+[11.351s] [ 10%] [32mBuilding CXX object CMakeFiles/checkNavResult.dir/src/CheckNavResult.cpp.o[0m
+[11.352s] [ 20%] [32mBuilding CXX object CMakeFiles/msgtest.dir/test/msgTest.cpp.o[0m
+[11.352s] [ 30%] [32mBuilding CXX object CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.o[0m
+[11.353s] [ 40%] [32mBuilding CXX object CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o[0m
+[11.353s] [ 50%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+[24.982s] [ 70%] [32m[1mLinking CXX executable msgtest[0m
+[24.982s] [ 70%] [32m[1mLinking CXX executable test_1[0m
+[25.599s] [ 70%] Built target msgtest
+[25.614s] [ 70%] Built target test_1
+[32.242s] [ 80%] [32m[1mLinking CXX executable checkNavResult[0m
+[33.297s] [ 80%] Built target checkNavResult
+[39.378s] [ 90%] [32m[1mLinking CXX executable tree_1[0m
+[40.628s] [ 90%] Built target tree_1
+[40.993s] [100%] [32m[1mLinking CXX executable cod_behavior[0m
+[42.140s] [100%] Built target cod_behavior

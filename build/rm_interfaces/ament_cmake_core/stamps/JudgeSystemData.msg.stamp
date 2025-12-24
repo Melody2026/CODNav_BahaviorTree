@@ -1,0 +1,17 @@
+uint8 game_status
+int16 remaining_time
+int16 blood
+int16 outpost_hp
+uint8 is_lowpower
+int16 hp
+int16 shut_num
+int16 qs_hp
+uint8 current_hp
+uint8 center_gain_point
+uint8 friendly_supply_non_zone_exchange
+uint8 stage_remain_time
+uint8 game_type
+uint8 game_progress
+int16 dm_qs_hp
+uint32 zone_status
+OperatorCommand operator_command

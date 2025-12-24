@@ -1,0 +1,19 @@
+// generated from rosidl_generator_c/resource/idl__type_support.c.em
+// with input from rm_interfaces:msg/ShootFireTarget.idl
+// generated code does not contain a copyright notice
+
+#include <string.h>
+
+#include "rm_interfaces/msg/detail/shoot_fire_target__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/msg/detail/shoot_fire_target__functions.h"
+#include "rm_interfaces/msg/detail/shoot_fire_target__struct.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#ifdef __cplusplus
+}
+#endif

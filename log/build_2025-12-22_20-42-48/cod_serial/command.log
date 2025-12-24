@@ -1,0 +1,2 @@
+Invoking command in '/home/ysl/ros2_ws/build/cod_serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
