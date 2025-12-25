@@ -31,7 +31,7 @@ typedef struct rm_interfaces__msg__JudgeSystemData
   int16_t blood;
   int16_t outpost_hp;
   uint8_t is_lowpower;
-  int16_t hp;
+  float hp;
   int16_t shut_num;
   int16_t qs_hp;
   uint8_t current_hp;
@@ -41,7 +41,9 @@ typedef struct rm_interfaces__msg__JudgeSystemData
   uint8_t game_type;
   uint8_t game_progress;
   int16_t dm_qs_hp;
-  uint32_t zone_status;
+  int32_t zone_status;
+  float position_x;
+  float position_y;
   rm_interfaces__msg__OperatorCommand operator_command;
 } rm_interfaces__msg__JudgeSystemData;
 

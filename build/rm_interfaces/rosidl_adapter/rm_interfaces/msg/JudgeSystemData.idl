@@ -17,7 +17,7 @@ module rm_interfaces {
 
       uint8 is_lowpower;
 
-      int16 hp;
+      float hp;
 
       int16 shut_num;
 
@@ -37,7 +37,11 @@ module rm_interfaces {
 
       int16 dm_qs_hp;
 
-      uint32 zone_status;
+      int32 zone_status;
+
+      float position_x;
+
+      float position_y;
 
       rm_interfaces::msg::OperatorCommand operator_command;
     };

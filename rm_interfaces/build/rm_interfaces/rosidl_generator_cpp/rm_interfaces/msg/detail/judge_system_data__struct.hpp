@@ -51,7 +51,7 @@ struct JudgeSystemData_
       this->blood = 0;
       this->outpost_hp = 0;
       this->is_lowpower = 0;
-      this->hp = 0;
+      this->hp = 0.0f;
       this->shut_num = 0;
       this->qs_hp = 0;
       this->current_hp = 0;
@@ -61,7 +61,9 @@ struct JudgeSystemData_
       this->game_type = 0;
       this->game_progress = 0;
       this->dm_qs_hp = 0;
-      this->zone_status = 0ul;
+      this->zone_status = 0l;
+      this->position_x = 0.0f;
+      this->position_y = 0.0f;
     }
   }
 
@@ -76,7 +78,7 @@ struct JudgeSystemData_
       this->blood = 0;
       this->outpost_hp = 0;
       this->is_lowpower = 0;
-      this->hp = 0;
+      this->hp = 0.0f;
       this->shut_num = 0;
       this->qs_hp = 0;
       this->current_hp = 0;
@@ -86,7 +88,9 @@ struct JudgeSystemData_
       this->game_type = 0;
       this->game_progress = 0;
       this->dm_qs_hp = 0;
-      this->zone_status = 0ul;
+      this->zone_status = 0l;
+      this->position_x = 0.0f;
+      this->position_y = 0.0f;
     }
   }
 
@@ -107,7 +111,7 @@ struct JudgeSystemData_
     uint8_t;
   _is_lowpower_type is_lowpower;
   using _hp_type =
-    int16_t;
+    float;
   _hp_type hp;
   using _shut_num_type =
     int16_t;
@@ -137,8 +141,14 @@ struct JudgeSystemData_
     int16_t;
   _dm_qs_hp_type dm_qs_hp;
   using _zone_status_type =
-    uint32_t;
+    int32_t;
   _zone_status_type zone_status;
+  using _position_x_type =
+    float;
+  _position_x_type position_x;
+  using _position_y_type =
+    float;
+  _position_y_type position_y;
   using _operator_command_type =
     rm_interfaces::msg::OperatorCommand_<ContainerAllocator>;
   _operator_command_type operator_command;
@@ -175,7 +185,7 @@ struct JudgeSystemData_
     return *this;
   }
   Type & set__hp(
-    const int16_t & _arg)
+    const float & _arg)
   {
     this->hp = _arg;
     return *this;
@@ -235,9 +245,21 @@ struct JudgeSystemData_
     return *this;
   }
   Type & set__zone_status(
-    const uint32_t & _arg)
+    const int32_t & _arg)
   {
     this->zone_status = _arg;
+    return *this;
+  }
+  Type & set__position_x(
+    const float & _arg)
+  {
+    this->position_x = _arg;
+    return *this;
+  }
+  Type & set__position_y(
+    const float & _arg)
+  {
+    this->position_y = _arg;
     return *this;
   }
   Type & set__operator_command(
@@ -335,6 +357,12 @@ struct JudgeSystemData_
       return false;
     }
     if (this->zone_status != other.zone_status) {
+      return false;
+    }
+    if (this->position_x != other.position_x) {
+      return false;
+    }
+    if (this->position_y != other.position_y) {
       return false;
     }
     if (this->operator_command != other.operator_command) {

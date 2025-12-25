@@ -37,6 +37,8 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
   // game_progress
   // dm_qs_hp
   // zone_status
+  // position_x
+  // position_y
   // operator_command
   if (!rm_interfaces__msg__OperatorCommand__init(&msg->operator_command)) {
     rm_interfaces__msg__JudgeSystemData__fini(msg);
@@ -67,6 +69,8 @@ rm_interfaces__msg__JudgeSystemData__fini(rm_interfaces__msg__JudgeSystemData * 
   // game_progress
   // dm_qs_hp
   // zone_status
+  // position_x
+  // position_y
   // operator_command
   rm_interfaces__msg__OperatorCommand__fini(&msg->operator_command);
 }
@@ -141,6 +145,14 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   if (lhs->zone_status != rhs->zone_status) {
     return false;
   }
+  // position_x
+  if (lhs->position_x != rhs->position_x) {
+    return false;
+  }
+  // position_y
+  if (lhs->position_y != rhs->position_y) {
+    return false;
+  }
   // operator_command
   if (!rm_interfaces__msg__OperatorCommand__are_equal(
       &(lhs->operator_command), &(rhs->operator_command)))
@@ -190,6 +202,10 @@ rm_interfaces__msg__JudgeSystemData__copy(
   output->dm_qs_hp = input->dm_qs_hp;
   // zone_status
   output->zone_status = input->zone_status;
+  // position_x
+  output->position_x = input->position_x;
+  // position_y
+  output->position_y = input->position_y;
   // operator_command
   if (!rm_interfaces__msg__OperatorCommand__copy(
       &(input->operator_command), &(output->operator_command)))

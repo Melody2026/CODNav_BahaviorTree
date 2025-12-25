@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "rm_interfaces/msg/detail/armor__type_support.h"
-#include "rm_interfaces/msg/detail/armor__functions.h"
 #include "rm_interfaces/msg/detail/armor__struct.h"
+#include "rm_interfaces/msg/detail/armor__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/msg/detail/armor__functions.h"
 
 #ifdef __cplusplus
 extern "C"

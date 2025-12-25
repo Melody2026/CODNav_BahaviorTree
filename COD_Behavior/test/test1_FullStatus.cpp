@@ -19,7 +19,7 @@ private:
     {
         auto msg = rm_interfaces::msg::SerialReceiveData();
         //msg.judge_system_data.game_status = 1;
-        msg.judge_system_data.hp = 200;
+        msg.judge_system_data.hp = 200.0;
         msg.judge_system_data.zone_status = 1;
         RCLCPP_INFO(this->get_logger(),"发布hp: 200");
         RCLCPP_INFO(this->get_logger(),"发布zone_status: 1");

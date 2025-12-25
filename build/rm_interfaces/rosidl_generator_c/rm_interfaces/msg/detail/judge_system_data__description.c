@@ -11,10 +11,10 @@ rm_interfaces__msg__JudgeSystemData__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x73, 0x11, 0x5d, 0x32, 0x64, 0x03, 0x94, 0xd1,
-      0xe7, 0x1b, 0x92, 0xa6, 0x16, 0xbc, 0x6d, 0x19,
-      0x44, 0x00, 0x55, 0x2c, 0x32, 0xf3, 0xf9, 0xca,
-      0xe2, 0x44, 0xf0, 0xaf, 0xe7, 0x20, 0x2c, 0xe0,
+      0xe4, 0x7f, 0xb7, 0xef, 0x33, 0x45, 0x33, 0x06,
+      0xc6, 0xac, 0xaa, 0x7c, 0xf8, 0x11, 0x4c, 0xae,
+      0x9f, 0x01, 0x0e, 0x57, 0xef, 0xe8, 0xd1, 0x63,
+      0xa1, 0xc0, 0x45, 0x8d, 0xfa, 0xb0, 0x4d, 0xd2,
     }};
   return &hash;
 }
@@ -55,6 +55,8 @@ static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__game_type[] = "game
 static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__game_progress[] = "game_progress";
 static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__dm_qs_hp[] = "dm_qs_hp";
 static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__zone_status[] = "zone_status";
+static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__position_x[] = "position_x";
+static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__position_y[] = "position_y";
 static char rm_interfaces__msg__JudgeSystemData__FIELD_NAME__operator_command[] = "operator_command";
 
 static rosidl_runtime_c__type_description__Field rm_interfaces__msg__JudgeSystemData__FIELDS[] = {
@@ -111,7 +113,7 @@ static rosidl_runtime_c__type_description__Field rm_interfaces__msg__JudgeSystem
   {
     {rm_interfaces__msg__JudgeSystemData__FIELD_NAME__hp, 2, 2},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT16,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -211,7 +213,27 @@ static rosidl_runtime_c__type_description__Field rm_interfaces__msg__JudgeSystem
   {
     {rm_interfaces__msg__JudgeSystemData__FIELD_NAME__zone_status, 11, 11},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT32,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {rm_interfaces__msg__JudgeSystemData__FIELD_NAME__position_x, 10, 10},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {rm_interfaces__msg__JudgeSystemData__FIELD_NAME__position_y, 10, 10},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -246,7 +268,7 @@ rm_interfaces__msg__JudgeSystemData__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {rm_interfaces__msg__JudgeSystemData__TYPE_NAME, 33, 33},
-      {rm_interfaces__msg__JudgeSystemData__FIELDS, 17, 17},
+      {rm_interfaces__msg__JudgeSystemData__FIELDS, 19, 19},
     },
     {rm_interfaces__msg__JudgeSystemData__REFERENCED_TYPE_DESCRIPTIONS, 1, 1},
   };
@@ -264,7 +286,7 @@ static char toplevel_type_raw_source[] =
   "int16 blood\n"
   "int16 outpost_hp\n"
   "uint8 is_lowpower\n"
-  "int16 hp\n"
+  "float32 hp\n"
   "int16 shut_num\n"
   "int16 qs_hp\n"
   "uint8 current_hp\n"
@@ -274,7 +296,9 @@ static char toplevel_type_raw_source[] =
   "uint8 game_type\n"
   "uint8 game_progress\n"
   "int16 dm_qs_hp\n"
-  "uint32 zone_status\n"
+  "int32 zone_status\n"
+  "float32 position_x\n"
+  "float32 position_y\n"
   "OperatorCommand operator_command";
 
 static char msg_encoding[] = "msg";
@@ -289,7 +313,7 @@ rm_interfaces__msg__JudgeSystemData__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {rm_interfaces__msg__JudgeSystemData__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 330, 330},
+    {toplevel_type_raw_source, 369, 369},
   };
   return &source;
 }

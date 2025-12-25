@@ -102,8 +102,8 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->hp = (int16_t)PyLong_AsLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->hp = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // shut_num
@@ -193,7 +193,25 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->zone_status = PyLong_AsUnsignedLong(field);
+    ros_message->zone_status = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // position_x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "position_x");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->position_x = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // position_y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "position_y");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->position_y = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // operator_command
@@ -286,7 +304,7 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
   }
   {  // hp
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->hp);
+    field = PyFloat_FromDouble(ros_message->hp);
     {
       int rc = PyObject_SetAttrString(_pymessage, "hp", field);
       Py_DECREF(field);
@@ -396,9 +414,31 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
   }
   {  // zone_status
     PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->zone_status);
+    field = PyLong_FromLong(ros_message->zone_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "zone_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // position_x
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->position_x);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "position_x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // position_y
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->position_y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "position_y", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -40,16 +40,48 @@ private:
   ::rm_interfaces::msg::JudgeSystemData msg_;
 };
 
+class Init_JudgeSystemData_position_y
+{
+public:
+  explicit Init_JudgeSystemData_position_y(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_operator_command position_y(::rm_interfaces::msg::JudgeSystemData::_position_y_type arg)
+  {
+    msg_.position_y = std::move(arg);
+    return Init_JudgeSystemData_operator_command(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_position_x
+{
+public:
+  explicit Init_JudgeSystemData_position_x(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_position_y position_x(::rm_interfaces::msg::JudgeSystemData::_position_x_type arg)
+  {
+    msg_.position_x = std::move(arg);
+    return Init_JudgeSystemData_position_y(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
 class Init_JudgeSystemData_zone_status
 {
 public:
   explicit Init_JudgeSystemData_zone_status(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  Init_JudgeSystemData_operator_command zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
+  Init_JudgeSystemData_position_x zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
   {
     msg_.zone_status = std::move(arg);
-    return Init_JudgeSystemData_operator_command(msg_);
+    return Init_JudgeSystemData_position_x(msg_);
   }
 
 private:

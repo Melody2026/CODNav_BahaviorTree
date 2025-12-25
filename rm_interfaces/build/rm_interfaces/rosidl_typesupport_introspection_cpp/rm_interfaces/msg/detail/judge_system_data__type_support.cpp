@@ -38,7 +38,7 @@ void JudgeSystemData_fini_function(void * message_memory)
   typed_message->~JudgeSystemData();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemData_message_member_array[17] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemData_message_member_array[19] = {
   {
     "game_status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
@@ -131,7 +131,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemDa
   },
   {
     "hp",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -311,7 +311,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemDa
   },
   {
     "zone_status",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -319,6 +319,42 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemDa
     0,  // array size
     false,  // is upper bound
     offsetof(rm_interfaces::msg::JudgeSystemData, zone_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "position_x",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rm_interfaces::msg::JudgeSystemData, position_x),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "position_y",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rm_interfaces::msg::JudgeSystemData, position_y),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -350,7 +386,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember JudgeSystemDa
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers JudgeSystemData_message_members = {
   "rm_interfaces::msg",  // message namespace
   "JudgeSystemData",  // message name
-  17,  // number of fields
+  19,  // number of fields
   sizeof(rm_interfaces::msg::JudgeSystemData),
   false,  // has_any_key_member_
   JudgeSystemData_message_member_array,  // message members

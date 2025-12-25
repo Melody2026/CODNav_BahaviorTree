@@ -119,6 +119,12 @@ cdr_serialize(
   // Member: zone_status
   cdr << ros_message.zone_status;
 
+  // Member: position_x
+  cdr << ros_message.position_x;
+
+  // Member: position_y
+  cdr << ros_message.position_y;
+
   // Member: operator_command
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.operator_command,
@@ -180,6 +186,12 @@ cdr_deserialize(
 
   // Member: zone_status
   cdr >> ros_message.zone_status;
+
+  // Member: position_x
+  cdr >> ros_message.position_x;
+
+  // Member: position_y
+  cdr >> ros_message.position_y;
 
   // Member: operator_command
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
@@ -314,6 +326,20 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Member: position_x
+  {
+    size_t item_size = sizeof(ros_message.position_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: position_y
+  {
+    size_t item_size = sizeof(ros_message.position_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Member: operator_command
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
@@ -378,9 +404,9 @@ max_serialized_size_JudgeSystemData(
   // Member: hp
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // Member: shut_num
   {
@@ -440,6 +466,20 @@ max_serialized_size_JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
   // Member: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: position_x
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: position_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -532,6 +572,12 @@ cdr_serialize_key(
 
   // Member: zone_status
   cdr << ros_message.zone_status;
+
+  // Member: position_x
+  cdr << ros_message.position_x;
+
+  // Member: position_y
+  cdr << ros_message.position_y;
 
   // Member: operator_command
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
@@ -666,6 +712,20 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Member: position_x
+  {
+    size_t item_size = sizeof(ros_message.position_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: position_y
+  {
+    size_t item_size = sizeof(ros_message.position_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Member: operator_command
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
@@ -734,9 +794,9 @@ max_serialized_size_key_JudgeSystemData(
   // Member: hp
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Member: shut_num
@@ -806,6 +866,22 @@ max_serialized_size_key_JudgeSystemData(
   }
 
   // Member: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: position_x
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: position_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

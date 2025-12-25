@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o"
-  "CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o.d"
+  "CMakeFiles/cod_serial.dir/src/test.cpp.o"
+  "CMakeFiles/cod_serial.dir/src/test.cpp.o.d"
   "CMakeFiles/cod_serial.dir/src/uart_transporter.cpp.o"
   "CMakeFiles/cod_serial.dir/src/uart_transporter.cpp.o.d"
   "cod_serial"

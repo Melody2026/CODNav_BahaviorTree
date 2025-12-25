@@ -1,8 +1,0 @@
-[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Krm_interfaces/msg/serial_receive_data.hpp: No such file or directory
-    3 | #include [01;31m[K<rm_interfaces/msg/serial_receive_data.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:76: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

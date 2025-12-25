@@ -107,13 +107,13 @@ public:
         {
             return { BT::OutputPort<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped>>("Position"),
 					 BT::OutputPort<double>("Hp"),
-					 BT::OutputPort<bool>("Zone_status") };
+					 BT::OutputPort<int>("Zone_status") };
         }
 
 		//设置参数
 		std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
 		double hp;
-		bool zone_status;
+		int zone_status;
 
         BT::NodeStatus tick() override
         {
@@ -224,7 +224,7 @@ public:
 		: BT::ConditionNode(name, config){ std::cout<<"IsPatrolCondition: start"<<std::endl; }
 	static BT::PortsList providedPorts(){
 		return { BT::InputPort<double>("Hp"),
-				 BT::InputPort<bool>("Zone_status") };
+				 BT::InputPort<int>("Zone_status") };
 	}
 	BT::NodeStatus tick() override{
 
@@ -238,7 +238,7 @@ public:
 		}
 		std::cout<<"Hp:"<<hp_.value()<<std::endl;
 
-		auto zone_status_ = getInput<bool>("Zone_status");
+		auto zone_status_ = getInput<int>("Zone_status");
 		//std::cout<<"zone_status:"<<zone_status_.value()<<std::endl;
 		if (!zone_status_)
 		{

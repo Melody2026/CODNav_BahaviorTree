@@ -23,8 +23,8 @@ rm_interfaces__msg__ChassisCmd__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "geometry_msgs/msg/detail/vector3__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
+#include "geometry_msgs/msg/detail/vector3__functions.h"
 #include "geometry_msgs/msg/detail/twist__functions.h"
 #include "std_msgs/msg/detail/header__functions.h"
 

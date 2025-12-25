@@ -162,6 +162,16 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
     cdr << ros_message->zone_status;
   }
 
+  // Field name: position_x
+  {
+    cdr << ros_message->position_x;
+  }
+
+  // Field name: position_y
+  {
+    cdr << ros_message->position_y;
+  }
+
   // Field name: operator_command
   {
     cdr_serialize_rm_interfaces__msg__OperatorCommand(
@@ -254,6 +264,16 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
   // Field name: zone_status
   {
     cdr >> ros_message->zone_status;
+  }
+
+  // Field name: position_x
+  {
+    cdr >> ros_message->position_x;
+  }
+
+  // Field name: position_y
+  {
+    cdr >> ros_message->position_y;
   }
 
   // Field name: operator_command
@@ -391,6 +411,20 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: position_x
+  {
+    size_t item_size = sizeof(ros_message->position_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: position_y
+  {
+    size_t item_size = sizeof(ros_message->position_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: operator_command
   current_alignment += get_serialized_size_rm_interfaces__msg__OperatorCommand(
     &(ros_message->operator_command), current_alignment);
@@ -458,9 +492,9 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
   // Field name: hp
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: shut_num
@@ -530,6 +564,22 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
   }
 
   // Field name: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: position_x
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: position_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -654,6 +704,16 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: zone_status
   {
     cdr << ros_message->zone_status;
+  }
+
+  // Field name: position_x
+  {
+    cdr << ros_message->position_x;
+  }
+
+  // Field name: position_y
+  {
+    cdr << ros_message->position_y;
   }
 
   // Field name: operator_command
@@ -792,6 +852,20 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: position_x
+  {
+    size_t item_size = sizeof(ros_message->position_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: position_y
+  {
+    size_t item_size = sizeof(ros_message->position_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: operator_command
   current_alignment += get_serialized_size_key_rm_interfaces__msg__OperatorCommand(
     &(ros_message->operator_command), current_alignment);
@@ -857,9 +931,9 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: hp
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: shut_num
@@ -929,6 +1003,22 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   }
 
   // Field name: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: position_x
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: position_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

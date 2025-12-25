@@ -37,7 +37,7 @@ void rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__Ju
   rm_interfaces__msg__JudgeSystemData__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[17] = {
+static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[19] = {
   {
     "game_status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
@@ -130,7 +130,7 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
   },
   {
     "hp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -310,7 +310,7 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
   },
   {
     "zone_status",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -318,6 +318,42 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
     0,  // array size
     false,  // is upper bound
     offsetof(rm_interfaces__msg__JudgeSystemData, zone_status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "position_x",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rm_interfaces__msg__JudgeSystemData, position_x),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "position_y",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rm_interfaces__msg__JudgeSystemData, position_y),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -349,7 +385,7 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
 static const rosidl_typesupport_introspection_c__MessageMembers rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_members = {
   "rm_interfaces__msg",  // message namespace
   "JudgeSystemData",  // message name
-  17,  // number of fields
+  19,  // number of fields
   sizeof(rm_interfaces__msg__JudgeSystemData),
   false,  // has_any_key_member_
   rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array,  // message members
@@ -371,7 +407,7 @@ static rosidl_message_type_support_t rm_interfaces__msg__JudgeSystemData__rosidl
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rm_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, JudgeSystemData)() {
-  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[16].members_ =
+  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[18].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, OperatorCommand)();
   if (!rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_type_support_handle.typesupport_identifier) {
     rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_type_support_handle.typesupport_identifier =

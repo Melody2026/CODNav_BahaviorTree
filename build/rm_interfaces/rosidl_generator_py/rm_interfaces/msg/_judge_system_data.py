@@ -14,6 +14,8 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -82,6 +84,8 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         '_game_progress',
         '_dm_qs_hp',
         '_zone_status',
+        '_position_x',
+        '_position_y',
         '_operator_command',
         '_check_fields',
     ]
@@ -92,7 +96,7 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         'blood': 'int16',
         'outpost_hp': 'int16',
         'is_lowpower': 'uint8',
-        'hp': 'int16',
+        'hp': 'float',
         'shut_num': 'int16',
         'qs_hp': 'int16',
         'current_hp': 'uint8',
@@ -102,7 +106,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         'game_type': 'uint8',
         'game_progress': 'uint8',
         'dm_qs_hp': 'int16',
-        'zone_status': 'uint32',
+        'zone_status': 'int32',
+        'position_x': 'float',
+        'position_y': 'float',
         'operator_command': 'rm_interfaces/OperatorCommand',
     }
 
@@ -114,9 +120,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -124,7 +130,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'OperatorCommand'),  # noqa: E501
     )
 
@@ -142,7 +150,7 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         self.blood = kwargs.get('blood', int())
         self.outpost_hp = kwargs.get('outpost_hp', int())
         self.is_lowpower = kwargs.get('is_lowpower', int())
-        self.hp = kwargs.get('hp', int())
+        self.hp = kwargs.get('hp', float())
         self.shut_num = kwargs.get('shut_num', int())
         self.qs_hp = kwargs.get('qs_hp', int())
         self.current_hp = kwargs.get('current_hp', int())
@@ -153,6 +161,8 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         self.game_progress = kwargs.get('game_progress', int())
         self.dm_qs_hp = kwargs.get('dm_qs_hp', int())
         self.zone_status = kwargs.get('zone_status', int())
+        self.position_x = kwargs.get('position_x', float())
+        self.position_y = kwargs.get('position_y', float())
         from rm_interfaces.msg import OperatorCommand
         self.operator_command = kwargs.get('operator_command', OperatorCommand())
 
@@ -217,6 +227,10 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         if self.dm_qs_hp != other.dm_qs_hp:
             return False
         if self.zone_status != other.zone_status:
+            return False
+        if self.position_x != other.position_x:
+            return False
+        if self.position_y != other.position_y:
             return False
         if self.operator_command != other.operator_command:
             return False
@@ -311,10 +325,10 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
     def hp(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, int), \
-                "The 'hp' field must be of type 'int'"
-            assert value >= -32768 and value < 32768, \
-                "The 'hp' field must be an integer in [-32768, 32767]"
+                isinstance(value, float), \
+                "The 'hp' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'hp' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._hp = value
 
     @builtins.property
@@ -463,9 +477,39 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
             assert \
                 isinstance(value, int), \
                 "The 'zone_status' field must be of type 'int'"
-            assert value >= 0 and value < 4294967296, \
-                "The 'zone_status' field must be an unsigned integer in [0, 4294967295]"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'zone_status' field must be an integer in [-2147483648, 2147483647]"
         self._zone_status = value
+
+    @builtins.property
+    def position_x(self):
+        """Message field 'position_x'."""
+        return self._position_x
+
+    @position_x.setter
+    def position_x(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'position_x' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'position_x' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._position_x = value
+
+    @builtins.property
+    def position_y(self):
+        """Message field 'position_y'."""
+        return self._position_y
+
+    @position_y.setter
+    def position_y(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'position_y' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'position_y' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._position_y = value
 
     @builtins.property
     def operator_command(self):

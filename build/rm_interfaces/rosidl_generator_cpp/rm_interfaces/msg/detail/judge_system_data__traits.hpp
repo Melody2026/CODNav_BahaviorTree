@@ -144,6 +144,20 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: position_x
+  {
+    out << "position_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.position_x, out);
+    out << ", ";
+  }
+
+  // member: position_y
+  {
+    out << "position_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.position_y, out);
+    out << ", ";
+  }
+
   // member: operator_command
   {
     out << "operator_command: ";
@@ -313,6 +327,26 @@ inline void to_block_style_yaml(
     }
     out << "zone_status: ";
     rosidl_generator_traits::value_to_yaml(msg.zone_status, out);
+    out << "\n";
+  }
+
+  // member: position_x
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "position_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.position_x, out);
+    out << "\n";
+  }
+
+  // member: position_y
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "position_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.position_y, out);
     out << "\n";
   }
 

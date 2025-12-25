@@ -56,7 +56,7 @@
         {
           "name": "hp",
           "type": {
-            "type_id": 4,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -156,7 +156,27 @@
         {
           "name": "zone_status",
           "type": {
-            "type_id": 7,
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "position_x",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "position_y",
+          "type": {
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -246,7 +266,7 @@
   "type_hashes": [
     {
       "type_name": "rm_interfaces/msg/JudgeSystemData",
-      "hash_string": "RIHS01_73115d32640394d1e71b92a616bc6d194400552c32f3f9cae244f0afe7202ce0"
+      "hash_string": "RIHS01_e47fb7ef33453306c6acaa7cf8114cae9f010e57efe8d163a1c0458dfab04dd2"
     },
     {
       "type_name": "rm_interfaces/msg/OperatorCommand",

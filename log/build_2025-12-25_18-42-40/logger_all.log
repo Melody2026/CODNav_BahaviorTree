@@ -1,0 +1,448 @@
+[0.373s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink']
+[0.373s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fad07053a40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fad07052db0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fad07052db0>>)
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.430s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ysl/ros2_ws'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extension 'ignore'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extension 'ignore_ament_install'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extensions ['colcon_pkg']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extension 'colcon_pkg'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extensions ['colcon_meta']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extension 'colcon_meta'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extensions ['ros']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Behavior) by extension 'ros'
+[0.473s] DEBUG:colcon.colcon_core.package_identification:Package 'COD_Behavior' with type 'ros.ament_cmake' and name 'cod_behavior'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(COD_Serial) by extension 'ros'
+[0.475s] DEBUG:colcon.colcon_core.package_identification:Package 'COD_Serial' with type 'ros.ament_cmake' and name 'cod_serial'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['ros']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'ros'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['cmake', 'python']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'cmake'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'python'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extensions ['python_setup_py']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug) by extension 'python_setup_py'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'ros'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['cmake', 'python']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'cmake'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'python'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extensions ['python_setup_py']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles) by extension 'python_setup_py'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'ros'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['cmake', 'python']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'cmake'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'python'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extensions ['python_setup_py']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2) by extension 'python_setup_py'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['colcon_pkg']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdC/tmp) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/4.0.2/CompilerIdCXX/tmp) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'ros'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'cmake'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'python'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extensions ['python_setup_py']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'ros'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['cmake', 'python']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/cod_serial.dir/src) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/CMakeFiles/pkgRedirects) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'cmake'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'python'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extensions ['python_setup_py']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'ros'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['cmake', 'python']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'cmake'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'python'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extensions ['python_setup_py']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(cmake-build-debug/Testing/Temporary) by extension 'python_setup_py'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extension 'ignore'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extension 'ignore_ament_install'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extensions ['colcon_pkg']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extension 'colcon_pkg'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extensions ['colcon_meta']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extension 'colcon_meta'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extensions ['ros']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(rm_interfaces) by extension 'ros'
+[0.491s] DEBUG:colcon.colcon_core.package_identification:Package 'rm_interfaces' with type 'ros.ament_cmake' and name 'rm_interfaces'
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.517s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.517s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.519s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ysl/ros2_ws/rm_interfaces/install
+[0.520s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ysl/BehaviorTree.CPP/install
+[0.522s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 379 installed packages in /opt/ros/jazzy
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.606s] DEBUG:colcon.colcon_core.verb:Building package 'rm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysl/ros2_ws/build/rm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysl/ros2_ws/install/rm_interfaces', 'merge_install': False, 'path': '/home/ysl/ros2_ws/rm_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_target' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_clean_cache' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_clean_first' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_force_configure' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'ament_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'catkin_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.607s] DEBUG:colcon.colcon_core.verb:Building package 'cod_behavior' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysl/ros2_ws/build/cod_behavior', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysl/ros2_ws/install/cod_behavior', 'merge_install': False, 'path': '/home/ysl/ros2_ws/COD_Behavior', 'symlink_install': True, 'test_result_base': None}
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_args' from command line to 'None'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_target' from command line to 'None'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_clean_first' from command line to 'False'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'cmake_force_configure' from command line to 'False'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'ament_cmake_args' from command line to 'None'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.608s] Level 5:colcon.colcon_core.verb:set package 'cod_serial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.608s] DEBUG:colcon.colcon_core.verb:Building package 'cod_serial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysl/ros2_ws/build/cod_serial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysl/ros2_ws/install/cod_serial', 'merge_install': False, 'path': '/home/ysl/ros2_ws/COD_Serial', 'symlink_install': True, 'test_result_base': None}
+[0.608s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.610s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.610s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ysl/ros2_ws/rm_interfaces' with build type 'ament_cmake'
+[0.610s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ysl/ros2_ws/rm_interfaces'
+[0.615s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.615s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.615s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.633s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/rm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/rm_interfaces
+[5.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/rm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/rm_interfaces
+[5.985s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ysl/ros2_ws/build/rm_interfaces -- -j12 -l12
+[29.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ysl/ros2_ws/build/rm_interfaces -- -j12 -l12
+[29.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ysl/ros2_ws/build/rm_interfaces
+[37.533s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_interfaces)
+[37.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ysl/ros2_ws/build/rm_interfaces
+[37.539s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces' for CMake module files
+[37.540s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces' for CMake config files
+[37.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'cmake_prefix_path')
+[37.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.ps1'
+[37.546s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.dsv'
+[37.546s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.sh'
+[37.548s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib'
+[37.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'ld_library_path_lib')
+[37.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.ps1'
+[37.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.dsv'
+[37.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.sh'
+[37.552s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/bin'
+[37.552s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib/pkgconfig/rm_interfaces.pc'
+[37.553s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages'
+[37.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'pythonpath')
+[37.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.ps1'
+[37.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.dsv'
+[37.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.sh'
+[37.558s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/bin'
+[37.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.ps1'
+[37.560s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.dsv'
+[37.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.sh'
+[37.562s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.bash'
+[37.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.zsh'
+[37.564s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/rm_interfaces/share/colcon-core/packages/rm_interfaces)
+[37.566s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_interfaces)
+[37.566s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces' for CMake module files
+[37.567s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces' for CMake config files
+[37.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'cmake_prefix_path')
+[37.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.ps1'
+[37.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.dsv'
+[37.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.sh'
+[37.573s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib'
+[37.573s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'ld_library_path_lib')
+[37.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.ps1'
+[37.574s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.dsv'
+[37.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.sh'
+[37.576s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/bin'
+[37.576s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib/pkgconfig/rm_interfaces.pc'
+[37.577s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages'
+[37.577s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'pythonpath')
+[37.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.ps1'
+[37.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.dsv'
+[37.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/hook/pythonpath.sh'
+[37.580s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/rm_interfaces/bin'
+[37.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.ps1'
+[37.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.dsv'
+[37.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.sh'
+[37.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.bash'
+[37.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.zsh'
+[37.586s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/rm_interfaces/share/colcon-core/packages/rm_interfaces)
+[37.586s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ysl/ros2_ws/COD_Behavior' with build type 'ament_cmake'
+[37.587s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ysl/ros2_ws/COD_Behavior'
+[37.587s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.587s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[37.599s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ysl/ros2_ws/COD_Serial' with build type 'ament_cmake'
+[37.599s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ysl/ros2_ws/COD_Serial'
+[37.600s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.600s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[37.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_behavior
+[37.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_serial
+[46.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_behavior' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_behavior
+[46.209s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_behavior -- -j12 -l12
+[46.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_serial
+[46.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[59.774s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[59.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysl/ros2_ws/build/cod_serial
+[60.109s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cod_serial)
+[60.110s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial' for CMake module files
+[60.111s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial' for CMake config files
+[60.112s] Level 1:colcon.colcon_core.shell:create_environment_hook('cod_serial', 'cmake_prefix_path')
+[60.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.ps1'
+[60.113s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysl/ros2_ws/build/cod_serial
+[60.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.dsv'
+[60.117s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.sh'
+[60.124s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib'
+[60.124s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/bin'
+[60.125s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib/pkgconfig/cod_serial.pc'
+[60.125s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib/python3.12/site-packages'
+[60.126s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/bin'
+[60.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.ps1'
+[60.128s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.dsv'
+[60.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.sh'
+[60.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.bash'
+[60.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.zsh'
+[60.140s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/cod_serial/share/colcon-core/packages/cod_serial)
+[60.143s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cod_serial)
+[60.143s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial' for CMake module files
+[60.144s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial' for CMake config files
+[60.145s] Level 1:colcon.colcon_core.shell:create_environment_hook('cod_serial', 'cmake_prefix_path')
+[60.145s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.ps1'
+[60.146s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.dsv'
+[60.147s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/hook/cmake_prefix_path.sh'
+[60.148s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib'
+[60.148s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/bin'
+[60.149s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib/pkgconfig/cod_serial.pc'
+[60.149s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/lib/python3.12/site-packages'
+[60.150s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_serial/bin'
+[60.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.ps1'
+[60.151s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.dsv'
+[60.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.sh'
+[60.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.bash'
+[60.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.zsh'
+[60.159s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/cod_serial/share/colcon-core/packages/cod_serial)
+[76.584s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_behavior' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_behavior -- -j12 -l12
+[76.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysl/ros2_ws/build/cod_behavior
+[76.960s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cod_behavior)
+[76.961s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior' for CMake module files
+[76.962s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/build/cod_behavior' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/rm_interfaces/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ysl/ros2_ws/build/cod_behavior
+[76.963s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior' for CMake config files
+[76.964s] Level 1:colcon.colcon_core.shell:create_environment_hook('cod_behavior', 'cmake_prefix_path')
+[76.964s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.ps1'
+[76.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.dsv'
+[76.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.sh'
+[76.966s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib'
+[76.966s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/bin'
+[76.966s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib/pkgconfig/cod_behavior.pc'
+[76.967s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib/python3.12/site-packages'
+[76.967s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/bin'
+[76.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.ps1'
+[76.968s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.dsv'
+[76.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.sh'
+[76.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.bash'
+[76.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.zsh'
+[76.970s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/cod_behavior/share/colcon-core/packages/cod_behavior)
+[76.971s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cod_behavior)
+[76.971s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior' for CMake module files
+[76.972s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior' for CMake config files
+[76.973s] Level 1:colcon.colcon_core.shell:create_environment_hook('cod_behavior', 'cmake_prefix_path')
+[76.973s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.ps1'
+[76.973s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.dsv'
+[76.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/hook/cmake_prefix_path.sh'
+[76.975s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib'
+[76.975s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/bin'
+[76.975s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib/pkgconfig/cod_behavior.pc'
+[76.975s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/lib/python3.12/site-packages'
+[76.975s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/install/cod_behavior/bin'
+[76.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.ps1'
+[76.976s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.dsv'
+[76.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.sh'
+[76.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.bash'
+[76.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.zsh'
+[76.979s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/install/cod_behavior/share/colcon-core/packages/cod_behavior)
+[76.980s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[76.981s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[76.981s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[76.981s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[77.106s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[77.107s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[77.107s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[77.107s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[77.108s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[77.109s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[77.109s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/install/local_setup.ps1'
+[77.111s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ysl/ros2_ws/install/_local_setup_util_ps1.py'
+[77.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/install/setup.ps1'
+[77.115s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/install/local_setup.sh'
+[77.116s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ysl/ros2_ws/install/_local_setup_util_sh.py'
+[77.117s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/install/setup.sh'
+[77.119s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/install/local_setup.bash'
+[77.120s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/install/setup.bash'
+[77.122s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/install/local_setup.zsh'
+[77.123s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/install/setup.zsh'

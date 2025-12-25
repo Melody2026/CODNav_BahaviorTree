@@ -3,7 +3,7 @@ int16 remaining_time
 int16 blood
 int16 outpost_hp
 uint8 is_lowpower
-int16 hp
+float32 hp
 int16 shut_num
 int16 qs_hp
 uint8 current_hp
@@ -13,5 +13,7 @@ uint8 stage_remain_time
 uint8 game_type
 uint8 game_progress
 int16 dm_qs_hp
-uint32 zone_status
+int32 zone_status
+float32 position_x
+float32 position_y
 OperatorCommand operator_command
