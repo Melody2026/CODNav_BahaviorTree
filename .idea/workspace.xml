@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
@@ -36,148 +37,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/codemodel-v2-04e61ca1ecf5337857db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/index-2025-12-25T10-43-26-0733.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/target-checkNavResult-71137b2f2bbfacaa5fbb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/target-cod_behavior-512a363c3db5d760d791.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/target-msgtest-05af41dcacab42b5f16f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/target-test_1-711be6b61a4296f30d56.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/.cmake/api/v1/reply/target-tree_1-9092bbbe40d332626fa5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/src/tree_1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/src/tree_1.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/src/tree_1.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/CMakeFiles/tree_1.dir/src/tree_1.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_core/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_core/package.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_core/stamps/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_core/stamps/package.xml.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cod_behavior" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cod_behavior" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_behavior" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_behavior" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/cod_behavior" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/cod_behavior" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cod_behavior/colcon_build.rc" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/colcon_build.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cod_behavior/colcon_command_prefix_build.sh.env" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/colcon_command_prefix_build.sh.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/compile_commands.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_behavior/symlink_install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/symlink_install_manifest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cod_behavior/tree_1" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_behavior/tree_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_serial/.cmake/api/v1/reply/index-2025-12-25T10-43-26-0787.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cod_serial/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_serial" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_serial" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cod_serial/colcon_command_prefix_build.sh.env" beforeDir="false" afterPath="$PROJECT_DIR$/build/cod_serial/colcon_command_prefix_build.sh.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/.cmake/api/v1/reply/index-2025-12-25T10-42-46-0512.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armor__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armor__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armor__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armor__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armors__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armors__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armors__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/armors__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_armor__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_armor__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_armors__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_armors__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_light__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_light__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_lights__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_lights__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/ekf_p__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/ekf_p__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/measurement__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/measurement__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/target__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/target__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/target__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/target__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/want__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/want__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/want__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/msg/detail/want__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__description.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__description.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__type_support.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__type_support.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rm_interfaces" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rm_interfaces" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/rm_interfaces/colcon_command_prefix_build.sh.env" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/colcon_command_prefix_build.sh.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armor__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armor__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armor__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armor__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armors__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armors__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armors__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/armors__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/chassis_cmd__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_armor__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_armor__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_armors__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_armors__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_light__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_light__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_lights__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_lights__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/debug_rune_angle__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/ekf_p__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/ekf_p__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/gimbal_cmd__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/measurement__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/measurement__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/rune_target__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_target__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/shoot_fire_targets__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/target__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/target__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/target__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/target__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/want__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/want__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/want__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/want__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__description.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__description.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__type_support.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/rm_interfaces/rosidl_generator_c/rm_interfaces/srv/detail/set_mode__type_support.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/cod_behavior/share/colcon-core/packages/cod_behavior" beforeDir="false" afterPath="$PROJECT_DIR$/install/cod_behavior/share/colcon-core/packages/cod_behavior" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/setup.bash" beforeDir="false" afterPath="$PROJECT_DIR$/install/setup.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/setup.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/install/setup.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install/setup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/setup.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/install/setup.zsh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/events.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/logger_all.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/rm_interfaces/command.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/rm_interfaces/stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/rm_interfaces/stdout.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/rm_interfaces/stdout_stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-11-11/rm_interfaces/streams.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_behavior/command.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_behavior/stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_behavior/stdout.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_behavior/stdout_stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_behavior/streams.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_serial/command.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_serial/stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_serial/stdout.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_serial/stdout_stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/cod_serial/streams.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/events.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/logger_all.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/rm_interfaces/command.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/rm_interfaces/stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/rm_interfaces/stdout.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/rm_interfaces/stdout_stderr.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/build_2025-12-25_18-42-40/rm_interfaces/streams.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/latest_build" beforeDir="false" afterPath="$PROJECT_DIR$/log/latest_build" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +70,7 @@
     <setting file="file://$PROJECT_DIR$/COD_Serial/include/uart_transporter.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/COD_Serial/src/cod_serial.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/COD_Serial/src/uart_transporter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -222,31 +89,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;CMake 应用程序.cod_serial.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "CMake 应用程序.cod_serial.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.语言默认设置",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/COD_Serial" />
@@ -351,6 +218,7 @@
       <workItem from="1766836163873" duration="509000" />
       <workItem from="1766888971313" duration="54000" />
       <workItem from="1766889066348" duration="1641000" />
+      <workItem from="1766910977890" duration="8425000" />
     </task>
     <servers />
   </component>

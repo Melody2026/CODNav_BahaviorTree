@@ -15,6 +15,26 @@
 #include <rm_interfaces/msg/serial_receive_data.hpp>
 #include <coroutine>
 #include <unordered_map>
+geometry_msgs::msg::PoseStamped
+loadPoseStamped(
+	const rclcpp::Node::SharedPtr& node,
+	const std::string& prefix)
+{
+	geometry_msgs::msg::PoseStamped pose;
+
+	pose.header.frame_id =
+		node->get_parameter(prefix + ".frame_id").as_string();
+
+	pose.pose.position.x =
+		node->get_parameter(prefix + ".position.x").as_double();
+	pose.pose.position.y =
+		node->get_parameter(prefix + ".position.y").as_double();
+	pose.pose.position.z =
+		node->get_parameter(prefix + ".position.z").as_double();
+	pose.pose.orientation.w =
+		node->get_parameter(prefix + ".orientation.w").as_double();
+	return pose;
+}
 
 class SendNav2Goal : public BT::CoroActionNode
 {
@@ -154,8 +174,6 @@ public:
 
 			bool test = pos_res.value();
 			std::cout<<"test:"<<test<<std::endl;
-			//std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pos_map = pos_res.value();
-			//std::cout<<"sentinelposition.pose.position.x: "<<pos_map["sentinelposition"].pose.position.x<<"sentinelposition.pose.position.y: "<<pos_map["sentinelposition"].pose.position.y<<std::endl;
 
             return BT::NodeStatus::SUCCESS;
         }
@@ -181,7 +199,6 @@ public:
     		);
 		}
 double hp = hp_.value();
-//double hp = 100;
 std::cout<<"hp:"<<hp<<std::endl;
 		if(hp<90){
 		std::cout << "hp < 90\n";
@@ -215,7 +232,6 @@ public:
 		std::cout<<"Hp:"<<hp_.value()<<std::endl;
 
 		auto zone_status_ = getInput<bool>("Zone_status");
-		//std::cout<<"zone_status:"<<zone_status_.value()<<std::endl;
 		if (!zone_status_)
 		{
     		throw BT::RuntimeError(

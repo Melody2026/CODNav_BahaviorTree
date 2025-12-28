@@ -3,26 +3,7 @@
 //
 #include "../include/cod_behavior/tree_1_action.h"
 #include "behaviortree_cpp/loggers/groot2_publisher.h"
-geometry_msgs::msg::PoseStamped
-loadPoseStamped(
-	const rclcpp::Node::SharedPtr& node,
-	const std::string& prefix)
-{
-	geometry_msgs::msg::PoseStamped pose;
 
-	pose.header.frame_id =
-		node->get_parameter(prefix + ".frame_id").as_string();
-
-	pose.pose.position.x =
-		node->get_parameter(prefix + ".position.x").as_double();
-	pose.pose.position.y =
-		node->get_parameter(prefix + ".position.y").as_double();
-	pose.pose.position.z =
-		node->get_parameter(prefix + ".position.z").as_double();
-	pose.pose.orientation.w =
-		node->get_parameter(prefix + ".orientation.w").as_double();
-	return pose;
-}
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);

@@ -1,0 +1,927 @@
+[0.000000] (-) TimerEvent: {}
+[0.001536] (rm_interfaces) JobQueued: {'identifier': 'rm_interfaces', 'dependencies': OrderedDict()}
+[0.001647] (cod_behavior) JobQueued: {'identifier': 'cod_behavior', 'dependencies': OrderedDict({'rm_interfaces': '/home/ysl/ros2_ws/install/rm_interfaces'})}
+[0.001707] (cod_serial) JobQueued: {'identifier': 'cod_serial', 'dependencies': OrderedDict({'rm_interfaces': '/home/ysl/ros2_ws/install/rm_interfaces'})}
+[0.001750] (rm_interfaces) JobStarted: {'identifier': 'rm_interfaces'}
+[0.013092] (rm_interfaces) JobProgress: {'identifier': 'rm_interfaces', 'progress': 'cmake'}
+[0.015255] (rm_interfaces) JobProgress: {'identifier': 'rm_interfaces', 'progress': 'build'}
+[0.016680] (rm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysl/ros2_ws/build/rm_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/ysl/ros2_ws/build/rm_interfaces', 'env': OrderedDict({'TERM_SESSION_ID': '03d2a1a8-74cd-4482-9f64-b637209e9991', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/ros2_ws/install:/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/356_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/build/rm_interfaces', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.081628] (-) TimerEvent: {}
+[0.182306] (-) TimerEvent: {}
+[0.243043] (rm_interfaces) StdoutLine: {'line': b'[  0%] Built target rm_interfaces__rosidl_generator_type_description\n'}
+[0.282432] (-) TimerEvent: {}
+[0.347576] (rm_interfaces) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_symlink_rm_interfaces\n'}
+[0.382651] (-) TimerEvent: {}
+[0.484362] (-) TimerEvent: {}
+[0.486628] (rm_interfaces) StdoutLine: {'line': b'[ 28%] Built target rm_interfaces__rosidl_generator_c\n'}
+[0.584520] (-) TimerEvent: {}
+[0.685532] (-) TimerEvent: {}
+[0.787143] (-) TimerEvent: {}
+[0.887506] (-) TimerEvent: {}
+[0.987977] (-) TimerEvent: {}
+[1.088381] (-) TimerEvent: {}
+[1.157726] (rm_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.188487] (-) TimerEvent: {}
+[1.223484] (rm_interfaces) StdoutLine: {'line': b'writing rm_interfaces.egg-info/PKG-INFO\n'}
+[1.224105] (rm_interfaces) StdoutLine: {'line': b'writing dependency_links to rm_interfaces.egg-info/dependency_links.txt\n'}
+[1.224917] (rm_interfaces) StdoutLine: {'line': b'writing top-level names to rm_interfaces.egg-info/top_level.txt\n'}
+[1.289358] (-) TimerEvent: {}
+[1.389750] (-) TimerEvent: {}
+[1.408031] (rm_interfaces) StdoutLine: {'line': b"reading manifest file 'rm_interfaces.egg-info/SOURCES.txt'\n"}
+[1.411269] (rm_interfaces) StdoutLine: {'line': b"writing manifest file 'rm_interfaces.egg-info/SOURCES.txt'\n"}
+[1.489951] (-) TimerEvent: {}
+[1.517982] (rm_interfaces) StdoutLine: {'line': b'[ 28%] Built target ament_cmake_python_build_rm_interfaces_egg\n'}
+[1.590327] (-) TimerEvent: {}
+[1.610402] (rm_interfaces) StdoutLine: {'line': b'[ 38%] Built target rm_interfaces__rosidl_typesupport_c\n'}
+[1.690455] (-) TimerEvent: {}
+[1.748527] (rm_interfaces) StdoutLine: {'line': b'[ 48%] Built target rm_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.790563] (-) TimerEvent: {}
+[1.891041] (-) TimerEvent: {}
+[1.910363] (rm_interfaces) StdoutLine: {'line': b'[ 58%] Built target rm_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.991323] (-) TimerEvent: {}
+[2.002198] (rm_interfaces) StdoutLine: {'line': b'[ 58%] Built target rm_interfaces__cpp\n'}
+[2.091504] (-) TimerEvent: {}
+[2.147824] (rm_interfaces) StdoutLine: {'line': b'[ 68%] Built target rm_interfaces__rosidl_typesupport_cpp\n'}
+[2.193332] (-) TimerEvent: {}
+[2.294020] (-) TimerEvent: {}
+[2.314896] (rm_interfaces) StdoutLine: {'line': b'[ 78%] Built target rm_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.394204] (-) TimerEvent: {}
+[2.472598] (rm_interfaces) StdoutLine: {'line': b'[ 87%] Built target rm_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[2.494371] (-) TimerEvent: {}
+[2.558532] (rm_interfaces) StdoutLine: {'line': b'[ 87%] Built target rm_interfaces\n'}
+[2.594689] (-) TimerEvent: {}
+[2.653404] (rm_interfaces) StdoutLine: {'line': b'[ 87%] Built target rm_interfaces__py\n'}
+[2.694842] (-) TimerEvent: {}
+[2.795234] (-) TimerEvent: {}
+[2.809239] (rm_interfaces) StdoutLine: {'line': b'[ 97%] Built target rm_interfaces__rosidl_generator_py\n'}
+[2.884226] (rm_interfaces) StdoutLine: {'line': b'[ 98%] Built target rm_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[2.895447] (-) TimerEvent: {}
+[2.979016] (rm_interfaces) StdoutLine: {'line': b'[ 99%] Built target rm_interfaces_s__rosidl_typesupport_c\n'}
+[2.995610] (-) TimerEvent: {}
+[3.056566] (rm_interfaces) StdoutLine: {'line': b'[100%] Built target rm_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[3.096358] (-) TimerEvent: {}
+[3.108248] (rm_interfaces) CommandEnded: {'returncode': 0}
+[3.109215] (rm_interfaces) JobProgress: {'identifier': 'rm_interfaces', 'progress': 'install'}
+[3.149427] (rm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ysl/ros2_ws/build/rm_interfaces'], 'cwd': '/home/ysl/ros2_ws/build/rm_interfaces', 'env': OrderedDict({'TERM_SESSION_ID': '03d2a1a8-74cd-4482-9f64-b637209e9991', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/ros2_ws/install:/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/356_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/build/rm_interfaces', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[3.184588] (rm_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.186746] (rm_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.187366] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/ament_index/resource_index/rosidl_interfaces/rm_interfaces\n'}
+[3.189643] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armor.json\n'}
+[3.190335] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armors.json\n'}
+[3.190622] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Target.json\n'}
+[3.190946] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/RuneTarget.json\n'}
+[3.193924] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Point2d.json\n'}
+[3.194360] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/GimbalCmd.json\n'}
+[3.195227] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ChassisCmd.json\n'}
+[3.196326] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLight.json\n'}
+[3.196568] (-) TimerEvent: {}
+[3.202678] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLights.json\n'}
+[3.203151] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmor.json\n'}
+[3.203433] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmors.json\n'}
+[3.203654] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugRuneAngle.json\n'}
+[3.203860] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Measurement.json\n'}
+[3.204052] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/JudgeSystemData.json\n'}
+[3.204262] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/OperatorCommand.json\n'}
+[3.204398] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/SerialReceiveData.json\n'}
+[3.204516] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/EkfP.json\n'}
+[3.204677] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Want.json\n'}
+[3.204814] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/LimitAngle.json\n'}
+[3.205196] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTarget.json\n'}
+[3.206139] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTargets.json\n'}
+[3.207138] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/srv/SetMode.json\n'}
+[3.213183] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armor.h\n'}
+[3.214174] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armors.h\n'}
+[3.214598] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/chassis_cmd.h\n'}
+[3.214981] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armor.h\n'}
+[3.215290] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armors.h\n'}
+[3.215799] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_light.h\n'}
+[3.216031] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_lights.h\n'}
+[3.216216] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_rune_angle.h\n'}
+[3.217187] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__functions.h\n'}
+[3.217560] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__struct.h\n'}
+[3.217790] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.h\n'}
+[3.218034] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__functions.h\n'}
+[3.218299] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__struct.h\n'}
+[3.219056] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.h\n'}
+[3.223409] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__functions.h\n'}
+[3.223684] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__struct.h\n'}
+[3.223933] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.h\n'}
+[3.228271] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__functions.h\n'}
+[3.229021] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__struct.h\n'}
+[3.229946] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.h\n'}
+[3.230210] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__functions.h\n'}
+[3.232431] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__struct.h\n'}
+[3.232681] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.h\n'}
+[3.233046] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__functions.h\n'}
+[3.233711] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__struct.h\n'}
+[3.235448] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.h\n'}
+[3.236247] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__functions.h\n'}
+[3.236540] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__struct.h\n'}
+[3.250097] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.h\n'}
+[3.250548] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__functions.h\n'}
+[3.251016] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__struct.h\n'}
+[3.251431] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.h\n'}
+[3.252193] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__functions.h\n'}
+[3.252528] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__struct.h\n'}
+[3.253370] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__type_support.h\n'}
+[3.253833] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__functions.h\n'}
+[3.254267] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__struct.h\n'}
+[3.254775] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.h\n'}
+[3.254995] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__functions.h\n'}
+[3.255635] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__struct.h\n'}
+[3.256805] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.h\n'}
+[3.257192] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__functions.h\n'}
+[3.258975] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__struct.h\n'}
+[3.259542] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__type_support.h\n'}
+[3.259748] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__functions.h\n'}
+[3.259937] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__struct.h\n'}
+[3.260098] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.h\n'}
+[3.260244] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__functions.h\n'}
+[3.260412] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__struct.h\n'}
+[3.260694] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.h\n'}
+[3.260862] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__functions.h\n'}
+[3.260998] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__struct.h\n'}
+[3.261126] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.h\n'}
+[3.261249] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__functions.h\n'}
+[3.261390] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__struct.h\n'}
+[3.261517] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.h\n'}
+[3.261666] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__functions.h\n'}
+[3.261841] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__struct.h\n'}
+[3.262021] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.h\n'}
+[3.262211] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__functions.h\n'}
+[3.262365] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__struct.h\n'}
+[3.262623] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__type_support.h\n'}
+[3.262803] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__functions.h\n'}
+[3.262980] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__struct.h\n'}
+[3.263191] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__type_support.h\n'}
+[3.263362] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__functions.h\n'}
+[3.263539] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__struct.h\n'}
+[3.263769] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.h\n'}
+[3.263953] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__functions.h\n'}
+[3.264124] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__struct.h\n'}
+[3.264290] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__type_support.h\n'}
+[3.264463] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/ekf_p.h\n'}
+[3.264739] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/gimbal_cmd.h\n'}
+[3.264999] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/judge_system_data.h\n'}
+[3.265209] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/limit_angle.h\n'}
+[3.265456] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/measurement.h\n'}
+[3.265680] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/operator_command.h\n'}
+[3.265857] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/point2d.h\n'}
+[3.266083] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.266274] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rune_target.h\n'}
+[3.266534] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/serial_receive_data.h\n'}
+[3.266715] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/shoot_fire_target.h\n'}
+[3.266948] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/shoot_fire_targets.h\n'}
+[3.267204] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/target.h\n'}
+[3.267407] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/want.h\n'}
+[3.267707] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__functions.h\n'}
+[3.268198] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__struct.h\n'}
+[3.268651] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.h\n'}
+[3.269006] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/set_mode.h\n'}
+[3.269754] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/library_path.sh\n'}
+[3.271459] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/library_path.dsv\n'}
+[3.275942] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_c.h\n'}
+[3.276768] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_c.h\n'}
+[3.282324] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[3.282947] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_fastrtps_c.h\n'}
+[3.283378] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_fastrtps_c.h\n'}
+[3.285762] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_fastrtps_c.h\n'}
+[3.286110] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_fastrtps_c.h\n'}
+[3.286858] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_fastrtps_c.h\n'}
+[3.287202] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__rosidl_typesupport_fastrtps_c.h\n'}
+[3.287564] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[3.288053] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_c.h\n'}
+[3.288528] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__rosidl_typesupport_fastrtps_c.h\n'}
+[3.288870] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_fastrtps_c.h\n'}
+[3.289823] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_fastrtps_c.h\n'}
+[3.290684] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.291075] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_fastrtps_c.h\n'}
+[3.291895] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_c.h\n'}
+[3.292266] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__rosidl_typesupport_fastrtps_c.h\n'}
+[3.292874] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__rosidl_typesupport_fastrtps_c.h\n'}
+[3.299903] (-) TimerEvent: {}
+[3.300917] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_c.h\n'}
+[3.301616] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__rosidl_typesupport_fastrtps_c.h\n'}
+[3.302075] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.302475] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h\n'}
+[3.305787] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_introspection_c.h\n'}
+[3.319693] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_introspection_c.h\n'}
+[3.319954] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_introspection_c.h\n'}
+[3.320180] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_introspection_c.h\n'}
+[3.320386] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_introspection_c.h\n'}
+[3.320612] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_introspection_c.h\n'}
+[3.320797] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_introspection_c.h\n'}
+[3.322686] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_introspection_c.h\n'}
+[3.322984] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__rosidl_typesupport_introspection_c.h\n'}
+[3.323256] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_introspection_c.h\n'}
+[3.325125] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_c.h\n'}
+[3.328519] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__rosidl_typesupport_introspection_c.h\n'}
+[3.328810] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_introspection_c.h\n'}
+[3.330173] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_c.h\n'}
+[3.330845] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h\n'}
+[3.331859] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_introspection_c.h\n'}
+[3.332177] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_introspection_c.h\n'}
+[3.332471] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__rosidl_typesupport_introspection_c.h\n'}
+[3.333995] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__rosidl_typesupport_introspection_c.h\n'}
+[3.334315] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_introspection_c.h\n'}
+[3.334918] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__rosidl_typesupport_introspection_c.h\n'}
+[3.336133] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.336659] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_c.h\n'}
+[3.338275] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armor.hpp\n'}
+[3.340432] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armors.hpp\n'}
+[3.341050] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/chassis_cmd.hpp\n'}
+[3.341402] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armor.hpp\n'}
+[3.342062] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armors.hpp\n'}
+[3.342961] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_light.hpp\n'}
+[3.343471] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_lights.hpp\n'}
+[3.343710] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_rune_angle.hpp\n'}
+[3.343989] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__builder.hpp\n'}
+[3.344464] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__struct.hpp\n'}
+[3.352310] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__traits.hpp\n'}
+[3.352792] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.hpp\n'}
+[3.353193] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__builder.hpp\n'}
+[3.353612] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__struct.hpp\n'}
+[3.354033] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__traits.hpp\n'}
+[3.354241] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.hpp\n'}
+[3.354416] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__builder.hpp\n'}
+[3.354609] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__struct.hpp\n'}
+[3.354788] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__traits.hpp\n'}
+[3.354981] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.hpp\n'}
+[3.355961] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__builder.hpp\n'}
+[3.357427] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__struct.hpp\n'}
+[3.358012] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__traits.hpp\n'}
+[3.358328] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.hpp\n'}
+[3.374865] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__builder.hpp\n'}
+[3.375643] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__struct.hpp\n'}
+[3.376550] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__traits.hpp\n'}
+[3.377024] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.hpp\n'}
+[3.377398] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__builder.hpp\n'}
+[3.377642] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__struct.hpp\n'}
+[3.377961] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__traits.hpp\n'}
+[3.378155] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.hpp\n'}
+[3.378388] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__builder.hpp\n'}
+[3.379067] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__struct.hpp\n'}
+[3.379299] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__traits.hpp\n'}
+[3.379459] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.hpp\n'}
+[3.380211] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__builder.hpp\n'}
+[3.381029] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__struct.hpp\n'}
+[3.382514] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__traits.hpp\n'}
+[3.383308] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.hpp\n'}
+[3.383860] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__builder.hpp\n'}
+[3.384804] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__struct.hpp\n'}
+[3.385501] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__traits.hpp\n'}
+[3.385842] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__type_support.hpp\n'}
+[3.386403] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__builder.hpp\n'}
+[3.386688] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__struct.hpp\n'}
+[3.386907] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__traits.hpp\n'}
+[3.387277] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.hpp\n'}
+[3.388622] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__builder.hpp\n'}
+[3.388838] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__struct.hpp\n'}
+[3.395521] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__traits.hpp\n'}
+[3.396081] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.hpp\n'}
+[3.396348] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__builder.hpp\n'}
+[3.396516] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__struct.hpp\n'}
+[3.396672] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__traits.hpp\n'}
+[3.396847] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__type_support.hpp\n'}
+[3.397581] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__builder.hpp\n'}
+[3.398060] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__struct.hpp\n'}
+[3.400029] (-) TimerEvent: {}
+[3.401149] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__traits.hpp\n'}
+[3.401694] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.hpp\n'}
+[3.408570] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__builder.hpp\n'}
+[3.409210] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__struct.hpp\n'}
+[3.409636] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__traits.hpp\n'}
+[3.410132] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.hpp\n'}
+[3.410529] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__builder.hpp\n'}
+[3.413194] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__struct.hpp\n'}
+[3.413527] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__traits.hpp\n'}
+[3.414097] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.hpp\n'}
+[3.414426] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__builder.hpp\n'}
+[3.415027] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__struct.hpp\n'}
+[3.416039] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__traits.hpp\n'}
+[3.416535] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.hpp\n'}
+[3.432735] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__builder.hpp\n'}
+[3.433323] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__struct.hpp\n'}
+[3.437638] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__traits.hpp\n'}
+[3.437870] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.hpp\n'}
+[3.438156] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__builder.hpp\n'}
+[3.438338] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__struct.hpp\n'}
+[3.438515] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__traits.hpp\n'}
+[3.438675] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__type_support.hpp\n'}
+[3.439012] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__builder.hpp\n'}
+[3.439184] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__struct.hpp\n'}
+[3.439366] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__traits.hpp\n'}
+[3.439550] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__type_support.hpp\n'}
+[3.439712] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__builder.hpp\n'}
+[3.439869] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__struct.hpp\n'}
+[3.440047] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__traits.hpp\n'}
+[3.440212] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.hpp\n'}
+[3.440444] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__builder.hpp\n'}
+[3.440633] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__struct.hpp\n'}
+[3.440794] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__traits.hpp\n'}
+[3.441197] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__type_support.hpp\n'}
+[3.441438] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/ekf_p.hpp\n'}
+[3.441639] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/gimbal_cmd.hpp\n'}
+[3.442954] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/judge_system_data.hpp\n'}
+[3.443873] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/limit_angle.hpp\n'}
+[3.444131] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/measurement.hpp\n'}
+[3.444687] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/operator_command.hpp\n'}
+[3.445208] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/point2d.hpp\n'}
+[3.445594] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.445950] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rune_target.hpp\n'}
+[3.446726] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/serial_receive_data.hpp\n'}
+[3.446990] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/shoot_fire_target.hpp\n'}
+[3.448328] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/shoot_fire_targets.hpp\n'}
+[3.448905] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/target.hpp\n'}
+[3.449443] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/want.hpp\n'}
+[3.449876] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__builder.hpp\n'}
+[3.450386] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__struct.hpp\n'}
+[3.450582] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__traits.hpp\n'}
+[3.450830] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.hpp\n'}
+[3.451550] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/set_mode.hpp\n'}
+[3.459278] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.459781] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.459990] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.460191] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.465999] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.466719] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.467678] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.470699] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.471042] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.471426] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.475169] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.475627] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.476007] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.476253] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.476635] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.477036] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.477370] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.477593] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.477897] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.478474] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.478689] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.479013] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.479371] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.479612] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.479890] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.480182] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.480538] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.508260] (-) TimerEvent: {}
+[3.508511] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.508864] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.509159] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.509349] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.509650] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/ekf_p__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.509815] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.509960] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.510096] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/limit_angle__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.510266] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.510478] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.510641] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.510794] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.511137] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.511690] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_target__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.512035] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/shoot_fire_targets__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.512227] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.519387] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/want__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.519638] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.519856] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/pythonpath.sh\n'}
+[3.520033] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/pythonpath.dsv\n'}
+[3.520264] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[3.520456] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[3.521166] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[3.521358] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[3.526954] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/__init__.py\n'}
+[3.527906] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[3.528122] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.528319] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.528478] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/__init__.py\n'}
+[3.528623] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_armor.py\n'}
+[3.528768] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_armor_s.c\n'}
+[3.528914] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_armors.py\n'}
+[3.529091] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_armors_s.c\n'}
+[3.529290] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_chassis_cmd.py\n'}
+[3.530965] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_chassis_cmd_s.c\n'}
+[3.531300] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_armor.py\n'}
+[3.531598] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_armor_s.c\n'}
+[3.532037] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_armors.py\n'}
+[3.535158] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_armors_s.c\n'}
+[3.535814] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_light.py\n'}
+[3.536172] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_light_s.c\n'}
+[3.536352] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_lights.py\n'}
+[3.536655] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_lights_s.c\n'}
+[3.536819] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_rune_angle.py\n'}
+[3.537026] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_debug_rune_angle_s.c\n'}
+[3.537212] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_ekf_p.py\n'}
+[3.541495] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_ekf_p_s.c\n'}
+[3.541775] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_gimbal_cmd.py\n'}
+[3.541954] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_gimbal_cmd_s.c\n'}
+[3.542157] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_judge_system_data.py\n'}
+[3.542365] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_judge_system_data_s.c\n'}
+[3.542510] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_limit_angle.py\n'}
+[3.542689] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_limit_angle_s.c\n'}
+[3.547697] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_measurement.py\n'}
+[3.548260] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_measurement_s.c\n'}
+[3.548635] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_operator_command.py\n'}
+[3.548983] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_operator_command_s.c\n'}
+[3.557493] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_point2d.py\n'}
+[3.558299] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_point2d_s.c\n'}
+[3.558733] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_rune_target.py\n'}
+[3.559227] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_rune_target_s.c\n'}
+[3.559406] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_serial_receive_data.py\n'}
+[3.559599] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_serial_receive_data_s.c\n'}
+[3.559761] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_shoot_fire_target.py\n'}
+[3.559888] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_shoot_fire_target_s.c\n'}
+[3.560011] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_shoot_fire_targets.py\n'}
+[3.560154] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_shoot_fire_targets_s.c\n'}
+[3.560275] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_target.py\n'}
+[3.560396] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_target_s.c\n'}
+[3.560567] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_want.py\n'}
+[3.560707] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg/_want_s.c\n'}
+[3.560830] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_c.so\n'}
+[3.561017] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.561153] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[3.561278] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/srv/__init__.py\n'}
+[3.561397] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/srv/_set_mode.py\n'}
+[3.561514] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/srv/_set_mode_s.c\n'}
+[3.561929] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.567655] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[3.568004] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_c.so\n'}
+[3.568249] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armor.idl\n'}
+[3.568501] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armors.idl\n'}
+[3.568897] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Target.idl\n'}
+[3.569631] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/RuneTarget.idl\n'}
+[3.569929] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Point2d.idl\n'}
+[3.570305] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/GimbalCmd.idl\n'}
+[3.570532] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ChassisCmd.idl\n'}
+[3.570873] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLight.idl\n'}
+[3.571065] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLights.idl\n'}
+[3.571501] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmor.idl\n'}
+[3.571736] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmors.idl\n'}
+[3.572117] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugRuneAngle.idl\n'}
+[3.572319] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Measurement.idl\n'}
+[3.573316] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/JudgeSystemData.idl\n'}
+[3.573684] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/OperatorCommand.idl\n'}
+[3.573835] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/SerialReceiveData.idl\n'}
+[3.576981] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/EkfP.idl\n'}
+[3.577449] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Want.idl\n'}
+[3.577824] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/LimitAngle.idl\n'}
+[3.578952] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTarget.idl\n'}
+[3.594216] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTargets.idl\n'}
+[3.595141] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/srv/SetMode.idl\n'}
+[3.595745] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armor.msg\n'}
+[3.596086] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Armors.msg\n'}
+[3.596586] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Target.msg\n'}
+[3.596842] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/RuneTarget.msg\n'}
+[3.597090] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Point2d.msg\n'}
+[3.597482] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/GimbalCmd.msg\n'}
+[3.597975] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ChassisCmd.msg\n'}
+[3.598178] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLight.msg\n'}
+[3.598479] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugLights.msg\n'}
+[3.598658] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmor.msg\n'}
+[3.605110] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugArmors.msg\n'}
+[3.605613] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/DebugRuneAngle.msg\n'}
+[3.605843] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Measurement.msg\n'}
+[3.606180] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/JudgeSystemData.msg\n'}
+[3.606930] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/OperatorCommand.msg\n'}
+[3.607115] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/SerialReceiveData.msg\n'}
+[3.607279] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/EkfP.msg\n'}
+[3.607629] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/Want.msg\n'}
+[3.607801] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/LimitAngle.msg\n'}
+[3.608061] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTarget.msg\n'}
+[3.608224] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/msg/ShootFireTargets.msg\n'}
+[3.608373] (-) TimerEvent: {}
+[3.608783] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/srv/SetMode.srv\n'}
+[3.609051] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/ament_index/resource_index/package_run_dependencies/rm_interfaces\n'}
+[3.609251] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/ament_index/resource_index/parent_prefix_path/rm_interfaces\n'}
+[3.609793] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/ament_prefix_path.sh\n'}
+[3.610385] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/ament_prefix_path.dsv\n'}
+[3.610535] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/path.sh\n'}
+[3.610698] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/environment/path.dsv\n'}
+[3.610841] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/local_setup.bash\n'}
+[3.610972] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/local_setup.sh\n'}
+[3.611139] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/local_setup.zsh\n'}
+[3.611281] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/local_setup.dsv\n'}
+[3.611409] (rm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.dsv\n'}
+[3.636794] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/ament_index/resource_index/packages/rm_interfaces\n'}
+[3.637184] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.637426] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.637825] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.638096] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.640649] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.642139] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.644752] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.653558] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfacesConfig.cmake\n'}
+[3.653940] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfacesConfig-version.cmake\n'}
+[3.654172] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/package.xml\n'}
+[3.654432] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_c.so\n'}
+[3.654600] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.657778] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.658136] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_c.so\n'}
+[3.658743] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.661671] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.662840] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.708495] (-) TimerEvent: {}
+[3.808881] (-) TimerEvent: {}
+[3.831200] (rm_interfaces) StdoutLine: {'line': b"Listing '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces'...\n"}
+[3.831712] (rm_interfaces) StdoutLine: {'line': b"Listing '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/msg'...\n"}
+[3.832013] (rm_interfaces) StdoutLine: {'line': b"Listing '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages/rm_interfaces/srv'...\n"}
+[3.862462] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_py.so\n'}
+[3.862972] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.863194] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.865235] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.865577] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.865799] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.866027] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.866277] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.866477] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.866685] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.866882] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.867094] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.867266] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.867446] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.867651] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.867853] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.868052] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_pyExport.cmake\n'}
+[3.868208] (rm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.872155] (rm_interfaces) CommandEnded: {'returncode': 0}
+[3.909441] (-) TimerEvent: {}
+[4.009995] (-) TimerEvent: {}
+[4.064488] (rm_interfaces) JobEnded: {'identifier': 'rm_interfaces', 'rc': 0}
+[4.066018] (cod_behavior) JobStarted: {'identifier': 'cod_behavior'}
+[4.091111] (cod_serial) JobStarted: {'identifier': 'cod_serial'}
+[4.110136] (-) TimerEvent: {}
+[4.210541] (-) TimerEvent: {}
+[4.311704] (-) TimerEvent: {}
+[4.414531] (-) TimerEvent: {}
+[4.515176] (-) TimerEvent: {}
+[4.615643] (-) TimerEvent: {}
+[4.716118] (-) TimerEvent: {}
+[4.816489] (-) TimerEvent: {}
+[4.917313] (-) TimerEvent: {}
+[4.985174] (cod_serial) JobProgress: {'identifier': 'cod_serial', 'progress': 'cmake'}
+[4.986778] (cod_serial) JobProgress: {'identifier': 'cod_serial', 'progress': 'build'}
+[4.986866] (cod_serial) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysl/ros2_ws/build/cod_serial', '--', '-j12', '-l12'], 'cwd': '/home/ysl/ros2_ws/build/cod_serial', 'env': OrderedDict({'TERM_SESSION_ID': '03d2a1a8-74cd-4482-9f64-b637209e9991', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/ros2_ws/install:/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/356_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/build/cod_serial', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[5.017443] (-) TimerEvent: {}
+[5.118392] (-) TimerEvent: {}
+[5.204329] (cod_behavior) JobProgress: {'identifier': 'cod_behavior', 'progress': 'cmake'}
+[5.204437] (cod_behavior) JobProgress: {'identifier': 'cod_behavior', 'progress': 'build'}
+[5.204512] (cod_behavior) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ysl/ros2_ws/build/cod_behavior', '--', '-j12', '-l12'], 'cwd': '/home/ysl/ros2_ws/build/cod_behavior', 'env': OrderedDict({'TERM_SESSION_ID': '03d2a1a8-74cd-4482-9f64-b637209e9991', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/ros2_ws/install:/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/356_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/build/cod_behavior', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[5.218494] (-) TimerEvent: {}
+[5.318986] (-) TimerEvent: {}
+[5.333591] (cod_serial) StdoutLine: {'line': b'[100%] Built target cod_serial\n'}
+[5.382507] (cod_serial) CommandEnded: {'returncode': 0}
+[5.385486] (cod_serial) JobProgress: {'identifier': 'cod_serial', 'progress': 'install'}
+[5.385601] (cod_serial) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ysl/ros2_ws/build/cod_serial'], 'cwd': '/home/ysl/ros2_ws/build/cod_serial', 'env': OrderedDict({'TERM_SESSION_ID': '03d2a1a8-74cd-4482-9f64-b637209e9991', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/ros2_ws/install:/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/356_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/build/cod_serial', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/ros2_ws/install/cod_serial:/home/ysl/ros2_ws/install/cod_behavior:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[5.419062] (-) TimerEvent: {}
+[5.453884] (cod_serial) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.454980] (cod_serial) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.457032] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/lib/cod_serial/cod_serial\n'}
+[5.458524] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/package_run_dependencies/cod_serial\n'}
+[5.459115] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/parent_prefix_path/cod_serial\n'}
+[5.460281] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/ament_prefix_path.sh\n'}
+[5.461450] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/ament_prefix_path.dsv\n'}
+[5.471837] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/path.sh\n'}
+[5.472318] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/path.dsv\n'}
+[5.472631] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.bash\n'}
+[5.473425] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.sh\n'}
+[5.477446] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.zsh\n'}
+[5.478852] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.dsv\n'}
+[5.480134] (cod_serial) StdoutLine: {'line': b'-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.dsv\n'}
+[5.511307] (cod_behavior) StdoutLine: {'line': b'[ 16%] Built target cod_behavior\n'}
+[5.519177] (-) TimerEvent: {}
+[5.540121] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/packages/cod_serial\n'}
+[5.545778] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/cmake/cod_serialConfig.cmake\n'}
+[5.552347] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/cmake/cod_serialConfig-version.cmake\n'}
+[5.552750] (cod_serial) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.xml\n'}
+[5.556180] (cod_serial) CommandEnded: {'returncode': 0}
+[5.588137] (cod_serial) JobEnded: {'identifier': 'cod_serial', 'rc': 0}
+[5.623875] (-) TimerEvent: {}
+[5.659576] (cod_behavior) StdoutLine: {'line': b'[ 33%] Built target test_2\n'}
+[5.727245] (-) TimerEvent: {}
+[5.805368] (cod_behavior) StdoutLine: {'line': b'[ 50%] Built target test_1\n'}
+[5.827418] (-) TimerEvent: {}
+[5.927921] (-) TimerEvent: {}
+[5.937295] (cod_behavior) StdoutLine: {'line': b'[ 66%] Built target msgtest\n'}
+[6.028382] (-) TimerEvent: {}
+[6.128896] (-) TimerEvent: {}
+[6.229376] (-) TimerEvent: {}
+[6.231569] (cod_behavior) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o\x1b[0m\n'}
+[6.329533] (-) TimerEvent: {}
+[6.430096] (-) TimerEvent: {}
+[6.540374] (-) TimerEvent: {}
+[6.641345] (-) TimerEvent: {}
+[6.741775] (-) TimerEvent: {}
+[6.842281] (-) TimerEvent: {}
+[6.942841] (-) TimerEvent: {}
+[7.046587] (-) TimerEvent: {}
+[7.147013] (-) TimerEvent: {}
+[7.249470] (-) TimerEvent: {}
+[7.350204] (-) TimerEvent: {}
+[7.450617] (-) TimerEvent: {}
+[7.551028] (-) TimerEvent: {}
+[7.651450] (-) TimerEvent: {}
+[7.752180] (-) TimerEvent: {}
+[7.853346] (-) TimerEvent: {}
+[7.954419] (-) TimerEvent: {}
+[8.058207] (-) TimerEvent: {}
+[8.158775] (-) TimerEvent: {}
+[8.259293] (-) TimerEvent: {}
+[8.361668] (-) TimerEvent: {}
+[8.462773] (-) TimerEvent: {}
+[8.563385] (-) TimerEvent: {}
+[8.663857] (-) TimerEvent: {}
+[8.765008] (-) TimerEvent: {}
+[8.865505] (-) TimerEvent: {}
+[8.965998] (-) TimerEvent: {}
+[9.069295] (-) TimerEvent: {}
+[9.169749] (-) TimerEvent: {}
+[9.271219] (-) TimerEvent: {}
+[9.371641] (-) TimerEvent: {}
+[9.472077] (-) TimerEvent: {}
+[9.572850] (-) TimerEvent: {}
+[9.673296] (-) TimerEvent: {}
+[9.773716] (-) TimerEvent: {}
+[9.874480] (-) TimerEvent: {}
+[9.975474] (-) TimerEvent: {}
+[10.076034] (-) TimerEvent: {}
+[10.176440] (-) TimerEvent: {}
+[10.276881] (-) TimerEvent: {}
+[10.377347] (-) TimerEvent: {}
+[10.477949] (-) TimerEvent: {}
+[10.579218] (-) TimerEvent: {}
+[10.680757] (-) TimerEvent: {}
+[10.781218] (-) TimerEvent: {}
+[10.881710] (-) TimerEvent: {}
+[10.982244] (-) TimerEvent: {}
+[11.082634] (-) TimerEvent: {}
+[11.183135] (-) TimerEvent: {}
+[11.283664] (-) TimerEvent: {}
+[11.384209] (-) TimerEvent: {}
+[11.485851] (-) TimerEvent: {}
+[11.586293] (-) TimerEvent: {}
+[11.686721] (-) TimerEvent: {}
+[11.787127] (-) TimerEvent: {}
+[11.887927] (-) TimerEvent: {}
+[11.988453] (-) TimerEvent: {}
+[12.088900] (-) TimerEvent: {}
+[12.189363] (-) TimerEvent: {}
+[12.289880] (-) TimerEvent: {}
+[12.390353] (-) TimerEvent: {}
+[12.490961] (-) TimerEvent: {}
+[12.591474] (-) TimerEvent: {}
+[12.692121] (-) TimerEvent: {}
+[12.792531] (-) TimerEvent: {}
+[12.892940] (-) TimerEvent: {}
+[12.993420] (-) TimerEvent: {}
+[13.093849] (-) TimerEvent: {}
+[13.194379] (-) TimerEvent: {}
+[13.294837] (-) TimerEvent: {}
+[13.395365] (-) TimerEvent: {}
+[13.495880] (-) TimerEvent: {}
+[13.596373] (-) TimerEvent: {}
+[13.696819] (-) TimerEvent: {}
+[13.797217] (-) TimerEvent: {}
+[13.898397] (-) TimerEvent: {}
+[13.998786] (-) TimerEvent: {}
+[14.101314] (-) TimerEvent: {}
+[14.201836] (-) TimerEvent: {}
+[14.302265] (-) TimerEvent: {}
+[14.403059] (-) TimerEvent: {}
+[14.503528] (-) TimerEvent: {}
+[14.604071] (-) TimerEvent: {}
+[14.704751] (-) TimerEvent: {}
+[14.805311] (-) TimerEvent: {}
+[14.905873] (-) TimerEvent: {}
+[15.009491] (-) TimerEvent: {}
+[15.110526] (-) TimerEvent: {}
+[15.211658] (-) TimerEvent: {}
+[15.312302] (-) TimerEvent: {}
+[15.412970] (-) TimerEvent: {}
+[15.513554] (-) TimerEvent: {}
+[15.614365] (-) TimerEvent: {}
+[15.714851] (-) TimerEvent: {}
+[15.815300] (-) TimerEvent: {}
+[15.915770] (-) TimerEvent: {}
+[16.016196] (-) TimerEvent: {}
+[16.116613] (-) TimerEvent: {}
+[16.217250] (-) TimerEvent: {}
+[16.317687] (-) TimerEvent: {}
+[16.418148] (-) TimerEvent: {}
+[16.518560] (-) TimerEvent: {}
+[16.619097] (-) TimerEvent: {}
+[16.719969] (-) TimerEvent: {}
+[16.822514] (-) TimerEvent: {}
+[16.923003] (-) TimerEvent: {}
+[17.024623] (-) TimerEvent: {}
+[17.125688] (-) TimerEvent: {}
+[17.226215] (-) TimerEvent: {}
+[17.326679] (-) TimerEvent: {}
+[17.427276] (-) TimerEvent: {}
+[17.527734] (-) TimerEvent: {}
+[17.628223] (-) TimerEvent: {}
+[17.728648] (-) TimerEvent: {}
+[17.830227] (-) TimerEvent: {}
+[17.930708] (-) TimerEvent: {}
+[18.031332] (-) TimerEvent: {}
+[18.131783] (-) TimerEvent: {}
+[18.232338] (-) TimerEvent: {}
+[18.332999] (-) TimerEvent: {}
+[18.433840] (-) TimerEvent: {}
+[18.534394] (-) TimerEvent: {}
+[18.634980] (-) TimerEvent: {}
+[18.736326] (-) TimerEvent: {}
+[18.836887] (-) TimerEvent: {}
+[18.937887] (-) TimerEvent: {}
+[19.038346] (-) TimerEvent: {}
+[19.139269] (-) TimerEvent: {}
+[19.242278] (-) TimerEvent: {}
+[19.342752] (-) TimerEvent: {}
+[19.443118] (-) TimerEvent: {}
+[19.543545] (-) TimerEvent: {}
+[19.644016] (-) TimerEvent: {}
+[19.744477] (-) TimerEvent: {}
+[19.844851] (-) TimerEvent: {}
+[19.945293] (-) TimerEvent: {}
+[20.046029] (-) TimerEvent: {}
+[20.146465] (-) TimerEvent: {}
+[20.247139] (-) TimerEvent: {}
+[20.348829] (-) TimerEvent: {}
+[20.449322] (-) TimerEvent: {}
+[20.550271] (-) TimerEvent: {}
+[20.651906] (-) TimerEvent: {}
+[20.752318] (-) TimerEvent: {}
+[20.859291] (-) TimerEvent: {}
+[20.959706] (-) TimerEvent: {}
+[21.060163] (-) TimerEvent: {}
+[21.173151] (-) TimerEvent: {}
+[21.282069] (-) TimerEvent: {}
+[21.383182] (-) TimerEvent: {}
+[21.484837] (-) TimerEvent: {}
+[21.589330] (-) TimerEvent: {}
+[21.690017] (-) TimerEvent: {}
+[21.720498] (cod_behavior) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4\x1b[m\x1b[K:\n'}
+[21.720978] (cod_behavior) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual BT::NodeStatus SendNav2Goal::\x1b[01;32m\x1b[Ktick\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.721257] (cod_behavior) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:102:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunable to find the promise type for this coroutine\n'}
+[21.721481] (cod_behavior) StderrLine: {'line': b'  102 |         if (\x1b[01;31m\x1b[Kco_await\x1b[m\x1b[K wait_for_goal_response(goal_handle_future, std::chrono::seconds(10)) !=\n'}
+[21.721757] (cod_behavior) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[21.790245] (-) TimerEvent: {}
+[21.893327] (-) TimerEvent: {}
+[21.993811] (-) TimerEvent: {}
+[22.094306] (-) TimerEvent: {}
+[22.195501] (-) TimerEvent: {}
+[22.296103] (-) TimerEvent: {}
+[22.399028] (-) TimerEvent: {}
+[22.502138] (-) TimerEvent: {}
+[22.602819] (-) TimerEvent: {}
+[22.703743] (-) TimerEvent: {}
+[22.804201] (-) TimerEvent: {}
+[22.905027] (-) TimerEvent: {}
+[23.005518] (-) TimerEvent: {}
+[23.106344] (-) TimerEvent: {}
+[23.206750] (-) TimerEvent: {}
+[23.307199] (-) TimerEvent: {}
+[23.407682] (-) TimerEvent: {}
+[23.508096] (-) TimerEvent: {}
+[23.608532] (-) TimerEvent: {}
+[23.708991] (-) TimerEvent: {}
+[23.809499] (-) TimerEvent: {}
+[23.910119] (-) TimerEvent: {}
+[24.010686] (-) TimerEvent: {}
+[24.111205] (-) TimerEvent: {}
+[24.211586] (-) TimerEvent: {}
+[24.312742] (-) TimerEvent: {}
+[24.413094] (-) TimerEvent: {}
+[24.513524] (-) TimerEvent: {}
+[24.613987] (-) TimerEvent: {}
+[24.714486] (-) TimerEvent: {}
+[24.814951] (-) TimerEvent: {}
+[24.915627] (-) TimerEvent: {}
+[25.016071] (-) TimerEvent: {}
+[25.116518] (-) TimerEvent: {}
+[25.217113] (-) TimerEvent: {}
+[25.317558] (-) TimerEvent: {}
+[25.418122] (-) TimerEvent: {}
+[25.518621] (-) TimerEvent: {}
+[25.619058] (-) TimerEvent: {}
+[25.719846] (-) TimerEvent: {}
+[25.820562] (-) TimerEvent: {}
+[25.920958] (-) TimerEvent: {}
+[26.021357] (-) TimerEvent: {}
+[26.123094] (-) TimerEvent: {}
+[26.223524] (-) TimerEvent: {}
+[26.324828] (-) TimerEvent: {}
+[26.425346] (-) TimerEvent: {}
+[26.525999] (-) TimerEvent: {}
+[26.628622] (-) TimerEvent: {}
+[26.731763] (-) TimerEvent: {}
+[26.832393] (-) TimerEvent: {}
+[26.934446] (-) TimerEvent: {}
+[27.035020] (-) TimerEvent: {}
+[27.135589] (-) TimerEvent: {}
+[27.236422] (-) TimerEvent: {}
+[27.337220] (-) TimerEvent: {}
+[27.437669] (-) TimerEvent: {}
+[27.539297] (-) TimerEvent: {}
+[27.640064] (-) TimerEvent: {}
+[27.741604] (-) TimerEvent: {}
+[27.842133] (-) TimerEvent: {}
+[27.943921] (-) TimerEvent: {}
+[28.044570] (-) TimerEvent: {}
+[28.145470] (-) TimerEvent: {}
+[28.245862] (-) TimerEvent: {}
+[28.346209] (-) TimerEvent: {}
+[28.446667] (-) TimerEvent: {}
+[28.547195] (-) TimerEvent: {}
+[28.647693] (-) TimerEvent: {}
+[28.748179] (-) TimerEvent: {}
+[28.850084] (-) TimerEvent: {}
+[28.950596] (-) TimerEvent: {}
+[29.051105] (-) TimerEvent: {}
+[29.151756] (-) TimerEvent: {}
+[29.253161] (-) TimerEvent: {}
+[29.353669] (-) TimerEvent: {}
+[29.454076] (-) TimerEvent: {}
+[29.555386] (-) TimerEvent: {}
+[29.655824] (-) TimerEvent: {}
+[29.756198] (-) TimerEvent: {}
+[29.856562] (-) TimerEvent: {}
+[29.956962] (-) TimerEvent: {}
+[30.057560] (-) TimerEvent: {}
+[30.159390] (-) TimerEvent: {}
+[30.260838] (-) TimerEvent: {}
+[30.361916] (-) TimerEvent: {}
+[30.463140] (-) TimerEvent: {}
+[30.563707] (-) TimerEvent: {}
+[30.664259] (-) TimerEvent: {}
+[30.764690] (-) TimerEvent: {}
+[30.865270] (-) TimerEvent: {}
+[30.965988] (-) TimerEvent: {}
+[31.066817] (-) TimerEvent: {}
+[31.167531] (-) TimerEvent: {}
+[31.267905] (-) TimerEvent: {}
+[31.368340] (-) TimerEvent: {}
+[31.468914] (-) TimerEvent: {}
+[31.569510] (-) TimerEvent: {}
+[31.669954] (-) TimerEvent: {}
+[31.770505] (-) TimerEvent: {}
+[31.870949] (-) TimerEvent: {}
+[31.971528] (-) TimerEvent: {}
+[32.071993] (-) TimerEvent: {}
+[32.172447] (-) TimerEvent: {}
+[32.272875] (-) TimerEvent: {}
+[32.378422] (-) TimerEvent: {}
+[32.481324] (-) TimerEvent: {}
+[32.582113] (-) TimerEvent: {}
+[32.684611] (-) TimerEvent: {}
+[32.785059] (-) TimerEvent: {}
+[32.885658] (-) TimerEvent: {}
+[32.992095] (-) TimerEvent: {}
+[33.092759] (-) TimerEvent: {}
+[33.193188] (-) TimerEvent: {}
+[33.293636] (-) TimerEvent: {}
+[33.394042] (-) TimerEvent: {}
+[33.494573] (-) TimerEvent: {}
+[33.595003] (-) TimerEvent: {}
+[33.695506] (-) TimerEvent: {}
+[33.797164] (-) TimerEvent: {}
+[33.897668] (-) TimerEvent: {}
+[33.999142] (-) TimerEvent: {}
+[34.099542] (-) TimerEvent: {}
+[34.200303] (-) TimerEvent: {}
+[34.300737] (-) TimerEvent: {}
+[34.401309] (-) TimerEvent: {}
+[34.503909] (-) TimerEvent: {}
+[34.604326] (-) TimerEvent: {}
+[34.705272] (-) TimerEvent: {}
+[34.805849] (-) TimerEvent: {}
+[34.906375] (-) TimerEvent: {}
+[35.006791] (-) TimerEvent: {}
+[35.107404] (-) TimerEvent: {}
+[35.207955] (-) TimerEvent: {}
+[35.308473] (-) TimerEvent: {}
+[35.409209] (-) TimerEvent: {}
+[35.509889] (-) TimerEvent: {}
+[35.613220] (-) TimerEvent: {}
+[35.713631] (-) TimerEvent: {}
+[35.814069] (-) TimerEvent: {}
+[35.914527] (-) TimerEvent: {}
+[36.015495] (-) TimerEvent: {}
+[36.115908] (-) TimerEvent: {}
+[36.216328] (-) TimerEvent: {}
+[36.316755] (-) TimerEvent: {}
+[36.417297] (-) TimerEvent: {}
+[36.517798] (-) TimerEvent: {}
+[36.618232] (-) TimerEvent: {}
+[36.718825] (-) TimerEvent: {}
+[36.819283] (-) TimerEvent: {}
+[36.919776] (-) TimerEvent: {}
+[37.020287] (-) TimerEvent: {}
+[37.120694] (-) TimerEvent: {}
+[37.194561] (cod_behavior) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1\n'}
+[37.197300] (cod_behavior) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2\n'}
+[37.197617] (cod_behavior) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[37.200500] (cod_behavior) CommandEnded: {'returncode': 2}
+[37.220840] (-) TimerEvent: {}
+[37.221326] (cod_behavior) JobEnded: {'identifier': 'cod_behavior', 'rc': 2}
+[37.224083] (-) EventReactorShutdown: {}
