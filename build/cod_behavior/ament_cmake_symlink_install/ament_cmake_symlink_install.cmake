@@ -325,6 +325,9 @@ include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_target
 # install("TARGETS" "test_1" "DESTINATION" "lib/cod_behavior")
 include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
+# install("TARGETS" "test_2" "DESTINATION" "lib/cod_behavior")
+include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
 # install(DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
 ament_cmake_symlink_install_directory("/home/ysl/ros2_ws/COD_Behavior" DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
 

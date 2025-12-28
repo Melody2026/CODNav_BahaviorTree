@@ -3,11 +3,37 @@
 //
 #include "../include/cod_behavior/tree_1_action.h"
 #include "behaviortree_cpp/loggers/groot2_publisher.h"
+geometry_msgs::msg::PoseStamped
+loadPoseStamped(
+	const rclcpp::Node::SharedPtr& node,
+	const std::string& prefix)
+{
+	geometry_msgs::msg::PoseStamped pose;
 
+	pose.header.frame_id =
+		node->get_parameter(prefix + ".frame_id").as_string();
+
+	pose.pose.position.x =
+		node->get_parameter(prefix + ".position.x").as_double();
+	pose.pose.position.y =
+		node->get_parameter(prefix + ".position.y").as_double();
+	pose.pose.position.z =
+		node->get_parameter(prefix + ".position.z").as_double();
+	pose.pose.orientation.w =
+		node->get_parameter(prefix + ".orientation.w").as_double();
+	return pose;
+}
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    const auto node = std::make_shared<rclcpp::Node>("bt_demo_node");
+
+	rclcpp::NodeOptions options;
+	options.automatically_declare_parameters_from_overrides(true);
+
+	auto node_ = std::make_shared<rclcpp::Node>(
+		"cod_behavior",
+		options
+	);
 
     // 创建行为树工厂
     BT::BehaviorTreeFactory factory;
@@ -35,38 +61,28 @@ int main(int argc, char** argv)
         // 创建目标位置
         auto blackboard = tree.rootBlackboard();
 
-        geometry_msgs::msg::PoseStamped maingoal = makePose(node.get(),1.0,1.0);
-        blackboard->set<geometry_msgs::msg::PoseStamped>("main_position", maingoal);
+    	auto maingoal = loadPoseStamped(node_, "nav_pose.main");
+    	auto homegoal = loadPoseStamped(node_, "nav_pose.home");
 
-        geometry_msgs::msg::PoseStamped homegoal = makePose(node.get(),1.0,1.0);
-        blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
-
-/*
-        position heroposition;
-        heroposition.x = 0.0;
-        heroposition.y = 0.0;
-        blackboard->set<position>("position", heroposition);
-*/
-
-		//geometry_msgs::msg::PoseStamped heroposition;
-        //blackboard->set<geometry_msgs::msg::PoseStamped>("position", heroposition);
+    	blackboard->set<geometry_msgs::msg::PoseStamped>("main_position", maingoal);
+    	blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
 
 		std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
         blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped>>("position", pose_map);
 
 		//记录血量
-		double hp;
-        blackboard->set<double>("hp", hp);
+		 double hp = {};
+         blackboard->set<double>("hp", hp);
 
 		//记录增益区状态
-		bool zone_status;
+		bool zone_status = {};
         blackboard->set<bool>("zone_status", zone_status);
 
 		//强攻巡逻路线
 		std::vector<geometry_msgs::msg::PoseStamped> patrol_points;
-		patrol_points.push_back(makePose(node.get(),1.0, 0.0));
-		patrol_points.push_back(makePose(node.get(),2.0, 1.0));
-		patrol_points.push_back(makePose(node.get(),0.0, -1.0));
+		patrol_points.push_back(loadPoseStamped(node_, "patrol_pose.first"));
+		patrol_points.push_back(loadPoseStamped(node_, "patrol_pose.second"));
+		patrol_points.push_back(loadPoseStamped(node_, "patrol_pose.third"));
 		blackboard->set<std::vector<geometry_msgs::msg::PoseStamped>>("patrol_points", patrol_points);
 		blackboard->set<int>("patrol_index", 0); //设置并初始化巡逻索引
 
@@ -74,7 +90,7 @@ int main(int argc, char** argv)
         tree.tickWhileRunning();
 
     } catch (const std::exception& e) {
-        RCLCPP_ERROR(node->get_logger(), "加载或执行行为树时出错: %s", e.what());
+        RCLCPP_ERROR(node_->get_logger(), "加载或执行行为树时出错: %s", e.what());
         return 1;
     }
 

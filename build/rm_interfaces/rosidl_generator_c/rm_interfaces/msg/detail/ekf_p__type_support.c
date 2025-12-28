@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/ekf_p__struct.h"
 #include "rm_interfaces/msg/detail/ekf_p__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/ekf_p__type_support.h"
 
 #ifdef __cplusplus

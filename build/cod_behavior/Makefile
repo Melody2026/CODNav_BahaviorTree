@@ -262,6 +262,19 @@ test_1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/build
 .PHONY : test_1/fast
 
+#=============================================================================
+# Target rules for targets named test_2
+
+# Build rule for target.
+test_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_2
+.PHONY : test_2
+
+# fast build rule for target.
+test_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/build
+.PHONY : test_2/fast
+
 src/CheckNavResult.o: src/CheckNavResult.cpp.o
 .PHONY : src/CheckNavResult.o
 
@@ -382,6 +395,30 @@ test/test1_FullStatus.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.s
 .PHONY : test/test1_FullStatus.cpp.s
 
+test/test2_PoorStatus.o: test/test2_PoorStatus.cpp.o
+.PHONY : test/test2_PoorStatus.o
+
+# target to build an object file
+test/test2_PoorStatus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.o
+.PHONY : test/test2_PoorStatus.cpp.o
+
+test/test2_PoorStatus.i: test/test2_PoorStatus.cpp.i
+.PHONY : test/test2_PoorStatus.i
+
+# target to preprocess a source file
+test/test2_PoorStatus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.i
+.PHONY : test/test2_PoorStatus.cpp.i
+
+test/test2_PoorStatus.s: test/test2_PoorStatus.cpp.s
+.PHONY : test/test2_PoorStatus.s
+
+# target to generate assembly for a file
+test/test2_PoorStatus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.s
+.PHONY : test/test2_PoorStatus.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -401,6 +438,7 @@ help:
 	@echo "... cod_behavior"
 	@echo "... msgtest"
 	@echo "... test_1"
+	@echo "... test_2"
 	@echo "... tree_1"
 	@echo "... src/CheckNavResult.o"
 	@echo "... src/CheckNavResult.i"
@@ -417,6 +455,9 @@ help:
 	@echo "... test/test1_FullStatus.o"
 	@echo "... test/test1_FullStatus.i"
 	@echo "... test/test1_FullStatus.s"
+	@echo "... test/test2_PoorStatus.o"
+	@echo "... test/test2_PoorStatus.i"
+	@echo "... test/test2_PoorStatus.s"
 .PHONY : help
 
 

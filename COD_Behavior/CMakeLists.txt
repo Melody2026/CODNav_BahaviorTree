@@ -18,12 +18,15 @@ find_package(example_interfaces REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rm_interfaces REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 add_executable(cod_behavior src/sentry_behavior.cpp)
 add_executable(checkNavResult src/CheckNavResult.cpp)
 add_executable(tree_1 src/tree_1.cpp)
 add_executable(msgtest test/msgTest.cpp)
 add_executable(test_1 test/test1_FullStatus.cpp)
+add_executable(test_2 test/test2_PoorStatus.cpp)
+
 
 
 ament_target_dependencies(cod_behavior
@@ -51,12 +54,17 @@ ament_target_dependencies(tree_1
         geometry_msgs
         behaviortree_cpp
         rm_interfaces
+        tf2_geometry_msgs
 )
 ament_target_dependencies(msgtest
         rm_interfaces
         rclcpp
 )
 ament_target_dependencies(test_1
+        rm_interfaces
+        rclcpp
+)
+ament_target_dependencies(test_2
         rm_interfaces
         rclcpp
 )
@@ -78,6 +86,9 @@ install(TARGETS msgtest
         DESTINATION lib/${PROJECT_NAME}
 )
 install(TARGETS test_1
+        DESTINATION lib/${PROJECT_NAME}
+)
+install(TARGETS test_2
         DESTINATION lib/${PROJECT_NAME}
 )
 

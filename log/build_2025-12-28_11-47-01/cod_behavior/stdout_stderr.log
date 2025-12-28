@@ -1,0 +1,13 @@
+[ 16%] Built target cod_behavior
+[ 33%] Built target test_2
+[ 50%] Built target test_1
+[ 66%] Built target msgtest
+[ 75%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4[m[K:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus WriteToBlackboard::[01;32m[Ktick[m[K()[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:111:54:[m[K [01;31m[Kerror: [m[K‘[01m[KmakePose[m[K’ was not declared in this scope
+  111 |                         pose_map["heroposition"]   = [01;31m[KmakePose[m[K(node_.get(), 0.0, 0.0);
+      |                                                      [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

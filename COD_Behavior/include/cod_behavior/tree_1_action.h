@@ -9,28 +9,12 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "std_msgs/msg/int32.hpp"
 #include <rm_interfaces/msg/serial_receive_data.hpp>
 #include <coroutine>
 #include <unordered_map>
-
-geometry_msgs::msg::PoseStamped makePose(
-    	rclcpp::Node* node,
-    	double x, double y,
-    	const std::string& frame = "map")
-	{
-    	geometry_msgs::msg::PoseStamped p;
-    	p.header.frame_id = frame;
-    	p.header.stamp = node->now();
-
-    	p.pose.position.x = x;
-   	 	p.pose.position.y = y;
-    	p.pose.position.z = 0.0;
-    	p.pose.orientation.w = 1.0;
-
-    	return p;
-	}
 
 class SendNav2Goal : public BT::CoroActionNode
 {
@@ -107,13 +91,13 @@ public:
         {
             return { BT::OutputPort<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped>>("Position"),
 					 BT::OutputPort<double>("Hp"),
-					 BT::OutputPort<int>("Zone_status") };
+					 BT::OutputPort<bool>("Zone_status") };
         }
 
 		//设置参数
 		std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
 		double hp;
-		int zone_status;
+		bool zone_status;
 
         BT::NodeStatus tick() override
         {
@@ -124,9 +108,9 @@ public:
 				return BT::NodeStatus::SUCCESS;
 
            //设置英雄，步兵，哨兵的位置坐标 后面根据消息做修改
-			pose_map["heroposition"]   = makePose(node_.get(), 0.0, 0.0);
-			pose_map["infantryposition"] = makePose(node_.get(), 0.0, 0.0);
-			pose_map["sentinelposition"] = makePose(node_.get(), 1.0, 1.0);
+			// pose_map["heroposition"]   = makePose(node_.get(), 0.0, 0.0);
+			// pose_map["infantryposition"] = makePose(node_.get(), 0.0, 0.0);
+			// pose_map["sentinelposition"] = makePose(node_.get(), 1.0, 1.0);
 			//写入黑板
             setOutput("Position",pose_map);
 			setOutput("Hp",hp);
@@ -134,19 +118,6 @@ public:
 
 			std::cout<<"zone_status:"<<zone_status<<std::endl;
              return BT::NodeStatus::SUCCESS;
-
-
-
-			//设置hp值 后面根据消息做修改
-			//hp = 200.0;
-
-			//
-			//zone_status = true;
-
-
-
-
-            return BT::NodeStatus::SUCCESS;
         }
 		void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg){
 			hp = static_cast<double>(msg->judge_system_data.hp);
@@ -202,6 +173,7 @@ public:
 	}
 	BT::NodeStatus tick() override{
 		auto hp_ = getInput<double>("Hp");
+
 		if (!hp_)
 		{
     		throw BT::RuntimeError(
@@ -209,9 +181,13 @@ public:
     		);
 		}
 double hp = hp_.value();
+//double hp = 100;
 std::cout<<"hp:"<<hp<<std::endl;
-		if(hp<90)
-			return BT::NodeStatus::SUCCESS;
+		if(hp<90){
+		std::cout << "hp < 90\n";
+		return BT::NodeStatus::SUCCESS;
+}
+
 		return BT::NodeStatus::FAILURE;
 	}
 private:
@@ -224,7 +200,7 @@ public:
 		: BT::ConditionNode(name, config){ std::cout<<"IsPatrolCondition: start"<<std::endl; }
 	static BT::PortsList providedPorts(){
 		return { BT::InputPort<double>("Hp"),
-				 BT::InputPort<int>("Zone_status") };
+				 BT::InputPort<bool>("Zone_status") };
 	}
 	BT::NodeStatus tick() override{
 
@@ -238,7 +214,7 @@ public:
 		}
 		std::cout<<"Hp:"<<hp_.value()<<std::endl;
 
-		auto zone_status_ = getInput<int>("Zone_status");
+		auto zone_status_ = getInput<bool>("Zone_status");
 		//std::cout<<"zone_status:"<<zone_status_.value()<<std::endl;
 		if (!zone_status_)
 		{

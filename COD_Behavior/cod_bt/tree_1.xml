@@ -2,74 +2,37 @@
 <root BTCPP_format="4"
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
-    <Sequence>
-      <SendNav2Goal goal_pose="{main_position}"/>
-      <KeepRunningUntilFailure>
-        <Fallback>
-          <Inverter>
-            <Sequence>
-              <WriteToBlackboard Position="{position}"
-                                 Hp="{hp}"
-                                 Zone_status="{zone_status}"/>
-              <test test="{zone_status}"/>
-            </Sequence>
-          </Inverter>
-          <Sequence>
-            <HpCondition Hp="{hp}"/>
-            <SendNav2Goal goal_pose="{home_position}"/>
-          </Sequence>
-          <SubTree ID="Patrol_tree"
-                   hp="{hp}"
-                   zone_status="{zone_status}"
-                   patrol_points="{patrol_points}"
-                   patrol_index="{patrol_index}"/>
-          <AlwaysSuccess/>
-        </Fallback>
-      </KeepRunningUntilFailure>
-    </Sequence>
-  </BehaviorTree>
-
-  <BehaviorTree ID="Patrol_tree">
-    <Sequence>
-      <test test="{zone_status}"/>
-      <IsPatrolCondition Hp="{hp}"
-                         Zone_status="{zone_status}"/>
-      <GetNextPatrolPose Patrol_pose="{patrol_pose}"/>
-      <SendNav2Goal goal_pose="{patrol_pose}"/>
-      <UpdataPatrolIndex/>
-    </Sequence>
+    <KeepRunningUntilFailure>
+      <Fallback>
+        <Inverter>
+          <WriteToBlackboard Position="{position}"
+                             Hp="{hp}"
+                             Zone_status="{zone_status}"/>
+        </Inverter>
+        <Sequence>
+          <HpCondition Hp="{hp}"/>
+          <SendNav2Goal goal_pose="{home_position}"/>
+        </Sequence>
+        <SendNav2Goal goal_pose="{main_position}"/>
+      </Fallback>
+    </KeepRunningUntilFailure>
   </BehaviorTree>
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="GetNextPatrolPose"
-            editable="true">
-      <output_port name="Patrol_pose"/>
-    </Action>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
-    </Condition>
-    <Condition ID="IsPatrolCondition"
-               editable="true">
-      <input_port name="Hp"/>
-      <input_port name="Zone_status"/>
     </Condition>
     <Action ID="SendNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>
     </Action>
-    <Action ID="UpdataPatrolIndex"
-            editable="true"/>
     <Action ID="WriteToBlackboard"
             editable="true">
-      <inout_port name="Position"/>
-      <inout_port name="Hp"/>
+      <output_port name="Position"/>
+      <output_port name="Hp"/>
       <output_port name="Zone_status"/>
-    </Action>
-    <Action ID="test"
-            editable="true">
-      <input_port name="test"/>
     </Action>
   </TreeNodesModel>
 

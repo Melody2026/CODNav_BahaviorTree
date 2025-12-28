@@ -68,6 +68,7 @@ all: CMakeFiles/checkNavResult.dir/all
 all: CMakeFiles/tree_1.dir/all
 all: CMakeFiles/msgtest.dir/all
 all: CMakeFiles/test_1.dir/all
+all: CMakeFiles/test_2.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -82,6 +83,7 @@ clean: CMakeFiles/checkNavResult.dir/clean
 clean: CMakeFiles/tree_1.dir/clean
 clean: CMakeFiles/msgtest.dir/clean
 clean: CMakeFiles/test_1.dir/clean
+clean: CMakeFiles/test_2.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -195,7 +197,7 @@ CMakeFiles/checkNavResult.dir/clean:
 CMakeFiles/tree_1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_1.dir/build.make CMakeFiles/tree_1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_1.dir/build.make CMakeFiles/tree_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles --progress-num=9,10 "Built target tree_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles --progress-num=11,12 "Built target tree_1"
 .PHONY : CMakeFiles/tree_1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -265,6 +267,32 @@ test_1: CMakeFiles/test_1.dir/rule
 CMakeFiles/test_1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/clean
 .PHONY : CMakeFiles/test_1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_2.dir
+
+# All Build rule for target.
+CMakeFiles/test_2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles --progress-num=9,10 "Built target test_2"
+.PHONY : CMakeFiles/test_2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles 0
+.PHONY : CMakeFiles/test_2.dir/rule
+
+# Convenience name for target.
+test_2: CMakeFiles/test_2.dir/rule
+.PHONY : test_2
+
+# clean rule for target.
+CMakeFiles/test_2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/clean
+.PHONY : CMakeFiles/test_2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

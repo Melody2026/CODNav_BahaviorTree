@@ -49,6 +49,7 @@ public:
     auto goal_msg = nav2_msgs::action::NavigateToPose::Goal();
     goal_msg.pose = *goal_pose;
 
+
     // 异步发送导航目标
     std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> goal_handle_future = action_client_->async_send_goal(goal_msg);
 

@@ -18,6 +18,7 @@ int main(int argc, char** argv)
     factory.registerNodeType<lowpower>("lowpower");
     factory.registerNodeType<qsbroke>("qsbroke");
 
+
     // 使用XML字符串定义行为树
     const std::string cod_bt = "/home/ysl/ros2_ws/COD_Behavior/cod_bt/t1.xml";
 
