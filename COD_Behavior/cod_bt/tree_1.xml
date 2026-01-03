@@ -3,26 +3,36 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <SendNav2Goal goal_pose="{main_position}"/>
+      <RetryUntilSuccessful num_attempts="9999">
+        <Parallel failure_count="2"
+                  success_count="2">
+          <SendNav2Goal goal_pose="{main_position}"/>
+          <CheckNavArrived goal_pose="{main_position}"
+                           tolerance="0.3"/>
+        </Parallel>
+      </RetryUntilSuccessful>
       <KeepRunningUntilFailure>
         <Fallback>
           <Inverter>
-            <Sequence>
-              <WriteToBlackboard Position="{position}"
-                                 Hp="{hp}"
-                                 Zone_status="{zone_status}"/>
-              <test test="{zone_status}"/>
-            </Sequence>
+            <WriteToBlackboard Position="{position}"
+                               Hp="{hp}"
+                               Zone_status="{zone_status}"/>
           </Inverter>
           <Sequence>
             <HpCondition Hp="{hp}"/>
-            <SendNav2Goal goal_pose="{home_position}"/>
+            <Parallel failure_count="2"
+                      success_count="2">
+              <SendNav2Goal goal_pose="{home_position}"/>
+              <CheckNavArrived goal_pose="{home_position}"
+                               tolerance="0.3"/>
+            </Parallel>
           </Sequence>
-          <SubTree ID="Patrol_tree"
-                   hp="{hp}"
-                   zone_status="{zone_status}"
-                   patrol_points="{patrol_points}"
-                   patrol_index="{patrol_index}"/>
+          <Parallel failure_count="2"
+                    success_count="2">
+            <SendNav2Goal goal_pose="{home_position}"/>
+            <CheckNavArrived goal_pose="{home_position}"
+                             tolerance="0.3"/>
+          </Parallel>
           <AlwaysSuccess/>
         </Fallback>
       </KeepRunningUntilFailure>
@@ -41,6 +51,11 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Condition ID="CheckNavArrived"
+               editable="true">
+      <input_port name="goal_pose"/>
+      <input_port name="tolerance"/>
+    </Condition>
     <Action ID="GetNextPatrolPose"
             editable="true">
       <output_port name="Patrol_pose"/>
@@ -65,10 +80,6 @@
       <inout_port name="Position"/>
       <inout_port name="Hp"/>
       <output_port name="Zone_status"/>
-    </Action>
-    <Action ID="test"
-            editable="true">
-      <input_port name="test"/>
     </Action>
   </TreeNodesModel>
 

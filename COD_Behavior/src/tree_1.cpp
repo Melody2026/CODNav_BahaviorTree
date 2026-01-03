@@ -27,6 +27,8 @@ int main(int argc, char** argv)
 	factory.registerNodeType<IsPatrolCondition>("IsPatrolCondition");
 	factory.registerNodeType<GetNextPatrolPose>("GetNextPatrolPose");
 	factory.registerNodeType<UpdataPatrolIndex>("UpdataPatrolIndex");
+	factory.registerNodeType<CheckNavArrived>("CheckNavArrived");
+
 	//factory.registerNodeType<UpdataPatrolIndex>("UpdataPatrolIndex");
 
 

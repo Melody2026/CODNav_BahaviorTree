@@ -15,12 +15,14 @@
 #include <rm_interfaces/msg/serial_receive_data.hpp>
 #include <coroutine>
 #include <unordered_map>
+#include <chrono>
+
 geometry_msgs::msg::PoseStamped
 loadPoseStamped(
 	const rclcpp::Node::SharedPtr& node,
 	const std::string& prefix)
 {
-	geometry_msgs::msg::PoseStamped pose;
+ 	geometry_msgs::msg::PoseStamped pose;
 
 	pose.header.frame_id =
 		node->get_parameter(prefix + ".frame_id").as_string();
@@ -39,58 +41,130 @@ loadPoseStamped(
 class SendNav2Goal : public BT::CoroActionNode
 {
 public:
-    SendNav2Goal(const std::string& name, const BT::NodeConfiguration& config)
-        : CoroActionNode(name, config)
-    {
+	SendNav2Goal(const std::string& name, const BT::NodeConfiguration& config)
+		: CoroActionNode(name, config)
+	{
 		std::cout<<"SendNav2Goal: start"<<std::endl;
-        node_ = rclcpp::Node::make_shared("nav2_goal_client");
-        action_client_ = rclcpp_action::create_client<nav2_msgs::action::NavigateToPose>(
-            node_, "navigate_to_pose");
-    }
+		node_ = rclcpp::Node::make_shared("nav2_goal_client");
+		action_client_ = rclcpp_action::create_client<nav2_msgs::action::NavigateToPose>(
+			node_, "navigate_to_pose");
+	}
 
-    static BT::PortsList providedPorts()
-    {
-        return { BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose", "导航目标位置") };
-    }
+	static BT::PortsList providedPorts()
+	{
+		return { BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose", "导航目标位置") };
+	}
 
-    // 实现tick方法，使用协程
-    BT::NodeStatus tick() override
-{
-    RCLCPP_INFO(node_->get_logger(), "发送导航目标...");
+	// 实现tick方法，使用协程
+	BT::NodeStatus tick() override
+	{
+		RCLCPP_INFO(node_->get_logger(), "发送导航目标...");
 
-    // 检查服务器是否可用
-    if (!action_client_->wait_for_action_server(std::chrono::seconds(5))) {
-        RCLCPP_ERROR(node_->get_logger(), "Nav2 Action server not available");
-        return BT::NodeStatus::FAILURE;
-    }
+		// 检查服务器是否可用
+		if (!action_client_->wait_for_action_server(std::chrono::seconds(5))) {
+			RCLCPP_ERROR(node_->get_logger(), "Nav2 Action server not available");
+			return BT::NodeStatus::FAILURE;
+		}
 
-    // 从端口获取目标位置
-    auto goal_pose = getInput<geometry_msgs::msg::PoseStamped>("goal_pose");
-    if (!goal_pose) {
-        RCLCPP_ERROR(node_->get_logger(), "目标位置未指定");
-        return BT::NodeStatus::FAILURE;
-    }
+		// 从端口获取目标位置
+		auto goal_pose = getInput<geometry_msgs::msg::PoseStamped>("goal_pose");
+		if (!goal_pose) {
+			RCLCPP_ERROR(node_->get_logger(), "目标位置未指定");
+			return BT::NodeStatus::FAILURE;
+		}
 
-    // 创建导航目标
-    auto goal_msg = nav2_msgs::action::NavigateToPose::Goal();
-    goal_msg.pose = *goal_pose;
+		// 创建导航目标
+		auto goal_msg = nav2_msgs::action::NavigateToPose::Goal();
+		goal_msg.pose = *goal_pose;
 
-    // 异步发送导航目标
-    std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> goal_handle_future = action_client_->async_send_goal(goal_msg);
+		// 异步发送导航目标
+		std::shared_future<rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr> goal_handle_future = action_client_->async_send_goal(goal_msg);
 
-    // 等待异步任务完成
-    if (rclcpp::spin_until_future_complete(node_, goal_handle_future) != rclcpp::FutureReturnCode::SUCCESS) {
-        RCLCPP_ERROR(node_->get_logger(), "发送导航目标失败");
-        return BT::NodeStatus::FAILURE;
-    }
+		// 等待异步任务完成
+		if (rclcpp::spin_until_future_complete(node_, goal_handle_future) != rclcpp::FutureReturnCode::SUCCESS) {
+			RCLCPP_ERROR(node_->get_logger(), "发送导航目标失败");
+			return BT::NodeStatus::FAILURE;
+		}
 
-    RCLCPP_INFO(node_->get_logger(), "导航目标发送成功");
-    return BT::NodeStatus::SUCCESS;
-}
+		RCLCPP_INFO(node_->get_logger(), "导航目标发送成功");
+		return BT::NodeStatus::SUCCESS;
+	}
 
 private:
-    rclcpp::Node::SharedPtr node_;
-    rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr action_client_;
+	rclcpp::Node::SharedPtr node_;
+	rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr action_client_;
+};
+
+class CheckNavArrived : public BT::ConditionNode
+{
+public:
+	CheckNavArrived(const std::string& name,
+					const BT::NodeConfiguration& config)
+	  : BT::ConditionNode(name, config)
+	{
+		node_ = rclcpp::Node::make_shared("check_nav_arrived");
+
+		pose_sub_ = node_->create_subscription<
+			geometry_msgs::msg::PoseWithCovarianceStamped>(
+			"/amcl_pose", 10,
+			std::bind(&CheckNavArrived::poseCallback, this, std::placeholders::_1));
+	}
+
+	static BT::PortsList providedPorts()
+	{
+		return {
+			BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose"),
+			BT::InputPort<double>("tolerance", 0.3, "distance tolerance")
+		  };
+	}
+
+	BT::NodeStatus tick() override
+	{
+		geometry_msgs::msg::PoseStamped goal;
+		double tolerance;
+
+		if (!getInput("goal_pose", goal))
+		{
+			throw BT::RuntimeError("CheckNavArrived: missing goal_pose");
+		}
+
+		getInput("tolerance", tolerance);
+
+		geometry_msgs::msg::Pose current;
+		{
+			std::lock_guard<std::mutex> lock(mutex_);
+			current = current_pose_;
+		}
+
+		double dx = goal.pose.position.x - current.position.x;
+		double dy = goal.pose.position.y - current.position.y;
+		double dist = std::hypot(dx, dy);
+
+		RCLCPP_DEBUG(node_->get_logger(),
+					 "dist to goal: %.3f", dist);
+
+		if (dist <= tolerance)
+			std::cout<<"6666666666666"<<std::endl;
+
+		return (dist <= tolerance)
+				 ? BT::NodeStatus::SUCCESS
+				 : BT::NodeStatus::FAILURE;
+	}
+
+private:
+	void poseCallback(
+	  const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg)
+	{
+		std::lock_guard<std::mutex> lock(mutex_);
+		current_pose_ = msg->pose.pose;
+	}
+
+	rclcpp::Node::SharedPtr node_;
+	rclcpp::Subscription<
+	  geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_sub_;
+
+	geometry_msgs::msg::Pose current_pose_;
+	std::mutex mutex_;
 };
 
 //通过接收的消息将有用的消息写入黑板实现共享
@@ -151,7 +225,6 @@ private:
     rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr sub_;
 	bool is_WriteToBlackboard_;
 };
-
 
 class test : public BT::SyncActionNode
 {
