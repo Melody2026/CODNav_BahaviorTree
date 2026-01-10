@@ -1,0 +1,148 @@
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:9[m[K,
+                 from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4[m[K:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual void SendGoalAction::[01;32m[KonHalt[m[K()[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  100 |         RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction has been halted.");
+      |                          [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  100 |         [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "SendGoalAction has been halted.");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  100 |         [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "SendGoalAction has been halted.");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  100 |         [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "SendGoalAction has been halted.");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  100 |         RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction has been halted.");
+      |                          [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:100:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  100 |         RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction has been halted.");
+      |                          [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendGoalAction::[01;32m[KonResultReceived[m[K(const BT::RosActionNode<nav2_msgs::action::NavigateToPose>::WrappedResult&)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  110 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Success!!!");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  110 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Success!!!");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  110 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Success!!!");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  110 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Success!!!");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  110 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Success!!!");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:110:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  110 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Success!!!");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  116 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was aborted");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  116 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was aborted");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  116 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was aborted");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  116 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was aborted");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  116 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was aborted");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:116:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  116 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was aborted");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  122 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was canceled");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was canceled");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was canceled");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Goal was canceled");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  122 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was canceled");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:122:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  122 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Goal was canceled");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  129 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Unknown result code");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  129 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Unknown result code");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  129 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Unknown result code");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  129 |                 [01;31m[KRCLCPP_INFO[m[K(node_->get_logger(), "Unknown result code");
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  129 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Unknown result code");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:129:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  129 |                 RCLCPP_INFO(node_[01;31m[K->[m[Kget_logger(), "Unknown result code");
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendGoalAction::[01;32m[KonFeedback[m[K(std::shared_ptr<const nav2_msgs::action::NavigateToPose_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:137:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 |         [01;35m[Kconst std::shared_ptr<const nav2_msgs::action::NavigateToPose::Feedback> feedback[m[K) override
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendGoalAction::[01;32m[KonFailure[m[K(BT::ActionNodeErrorCode)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  153 |         RCLCPP_ERROR(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction failed with error code: %d", error);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |         [01;31m[KRCLCPP_ERROR[m[K(node_->get_logger(), "SendGoalAction failed with error code: %d", error);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |         [01;31m[KRCLCPP_ERROR[m[K(node_->get_logger(), "SendGoalAction failed with error code: %d", error);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |         [01;31m[KRCLCPP_ERROR[m[K(node_->get_logger(), "SendGoalAction failed with error code: %d", error);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  153 |         RCLCPP_ERROR(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction failed with error code: %d", error);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:153:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::weak_ptr<rclcpp::Node>[m[K’
+  153 |         RCLCPP_ERROR(node_[01;31m[K->[m[Kget_logger(), "SendGoalAction failed with error code: %d", error);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KSendNav2Goal[m[K’ was not declared in this scope
+   23 |     factory.registerNodeType<[01;31m[KSendNav2Goal[m[K>("SendNav2Goal");
+      |                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:23:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KBT::BehaviorTreeFactory::registerNodeType<<expression error> >(const char [13])[m[K’
+   23 |     [01;31m[Kfactory.registerNodeType<SendNav2Goal>("SendNav2Goal")[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:6[m[K:
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:332:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class ... ExtraArgs> void BT::BehaviorTreeFactory::[01;32m[KregisterNodeType[m[K(const std::string&, const BT::PortsList&, ExtraArgs ...)[m[K’
+  332 |   void [01;36m[KregisterNodeType[m[K(const std::string& ID, const PortsList& ports, ExtraArgs... args)
+      |        [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:332:8:[m[K [01;36m[Knote: [m[K  candidate expects at least 2 arguments, 1 provided
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:368:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T, class ... ExtraArgs> void BT::BehaviorTreeFactory::[01;32m[KregisterNodeType[m[K(const std::string&, ExtraArgs ...)[m[K’
+  368 |   void [01;36m[KregisterNodeType[m[K(const std::string& ID, ExtraArgs... args)
+      |        [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:368:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:23:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   23 |     [01;31m[Kfactory.registerNodeType<SendNav2Goal>("SendNav2Goal")[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

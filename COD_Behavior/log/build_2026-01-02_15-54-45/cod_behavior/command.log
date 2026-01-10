@@ -1,2 +1,0 @@
-Invoking command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior
-Invoked command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior

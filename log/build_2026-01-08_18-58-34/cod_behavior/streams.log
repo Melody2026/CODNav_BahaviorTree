@@ -1,0 +1,26 @@
+[0.409s] Invoking command in '/home/ysl/ros2_ws/build/cod_behavior': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_behavior -- -j12 -l12
+[0.566s] [ 41%] Built target msgtest
+[0.566s] [ 50%] Built target checkNavResult
+[0.567s] [ 50%] Built target test_2
+[0.567s] [ 66%] Built target test_1
+[0.570s] [ 83%] Built target cod_behavior
+[0.599s] [ 91%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+[7.845s] In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4[m[K:
+[7.845s] [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendNav2Goal::[01;32m[KonFeedback[m[K(std::shared_ptr<const nav2_msgs::action::NavigateToPose_Feedback_<std::allocator<void> > >)[m[K’:
+[7.845s] [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:139:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.845s]   139 |         [01;35m[Kconst std::shared_ptr<const nav2_msgs::action::NavigateToPose::Feedback> feedback[m[K) override
+[7.845s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.636s] In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:6[m[K:
+[8.636s] /home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h: In instantiation of ‘[01m[Kvoid BT::BehaviorTreeFactory::[01;32m[KregisterNodeType[m[K(const std::string&, ExtraArgs ...) [35m[K[with T = SendNav2Goal; ExtraArgs = {}; std::string = std::__cxx11::basic_string<char>][m[K[m[K’:
+[8.636s] [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:23:43:[m[K   required from here
+[8.636s] [01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:389:45:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: [registerNode]: since you have a static method providedPorts(),
+[8.636s] you MUST add a constructor with signature:
+[8.636s] (const std::string&, const NodeConfig&)
+[8.636s] 
+[8.636s]   389 |       static_assert(![01;31m[K(has_static_ports_list && !param_constructable)[m[K,
+[8.637s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.637s] [01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:389:45:[m[K [01;36m[Knote: [m[K‘[01m[K((!(bool)has_static_ports_list) || ((bool)param_constructable))[m[K’ evaluates to false
+[15.993s] gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1
+[15.994s] gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
+[15.994s] gmake: *** [Makefile:146: all] Error 2
+[15.998s] Invoked command in '/home/ysl/ros2_ws/build/cod_behavior' returned '2': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_behavior -- -j12 -l12

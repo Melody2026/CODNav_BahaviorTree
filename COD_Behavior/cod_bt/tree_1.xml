@@ -3,14 +3,7 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <RetryUntilSuccessful num_attempts="9999">
-        <Parallel failure_count="2"
-                  success_count="2">
-          <SendNav2Goal goal_pose="{main_position}"/>
-          <CheckNavArrived goal_pose="{main_position}"
-                           tolerance="0.3"/>
-        </Parallel>
-      </RetryUntilSuccessful>
+      <SendNav2Goal goal_pose="{main_position}"/>
       <KeepRunningUntilFailure>
         <Fallback>
           <Inverter>
@@ -20,19 +13,9 @@
           </Inverter>
           <Sequence>
             <HpCondition Hp="{hp}"/>
-            <Parallel failure_count="2"
-                      success_count="2">
-              <SendNav2Goal goal_pose="{home_position}"/>
-              <CheckNavArrived goal_pose="{home_position}"
-                               tolerance="0.3"/>
-            </Parallel>
-          </Sequence>
-          <Parallel failure_count="2"
-                    success_count="2">
             <SendNav2Goal goal_pose="{home_position}"/>
-            <CheckNavArrived goal_pose="{home_position}"
-                             tolerance="0.3"/>
-          </Parallel>
+          </Sequence>
+          <SendNav2Goal goal_pose="{main_position}"/>
           <AlwaysSuccess/>
         </Fallback>
       </KeepRunningUntilFailure>
@@ -51,11 +34,6 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Condition ID="CheckNavArrived"
-               editable="true">
-      <input_port name="goal_pose"/>
-      <input_port name="tolerance"/>
-    </Condition>
     <Action ID="GetNextPatrolPose"
             editable="true">
       <output_port name="Patrol_pose"/>

@@ -1,0 +1,19 @@
+[100%] Built target cod_serial
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/lib/cod_serial/cod_serial
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/package_run_dependencies/cod_serial
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/parent_prefix_path/cod_serial
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/ament_prefix_path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/environment/path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.bash
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.zsh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/local_setup.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/ament_index/resource_index/packages/cod_serial
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/cmake/cod_serialConfig.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/cmake/cod_serialConfig-version.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_serial/share/cod_serial/package.xml

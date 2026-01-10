@@ -1,0 +1,44 @@
+[  8%] [32mBuilding CXX object CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o[0m
+[ 16%] [32m[1mLinking CXX executable cod_behavior[0m
+[ 16%] Built target cod_behavior
+[ 25%] [32mBuilding CXX object CMakeFiles/msgtest.dir/test/msgTest.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/checkNavResult.dir/src/CheckNavResult.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_1[0m
+[ 75%] [32m[1mLinking CXX executable msgtest[0m
+[ 83%] [32m[1mLinking CXX executable test_2[0m
+[ 83%] Built target test_1
+[ 83%] Built target msgtest
+[ 83%] Built target test_2
+[ 91%] [32m[1mLinking CXX executable checkNavResult[0m
+[ 91%] Built target checkNavResult
+[100%] [32m[1mLinking CXX executable tree_1[0m
+[100%] Built target tree_1
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/checkNavResult
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/tree_1
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/msgtest
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/test_1
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/test_2
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup.launch.py
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup_behavior.launch.py
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/nav_pose.yaml
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/package_run_dependencies/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/parent_prefix_path/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/ament_prefix_path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.bash
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.zsh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/packages/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/cmake/cod_behaviorConfig.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/cmake/cod_behaviorConfig-version.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.xml

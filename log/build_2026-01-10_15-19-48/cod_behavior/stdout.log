@@ -1,0 +1,6 @@
+[ 16%] Built target cod_behavior
+[ 33%] Built target test_2
+[ 50%] Built target test_1
+[ 66%] Built target msgtest
+[ 75%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable tree_1[0m

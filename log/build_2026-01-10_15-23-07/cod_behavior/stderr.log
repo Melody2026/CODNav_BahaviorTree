@@ -1,0 +1,8 @@
+/usr/bin/ld: CMakeFiles/tree_1.dir/src/tree_1.cpp.o: in function `tbb::detail::d1::execution_slot(tbb::detail::d1::execution_data const&)':
+tree_1.cpp:(.text._ZN3tbb6detail2d114execution_slotERKNS1_14execution_dataE[_ZN3tbb6detail2d114execution_slotERKNS1_14execution_dataE]+0x18): undefined reference to `tbb::detail::r1::execution_slot(tbb::detail::d1::execution_data const*)'
+/usr/bin/ld: CMakeFiles/tree_1.dir/src/tree_1.cpp.o: in function `tbb::detail::d1::current_thread_index()':
+tree_1.cpp:(.text._ZN3tbb6detail2d120current_thread_indexEv[_ZN3tbb6detail2d120current_thread_indexEv]+0x12): undefined reference to `tbb::detail::r1::execution_slot(tbb::detail::d1::execution_data const*)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:247: tree_1] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

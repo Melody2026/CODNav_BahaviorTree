@@ -1,0 +1,22 @@
+[  5%] [32m[1mLinking CXX executable bool_server[0m
+[ 16%] [32m[1mLinking CXX executable sample_bt_executor[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/sleep_server.dir/src/sleep_server.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/bool_client.dir/src/bool_client.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/sleep_client.dir/src/sleep_action.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/sleep_client.dir/src/sleep_client.cpp.o[0m
+[ 38%] [32m[1mLinking CXX executable subscriber_test[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/sleep_plugin.dir/src/sleep_action.cpp.o[0m
+[ 50%] Built target bool_server
+[ 55%] Built target subscriber_test
+[ 61%] Built target sample_bt_executor
+[ 66%] [32m[1mLinking CXX executable sleep_server[0m
+[ 72%] [32m[1mLinking CXX executable bool_client[0m
+[ 72%] Built target sleep_server
+[ 77%] [32m[1mLinking CXX shared library libsleep_plugin.so[0m
+[ 83%] Built target bool_client
+[ 88%] [32m[1mLinking CXX executable sleep_client[0m
+[ 88%] Built target sleep_plugin
+[ 94%] [32mBuilding CXX object CMakeFiles/sleep_client_dyn.dir/src/sleep_client.cpp.o[0m
+[ 94%] Built target sleep_client
+[100%] [32m[1mLinking CXX executable sleep_client_dyn[0m
+[100%] Built target sleep_client_dyn

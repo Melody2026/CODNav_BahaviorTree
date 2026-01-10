@@ -1,0 +1,23 @@
+[0.726s] Invoking command in '/home/ysl/ros2_ws/build/btcpp_ros2_samples': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2/lib:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/btcpp_ros2_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/btcpp_ros2_samples -- -j12 -l12
+[0.881s] [  5%] [32m[1mLinking CXX executable bool_server[0m
+[0.885s] [ 16%] [32m[1mLinking CXX executable sample_bt_executor[0m
+[0.885s] [ 16%] [32mBuilding CXX object CMakeFiles/sleep_server.dir/src/sleep_server.cpp.o[0m
+[0.897s] [ 22%] [32mBuilding CXX object CMakeFiles/bool_client.dir/src/bool_client.cpp.o[0m
+[0.897s] [ 27%] [32mBuilding CXX object CMakeFiles/sleep_client.dir/src/sleep_action.cpp.o[0m
+[0.900s] [ 33%] [32mBuilding CXX object CMakeFiles/sleep_client.dir/src/sleep_client.cpp.o[0m
+[0.908s] [ 38%] [32m[1mLinking CXX executable subscriber_test[0m
+[0.912s] [ 44%] [32mBuilding CXX object CMakeFiles/sleep_plugin.dir/src/sleep_action.cpp.o[0m
+[1.984s] [ 50%] Built target bool_server
+[2.428s] [ 55%] Built target subscriber_test
+[2.465s] [ 61%] Built target sample_bt_executor
+[18.675s] [ 66%] [32m[1mLinking CXX executable sleep_server[0m
+[19.220s] [ 72%] [32m[1mLinking CXX executable bool_client[0m
+[20.010s] [ 72%] Built target sleep_server
+[20.289s] [ 77%] [32m[1mLinking CXX shared library libsleep_plugin.so[0m
+[20.348s] [ 83%] Built target bool_client
+[20.513s] [ 88%] [32m[1mLinking CXX executable sleep_client[0m
+[21.103s] [ 88%] Built target sleep_plugin
+[21.269s] [ 94%] [32mBuilding CXX object CMakeFiles/sleep_client_dyn.dir/src/sleep_client.cpp.o[0m
+[21.417s] [ 94%] Built target sleep_client
+[30.734s] [100%] [32m[1mLinking CXX executable sleep_client_dyn[0m
+[31.374s] [100%] Built target sleep_client_dyn

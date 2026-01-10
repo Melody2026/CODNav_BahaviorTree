@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/limit_angle__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/limit_angle__type_support.h"
 #include "rm_interfaces/msg/detail/limit_angle__functions.h"
 

@@ -1,0 +1,24 @@
+[ 41%] Built target msgtest
+[ 50%] Built target checkNavResult
+[ 50%] Built target test_2
+[ 66%] Built target test_1
+[ 83%] Built target cod_behavior
+[ 91%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m
+In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4[m[K:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendNav2Goal::[01;32m[KonFeedback[m[K(std::shared_ptr<const nav2_msgs::action::NavigateToPose_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:139:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  139 |         [01;35m[Kconst std::shared_ptr<const nav2_msgs::action::NavigateToPose::Feedback> feedback[m[K) override
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:6[m[K:
+/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h: In instantiation of ‘[01m[Kvoid BT::BehaviorTreeFactory::[01;32m[KregisterNodeType[m[K(const std::string&, ExtraArgs ...) [35m[K[with T = SendNav2Goal; ExtraArgs = {}; std::string = std::__cxx11::basic_string<char>][m[K[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:23:43:[m[K   required from here
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:389:45:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: [registerNode]: since you have a static method providedPorts(),
+you MUST add a constructor with signature:
+(const std::string&, const NodeConfig&)
+
+  389 |       static_assert(![01;31m[K(has_static_ports_list && !param_constructable)[m[K,
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h:389:45:[m[K [01;36m[Knote: [m[K‘[01m[K((!(bool)has_static_ports_list) || ((bool)param_constructable))[m[K’ evaluates to false
+gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

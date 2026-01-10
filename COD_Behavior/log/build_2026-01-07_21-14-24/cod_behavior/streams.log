@@ -1,0 +1,49 @@
+[0.022s] Invoking command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior
+[0.546s] -- The C compiler identification is GNU 13.3.0
+[2.309s] -- The CXX compiler identification is GNU 13.3.0
+[3.898s] -- Detecting C compiler ABI info
+[4.723s] -- Detecting C compiler ABI info - done
+[4.737s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.738s] -- Detecting C compile features
+[4.739s] -- Detecting C compile features - done
+[5.080s] -- Detecting CXX compiler ABI info
+[5.908s] -- Detecting CXX compiler ABI info - done
+[5.925s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.926s] -- Detecting CXX compile features
+[5.927s] -- Detecting CXX compile features - done
+[5.941s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[6.195s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.308s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.423s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[7.047s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[7.081s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[7.120s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.168s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.336s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[7.346s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[7.541s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[8.254s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[8.641s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.301s] -- Found behaviortree_cpp: 4.8.2 (/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/share/behaviortree_cpp/cmake)
+[9.311s] -- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)
+[9.686s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[9.729s] -- Found rclcpp_action: 28.1.9 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[13.406s] [31mCMake Error at CMakeLists.txt:20 (find_package):
+[13.407s]   By not providing "Findrm_interfaces.cmake" in CMAKE_MODULE_PATH this
+[13.407s]   project has asked CMake to find a package configuration file provided by
+[13.407s]   "rm_interfaces", but CMake did not find one.
+[13.407s] 
+[13.407s]   Could not find a package configuration file provided by "rm_interfaces"
+[13.407s]   with any of the following names:
+[13.407s] 
+[13.408s]     rm_interfacesConfig.cmake
+[13.408s]     rm_interfaces-config.cmake
+[13.408s] 
+[13.408s]   Add the installation prefix of "rm_interfaces" to CMAKE_PREFIX_PATH or set
+[13.408s]   "rm_interfaces_DIR" to a directory containing one of the above files.  If
+[13.408s]   "rm_interfaces" provides a separate development package or SDK, be sure it
+[13.408s]   has been installed.
+[13.408s] 
+[13.408s] [0m
+[13.409s] -- Configuring incomplete, errors occurred!
+[13.424s] Invoked command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior
