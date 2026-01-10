@@ -3,10 +3,8 @@
 //
 #include "../include/cod_behavior/tree_1_action.h"
 #include "behaviortree_cpp/loggers/groot2_publisher.h"
-#include <chrono>
 
-int main(int argc, char** argv)
-{
+int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
 
     rclcpp::NodeOptions options;
@@ -30,19 +28,19 @@ int main(int argc, char** argv)
     // 注册自定义节点（保持你的注册逻辑）
     factory.registerBuilder<SendNav2Goal>(
         "SendNav2Goal",
-        [&](const std::string& name, const BT::NodeConfig& config) {
+        [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<SendNav2Goal>(name, config, params);
         }
     );
     factory.registerBuilder<WriteToBlackboard>(
         "WriteToBlackboard",
-        [&](const std::string& name, const BT::NodeConfig& config) {
+        [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<WriteToBlackboard>(name, config, global_node_);
         }
     );
     factory.registerBuilder<CheckNavArrived>(
         "CheckNavArrived",
-        [&](const std::string& name, const BT::NodeConfig& config) {
+        [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<CheckNavArrived>(name, config, global_node_);
         }
     );
@@ -59,7 +57,7 @@ int main(int argc, char** argv)
         auto blackboard = tree.rootBlackboard();
 
         // 存入全局节点，增加强引用
-        blackboard->set<std::shared_ptr<rclcpp::Node>>("global_node", global_node_);
+        blackboard->set<std::shared_ptr<rclcpp::Node> >("global_node", global_node_);
 
         // 初始化黑板数据（保持你的逻辑）
         auto maingoal = loadPoseStamped(global_node_, "nav_pose.main");
@@ -68,7 +66,7 @@ int main(int argc, char** argv)
         blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
 
         std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
-        blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped>>("position", pose_map);
+        blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("position", pose_map);
         blackboard->set<double>("hp", 0.0);
         blackboard->set<bool>("zone_status", false);
 
@@ -76,10 +74,10 @@ int main(int argc, char** argv)
         patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.first"));
         patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.second"));
         patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.third"));
-        blackboard->set<std::vector<geometry_msgs::msg::PoseStamped>>("patrol_points", patrol_points);
+        blackboard->set<std::vector<geometry_msgs::msg::PoseStamped> >("patrol_points", patrol_points);
         blackboard->set<int>("patrol_index", 0);
 
-        BT::Groot2Publisher publisher(tree,5555);
+        BT::Groot2Publisher publisher(tree, 5555);
 
         // ========== 核心：单线程主循环（同时处理 ROS 回调 + 行为树） ==========
         while (rclcpp::ok()) {
@@ -90,8 +88,7 @@ int main(int argc, char** argv)
             // 控制循环频率（避免占用过多 CPU）
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }
-
-    } catch (const std::exception& e) {
+    } catch (const std::exception &e) {
         RCLCPP_ERROR(global_node_->get_logger(), "加载或执行行为树时出错: %s", e.what());
         rclcpp::shutdown();
         return 1;

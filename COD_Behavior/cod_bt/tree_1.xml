@@ -5,7 +5,7 @@
     <Sequence>
       <SendNav2Goal goal_pose="{main_position}"/>
       <KeepRunningUntilFailure>
-        <Fallback>
+        <ReactiveFallback>
           <Inverter>
             <WriteToBlackboard Position="{position}"
                                Hp="{hp}"
@@ -17,7 +17,7 @@
           </Sequence>
           <SendNav2Goal goal_pose="{main_position}"/>
           <AlwaysSuccess/>
-        </Fallback>
+        </ReactiveFallback>
       </KeepRunningUntilFailure>
     </Sequence>
   </BehaviorTree>
