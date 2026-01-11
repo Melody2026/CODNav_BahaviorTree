@@ -518,6 +518,7 @@ CMakeFiles/cod_serial.dir/src/test.cpp.o: \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__builder.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__traits.hpp \
  /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
@@ -526,6 +527,7 @@ CMakeFiles/cod_serial.dir/src/test.cpp.o: \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__traits.hpp \
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__type_support.hpp \
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \

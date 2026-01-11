@@ -22,6 +22,10 @@ extern "C"
 // Include directives for member types
 // Member 'operator_command'
 #include "rm_interfaces/msg/detail/operator_command__struct.h"
+// Member 'heroposition'
+// Member 'standard_3position'
+// Member 'standard_4position'
+#include "rm_interfaces/msg/detail/point2d__struct.h"
 
 /// Struct defined in msg/JudgeSystemData in the package rm_interfaces.
 typedef struct rm_interfaces__msg__JudgeSystemData
@@ -45,6 +49,9 @@ typedef struct rm_interfaces__msg__JudgeSystemData
   float position_x;
   float position_y;
   rm_interfaces__msg__OperatorCommand operator_command;
+  rm_interfaces__msg__Point2d heroposition;
+  rm_interfaces__msg__Point2d standard_3position;
+  rm_interfaces__msg__Point2d standard_4position;
 } rm_interfaces__msg__JudgeSystemData;
 
 // Struct for a sequence of rm_interfaces__msg__JudgeSystemData.

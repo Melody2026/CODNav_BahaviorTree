@@ -78,6 +78,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+ /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/header.h \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__functions.h \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \

@@ -222,7 +222,7 @@ public:
         sub_ = global_node_->create_subscription<rm_interfaces::msg::SerialReceiveData>(
             "/SerialReceiveData", 10,
             std::bind(&WriteToBlackboard::callback, this, std::placeholders::_1));
-        is_WriteToBlackboard_ = false;
+        is_ReadInterface_ = false;
     }
 
 
@@ -242,33 +242,45 @@ public:
     BT::NodeStatus tick() override {
         // 处理回调
         rclcpp::spin_some(global_node_); //只处理当前队列中的回s后就返回
-        if (!is_WriteToBlackboard_)
+        if (!is_ReadInterface_)
             return BT::NodeStatus::FAILURE;
 
-        //设置英雄，步兵，哨兵的位置坐标 后面根据消息做修改
-        // pose_map["heroposition"]   = makePose(node_.get(), 0.0, 0.0);
-        // pose_map["infantryposition"] = makePose(node_.get(), 0.0, 0.0);
-        // pose_map["sentinelposition"] = makePose(node_.get(), 1.0, 1.0);
         //写入黑板
         setOutput("Position", pose_map);
         setOutput("Hp", hp);
         setOutput("Zone_status", zone_status);
 
         std::cout << "zone_status:" << zone_status << std::endl;
+        std::cout<<"Position........................"<<std::endl;
+        // std::cout<<"heroposition:"<<pose_map["heroposition"].pose.position.x<<","<<pose_map["heroposition"].pose.position.y<<std::endl;
+        // std::cout<<"standard_3position:"<<pose_map["standard_3position"].pose.position.x<<","<<pose_map["standard_3position"].pose.position.y<<std::endl;
+        // std::cout<<"standard_4position:"<<pose_map["standard_4position"].pose.position.x<<","<<pose_map["standard_4position"].pose.position.y<<std::endl;
+        std::cout<<"position:"<<pose_map["position"].pose.position.x<<","<<pose_map["position"].pose.position.y<<std::endl;
+
         return BT::NodeStatus::SUCCESS;
     }
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
         hp = static_cast<double>(msg->judge_system_data.hp);
         zone_status = msg->judge_system_data.zone_status;
-        is_WriteToBlackboard_ = true;
+        //英雄，步兵，哨兵的位置坐标 后面根据消息做修改
+        pose_map["heroposition"].pose.position.x = msg->judge_system_data.heroposition.x;
+        pose_map["heroposition"].pose.position.y = msg->judge_system_data.heroposition.y;
+        pose_map["standard_3position"].pose.position.x = msg->judge_system_data.standard_3position.x;
+        pose_map["standard_3position"].pose.position.y = msg->judge_system_data.standard_3position.y;
+        pose_map["standard_4position"].pose.position.x = msg->judge_system_data.standard_4position.x;
+        pose_map["standard_4position"].pose.position.y = msg->judge_system_data.standard_4position.y;
+        pose_map["position"].pose.position.x = msg->judge_system_data.position_x;
+        pose_map["position"].pose.position.y = msg->judge_system_data.position_y;
+
+        is_ReadInterface_ = true;
         RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }
 
 private:
     std::shared_ptr<rclcpp::Node> global_node_;
     rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr sub_;
-    bool is_WriteToBlackboard_;
+    bool is_ReadInterface_;
 };
 
 class test : public BT::SyncActionNode {

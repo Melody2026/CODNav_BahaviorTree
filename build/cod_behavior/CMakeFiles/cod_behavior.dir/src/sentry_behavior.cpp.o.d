@@ -879,10 +879,12 @@ CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o: \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__builder.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__traits.hpp \
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__traits.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__type_support.hpp \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /usr/include/c++/13/coroutine \

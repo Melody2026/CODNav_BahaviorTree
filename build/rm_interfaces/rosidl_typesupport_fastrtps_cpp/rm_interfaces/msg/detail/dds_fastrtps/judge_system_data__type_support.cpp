@@ -54,6 +54,45 @@ max_serialized_size_key_OperatorCommand(
 }  // namespace msg
 }  // namespace rm_interfaces
 
+namespace rm_interfaces
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const rm_interfaces::msg::Point2d &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  rm_interfaces::msg::Point2d &);
+size_t get_serialized_size(
+  const rm_interfaces::msg::Point2d &,
+  size_t current_alignment);
+size_t
+max_serialized_size_Point2d(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+bool cdr_serialize_key(
+  const rm_interfaces::msg::Point2d &,
+  eprosima::fastcdr::Cdr &);
+size_t get_serialized_size_key(
+  const rm_interfaces::msg::Point2d &,
+  size_t current_alignment);
+size_t
+max_serialized_size_key_Point2d(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace rm_interfaces
+
+// functions for rm_interfaces::msg::Point2d already declared above
+
+// functions for rm_interfaces::msg::Point2d already declared above
+
 
 namespace rm_interfaces
 {
@@ -130,6 +169,21 @@ cdr_serialize(
     ros_message.operator_command,
     cdr);
 
+  // Member: heroposition
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.heroposition,
+    cdr);
+
+  // Member: standard_3position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.standard_3position,
+    cdr);
+
+  // Member: standard_4position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.standard_4position,
+    cdr);
+
   return true;
 }
 
@@ -196,6 +250,18 @@ cdr_deserialize(
   // Member: operator_command
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.operator_command);
+
+  // Member: heroposition
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.heroposition);
+
+  // Member: standard_3position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.standard_3position);
+
+  // Member: standard_4position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.standard_4position);
 
   return true;
 }
@@ -344,6 +410,21 @@ get_serialized_size(
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.operator_command, current_alignment);
+
+  // Member: heroposition
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.heroposition, current_alignment);
+
+  // Member: standard_3position
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.standard_3position, current_alignment);
+
+  // Member: standard_4position
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.standard_4position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -502,6 +583,54 @@ max_serialized_size_JudgeSystemData(
       is_plain &= inner_is_plain;
     }
   }
+  // Member: heroposition
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // Member: standard_3position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // Member: standard_4position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -511,7 +640,7 @@ max_serialized_size_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, operator_command) +
+      offsetof(DataType, standard_4position) +
       last_member_size
       ) == ret_val;
   }
@@ -582,6 +711,21 @@ cdr_serialize_key(
   // Member: operator_command
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
     ros_message.operator_command,
+    cdr);
+
+  // Member: heroposition
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.heroposition,
+    cdr);
+
+  // Member: standard_3position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.standard_3position,
+    cdr);
+
+  // Member: standard_4position
+  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.standard_4position,
     cdr);
 
   return true;
@@ -730,6 +874,21 @@ get_serialized_size_key(
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
     ros_message.operator_command, current_alignment);
+
+  // Member: heroposition
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.heroposition, current_alignment);
+
+  // Member: standard_3position
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.standard_3position, current_alignment);
+
+  // Member: standard_4position
+  current_alignment +=
+    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.standard_4position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -906,6 +1065,57 @@ max_serialized_size_key_JudgeSystemData(
     }
   }
 
+  // Member: heroposition
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: standard_3position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: standard_4position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -914,7 +1124,7 @@ max_serialized_size_key_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, operator_command) +
+      offsetof(DataType, standard_4position) +
       last_member_size
       ) == ret_val;
   }

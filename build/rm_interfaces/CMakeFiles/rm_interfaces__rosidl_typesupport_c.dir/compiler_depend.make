@@ -915,6 +915,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_inter
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -1453,6 +1454,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_inter
 CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_interfaces/msg/serial_receive_data__type_support.cpp.o: rosidl_typesupport_c/rm_interfaces/msg/serial_receive_data__type_support.cpp \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.h \
@@ -2055,8 +2057,6 @@ rosidl_generator_c/rm_interfaces/msg/detail/rune_target__functions.h:
 
 rosidl_typesupport_c/rm_interfaces/msg/rune_target__type_support.cpp:
 
-rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h:
-
 rosidl_typesupport_c/rm_interfaces/msg/point2d__type_support.cpp:
 
 rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.h:
@@ -2074,6 +2074,8 @@ rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__struct.h:
 rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__functions.h:
 
 rosidl_typesupport_c/rm_interfaces/msg/limit_angle__type_support.cpp:
+
+rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h:
 
 rosidl_typesupport_c/rm_interfaces/msg/judge_system_data__type_support.cpp:
 

@@ -3,6 +3,7 @@
 // generated code does not contain a copyright notice
 
 #include "rm_interfaces/msg/OperatorCommand.idl"
+#include "rm_interfaces/msg/Point2d.idl"
 
 module rm_interfaces {
   module msg {
@@ -44,6 +45,12 @@ module rm_interfaces {
       float position_y;
 
       rm_interfaces::msg::OperatorCommand operator_command;
+
+      rm_interfaces::msg::Point2d heroposition;
+
+      rm_interfaces::msg::Point2d standard_3position;
+
+      rm_interfaces::msg::Point2d standard_4position;
     };
   };
 };

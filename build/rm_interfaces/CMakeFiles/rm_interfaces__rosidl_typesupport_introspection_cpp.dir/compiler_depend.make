@@ -2393,9 +2393,11 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesu
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+  rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
   /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
@@ -3814,11 +3816,13 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesu
 CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rm_interfaces/msg/detail/serial_receive_data__type_support.cpp.o: rosidl_typesupport_introspection_cpp/rm_interfaces/msg/detail/serial_receive_data__type_support.cpp \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+  rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__struct.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
@@ -5310,8 +5314,6 @@ rosidl_generator_c/rm_interfaces/msg/detail/rune_target__functions.h:
 
 rosidl_typesupport_introspection_cpp/rm_interfaces/msg/detail/rune_target__type_support.cpp:
 
-rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp:
-
 rosidl_generator_cpp/rm_interfaces/msg/detail/measurement__struct.hpp:
 
 rosidl_generator_c/rm_interfaces/msg/detail/measurement__struct.h:
@@ -5321,6 +5323,8 @@ rosidl_generator_c/rm_interfaces/msg/detail/measurement__functions.h:
 rosidl_typesupport_introspection_cpp/rm_interfaces/msg/detail/measurement__type_support.cpp:
 
 rosidl_generator_cpp/rm_interfaces/msg/detail/limit_angle__struct.hpp:
+
+rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp:
 
 rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp:
 

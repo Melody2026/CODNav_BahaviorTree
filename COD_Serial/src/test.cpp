@@ -78,12 +78,7 @@ public:
                 }
 
                 // 转换为浮点数
-                std::vector<float> floats;
-                for (size_t i = 0; i < 16; i += 4) {
-                    float f;
-                    std::memcpy(&f, &data[i], sizeof(f)); // 将4个字节复制到float类型变量
-                    floats.push_back(f); // 将转换后的float存储到vector中
-                }
+
 
                 // 打印接收到的数据
                 std::cout << color_text::GREEN << "Received:";
@@ -164,22 +159,22 @@ private:
             // 根据实际需求将浮点数映射到消息字段
             // 这里假设第一个浮点数表示hp，第二个表示zone_status
             if (floats.size() >= 1) {
-                msg.judge_system_data.hp = floats[0]; // 转换为整数
+                msg.judge_system_data.hp = floats[0];
                 RCLCPP_INFO(this->get_logger(), "发布hp: %f", msg.judge_system_data.hp);
             }
 
             if (floats.size() >= 2) {
-                msg.judge_system_data.zone_status = static_cast<int>(floats[1]); // 转换为整数
+                msg.judge_system_data.zone_status = static_cast<int>(floats[1]);
                 RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
             }
 
             if (floats.size() >= 3) {
-                msg.judge_system_data.position_x = floats[2]; // 转换为整数
+                msg.judge_system_data.position_x = floats[2];
                 RCLCPP_INFO(this->get_logger(), "发布position_x: %f", msg.judge_system_data.position_x);
             }
 
             if (floats.size() >= 4) {
-                msg.judge_system_data.position_y = floats[3]; // 转换为整数
+                msg.judge_system_data.position_y = floats[3];
                 RCLCPP_INFO(this->get_logger(), "发布position_y: %f", msg.judge_system_data.position_y);
             }
 
@@ -193,8 +188,7 @@ private:
             msg.judge_system_data.zone_status = 1;
             msg.judge_system_data.position_x = 3.0;
             msg.judge_system_data.position_y = 4.0;
-
-            RCLCPP_INFO(this->get_logger(), "使用默认值: hp=200, zone_status=1");
+            RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
         }
 
         // 发布消息

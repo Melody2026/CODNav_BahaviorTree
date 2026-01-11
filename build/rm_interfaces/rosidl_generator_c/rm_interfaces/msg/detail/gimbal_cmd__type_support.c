@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "rm_interfaces/msg/detail/gimbal_cmd__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/gimbal_cmd__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/gimbal_cmd__type_support.h"
 
 #ifdef __cplusplus

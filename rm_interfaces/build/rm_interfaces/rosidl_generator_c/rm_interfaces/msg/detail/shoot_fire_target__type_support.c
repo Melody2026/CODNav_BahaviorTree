@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/msg/detail/shoot_fire_target__type_support.h"
 #include "rm_interfaces/msg/detail/shoot_fire_target__struct.h"
 #include "rm_interfaces/msg/detail/shoot_fire_target__functions.h"
-#include "rm_interfaces/msg/detail/shoot_fire_target__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

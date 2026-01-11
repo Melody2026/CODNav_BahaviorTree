@@ -21,6 +21,10 @@
 // Include directives for member types
 // Member 'operator_command'
 #include "rm_interfaces/msg/detail/operator_command__struct.hpp"
+// Member 'heroposition'
+// Member 'standard_3position'
+// Member 'standard_4position'
+#include "rm_interfaces/msg/detail/point2d__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__rm_interfaces__msg__JudgeSystemData __attribute__((deprecated))
@@ -41,7 +45,10 @@ struct JudgeSystemData_
   using Type = JudgeSystemData_<ContainerAllocator>;
 
   explicit JudgeSystemData_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : operator_command(_init)
+  : operator_command(_init),
+    heroposition(_init),
+    standard_3position(_init),
+    standard_4position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -68,7 +75,10 @@ struct JudgeSystemData_
   }
 
   explicit JudgeSystemData_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : operator_command(_alloc, _init)
+  : operator_command(_alloc, _init),
+    heroposition(_alloc, _init),
+    standard_3position(_alloc, _init),
+    standard_4position(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -152,6 +162,15 @@ struct JudgeSystemData_
   using _operator_command_type =
     rm_interfaces::msg::OperatorCommand_<ContainerAllocator>;
   _operator_command_type operator_command;
+  using _heroposition_type =
+    rm_interfaces::msg::Point2d_<ContainerAllocator>;
+  _heroposition_type heroposition;
+  using _standard_3position_type =
+    rm_interfaces::msg::Point2d_<ContainerAllocator>;
+  _standard_3position_type standard_3position;
+  using _standard_4position_type =
+    rm_interfaces::msg::Point2d_<ContainerAllocator>;
+  _standard_4position_type standard_4position;
 
   // setters for named parameter idiom
   Type & set__game_status(
@@ -268,6 +287,24 @@ struct JudgeSystemData_
     this->operator_command = _arg;
     return *this;
   }
+  Type & set__heroposition(
+    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
+  {
+    this->heroposition = _arg;
+    return *this;
+  }
+  Type & set__standard_3position(
+    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
+  {
+    this->standard_3position = _arg;
+    return *this;
+  }
+  Type & set__standard_4position(
+    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
+  {
+    this->standard_4position = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -366,6 +403,15 @@ struct JudgeSystemData_
       return false;
     }
     if (this->operator_command != other.operator_command) {
+      return false;
+    }
+    if (this->heroposition != other.heroposition) {
+      return false;
+    }
+    if (this->standard_3position != other.standard_3position) {
+      return false;
+    }
+    if (this->standard_4position != other.standard_4position) {
       return false;
     }
     return true;

@@ -2793,9 +2793,11 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+  rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
   rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_cpp.hpp \
   rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h \
   /opt/ros/jazzy/include/fastcdr/fastcdr/Cdr.h \
@@ -4454,11 +4456,13 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport
 CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/dds_fastrtps/serial_receive_data__type_support.cpp \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_cpp/rm_interfaces/msg/detail/judge_system_data__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp \
+  rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp \
   rosidl_generator_cpp/rm_interfaces/msg/detail/serial_receive_data__struct.hpp \
   rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_cpp.hpp \
   rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h \
@@ -6250,8 +6254,6 @@ rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/dds_fastrtps/rune_targe
 
 rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_cpp.hpp:
 
-rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp:
-
 rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/dds_fastrtps/point2d__type_support.cpp:
 
 rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_fastrtps_cpp.hpp:
@@ -6265,6 +6267,8 @@ rosidl_generator_c/rm_interfaces/msg/detail/measurement__functions.h:
 rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/dds_fastrtps/measurement__type_support.cpp:
 
 rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/limit_angle__rosidl_typesupport_fastrtps_cpp.hpp:
+
+rosidl_generator_cpp/rm_interfaces/msg/detail/point2d__struct.hpp:
 
 rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__struct.hpp:
 

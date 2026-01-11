@@ -55,6 +55,10 @@ class Metaclass_JudgeSystemData(type):
             if OperatorCommand.__class__._TYPE_SUPPORT is None:
                 OperatorCommand.__class__.__import_type_support__()
 
+            from rm_interfaces.msg import Point2d
+            if Point2d.__class__._TYPE_SUPPORT is None:
+                Point2d.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -87,6 +91,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         '_position_x',
         '_position_y',
         '_operator_command',
+        '_heroposition',
+        '_standard_3position',
+        '_standard_4position',
         '_check_fields',
     ]
 
@@ -110,6 +117,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         'position_x': 'float',
         'position_y': 'float',
         'operator_command': 'rm_interfaces/OperatorCommand',
+        'heroposition': 'rm_interfaces/Point2d',
+        'standard_3position': 'rm_interfaces/Point2d',
+        'standard_4position': 'rm_interfaces/Point2d',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -134,6 +144,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'OperatorCommand'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'Point2d'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'Point2d'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'Point2d'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -165,6 +178,12 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         self.position_y = kwargs.get('position_y', float())
         from rm_interfaces.msg import OperatorCommand
         self.operator_command = kwargs.get('operator_command', OperatorCommand())
+        from rm_interfaces.msg import Point2d
+        self.heroposition = kwargs.get('heroposition', Point2d())
+        from rm_interfaces.msg import Point2d
+        self.standard_3position = kwargs.get('standard_3position', Point2d())
+        from rm_interfaces.msg import Point2d
+        self.standard_4position = kwargs.get('standard_4position', Point2d())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -233,6 +252,12 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         if self.position_y != other.position_y:
             return False
         if self.operator_command != other.operator_command:
+            return False
+        if self.heroposition != other.heroposition:
+            return False
+        if self.standard_3position != other.standard_3position:
+            return False
+        if self.standard_4position != other.standard_4position:
             return False
         return True
 
@@ -524,3 +549,45 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
                 isinstance(value, OperatorCommand), \
                 "The 'operator_command' field must be a sub message of type 'OperatorCommand'"
         self._operator_command = value
+
+    @builtins.property
+    def heroposition(self):
+        """Message field 'heroposition'."""
+        return self._heroposition
+
+    @heroposition.setter
+    def heroposition(self, value):
+        if self._check_fields:
+            from rm_interfaces.msg import Point2d
+            assert \
+                isinstance(value, Point2d), \
+                "The 'heroposition' field must be a sub message of type 'Point2d'"
+        self._heroposition = value
+
+    @builtins.property
+    def standard_3position(self):
+        """Message field 'standard_3position'."""
+        return self._standard_3position
+
+    @standard_3position.setter
+    def standard_3position(self, value):
+        if self._check_fields:
+            from rm_interfaces.msg import Point2d
+            assert \
+                isinstance(value, Point2d), \
+                "The 'standard_3position' field must be a sub message of type 'Point2d'"
+        self._standard_3position = value
+
+    @builtins.property
+    def standard_4position(self):
+        """Message field 'standard_4position'."""
+        return self._standard_4position
+
+    @standard_4position.setter
+    def standard_4position(self, value):
+        if self._check_fields:
+            from rm_interfaces.msg import Point2d
+            assert \
+                isinstance(value, Point2d), \
+                "The 'standard_4position' field must be a sub message of type 'Point2d'"
+        self._standard_4position = value

@@ -37,6 +37,7 @@ extern "C"
 #endif
 
 #include "rm_interfaces/msg/detail/operator_command__functions.h"  // operator_command
+#include "rm_interfaces/msg/detail/point2d__functions.h"  // heroposition, standard_3position, standard_4position
 
 // forward declare type support functions
 
@@ -72,6 +73,39 @@ size_t max_serialized_size_key_rm_interfaces__msg__OperatorCommand(
 
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rm_interfaces, msg, OperatorCommand)();
+
+bool cdr_serialize_rm_interfaces__msg__Point2d(
+  const rm_interfaces__msg__Point2d * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+bool cdr_deserialize_rm_interfaces__msg__Point2d(
+  eprosima::fastcdr::Cdr & cdr,
+  rm_interfaces__msg__Point2d * ros_message);
+
+size_t get_serialized_size_rm_interfaces__msg__Point2d(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_rm_interfaces__msg__Point2d(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+bool cdr_serialize_key_rm_interfaces__msg__Point2d(
+  const rm_interfaces__msg__Point2d * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+size_t get_serialized_size_key_rm_interfaces__msg__Point2d(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_key_rm_interfaces__msg__Point2d(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rm_interfaces, msg, Point2d)();
 
 
 using _JudgeSystemData__ros_msg_type = rm_interfaces__msg__JudgeSystemData;
@@ -178,6 +212,24 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
       &ros_message->operator_command, cdr);
   }
 
+  // Field name: heroposition
+  {
+    cdr_serialize_rm_interfaces__msg__Point2d(
+      &ros_message->heroposition, cdr);
+  }
+
+  // Field name: standard_3position
+  {
+    cdr_serialize_rm_interfaces__msg__Point2d(
+      &ros_message->standard_3position, cdr);
+  }
+
+  // Field name: standard_4position
+  {
+    cdr_serialize_rm_interfaces__msg__Point2d(
+      &ros_message->standard_4position, cdr);
+  }
+
   return true;
 }
 
@@ -279,6 +331,21 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
   // Field name: operator_command
   {
     cdr_deserialize_rm_interfaces__msg__OperatorCommand(cdr, &ros_message->operator_command);
+  }
+
+  // Field name: heroposition
+  {
+    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->heroposition);
+  }
+
+  // Field name: standard_3position
+  {
+    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->standard_3position);
+  }
+
+  // Field name: standard_4position
+  {
+    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->standard_4position);
   }
 
   return true;
@@ -428,6 +495,18 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
   // Field name: operator_command
   current_alignment += get_serialized_size_rm_interfaces__msg__OperatorCommand(
     &(ros_message->operator_command), current_alignment);
+
+  // Field name: heroposition
+  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
+    &(ros_message->heroposition), current_alignment);
+
+  // Field name: standard_3position
+  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
+    &(ros_message->standard_3position), current_alignment);
+
+  // Field name: standard_4position
+  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
+    &(ros_message->standard_4position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -605,6 +684,60 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     }
   }
 
+  // Field name: heroposition
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: standard_3position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: standard_4position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -614,7 +747,7 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, operator_command) +
+      offsetof(DataType, standard_4position) +
       last_member_size
       ) == ret_val;
   }
@@ -720,6 +853,24 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
   {
     cdr_serialize_key_rm_interfaces__msg__OperatorCommand(
       &ros_message->operator_command, cdr);
+  }
+
+  // Field name: heroposition
+  {
+    cdr_serialize_key_rm_interfaces__msg__Point2d(
+      &ros_message->heroposition, cdr);
+  }
+
+  // Field name: standard_3position
+  {
+    cdr_serialize_key_rm_interfaces__msg__Point2d(
+      &ros_message->standard_3position, cdr);
+  }
+
+  // Field name: standard_4position
+  {
+    cdr_serialize_key_rm_interfaces__msg__Point2d(
+      &ros_message->standard_4position, cdr);
   }
 
   return true;
@@ -869,6 +1020,18 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: operator_command
   current_alignment += get_serialized_size_key_rm_interfaces__msg__OperatorCommand(
     &(ros_message->operator_command), current_alignment);
+
+  // Field name: heroposition
+  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
+    &(ros_message->heroposition), current_alignment);
+
+  // Field name: standard_3position
+  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
+    &(ros_message->standard_3position), current_alignment);
+
+  // Field name: standard_4position
+  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
+    &(ros_message->standard_4position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -1044,6 +1207,60 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     }
   }
 
+  // Field name: heroposition
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: standard_3position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: standard_4position
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_rm_interfaces__msg__Point2d(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1052,7 +1269,7 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, operator_command) +
+      offsetof(DataType, standard_4position) +
       last_member_size
       ) == ret_val;
   }

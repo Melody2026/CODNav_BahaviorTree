@@ -17,3 +17,6 @@ int32 zone_status
 float32 position_x
 float32 position_y
 OperatorCommand operator_command
+Point2d heroposition
+Point2d standard_3position
+Point2d standard_4position

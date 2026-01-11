@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "rm_interfaces/msg/detail/debug_light__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/msg/detail/debug_light__type_support.h"
 #include "rm_interfaces/msg/detail/debug_light__struct.h"
 #include "rm_interfaces/msg/detail/debug_light__functions.h"
 
