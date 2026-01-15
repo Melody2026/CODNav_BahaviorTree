@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rm_interfaces/msg/detail/debug_rune_angle__functions.h"
 #include "rm_interfaces/msg/detail/debug_rune_angle__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/msg/detail/debug_rune_angle__functions.h"
 #include "rm_interfaces/msg/detail/debug_rune_angle__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

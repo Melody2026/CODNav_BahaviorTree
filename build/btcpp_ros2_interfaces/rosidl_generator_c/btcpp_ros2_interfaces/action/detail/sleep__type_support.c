@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "btcpp_ros2_interfaces/action/detail/sleep__functions.h"
 #include "btcpp_ros2_interfaces/action/detail/sleep__type_support.h"
 #include "btcpp_ros2_interfaces/action/detail/sleep__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "btcpp_ros2_interfaces/action/detail/sleep__functions.h"
 
 #ifdef __cplusplus
 extern "C"
