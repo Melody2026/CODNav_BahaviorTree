@@ -10,7 +10,7 @@ find_package(Eigen3 REQUIRED)
 include_directories(include)
 
 add_executable(cod_serial  src/uart_transporter.cpp
-        src/test.cpp
+        src/cod_serial.cpp
 )
 ament_target_dependencies(cod_serial
         rclcpp

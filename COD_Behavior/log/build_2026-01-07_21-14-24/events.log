@@ -1,0 +1,189 @@
+[0.000000] (-) TimerEvent: {}
+[0.000735] (cod_behavior) JobQueued: {'identifier': 'cod_behavior', 'dependencies': OrderedDict()}
+[0.000820] (cod_behavior) JobStarted: {'identifier': 'cod_behavior'}
+[0.014065] (cod_behavior) JobProgress: {'identifier': 'cod_behavior', 'progress': 'cmake'}
+[0.016797] (cod_behavior) Command: {'cmd': ['/usr/bin/cmake', '/home/ysl/ros2_ws/COD_Behavior', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior'], 'cwd': '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior', 'env': OrderedDict({'TERM_SESSION_ID': 'fe8dbdf5-0205-49db-8832-bd46264795e3', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ysl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/ysl/bt_ws/install/lib:/home/ysl/bt_ws/install/lib', 'WT_PROFILE_ID': '{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}', 'HOME': '/home/ysl', 'OLDPWD': '/home/ysl/ros2_ws', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ysl/BehaviorTree.CPP/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ysl', 'NAME': '_', 'WSL_INTEROP': '/run/WSL/11921_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/clion-2025.2.1/bin:/home/ysl/.local/bin:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/bin:/opt/clion-2025.2.1/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.8/libnvvp:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/d/机器人2/bin/:/mnt/e/Python/:/mnt/c/Program Files/Java/jdk1.8.0_201/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/e/Program Files/MATLAB/R2023a/runtime/win64:/mnt/e/Program Files/MATLAB/R2023a/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin/mingw/bin:/mnt/e/Anaconda:/mnt/e/Anaconda/Scripts:/mnt/e/Anaconda/Library/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/e/Python/Scripts/:/mnt/e/Python/:/mnt/e/Scripts/:/mnt/e/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/叶少龙1/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/CLion 2025.2.1/bin:/mnt/c/Users/叶少龙1/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/Downloads/浏览器/cursor/resources/app/bin:/mnt/e/Program Files/PyCharm 2025.2.1.1/bin:/mnt/e/IntelliJ IDEA 2025.3/bin:/snap/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin:/home/ysl/.local/bin:/home/ysl/bt_ws/install/bin:/home/ysl/.local/bin', 'WT_SESSION': 'f438b5b2-fd27-43cd-b718-4016adf82694', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'AMENT_PREFIX_PATH': '/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.099677] (-) TimerEvent: {}
+[0.200092] (-) TimerEvent: {}
+[0.300673] (-) TimerEvent: {}
+[0.401211] (-) TimerEvent: {}
+[0.501628] (-) TimerEvent: {}
+[0.546784] (cod_behavior) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.601783] (-) TimerEvent: {}
+[0.702184] (-) TimerEvent: {}
+[0.802658] (-) TimerEvent: {}
+[0.903159] (-) TimerEvent: {}
+[1.003618] (-) TimerEvent: {}
+[1.104073] (-) TimerEvent: {}
+[1.204581] (-) TimerEvent: {}
+[1.305104] (-) TimerEvent: {}
+[1.405683] (-) TimerEvent: {}
+[1.506121] (-) TimerEvent: {}
+[1.606559] (-) TimerEvent: {}
+[1.706977] (-) TimerEvent: {}
+[1.807524] (-) TimerEvent: {}
+[1.908105] (-) TimerEvent: {}
+[2.008579] (-) TimerEvent: {}
+[2.109088] (-) TimerEvent: {}
+[2.209500] (-) TimerEvent: {}
+[2.309935] (cod_behavior) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.310234] (-) TimerEvent: {}
+[2.410606] (-) TimerEvent: {}
+[2.511032] (-) TimerEvent: {}
+[2.611558] (-) TimerEvent: {}
+[2.711988] (-) TimerEvent: {}
+[2.812422] (-) TimerEvent: {}
+[2.912902] (-) TimerEvent: {}
+[3.013405] (-) TimerEvent: {}
+[3.113924] (-) TimerEvent: {}
+[3.214367] (-) TimerEvent: {}
+[3.314810] (-) TimerEvent: {}
+[3.415451] (-) TimerEvent: {}
+[3.515974] (-) TimerEvent: {}
+[3.616417] (-) TimerEvent: {}
+[3.716839] (-) TimerEvent: {}
+[3.817588] (-) TimerEvent: {}
+[3.898619] (cod_behavior) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.917708] (-) TimerEvent: {}
+[4.018116] (-) TimerEvent: {}
+[4.118528] (-) TimerEvent: {}
+[4.218944] (-) TimerEvent: {}
+[4.319380] (-) TimerEvent: {}
+[4.419808] (-) TimerEvent: {}
+[4.520264] (-) TimerEvent: {}
+[4.620831] (-) TimerEvent: {}
+[4.721313] (-) TimerEvent: {}
+[4.723760] (cod_behavior) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.737749] (cod_behavior) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.738662] (cod_behavior) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.739847] (cod_behavior) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.821519] (-) TimerEvent: {}
+[4.922019] (-) TimerEvent: {}
+[5.022472] (-) TimerEvent: {}
+[5.080765] (cod_behavior) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.122626] (-) TimerEvent: {}
+[5.223062] (-) TimerEvent: {}
+[5.323535] (-) TimerEvent: {}
+[5.424312] (-) TimerEvent: {}
+[5.524827] (-) TimerEvent: {}
+[5.625276] (-) TimerEvent: {}
+[5.725710] (-) TimerEvent: {}
+[5.826168] (-) TimerEvent: {}
+[5.909083] (cod_behavior) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.925801] (cod_behavior) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.926466] (cod_behavior) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.926676] (-) TimerEvent: {}
+[5.927480] (cod_behavior) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.941644] (cod_behavior) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[6.026837] (-) TimerEvent: {}
+[6.127252] (-) TimerEvent: {}
+[6.195861] (cod_behavior) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[6.227388] (-) TimerEvent: {}
+[6.308777] (cod_behavior) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[6.327556] (-) TimerEvent: {}
+[6.423132] (cod_behavior) StdoutLine: {'line': b'-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[6.427699] (-) TimerEvent: {}
+[6.528091] (-) TimerEvent: {}
+[6.628553] (-) TimerEvent: {}
+[6.729046] (-) TimerEvent: {}
+[6.829553] (-) TimerEvent: {}
+[6.930029] (-) TimerEvent: {}
+[7.030484] (-) TimerEvent: {}
+[7.047370] (cod_behavior) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[7.081521] (cod_behavior) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[7.120862] (cod_behavior) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.130647] (-) TimerEvent: {}
+[7.168622] (cod_behavior) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.230821] (-) TimerEvent: {}
+[7.331279] (-) TimerEvent: {}
+[7.336842] (cod_behavior) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[7.346201] (cod_behavior) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[7.431445] (-) TimerEvent: {}
+[7.531879] (-) TimerEvent: {}
+[7.541865] (cod_behavior) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[7.632039] (-) TimerEvent: {}
+[7.732490] (-) TimerEvent: {}
+[7.832935] (-) TimerEvent: {}
+[7.933528] (-) TimerEvent: {}
+[8.034029] (-) TimerEvent: {}
+[8.134540] (-) TimerEvent: {}
+[8.234963] (-) TimerEvent: {}
+[8.254220] (cod_behavior) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[8.335124] (-) TimerEvent: {}
+[8.435577] (-) TimerEvent: {}
+[8.536091] (-) TimerEvent: {}
+[8.636594] (-) TimerEvent: {}
+[8.642034] (cod_behavior) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.736732] (-) TimerEvent: {}
+[8.837115] (-) TimerEvent: {}
+[8.937656] (-) TimerEvent: {}
+[9.038159] (-) TimerEvent: {}
+[9.138647] (-) TimerEvent: {}
+[9.239090] (-) TimerEvent: {}
+[9.301267] (cod_behavior) StdoutLine: {'line': b'-- Found behaviortree_cpp: 4.8.2 (/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp/share/behaviortree_cpp/cmake)\n'}
+[9.311673] (cod_behavior) StdoutLine: {'line': b'-- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)\n'}
+[9.339271] (-) TimerEvent: {}
+[9.439731] (-) TimerEvent: {}
+[9.540176] (-) TimerEvent: {}
+[9.640707] (-) TimerEvent: {}
+[9.686578] (cod_behavior) StdoutLine: {'line': b'-- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)\n'}
+[9.729354] (cod_behavior) StdoutLine: {'line': b'-- Found rclcpp_action: 28.1.9 (/opt/ros/jazzy/share/rclcpp_action/cmake)\n'}
+[9.740857] (-) TimerEvent: {}
+[9.841263] (-) TimerEvent: {}
+[9.941726] (-) TimerEvent: {}
+[10.042269] (-) TimerEvent: {}
+[10.142750] (-) TimerEvent: {}
+[10.243263] (-) TimerEvent: {}
+[10.343708] (-) TimerEvent: {}
+[10.444249] (-) TimerEvent: {}
+[10.544800] (-) TimerEvent: {}
+[10.645269] (-) TimerEvent: {}
+[10.745705] (-) TimerEvent: {}
+[10.846179] (-) TimerEvent: {}
+[10.946625] (-) TimerEvent: {}
+[11.047134] (-) TimerEvent: {}
+[11.147658] (-) TimerEvent: {}
+[11.248143] (-) TimerEvent: {}
+[11.348627] (-) TimerEvent: {}
+[11.449169] (-) TimerEvent: {}
+[11.549673] (-) TimerEvent: {}
+[11.650528] (-) TimerEvent: {}
+[11.751059] (-) TimerEvent: {}
+[11.851647] (-) TimerEvent: {}
+[11.952174] (-) TimerEvent: {}
+[12.052713] (-) TimerEvent: {}
+[12.153174] (-) TimerEvent: {}
+[12.253865] (-) TimerEvent: {}
+[12.354328] (-) TimerEvent: {}
+[12.454824] (-) TimerEvent: {}
+[12.555345] (-) TimerEvent: {}
+[12.655795] (-) TimerEvent: {}
+[12.756263] (-) TimerEvent: {}
+[12.856740] (-) TimerEvent: {}
+[12.957288] (-) TimerEvent: {}
+[13.057730] (-) TimerEvent: {}
+[13.158285] (-) TimerEvent: {}
+[13.258840] (-) TimerEvent: {}
+[13.359270] (-) TimerEvent: {}
+[13.406978] (cod_behavior) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:20 (find_package):\n'}
+[13.407337] (cod_behavior) StderrLine: {'line': b'  By not providing "Findrm_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[13.407465] (cod_behavior) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[13.407568] (cod_behavior) StderrLine: {'line': b'  "rm_interfaces", but CMake did not find one.\n'}
+[13.407664] (cod_behavior) StderrLine: {'line': b'\n'}
+[13.407798] (cod_behavior) StderrLine: {'line': b'  Could not find a package configuration file provided by "rm_interfaces"\n'}
+[13.407911] (cod_behavior) StderrLine: {'line': b'  with any of the following names:\n'}
+[13.408033] (cod_behavior) StderrLine: {'line': b'\n'}
+[13.408217] (cod_behavior) StderrLine: {'line': b'    rm_interfacesConfig.cmake\n'}
+[13.408403] (cod_behavior) StderrLine: {'line': b'    rm_interfaces-config.cmake\n'}
+[13.408529] (cod_behavior) StderrLine: {'line': b'\n'}
+[13.408643] (cod_behavior) StderrLine: {'line': b'  Add the installation prefix of "rm_interfaces" to CMAKE_PREFIX_PATH or set\n'}
+[13.408806] (cod_behavior) StderrLine: {'line': b'  "rm_interfaces_DIR" to a directory containing one of the above files.  If\n'}
+[13.408908] (cod_behavior) StderrLine: {'line': b'  "rm_interfaces" provides a separate development package or SDK, be sure it\n'}
+[13.409001] (cod_behavior) StderrLine: {'line': b'  has been installed.\n'}
+[13.409116] (cod_behavior) StderrLine: {'line': b'\n'}
+[13.409219] (cod_behavior) StderrLine: {'line': b'\x1b[0m\n'}
+[13.409319] (cod_behavior) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[13.424671] (cod_behavior) CommandEnded: {'returncode': 1}
+[13.455968] (cod_behavior) JobEnded: {'identifier': 'cod_behavior', 'rc': 1}
+[13.459398] (-) TimerEvent: {}
+[13.467014] (-) EventReactorShutdown: {}

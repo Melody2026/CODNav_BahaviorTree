@@ -210,29 +210,29 @@ cod_serial/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/build
 .PHONY : cod_serial/fast
 
-src/test.o: src/test.cpp.o
-.PHONY : src/test.o
+src/cod_serial.o: src/cod_serial.cpp.o
+.PHONY : src/cod_serial.o
 
 # target to build an object file
-src/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
+src/cod_serial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o
+.PHONY : src/cod_serial.cpp.o
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+src/cod_serial.i: src/cod_serial.cpp.i
+.PHONY : src/cod_serial.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/cod_serial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/cod_serial.cpp.i
+.PHONY : src/cod_serial.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+src/cod_serial.s: src/cod_serial.cpp.s
+.PHONY : src/cod_serial.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/cod_serial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_serial.dir/build.make CMakeFiles/cod_serial.dir/src/cod_serial.cpp.s
+.PHONY : src/cod_serial.cpp.s
 
 src/uart_transporter.o: src/uart_transporter.cpp.o
 .PHONY : src/uart_transporter.o
@@ -274,9 +274,9 @@ help:
 	@echo "... cod_serial_uninstall"
 	@echo "... uninstall"
 	@echo "... cod_serial"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/cod_serial.o"
+	@echo "... src/cod_serial.i"
+	@echo "... src/cod_serial.s"
 	@echo "... src/uart_transporter.o"
 	@echo "... src/uart_transporter.i"
 	@echo "... src/uart_transporter.s"

@@ -1,0 +1,16 @@
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:[m[K In member function ‘[01m[Kstd::optional<std::vector<float> > CODSerial::[01;32m[KreceiveData[m[K(UartTransporter&)[m[K’:
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:85:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+   85 |                 for (const auto &f: [01;31m[Kfloats[m[K) {
+      |                                     [01;31m[K^~~~~~[m[K
+      |                                     [32m[Kfloat[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:94:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+   94 |                     latest_floats_ = [01;31m[Kfloats[m[K; // 保存数据
+      |                                      [01;31m[K^~~~~~[m[K
+      |                                      [32m[Kfloat[m[K
+[01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:99:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+   99 |                 return [01;31m[Kfloats[m[K; // 返回解析的数据
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kfloat[m[K
+gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:90: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,30 @@
+[0.206s] Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[0.327s] [ 33%] [32mBuilding CXX object CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o[0m
+[8.503s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:[m[K In member function ‘[01m[Kstd::optional<std::vector<float> > CODSerial::[01;32m[KreceiveData[m[K(UartTransporter&)[m[K’:
+[8.505s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:81:64:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[8.505s]    81 |                 std::optional<std::vector<float>> getLatestData[01;35m[K()[m[K
+[8.505s]       |                                                                [01;35m[K^~[m[K
+[8.506s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:81:64:[m[K [01;36m[Knote: [m[Kremove parentheses to default-initialize a variable
+[8.506s]    81 |                 std::optional<std::vector<float>> getLatestData[01;36m[K()[m[K
+[8.506s]       |                                                                [01;36m[K^~[m[K
+[8.506s]       |                                                                [31m[K--[m[K
+[8.506s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:81:64:[m[K [01;36m[Knote: [m[Kor replace parentheses with braces to value-initialize a variable
+[8.507s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:82:17:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[8.507s]    82 |                 [01;31m[K{[m[K
+[8.507s]       |                 [01;31m[K^[m[K
+[8.524s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:93:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[8.524s]    93 |                 for (const auto &f: [01;31m[Kfloats[m[K) {
+[8.524s]       |                                     [01;31m[K^~~~~~[m[K
+[8.525s]       |                                     [32m[Kfloat[m[K
+[8.544s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:102:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[8.545s]   102 |                     latest_floats_ = [01;31m[Kfloats[m[K; // 保存数据
+[8.545s]       |                                      [01;31m[K^~~~~~[m[K
+[8.545s]       |                                      [32m[Kfloat[m[K
+[8.565s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:107:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[8.565s]   107 |                 return [01;31m[Kfloats[m[K; // 返回解析的数据
+[8.565s]       |                        [01;31m[K^~~~~~[m[K
+[8.565s]       |                        [32m[Kfloat[m[K
+[12.730s] gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:90: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+[12.731s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+[12.731s] gmake: *** [Makefile:146: all] Error 2
+[12.745s] Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '2': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12

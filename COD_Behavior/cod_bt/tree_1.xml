@@ -5,26 +5,19 @@
     <Sequence>
       <SendNav2Goal goal_pose="{main_position}"/>
       <KeepRunningUntilFailure>
-        <Fallback>
+        <ReactiveFallback>
           <Inverter>
-            <Sequence>
-              <WriteToBlackboard Position="{position}"
-                                 Hp="{hp}"
-                                 Zone_status="{zone_status}"/>
-              <test test="{zone_status}"/>
-            </Sequence>
+            <WriteToBlackboard Position="{position}"
+                               Hp="{hp}"
+                               Zone_status="{zone_status}"/>
           </Inverter>
           <Sequence>
             <HpCondition Hp="{hp}"/>
             <SendNav2Goal goal_pose="{home_position}"/>
           </Sequence>
-          <SubTree ID="Patrol_tree"
-                   hp="{hp}"
-                   zone_status="{zone_status}"
-                   patrol_points="{patrol_points}"
-                   patrol_index="{patrol_index}"/>
+          <SendNav2Goal goal_pose="{main_position}"/>
           <AlwaysSuccess/>
-        </Fallback>
+        </ReactiveFallback>
       </KeepRunningUntilFailure>
     </Sequence>
   </BehaviorTree>
@@ -65,10 +58,6 @@
       <inout_port name="Position"/>
       <inout_port name="Hp"/>
       <output_port name="Zone_status"/>
-    </Action>
-    <Action ID="test"
-            editable="true">
-      <input_port name="test"/>
     </Action>
   </TreeNodesModel>
 

@@ -1,0 +1,81 @@
+[0.500s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.500s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1e5c743aa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1e5c743710>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1e5c743710>>)
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.560s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ysl/ros2_ws/COD_Behavior'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.599s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'cod_behavior'
+[0.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.624s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.624s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.626s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ysl/BehaviorTree.CPP/install
+[0.629s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 388 installed packages in /opt/ros/jazzy
+[0.633s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_args' from command line to 'None'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_target' from command line to 'None'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_clean_cache' from command line to 'False'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_clean_first' from command line to 'False'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'cmake_force_configure' from command line to 'False'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'ament_cmake_args' from command line to 'None'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'catkin_cmake_args' from command line to 'None'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'cod_behavior' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.710s] DEBUG:colcon.colcon_core.verb:Building package 'cod_behavior' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior', 'merge_install': False, 'path': '/home/ysl/ros2_ws/COD_Behavior', 'symlink_install': True, 'test_result_base': None}
+[0.711s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.712s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.712s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ysl/ros2_ws/COD_Behavior' with build type 'ament_cmake'
+[0.713s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ysl/ros2_ws/COD_Behavior'
+[0.716s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.716s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.716s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.735s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior
+[14.137s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ysl/ros2_ws/COD_Behavior -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior
+[14.156s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cod_behavior)
+[14.159s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior' for CMake module files
+[14.160s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior' for CMake config files
+[14.160s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/bin'
+[14.160s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/lib/pkgconfig/cod_behavior.pc'
+[14.161s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/lib/python3.12/site-packages'
+[14.161s] Level 1:colcon.colcon_core.environment:checking '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/bin'
+[14.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/cod_behavior/package.ps1'
+[14.163s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/cod_behavior/package.dsv'
+[14.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/cod_behavior/package.sh'
+[14.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/cod_behavior/package.bash'
+[14.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/cod_behavior/package.zsh'
+[14.167s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ysl/ros2_ws/COD_Behavior/install/cod_behavior/share/colcon-core/packages/cod_behavior)
+[14.178s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[14.178s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[14.178s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[14.179s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[14.355s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[14.356s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[14.356s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[14.356s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[14.358s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[14.358s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[14.359s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/COD_Behavior/install/local_setup.ps1'
+[14.360s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ysl/ros2_ws/COD_Behavior/install/_local_setup_util_ps1.py'
+[14.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/COD_Behavior/install/setup.ps1'
+[14.363s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/COD_Behavior/install/local_setup.sh'
+[14.364s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ysl/ros2_ws/COD_Behavior/install/_local_setup_util_sh.py'
+[14.364s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/COD_Behavior/install/setup.sh'
+[14.366s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/COD_Behavior/install/local_setup.bash'
+[14.366s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/COD_Behavior/install/setup.bash'
+[14.367s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ysl/ros2_ws/COD_Behavior/install/local_setup.zsh'
+[14.368s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ysl/ros2_ws/COD_Behavior/install/setup.zsh'

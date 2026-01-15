@@ -198,32 +198,6 @@ cod_behavior_uninstall/fast:
 .PHONY : cod_behavior_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named cod_behavior
-
-# Build rule for target.
-cod_behavior: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cod_behavior
-.PHONY : cod_behavior
-
-# fast build rule for target.
-cod_behavior/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_behavior.dir/build.make CMakeFiles/cod_behavior.dir/build
-.PHONY : cod_behavior/fast
-
-#=============================================================================
-# Target rules for targets named checkNavResult
-
-# Build rule for target.
-checkNavResult: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 checkNavResult
-.PHONY : checkNavResult
-
-# fast build rule for target.
-checkNavResult/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkNavResult.dir/build.make CMakeFiles/checkNavResult.dir/build
-.PHONY : checkNavResult/fast
-
-#=============================================================================
 # Target rules for targets named tree_1
 
 # Build rule for target.
@@ -235,93 +209,6 @@ tree_1: cmake_check_build_system
 tree_1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_1.dir/build.make CMakeFiles/tree_1.dir/build
 .PHONY : tree_1/fast
-
-#=============================================================================
-# Target rules for targets named msgtest
-
-# Build rule for target.
-msgtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgtest
-.PHONY : msgtest
-
-# fast build rule for target.
-msgtest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgtest.dir/build.make CMakeFiles/msgtest.dir/build
-.PHONY : msgtest/fast
-
-#=============================================================================
-# Target rules for targets named test_1
-
-# Build rule for target.
-test_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_1
-.PHONY : test_1
-
-# fast build rule for target.
-test_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/build
-.PHONY : test_1/fast
-
-#=============================================================================
-# Target rules for targets named test_2
-
-# Build rule for target.
-test_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_2
-.PHONY : test_2
-
-# fast build rule for target.
-test_2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/build
-.PHONY : test_2/fast
-
-src/CheckNavResult.o: src/CheckNavResult.cpp.o
-.PHONY : src/CheckNavResult.o
-
-# target to build an object file
-src/CheckNavResult.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkNavResult.dir/build.make CMakeFiles/checkNavResult.dir/src/CheckNavResult.cpp.o
-.PHONY : src/CheckNavResult.cpp.o
-
-src/CheckNavResult.i: src/CheckNavResult.cpp.i
-.PHONY : src/CheckNavResult.i
-
-# target to preprocess a source file
-src/CheckNavResult.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkNavResult.dir/build.make CMakeFiles/checkNavResult.dir/src/CheckNavResult.cpp.i
-.PHONY : src/CheckNavResult.cpp.i
-
-src/CheckNavResult.s: src/CheckNavResult.cpp.s
-.PHONY : src/CheckNavResult.s
-
-# target to generate assembly for a file
-src/CheckNavResult.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkNavResult.dir/build.make CMakeFiles/checkNavResult.dir/src/CheckNavResult.cpp.s
-.PHONY : src/CheckNavResult.cpp.s
-
-src/sentry_behavior.o: src/sentry_behavior.cpp.o
-.PHONY : src/sentry_behavior.o
-
-# target to build an object file
-src/sentry_behavior.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_behavior.dir/build.make CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.o
-.PHONY : src/sentry_behavior.cpp.o
-
-src/sentry_behavior.i: src/sentry_behavior.cpp.i
-.PHONY : src/sentry_behavior.i
-
-# target to preprocess a source file
-src/sentry_behavior.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_behavior.dir/build.make CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.i
-.PHONY : src/sentry_behavior.cpp.i
-
-src/sentry_behavior.s: src/sentry_behavior.cpp.s
-.PHONY : src/sentry_behavior.s
-
-# target to generate assembly for a file
-src/sentry_behavior.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cod_behavior.dir/build.make CMakeFiles/cod_behavior.dir/src/sentry_behavior.cpp.s
-.PHONY : src/sentry_behavior.cpp.s
 
 src/tree_1.o: src/tree_1.cpp.o
 .PHONY : src/tree_1.o
@@ -347,78 +234,6 @@ src/tree_1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_1.dir/build.make CMakeFiles/tree_1.dir/src/tree_1.cpp.s
 .PHONY : src/tree_1.cpp.s
 
-test/msgTest.o: test/msgTest.cpp.o
-.PHONY : test/msgTest.o
-
-# target to build an object file
-test/msgTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgtest.dir/build.make CMakeFiles/msgtest.dir/test/msgTest.cpp.o
-.PHONY : test/msgTest.cpp.o
-
-test/msgTest.i: test/msgTest.cpp.i
-.PHONY : test/msgTest.i
-
-# target to preprocess a source file
-test/msgTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgtest.dir/build.make CMakeFiles/msgtest.dir/test/msgTest.cpp.i
-.PHONY : test/msgTest.cpp.i
-
-test/msgTest.s: test/msgTest.cpp.s
-.PHONY : test/msgTest.s
-
-# target to generate assembly for a file
-test/msgTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/msgtest.dir/build.make CMakeFiles/msgtest.dir/test/msgTest.cpp.s
-.PHONY : test/msgTest.cpp.s
-
-test/test1_FullStatus.o: test/test1_FullStatus.cpp.o
-.PHONY : test/test1_FullStatus.o
-
-# target to build an object file
-test/test1_FullStatus.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.o
-.PHONY : test/test1_FullStatus.cpp.o
-
-test/test1_FullStatus.i: test/test1_FullStatus.cpp.i
-.PHONY : test/test1_FullStatus.i
-
-# target to preprocess a source file
-test/test1_FullStatus.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.i
-.PHONY : test/test1_FullStatus.cpp.i
-
-test/test1_FullStatus.s: test/test1_FullStatus.cpp.s
-.PHONY : test/test1_FullStatus.s
-
-# target to generate assembly for a file
-test/test1_FullStatus.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_1.dir/build.make CMakeFiles/test_1.dir/test/test1_FullStatus.cpp.s
-.PHONY : test/test1_FullStatus.cpp.s
-
-test/test2_PoorStatus.o: test/test2_PoorStatus.cpp.o
-.PHONY : test/test2_PoorStatus.o
-
-# target to build an object file
-test/test2_PoorStatus.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.o
-.PHONY : test/test2_PoorStatus.cpp.o
-
-test/test2_PoorStatus.i: test/test2_PoorStatus.cpp.i
-.PHONY : test/test2_PoorStatus.i
-
-# target to preprocess a source file
-test/test2_PoorStatus.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.i
-.PHONY : test/test2_PoorStatus.cpp.i
-
-test/test2_PoorStatus.s: test/test2_PoorStatus.cpp.s
-.PHONY : test/test2_PoorStatus.s
-
-# target to generate assembly for a file
-test/test2_PoorStatus.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_2.dir/build.make CMakeFiles/test_2.dir/test/test2_PoorStatus.cpp.s
-.PHONY : test/test2_PoorStatus.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -434,30 +249,10 @@ help:
 	@echo "... test"
 	@echo "... cod_behavior_uninstall"
 	@echo "... uninstall"
-	@echo "... checkNavResult"
-	@echo "... cod_behavior"
-	@echo "... msgtest"
-	@echo "... test_1"
-	@echo "... test_2"
 	@echo "... tree_1"
-	@echo "... src/CheckNavResult.o"
-	@echo "... src/CheckNavResult.i"
-	@echo "... src/CheckNavResult.s"
-	@echo "... src/sentry_behavior.o"
-	@echo "... src/sentry_behavior.i"
-	@echo "... src/sentry_behavior.s"
 	@echo "... src/tree_1.o"
 	@echo "... src/tree_1.i"
 	@echo "... src/tree_1.s"
-	@echo "... test/msgTest.o"
-	@echo "... test/msgTest.i"
-	@echo "... test/msgTest.s"
-	@echo "... test/test1_FullStatus.o"
-	@echo "... test/test1_FullStatus.i"
-	@echo "... test/test1_FullStatus.s"
-	@echo "... test/test2_PoorStatus.o"
-	@echo "... test/test2_PoorStatus.i"
-	@echo "... test/test2_PoorStatus.s"
 .PHONY : help
 
 

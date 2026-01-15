@@ -18,6 +18,12 @@
 
 bool rm_interfaces__msg__operator_command__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * rm_interfaces__msg__operator_command__convert_to_py(void * raw_ros_message);
+bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
+bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
+bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -220,6 +226,39 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
       return false;
     }
     if (!rm_interfaces__msg__operator_command__convert_from_py(field, &ros_message->operator_command)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // heroposition
+    PyObject * field = PyObject_GetAttrString(_pymsg, "heroposition");
+    if (!field) {
+      return false;
+    }
+    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->heroposition)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // standard_3position
+    PyObject * field = PyObject_GetAttrString(_pymsg, "standard_3position");
+    if (!field) {
+      return false;
+    }
+    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->standard_3position)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // standard_4position
+    PyObject * field = PyObject_GetAttrString(_pymsg, "standard_4position");
+    if (!field) {
+      return false;
+    }
+    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->standard_4position)) {
       Py_DECREF(field);
       return false;
     }
@@ -453,6 +492,48 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "operator_command", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // heroposition
+    PyObject * field = NULL;
+    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->heroposition);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "heroposition", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // standard_3position
+    PyObject * field = NULL;
+    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->standard_3position);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "standard_3position", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // standard_4position
+    PyObject * field = NULL;
+    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->standard_4position);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "standard_4position", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

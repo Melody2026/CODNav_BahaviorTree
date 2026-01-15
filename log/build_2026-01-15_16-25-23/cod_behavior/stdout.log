@@ -1,0 +1,22 @@
+[100%] Built target tree_1
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/tree_1
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup.launch.py
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup_behavior.launch.py
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/nav_pose.yaml
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/package_run_dependencies/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/parent_prefix_path/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/ament_prefix_path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/path.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/environment/path.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.bash
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.sh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.zsh
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/local_setup.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.dsv
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/ament_index/resource_index/packages/cod_behavior
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/cmake/cod_behaviorConfig.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/cmake/cod_behaviorConfig-version.cmake
+-- Symlinking: /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/package.xml

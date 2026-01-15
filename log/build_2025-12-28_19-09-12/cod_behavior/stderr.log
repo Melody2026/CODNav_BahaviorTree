@@ -1,8 +1,0 @@
-In file included from [01m[K/home/ysl/ros2_ws/COD_Behavior/src/tree_1.cpp:4[m[K:
-[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus SendNav2Goal::[01;32m[Ktick[m[K()[m[K’:
-[01m[K/home/ysl/ros2_ws/COD_Behavior/src/../include/cod_behavior/tree_1_action.h:99:23:[m[K [01;31m[Kerror: [m[Kunable to find the promise type for this coroutine
-   99 |         auto result = [01;31m[Kco_await[m[K goal_handle_future;  // 10秒内等待响应
-      |                       [01;31m[K^~~~~~~~[m[K
-gmake[2]: *** [CMakeFiles/tree_1.dir/build.make:76: CMakeFiles/tree_1.dir/src/tree_1.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/tree_1.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

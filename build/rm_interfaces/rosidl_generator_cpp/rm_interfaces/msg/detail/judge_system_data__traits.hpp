@@ -20,6 +20,10 @@
 // Include directives for member types
 // Member 'operator_command'
 #include "rm_interfaces/msg/detail/operator_command__traits.hpp"
+// Member 'heroposition'
+// Member 'standard_3position'
+// Member 'standard_4position'
+#include "rm_interfaces/msg/detail/point2d__traits.hpp"
 
 namespace rm_interfaces
 {
@@ -162,6 +166,27 @@ inline void to_flow_style_yaml(
   {
     out << "operator_command: ";
     to_flow_style_yaml(msg.operator_command, out);
+    out << ", ";
+  }
+
+  // member: heroposition
+  {
+    out << "heroposition: ";
+    to_flow_style_yaml(msg.heroposition, out);
+    out << ", ";
+  }
+
+  // member: standard_3position
+  {
+    out << "standard_3position: ";
+    to_flow_style_yaml(msg.standard_3position, out);
+    out << ", ";
+  }
+
+  // member: standard_4position
+  {
+    out << "standard_4position: ";
+    to_flow_style_yaml(msg.standard_4position, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -358,6 +383,33 @@ inline void to_block_style_yaml(
     out << "operator_command:\n";
     to_block_style_yaml(msg.operator_command, out, indentation + 2);
   }
+
+  // member: heroposition
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "heroposition:\n";
+    to_block_style_yaml(msg.heroposition, out, indentation + 2);
+  }
+
+  // member: standard_3position
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "standard_3position:\n";
+    to_block_style_yaml(msg.standard_3position, out, indentation + 2);
+  }
+
+  // member: standard_4position
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "standard_4position:\n";
+    to_block_style_yaml(msg.standard_4position, out, indentation + 2);
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const JudgeSystemData & msg, bool use_flow_style = false)
@@ -406,11 +458,11 @@ inline const char * name<rm_interfaces::msg::JudgeSystemData>()
 
 template<>
 struct has_fixed_size<rm_interfaces::msg::JudgeSystemData>
-  : std::integral_constant<bool, has_fixed_size<rm_interfaces::msg::OperatorCommand>::value> {};
+  : std::integral_constant<bool, has_fixed_size<rm_interfaces::msg::OperatorCommand>::value && has_fixed_size<rm_interfaces::msg::Point2d>::value> {};
 
 template<>
 struct has_bounded_size<rm_interfaces::msg::JudgeSystemData>
-  : std::integral_constant<bool, has_bounded_size<rm_interfaces::msg::OperatorCommand>::value> {};
+  : std::integral_constant<bool, has_bounded_size<rm_interfaces::msg::OperatorCommand>::value && has_bounded_size<rm_interfaces::msg::Point2d>::value> {};
 
 template<>
 struct is_message<rm_interfaces::msg::JudgeSystemData>

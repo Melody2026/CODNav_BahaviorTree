@@ -1,11 +1,6 @@
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/uninstall.dir
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/cod_behavior_uninstall.dir
-/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/cod_behavior.dir
-/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/checkNavResult.dir
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/tree_1.dir
-/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/msgtest.dir
-/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/test_1.dir
-/home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/test_2.dir
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/test.dir
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/edit_cache.dir
 /home/ysl/ros2_ws/build/cod_behavior/CMakeFiles/rebuild_cache.dir

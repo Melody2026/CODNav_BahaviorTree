@@ -14,6 +14,10 @@
 // Include directives for member types
 // Member `operator_command`
 #include "rm_interfaces/msg/detail/operator_command__functions.h"
+// Member `heroposition`
+// Member `standard_3position`
+// Member `standard_4position`
+#include "rm_interfaces/msg/detail/point2d__functions.h"
 
 bool
 rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * msg)
@@ -41,6 +45,21 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
   // position_y
   // operator_command
   if (!rm_interfaces__msg__OperatorCommand__init(&msg->operator_command)) {
+    rm_interfaces__msg__JudgeSystemData__fini(msg);
+    return false;
+  }
+  // heroposition
+  if (!rm_interfaces__msg__Point2d__init(&msg->heroposition)) {
+    rm_interfaces__msg__JudgeSystemData__fini(msg);
+    return false;
+  }
+  // standard_3position
+  if (!rm_interfaces__msg__Point2d__init(&msg->standard_3position)) {
+    rm_interfaces__msg__JudgeSystemData__fini(msg);
+    return false;
+  }
+  // standard_4position
+  if (!rm_interfaces__msg__Point2d__init(&msg->standard_4position)) {
     rm_interfaces__msg__JudgeSystemData__fini(msg);
     return false;
   }
@@ -73,6 +92,12 @@ rm_interfaces__msg__JudgeSystemData__fini(rm_interfaces__msg__JudgeSystemData * 
   // position_y
   // operator_command
   rm_interfaces__msg__OperatorCommand__fini(&msg->operator_command);
+  // heroposition
+  rm_interfaces__msg__Point2d__fini(&msg->heroposition);
+  // standard_3position
+  rm_interfaces__msg__Point2d__fini(&msg->standard_3position);
+  // standard_4position
+  rm_interfaces__msg__Point2d__fini(&msg->standard_4position);
 }
 
 bool
@@ -159,6 +184,24 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   {
     return false;
   }
+  // heroposition
+  if (!rm_interfaces__msg__Point2d__are_equal(
+      &(lhs->heroposition), &(rhs->heroposition)))
+  {
+    return false;
+  }
+  // standard_3position
+  if (!rm_interfaces__msg__Point2d__are_equal(
+      &(lhs->standard_3position), &(rhs->standard_3position)))
+  {
+    return false;
+  }
+  // standard_4position
+  if (!rm_interfaces__msg__Point2d__are_equal(
+      &(lhs->standard_4position), &(rhs->standard_4position)))
+  {
+    return false;
+  }
   return true;
 }
 
@@ -209,6 +252,24 @@ rm_interfaces__msg__JudgeSystemData__copy(
   // operator_command
   if (!rm_interfaces__msg__OperatorCommand__copy(
       &(input->operator_command), &(output->operator_command)))
+  {
+    return false;
+  }
+  // heroposition
+  if (!rm_interfaces__msg__Point2d__copy(
+      &(input->heroposition), &(output->heroposition)))
+  {
+    return false;
+  }
+  // standard_3position
+  if (!rm_interfaces__msg__Point2d__copy(
+      &(input->standard_3position), &(output->standard_3position)))
+  {
+    return false;
+  }
+  // standard_4position
+  if (!rm_interfaces__msg__Point2d__copy(
+      &(input->standard_4position), &(output->standard_4position)))
   {
     return false;
   }

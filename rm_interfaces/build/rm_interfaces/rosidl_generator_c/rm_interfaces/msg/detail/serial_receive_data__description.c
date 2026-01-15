@@ -11,10 +11,10 @@ rm_interfaces__msg__SerialReceiveData__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x05, 0xdd, 0x85, 0x88, 0xf2, 0x28, 0xc6, 0xf2,
-      0xff, 0xb3, 0x20, 0x9c, 0x94, 0x80, 0x29, 0x72,
-      0x40, 0x8b, 0xf9, 0x2d, 0x40, 0x9a, 0xcc, 0xde,
-      0xcc, 0x6f, 0x14, 0xde, 0xa0, 0xb4, 0xd9, 0x43,
+      0x08, 0xc6, 0xff, 0x63, 0xe5, 0x6d, 0x2f, 0xdb,
+      0x91, 0xb9, 0x4f, 0xc1, 0x15, 0x7e, 0x58, 0xe1,
+      0x4f, 0x54, 0xe4, 0x2d, 0xd3, 0xf1, 0x1a, 0x3f,
+      0x7c, 0xb1, 0x25, 0x83, 0x84, 0x37, 0x81, 0xfd,
     }};
   return &hash;
 }
@@ -23,10 +23,11 @@ rm_interfaces__msg__SerialReceiveData__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
+#include "rm_interfaces/msg/detail/operator_command__functions.h"
+#include "rm_interfaces/msg/detail/point2d__functions.h"
+#include "rm_interfaces/msg/detail/judge_system_data__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
 #include "std_msgs/msg/detail/header__functions.h"
-#include "rm_interfaces/msg/detail/judge_system_data__functions.h"
-#include "rm_interfaces/msg/detail/operator_command__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -37,16 +38,22 @@ static const rosidl_type_hash_t builtin_interfaces__msg__Time__EXPECTED_HASH = {
     0x42, 0x06, 0xce, 0xa9, 0xac, 0xf9, 0xc1, 0x97,
   }};
 static const rosidl_type_hash_t rm_interfaces__msg__JudgeSystemData__EXPECTED_HASH = {1, {
-    0xe4, 0x7f, 0xb7, 0xef, 0x33, 0x45, 0x33, 0x06,
-    0xc6, 0xac, 0xaa, 0x7c, 0xf8, 0x11, 0x4c, 0xae,
-    0x9f, 0x01, 0x0e, 0x57, 0xef, 0xe8, 0xd1, 0x63,
-    0xa1, 0xc0, 0x45, 0x8d, 0xfa, 0xb0, 0x4d, 0xd2,
+    0x83, 0xb3, 0x50, 0x70, 0x2a, 0x98, 0x73, 0x92,
+    0x27, 0xae, 0x70, 0x0c, 0x95, 0x2b, 0x5b, 0x81,
+    0xe9, 0x23, 0x98, 0x75, 0xf5, 0xbe, 0x94, 0xad,
+    0x90, 0x5e, 0xb7, 0x5e, 0xfe, 0x5a, 0x93, 0xee,
   }};
 static const rosidl_type_hash_t rm_interfaces__msg__OperatorCommand__EXPECTED_HASH = {1, {
     0x66, 0x69, 0xc8, 0x15, 0x1d, 0xe4, 0x36, 0x91,
     0x11, 0x87, 0x5e, 0x60, 0xd9, 0x39, 0x54, 0xd5,
     0x26, 0xc2, 0xb5, 0x98, 0xfd, 0x69, 0x40, 0x21,
     0x0b, 0x2f, 0x2f, 0xf6, 0x3d, 0x15, 0xed, 0xc9,
+  }};
+static const rosidl_type_hash_t rm_interfaces__msg__Point2d__EXPECTED_HASH = {1, {
+    0x80, 0xa9, 0x10, 0xe6, 0x6a, 0xf4, 0x73, 0xa6,
+    0x81, 0x96, 0x1d, 0x99, 0x66, 0xf6, 0x43, 0xd4,
+    0x23, 0x89, 0x2b, 0x87, 0xae, 0xe1, 0x5c, 0xe2,
+    0x51, 0x38, 0xda, 0xb7, 0x3e, 0x21, 0x7d, 0x8e,
   }};
 static const rosidl_type_hash_t std_msgs__msg__Header__EXPECTED_HASH = {1, {
     0xf4, 0x9f, 0xb3, 0xae, 0x2c, 0xf0, 0x70, 0xf7,
@@ -60,6 +67,7 @@ static char rm_interfaces__msg__SerialReceiveData__TYPE_NAME[] = "rm_interfaces/
 static char builtin_interfaces__msg__Time__TYPE_NAME[] = "builtin_interfaces/msg/Time";
 static char rm_interfaces__msg__JudgeSystemData__TYPE_NAME[] = "rm_interfaces/msg/JudgeSystemData";
 static char rm_interfaces__msg__OperatorCommand__TYPE_NAME[] = "rm_interfaces/msg/OperatorCommand";
+static char rm_interfaces__msg__Point2d__TYPE_NAME[] = "rm_interfaces/msg/Point2d";
 static char std_msgs__msg__Header__TYPE_NAME[] = "std_msgs/msg/Header";
 
 // Define type names, field names, and default values
@@ -158,6 +166,10 @@ static rosidl_runtime_c__type_description__IndividualTypeDescription rm_interfac
     {NULL, 0, 0},
   },
   {
+    {rm_interfaces__msg__Point2d__TYPE_NAME, 25, 25},
+    {NULL, 0, 0},
+  },
+  {
     {std_msgs__msg__Header__TYPE_NAME, 19, 19},
     {NULL, 0, 0},
   },
@@ -174,7 +186,7 @@ rm_interfaces__msg__SerialReceiveData__get_type_description(
       {rm_interfaces__msg__SerialReceiveData__TYPE_NAME, 35, 35},
       {rm_interfaces__msg__SerialReceiveData__FIELDS, 7, 7},
     },
-    {rm_interfaces__msg__SerialReceiveData__REFERENCED_TYPE_DESCRIPTIONS, 4, 4},
+    {rm_interfaces__msg__SerialReceiveData__REFERENCED_TYPE_DESCRIPTIONS, 5, 5},
   };
   if (!constructed) {
     assert(0 == memcmp(&builtin_interfaces__msg__Time__EXPECTED_HASH, builtin_interfaces__msg__Time__get_type_hash(NULL), sizeof(rosidl_type_hash_t)));
@@ -183,8 +195,10 @@ rm_interfaces__msg__SerialReceiveData__get_type_description(
     description.referenced_type_descriptions.data[1].fields = rm_interfaces__msg__JudgeSystemData__get_type_description(NULL)->type_description.fields;
     assert(0 == memcmp(&rm_interfaces__msg__OperatorCommand__EXPECTED_HASH, rm_interfaces__msg__OperatorCommand__get_type_hash(NULL), sizeof(rosidl_type_hash_t)));
     description.referenced_type_descriptions.data[2].fields = rm_interfaces__msg__OperatorCommand__get_type_description(NULL)->type_description.fields;
+    assert(0 == memcmp(&rm_interfaces__msg__Point2d__EXPECTED_HASH, rm_interfaces__msg__Point2d__get_type_hash(NULL), sizeof(rosidl_type_hash_t)));
+    description.referenced_type_descriptions.data[3].fields = rm_interfaces__msg__Point2d__get_type_description(NULL)->type_description.fields;
     assert(0 == memcmp(&std_msgs__msg__Header__EXPECTED_HASH, std_msgs__msg__Header__get_type_hash(NULL), sizeof(rosidl_type_hash_t)));
-    description.referenced_type_descriptions.data[3].fields = std_msgs__msg__Header__get_type_description(NULL)->type_description.fields;
+    description.referenced_type_descriptions.data[4].fields = std_msgs__msg__Header__get_type_description(NULL)->type_description.fields;
     constructed = true;
   }
   return &description;
@@ -221,15 +235,16 @@ rm_interfaces__msg__SerialReceiveData__get_type_description_sources(
   const rosidl_message_type_support_t * type_support)
 {
   (void)type_support;
-  static rosidl_runtime_c__type_description__TypeSource sources[5];
-  static const rosidl_runtime_c__type_description__TypeSource__Sequence source_sequence = {sources, 5, 5};
+  static rosidl_runtime_c__type_description__TypeSource sources[6];
+  static const rosidl_runtime_c__type_description__TypeSource__Sequence source_sequence = {sources, 6, 6};
   static bool constructed = false;
   if (!constructed) {
     sources[0] = *rm_interfaces__msg__SerialReceiveData__get_individual_type_description_source(NULL),
     sources[1] = *builtin_interfaces__msg__Time__get_individual_type_description_source(NULL);
     sources[2] = *rm_interfaces__msg__JudgeSystemData__get_individual_type_description_source(NULL);
     sources[3] = *rm_interfaces__msg__OperatorCommand__get_individual_type_description_source(NULL);
-    sources[4] = *std_msgs__msg__Header__get_individual_type_description_source(NULL);
+    sources[4] = *rm_interfaces__msg__Point2d__get_individual_type_description_source(NULL);
+    sources[5] = *std_msgs__msg__Header__get_individual_type_description_source(NULL);
     constructed = true;
   }
   return &source_sequence;

@@ -886,10 +886,15 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.h \
   rosidl_generator_c/rm_interfaces/msg/operator_command.h \
+  rosidl_generator_c/rm_interfaces/msg/point2d.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_c.h \
   rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_c.h \
+  rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h \
   rosidl_typesupport_introspection_c/rm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -1397,6 +1402,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/judge_system_data.h \
@@ -2011,15 +2017,9 @@ rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/serial_receive_data_
 
 rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_introspection_c.h:
 
-rosidl_generator_c/rm_interfaces/msg/point2d.h:
-
 rosidl_generator_c/rm_interfaces/msg/detail/rune_target__functions.h:
 
 rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/rune_target__type_support.c:
-
-rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h:
-
-rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h:
 
 rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/measurement__rosidl_typesupport_introspection_c.h:
 
@@ -2033,11 +2033,17 @@ rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__struct.h:
 
 rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__functions.h:
 
+rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h:
+
 rosidl_generator_c/rm_interfaces/msg/detail/target__functions.h:
 
 rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_c.h:
 
 rosidl_typesupport_introspection_c/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_c.h:
+
+rosidl_generator_c/rm_interfaces/msg/point2d.h:
+
+rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h:
 
 rosidl_generator_c/rm_interfaces/msg/detail/operator_command__type_support.h:
 

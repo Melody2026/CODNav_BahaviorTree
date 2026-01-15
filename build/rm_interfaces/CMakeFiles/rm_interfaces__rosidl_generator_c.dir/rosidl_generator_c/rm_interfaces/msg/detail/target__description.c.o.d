@@ -79,6 +79,6 @@ CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interface
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__functions.h \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__functions.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h \
- /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__functions.h
+ /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h

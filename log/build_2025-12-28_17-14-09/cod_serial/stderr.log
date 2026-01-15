@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:90: CMakeFiles/cod_serial.dir/src/test.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

@@ -24,16 +24,64 @@ namespace msg
 namespace builder
 {
 
+class Init_JudgeSystemData_standard_4position
+{
+public:
+  explicit Init_JudgeSystemData_standard_4position(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  ::rm_interfaces::msg::JudgeSystemData standard_4position(::rm_interfaces::msg::JudgeSystemData::_standard_4position_type arg)
+  {
+    msg_.standard_4position = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_standard_3position
+{
+public:
+  explicit Init_JudgeSystemData_standard_3position(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_standard_4position standard_3position(::rm_interfaces::msg::JudgeSystemData::_standard_3position_type arg)
+  {
+    msg_.standard_3position = std::move(arg);
+    return Init_JudgeSystemData_standard_4position(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_heroposition
+{
+public:
+  explicit Init_JudgeSystemData_heroposition(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_standard_3position heroposition(::rm_interfaces::msg::JudgeSystemData::_heroposition_type arg)
+  {
+    msg_.heroposition = std::move(arg);
+    return Init_JudgeSystemData_standard_3position(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
 class Init_JudgeSystemData_operator_command
 {
 public:
   explicit Init_JudgeSystemData_operator_command(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  ::rm_interfaces::msg::JudgeSystemData operator_command(::rm_interfaces::msg::JudgeSystemData::_operator_command_type arg)
+  Init_JudgeSystemData_heroposition operator_command(::rm_interfaces::msg::JudgeSystemData::_operator_command_type arg)
   {
     msg_.operator_command = std::move(arg);
-    return std::move(msg_);
+    return Init_JudgeSystemData_heroposition(msg_);
   }
 
 private:

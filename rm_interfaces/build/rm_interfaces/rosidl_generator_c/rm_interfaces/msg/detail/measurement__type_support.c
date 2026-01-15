@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "rm_interfaces/msg/detail/measurement__functions.h"
 #include "rm_interfaces/msg/detail/measurement__type_support.h"
 #include "rm_interfaces/msg/detail/measurement__struct.h"
+#include "rm_interfaces/msg/detail/measurement__functions.h"
 
 #ifdef __cplusplus
 extern "C"

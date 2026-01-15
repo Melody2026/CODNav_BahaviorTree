@@ -42,6 +42,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_inter
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+ /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \

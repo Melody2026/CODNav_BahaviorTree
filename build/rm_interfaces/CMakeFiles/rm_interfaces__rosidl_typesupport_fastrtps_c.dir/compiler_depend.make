@@ -2732,6 +2732,8 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_typesupport_fastrtps_c/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_c.h \
   rosidl_typesupport_fastrtps_c/rm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h \
@@ -4357,6 +4359,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
+  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \

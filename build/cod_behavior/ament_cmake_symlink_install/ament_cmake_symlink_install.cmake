@@ -310,23 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "cod_behavior" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install("TARGETS" "checkNavResult" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
 # install("TARGETS" "tree_1" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install("TARGETS" "msgtest" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install("TARGETS" "test_1" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install("TARGETS" "test_2" "DESTINATION" "lib/cod_behavior")
-include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/ysl/ros2_ws/build/cod_behavior/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
 ament_cmake_symlink_install_directory("/home/ysl/ros2_ws/COD_Behavior" DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
