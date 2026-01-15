@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/detail/operator_command__type_support.hpp

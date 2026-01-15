@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/btcpp_ros2_interfaces/rosidl_typesupport_fastrtps_c/btcpp_ros2_interfaces/srv/detail/get_trees__rosidl_typesupport_fastrtps_c.h

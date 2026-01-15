@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/judge_system_data.h

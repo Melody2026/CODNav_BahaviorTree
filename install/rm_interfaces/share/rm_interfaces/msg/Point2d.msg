@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/rm_interfaces/msg/Point2d.msg

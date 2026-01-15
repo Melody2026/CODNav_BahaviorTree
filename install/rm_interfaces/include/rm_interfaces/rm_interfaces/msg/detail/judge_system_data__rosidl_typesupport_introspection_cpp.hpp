@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/rm_interfaces/rosidl_typesupport_introspection_cpp/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_cpp.hpp

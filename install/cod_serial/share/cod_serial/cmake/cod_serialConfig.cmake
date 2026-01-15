@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/cod_serial/ament_cmake_core/cod_serialConfig.cmake

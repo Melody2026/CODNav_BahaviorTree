@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/build/rm_interfaces/rosidl_typesupport_fastrtps_c/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_c.h

@@ -1,3 +1,0 @@
-std_msgs/Header header
-float64 min_limit_yaw
-float64 max_limit_yaw
