@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "btcpp_ros2_interfaces/msg/detail/node_status__type_support.h"
-#include "btcpp_ros2_interfaces/msg/detail/node_status__struct.h"
 #include "btcpp_ros2_interfaces/msg/detail/node_status__functions.h"
+#include "btcpp_ros2_interfaces/msg/detail/node_status__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "btcpp_ros2_interfaces/msg/detail/node_status__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,9 +1,4 @@
-/home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/cod_behavior
-/home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/checkNavResult
 /home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/tree_1
-/home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/msgtest
-/home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/test_1
-/home/ysl/ros2_ws/install/cod_behavior/lib/cod_behavior/test_2
 /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup.launch.py
 /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/bringup_behavior.launch.py
 /home/ysl/ros2_ws/install/cod_behavior/share/cod_behavior/launch/nav_pose.yaml

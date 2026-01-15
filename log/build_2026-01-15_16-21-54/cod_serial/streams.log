@@ -1,0 +1,50 @@
+[0.310s] Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_serial
+[0.778s] -- The C compiler identification is GNU 13.3.0
+[2.593s] -- The CXX compiler identification is GNU 13.3.0
+[4.160s] -- Detecting C compiler ABI info
+[4.779s] -- Detecting C compiler ABI info - done
+[4.798s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.799s] -- Detecting C compile features
+[4.800s] -- Detecting C compile features - done
+[5.060s] -- Detecting CXX compiler ABI info
+[5.826s] -- Detecting CXX compiler ABI info - done
+[5.847s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.848s] -- Detecting CXX compile features
+[5.851s] -- Detecting CXX compile features - done
+[5.862s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[6.286s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.471s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[7.114s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[7.150s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[7.196s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.244s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.460s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[7.470s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[7.693s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[8.187s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[8.487s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.007s] -- Found rm_interfaces: 0.0.0 (/home/ysl/ros2_ws/install/rm_interfaces/share/rm_interfaces/cmake)
+[9.317s] -- Configuring done (9.0s)
+[9.346s] -- Generating done (0.0s)
+[9.355s] -- Build files have been written to: /home/ysl/ros2_ws/build/cod_serial
+[9.378s] Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '0': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/COD_Serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/cod_serial
+[9.380s] Invoking command in '/home/ysl/ros2_ws/build/cod_serial': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12
+[9.478s] [ 33%] [32mBuilding CXX object CMakeFiles/cod_serial.dir/src/uart_transporter.cpp.o[0m
+[9.479s] [ 66%] [32mBuilding CXX object CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o[0m
+[14.784s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:[m[K In member function ‘[01m[Kstd::optional<std::vector<float> > CODSerial::[01;32m[KreceiveData[m[K(UartTransporter&)[m[K’:
+[14.784s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:85:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[14.785s]    85 |                 for (const auto &f: [01;31m[Kfloats[m[K) {
+[14.785s]       |                                     [01;31m[K^~~~~~[m[K
+[14.785s]       |                                     [32m[Kfloat[m[K
+[14.796s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:94:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[14.796s]    94 |                     latest_floats_ = [01;31m[Kfloats[m[K; // 保存数据
+[14.796s]       |                                      [01;31m[K^~~~~~[m[K
+[14.796s]       |                                      [32m[Kfloat[m[K
+[14.806s] [01m[K/home/ysl/ros2_ws/COD_Serial/src/cod_serial.cpp:99:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloats[m[K’ was not declared in this scope; did you mean ‘[01m[Kfloat[m[K’?
+[14.807s]    99 |                 return [01;31m[Kfloats[m[K; // 返回解析的数据
+[14.807s]       |                        [01;31m[K^~~~~~[m[K
+[14.807s]       |                        [32m[Kfloat[m[K
+[17.290s] gmake[2]: *** [CMakeFiles/cod_serial.dir/build.make:90: CMakeFiles/cod_serial.dir/src/cod_serial.cpp.o] Error 1
+[17.291s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cod_serial.dir/all] Error 2
+[17.291s] gmake: *** [Makefile:146: all] Error 2
+[17.295s] Invoked command in '/home/ysl/ros2_ws/build/cod_serial' returned '2': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/rm_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/rm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ysl/ros2_ws/build/cod_serial -- -j12 -l12

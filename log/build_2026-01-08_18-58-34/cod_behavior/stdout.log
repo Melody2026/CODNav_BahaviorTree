@@ -1,6 +1,0 @@
-[ 41%] Built target msgtest
-[ 50%] Built target checkNavResult
-[ 50%] Built target test_2
-[ 66%] Built target test_1
-[ 83%] Built target cod_behavior
-[ 91%] [32mBuilding CXX object CMakeFiles/tree_1.dir/src/tree_1.cpp.o[0m

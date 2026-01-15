@@ -1,0 +1,31 @@
+[0.460s] Invoking command in '/home/ysl/ros2_ws/build/btcpp_ros2_samples': AMENT_PREFIX_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces:/home/ysl/BehaviorTree.CPP/install/behaviortree_cpp:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ysl/ros2_ws/install/behaviortree_ros2/lib:/home/ysl/ros2_ws/install/btcpp_ros2_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ysl/ros2_ws/install/btcpp_ros2_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ysl/ros2_ws/BehaviorTree.ROS2/btcpp_ros2_samples -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ysl/ros2_ws/install/btcpp_ros2_samples
+[0.777s] -- The C compiler identification is GNU 13.3.0
+[2.339s] -- The CXX compiler identification is GNU 13.3.0
+[3.763s] -- Detecting C compiler ABI info
+[4.300s] -- Detecting C compiler ABI info - done
+[4.317s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.317s] -- Detecting C compile features
+[4.317s] -- Detecting C compile features - done
+[4.529s] -- Detecting CXX compiler ABI info
+[5.108s] -- Detecting CXX compiler ABI info - done
+[5.123s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.123s] -- Detecting CXX compile features
+[5.124s] -- Detecting CXX compile features - done
+[5.131s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.390s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.505s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.607s] -- Found behaviortree_ros2: 0.3.0 (/home/ysl/ros2_ws/install/behaviortree_ros2/share/behaviortree_ros2/cmake)
+[6.094s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[6.127s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[6.165s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.207s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.387s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.396s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[6.565s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[7.050s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[7.303s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.125s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[8.157s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[8.355s] -- Configuring done (7.9s)
+[8.458s] -- Generating done (0.1s)
+[8.486s] -- Build files have been written to: /home/ysl/ros2_ws/build/btcpp_ros2_samples

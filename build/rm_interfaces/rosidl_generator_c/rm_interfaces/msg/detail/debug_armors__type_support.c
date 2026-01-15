@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "rm_interfaces/msg/detail/debug_armors__type_support.h"
 #include "rm_interfaces/msg/detail/debug_armors__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/debug_armors__functions.h"
+#include "rm_interfaces/msg/detail/debug_armors__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

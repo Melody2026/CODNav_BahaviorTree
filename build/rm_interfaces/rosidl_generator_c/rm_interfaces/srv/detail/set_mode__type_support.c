@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "rm_interfaces/srv/detail/set_mode__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/srv/detail/set_mode__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "rm_interfaces/srv/detail/set_mode__struct.h"
 #include "rm_interfaces/srv/detail/set_mode__functions.h"
 
 #ifdef __cplusplus

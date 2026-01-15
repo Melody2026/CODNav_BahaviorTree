@@ -20,32 +20,9 @@ find_package(geometry_msgs REQUIRED)
 find_package(rm_interfaces REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
-add_executable(cod_behavior src/sentry_behavior.cpp)
-add_executable(checkNavResult src/CheckNavResult.cpp)
 add_executable(tree_1 src/tree_1.cpp)
-add_executable(msgtest test/msgTest.cpp)
-add_executable(test_1 test/test1_FullStatus.cpp)
-add_executable(test_2 test/test2_PoorStatus.cpp)
 
 
-
-ament_target_dependencies(cod_behavior
-        rclcpp
-        nav2_msgs
-        behaviortree_cpp
-        example_interfaces
-        rclcpp_action
-        rm_interfaces
-        geometry_msgs
-
-)
-ament_target_dependencies(checkNavResult
-        rclcpp
-        nav2_msgs
-        example_interfaces
-        rclcpp_action
-        geometry_msgs
-)
 ament_target_dependencies(tree_1
         rclcpp
         nav2_msgs
@@ -56,41 +33,16 @@ ament_target_dependencies(tree_1
         rm_interfaces
         tf2_geometry_msgs
 )
-ament_target_dependencies(msgtest
-        rm_interfaces
-        rclcpp
-)
-ament_target_dependencies(test_1
-        rm_interfaces
-        rclcpp
-)
-ament_target_dependencies(test_2
-        rm_interfaces
-        rclcpp
-)
+
 
 include_directories(
         include
 )
 
-install(TARGETS cod_behavior
-        DESTINATION lib/${PROJECT_NAME}
-)
-install(TARGETS checkNavResult
-        DESTINATION lib/${PROJECT_NAME}
-)
 install(TARGETS tree_1
         DESTINATION lib/${PROJECT_NAME}
 )
-install(TARGETS msgtest
-        DESTINATION lib/${PROJECT_NAME}
-)
-install(TARGETS test_1
-        DESTINATION lib/${PROJECT_NAME}
-)
-install(TARGETS test_2
-        DESTINATION lib/${PROJECT_NAME}
-)
+
 
 install(DIRECTORY
         launch
