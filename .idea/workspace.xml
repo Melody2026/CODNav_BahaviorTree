@@ -36,9 +36,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="94fc50bf-3483-48ea-ac41-ab975a947941" name="更改" comment="&quot;Simple decision&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,6 +238,15 @@
       <workItem from="1768131159559" duration="1864000" />
       <workItem from="1768462915075" duration="3280000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;Simple decision&quot;">
+      <option name="closed" value="true" />
+      <created>1768468644573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768468644573</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +256,10 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Simple decision&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Simple decision&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
