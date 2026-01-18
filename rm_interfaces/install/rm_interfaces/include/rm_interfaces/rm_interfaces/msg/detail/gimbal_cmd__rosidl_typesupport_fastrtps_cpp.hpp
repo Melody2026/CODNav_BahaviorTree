@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_typesupport_fastrtps_cpp/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_fastrtps_cpp.hpp

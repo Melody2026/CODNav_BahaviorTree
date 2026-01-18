@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/judge_system_data__struct.h"
 #include "rm_interfaces/msg/detail/judge_system_data__type_support.h"
 #include "rm_interfaces/msg/detail/judge_system_data__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

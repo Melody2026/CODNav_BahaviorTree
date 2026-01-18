@@ -18,6 +18,7 @@
 #include <chrono>
 #include <../../BehaviorTree.ROS2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp>
 
+//读取自定义的航点函数
 geometry_msgs::msg::PoseStamped
 loadPoseStamped(
     const rclcpp::Node::SharedPtr &node,
@@ -38,6 +39,7 @@ loadPoseStamped(
     return pose;
 }
 
+//发送导航节点
 class SendNav2Goal : public BT::RosActionNode<nav2_msgs::action::NavigateToPose> {
 public:
     // 构造函数：初始化节点名称、配置和ROS2参数

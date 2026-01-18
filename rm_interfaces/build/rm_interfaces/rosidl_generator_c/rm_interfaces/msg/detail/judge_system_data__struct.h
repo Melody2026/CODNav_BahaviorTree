@@ -20,38 +20,20 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'operator_command'
-#include "rm_interfaces/msg/detail/operator_command__struct.h"
 // Member 'heroposition'
 // Member 'standard_3position'
-// Member 'standard_4position'
 #include "rm_interfaces/msg/detail/point2d__struct.h"
 
 /// Struct defined in msg/JudgeSystemData in the package rm_interfaces.
 typedef struct rm_interfaces__msg__JudgeSystemData
 {
-  uint8_t game_status;
-  int16_t remaining_time;
-  int16_t blood;
-  int16_t outpost_hp;
-  uint8_t is_lowpower;
   float hp;
-  int16_t shut_num;
-  int16_t qs_hp;
-  uint8_t current_hp;
-  uint8_t center_gain_point;
-  uint8_t friendly_supply_non_zone_exchange;
-  uint8_t stage_remain_time;
-  uint8_t game_type;
-  uint8_t game_progress;
-  int16_t dm_qs_hp;
-  int32_t zone_status;
+  bool zone_status;
+  bool is_attacted;
   float position_x;
   float position_y;
-  rm_interfaces__msg__OperatorCommand operator_command;
   rm_interfaces__msg__Point2d heroposition;
   rm_interfaces__msg__Point2d standard_3position;
-  rm_interfaces__msg__Point2d standard_4position;
 } rm_interfaces__msg__JudgeSystemData;
 
 // Struct for a sequence of rm_interfaces__msg__JudgeSystemData.

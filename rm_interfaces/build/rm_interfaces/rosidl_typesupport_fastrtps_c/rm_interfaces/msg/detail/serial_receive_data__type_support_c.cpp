@@ -37,7 +37,6 @@ extern "C"
 #endif
 
 #include "rm_interfaces/msg/detail/judge_system_data__functions.h"  // judge_system_data
-#include "std_msgs/msg/detail/header__functions.h"  // header
 
 // forward declare type support functions
 
@@ -74,47 +73,6 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rm_interfaces, msg, JudgeSystemData)();
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-bool cdr_serialize_std_msgs__msg__Header(
-  const std_msgs__msg__Header * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-bool cdr_deserialize_std_msgs__msg__Header(
-  eprosima::fastcdr::Cdr & cdr,
-  std_msgs__msg__Header * ros_message);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-size_t get_serialized_size_std_msgs__msg__Header(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-size_t max_serialized_size_std_msgs__msg__Header(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-bool cdr_serialize_key_std_msgs__msg__Header(
-  const std_msgs__msg__Header * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-size_t get_serialized_size_key_std_msgs__msg__Header(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-size_t max_serialized_size_key_std_msgs__msg__Header(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rm_interfaces
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, std_msgs, msg, Header)();
-
 
 using _SerialReceiveData__ros_msg_type = rm_interfaces__msg__SerialReceiveData;
 
@@ -124,37 +82,6 @@ bool cdr_serialize_rm_interfaces__msg__SerialReceiveData(
   const rm_interfaces__msg__SerialReceiveData * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: header
-  {
-    cdr_serialize_std_msgs__msg__Header(
-      &ros_message->header, cdr);
-  }
-
-  // Field name: mode
-  {
-    cdr << ros_message->mode;
-  }
-
-  // Field name: bullet_speed
-  {
-    cdr << ros_message->bullet_speed;
-  }
-
-  // Field name: roll
-  {
-    cdr << ros_message->roll;
-  }
-
-  // Field name: yaw
-  {
-    cdr << ros_message->yaw;
-  }
-
-  // Field name: pitch
-  {
-    cdr << ros_message->pitch;
-  }
-
   // Field name: judge_system_data
   {
     cdr_serialize_rm_interfaces__msg__JudgeSystemData(
@@ -169,36 +96,6 @@ bool cdr_deserialize_rm_interfaces__msg__SerialReceiveData(
   eprosima::fastcdr::Cdr & cdr,
   rm_interfaces__msg__SerialReceiveData * ros_message)
 {
-  // Field name: header
-  {
-    cdr_deserialize_std_msgs__msg__Header(cdr, &ros_message->header);
-  }
-
-  // Field name: mode
-  {
-    cdr >> ros_message->mode;
-  }
-
-  // Field name: bullet_speed
-  {
-    cdr >> ros_message->bullet_speed;
-  }
-
-  // Field name: roll
-  {
-    cdr >> ros_message->roll;
-  }
-
-  // Field name: yaw
-  {
-    cdr >> ros_message->yaw;
-  }
-
-  // Field name: pitch
-  {
-    cdr >> ros_message->pitch;
-  }
-
   // Field name: judge_system_data
   {
     cdr_deserialize_rm_interfaces__msg__JudgeSystemData(cdr, &ros_message->judge_system_data);
@@ -221,45 +118,6 @@ size_t get_serialized_size_rm_interfaces__msg__SerialReceiveData(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-
-  // Field name: header
-  current_alignment += get_serialized_size_std_msgs__msg__Header(
-    &(ros_message->header), current_alignment);
-
-  // Field name: mode
-  {
-    size_t item_size = sizeof(ros_message->mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: bullet_speed
-  {
-    size_t item_size = sizeof(ros_message->bullet_speed);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: roll
-  {
-    size_t item_size = sizeof(ros_message->roll);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: yaw
-  {
-    size_t item_size = sizeof(ros_message->yaw);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: pitch
-  {
-    size_t item_size = sizeof(ros_message->pitch);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
 
   // Field name: judge_system_data
   current_alignment += get_serialized_size_rm_interfaces__msg__JudgeSystemData(
@@ -286,63 +144,6 @@ size_t max_serialized_size_rm_interfaces__msg__SerialReceiveData(
 
   full_bounded = true;
   is_plain = true;
-
-  // Field name: header
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_std_msgs__msg__Header(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Field name: mode
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: bullet_speed
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: roll
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: yaw
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: pitch
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   // Field name: judge_system_data
   {
@@ -383,37 +184,6 @@ bool cdr_serialize_key_rm_interfaces__msg__SerialReceiveData(
   const rm_interfaces__msg__SerialReceiveData * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: header
-  {
-    cdr_serialize_key_std_msgs__msg__Header(
-      &ros_message->header, cdr);
-  }
-
-  // Field name: mode
-  {
-    cdr << ros_message->mode;
-  }
-
-  // Field name: bullet_speed
-  {
-    cdr << ros_message->bullet_speed;
-  }
-
-  // Field name: roll
-  {
-    cdr << ros_message->roll;
-  }
-
-  // Field name: yaw
-  {
-    cdr << ros_message->yaw;
-  }
-
-  // Field name: pitch
-  {
-    cdr << ros_message->pitch;
-  }
-
   // Field name: judge_system_data
   {
     cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
@@ -437,45 +207,6 @@ size_t get_serialized_size_key_rm_interfaces__msg__SerialReceiveData(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-
-  // Field name: header
-  current_alignment += get_serialized_size_key_std_msgs__msg__Header(
-    &(ros_message->header), current_alignment);
-
-  // Field name: mode
-  {
-    size_t item_size = sizeof(ros_message->mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: bullet_speed
-  {
-    size_t item_size = sizeof(ros_message->bullet_speed);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: roll
-  {
-    size_t item_size = sizeof(ros_message->roll);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: yaw
-  {
-    size_t item_size = sizeof(ros_message->yaw);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: pitch
-  {
-    size_t item_size = sizeof(ros_message->pitch);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
 
   // Field name: judge_system_data
   current_alignment += get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
@@ -501,63 +232,6 @@ size_t max_serialized_size_key_rm_interfaces__msg__SerialReceiveData(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: header
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_key_std_msgs__msg__Header(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Field name: mode
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: bullet_speed
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: roll
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: yaw
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: pitch
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   // Field name: judge_system_data
   {
     size_t array_size = 1;

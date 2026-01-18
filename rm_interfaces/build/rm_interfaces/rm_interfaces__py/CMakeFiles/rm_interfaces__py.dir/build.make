@@ -69,51 +69,15 @@ include rm_interfaces__py/CMakeFiles/rm_interfaces__py.dir/progress.make
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_c.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armor.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armors.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_target.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_rune_target.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_point2d.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_chassis_cmd.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_light.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_lights.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armor.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armors.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_measurement.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_judge_system_data.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_operator_command.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_serial_receive_data.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_ekf_p.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_want.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_limit_angle.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/_set_mode.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/__init__.py
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/__init__.py
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armor_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armors_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_target_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_rune_target_s.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_point2d_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_chassis_cmd_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_light_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_lights_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armor_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armors_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_measurement_s.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_judge_system_data_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_operator_command_s.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_serial_receive_data_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_ekf_p_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_want_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_limit_angle_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target_s.c
-rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets_s.c
 rm_interfaces__py/CMakeFiles/rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/_set_mode_s.c
 
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
@@ -129,27 +93,9 @@ rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtp
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Armor.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Armors.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Target.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/RuneTarget.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Point2d.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/GimbalCmd.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/ChassisCmd.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/DebugLight.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/DebugLights.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/DebugArmor.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/DebugArmors.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/DebugRuneAngle.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Measurement.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/JudgeSystemData.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/OperatorCommand.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/SerialReceiveData.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/EkfP.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/Want.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/LimitAngle.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/ShootFireTarget.idl
-rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/msg/ShootFireTargets.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rm_interfaces/srv/SetMode.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
@@ -225,68 +171,14 @@ rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_introsp
 rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_c.c
 
-rosidl_generator_py/rm_interfaces/msg/_armor.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_armor.py
-
-rosidl_generator_py/rm_interfaces/msg/_armors.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_armors.py
-
-rosidl_generator_py/rm_interfaces/msg/_target.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_target.py
-
-rosidl_generator_py/rm_interfaces/msg/_rune_target.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_rune_target.py
-
 rosidl_generator_py/rm_interfaces/msg/_point2d.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_point2d.py
-
-rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd.py
-
-rosidl_generator_py/rm_interfaces/msg/_chassis_cmd.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_chassis_cmd.py
-
-rosidl_generator_py/rm_interfaces/msg/_debug_light.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_light.py
-
-rosidl_generator_py/rm_interfaces/msg/_debug_lights.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_lights.py
-
-rosidl_generator_py/rm_interfaces/msg/_debug_armor.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_armor.py
-
-rosidl_generator_py/rm_interfaces/msg/_debug_armors.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_armors.py
-
-rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle.py
-
-rosidl_generator_py/rm_interfaces/msg/_measurement.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_measurement.py
 
 rosidl_generator_py/rm_interfaces/msg/_judge_system_data.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_judge_system_data.py
 
-rosidl_generator_py/rm_interfaces/msg/_operator_command.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_operator_command.py
-
 rosidl_generator_py/rm_interfaces/msg/_serial_receive_data.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_serial_receive_data.py
-
-rosidl_generator_py/rm_interfaces/msg/_ekf_p.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_ekf_p.py
-
-rosidl_generator_py/rm_interfaces/msg/_want.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_want.py
-
-rosidl_generator_py/rm_interfaces/msg/_limit_angle.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_limit_angle.py
-
-rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target.py
-
-rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets.py
 
 rosidl_generator_py/rm_interfaces/srv/_set_mode.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/srv/_set_mode.py
@@ -297,68 +189,14 @@ rosidl_generator_py/rm_interfaces/msg/__init__.py: rosidl_generator_py/rm_interf
 rosidl_generator_py/rm_interfaces/srv/__init__.py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/srv/__init__.py
 
-rosidl_generator_py/rm_interfaces/msg/_armor_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_armor_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_armors_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_armors_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_target_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_target_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_rune_target_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_rune_target_s.c
-
 rosidl_generator_py/rm_interfaces/msg/_point2d_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_point2d_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_chassis_cmd_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_chassis_cmd_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_debug_light_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_light_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_debug_lights_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_lights_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_debug_armor_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_armor_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_debug_armors_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_armors_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_measurement_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_measurement_s.c
 
 rosidl_generator_py/rm_interfaces/msg/_judge_system_data_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_judge_system_data_s.c
 
-rosidl_generator_py/rm_interfaces/msg/_operator_command_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_operator_command_s.c
-
 rosidl_generator_py/rm_interfaces/msg/_serial_receive_data_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_serial_receive_data_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_ekf_p_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_ekf_p_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_want_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_want_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_limit_angle_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_limit_angle_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target_s.c
-
-rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets_s.c
 
 rosidl_generator_py/rm_interfaces/srv/_set_mode_s.c: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rm_interfaces/srv/_set_mode_s.c
@@ -368,48 +206,12 @@ rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/__init__.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armor.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armor_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armors.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_armors_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_chassis_cmd.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_chassis_cmd_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armor.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armor_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armors.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_armors_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_light.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_light_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_lights.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_lights_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_debug_rune_angle_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_ekf_p.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_ekf_p_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_gimbal_cmd_s.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_judge_system_data.py
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_judge_system_data_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_limit_angle.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_limit_angle_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_measurement.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_measurement_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_operator_command.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_operator_command_s.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_point2d.py
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_point2d_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_rune_target.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_rune_target_s.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_serial_receive_data.py
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_serial_receive_data_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_target_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_shoot_fire_targets_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_target.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_target_s.c
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_want.py
-rm_interfaces__py: rosidl_generator_py/rm_interfaces/msg/_want_s.c
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/__init__.py
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/_set_mode.py
 rm_interfaces__py: rosidl_generator_py/rm_interfaces/srv/_set_mode_s.c

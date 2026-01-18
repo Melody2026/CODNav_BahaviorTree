@@ -18,8 +18,6 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'header'
-#include "std_msgs/msg/detail/header__traits.hpp"
 // Member 'judge_system_data'
 #include "rm_interfaces/msg/detail/judge_system_data__traits.hpp"
 
@@ -34,48 +32,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: header
-  {
-    out << "header: ";
-    to_flow_style_yaml(msg.header, out);
-    out << ", ";
-  }
-
-  // member: mode
-  {
-    out << "mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.mode, out);
-    out << ", ";
-  }
-
-  // member: bullet_speed
-  {
-    out << "bullet_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.bullet_speed, out);
-    out << ", ";
-  }
-
-  // member: roll
-  {
-    out << "roll: ";
-    rosidl_generator_traits::value_to_yaml(msg.roll, out);
-    out << ", ";
-  }
-
-  // member: yaw
-  {
-    out << "yaw: ";
-    rosidl_generator_traits::value_to_yaml(msg.yaw, out);
-    out << ", ";
-  }
-
-  // member: pitch
-  {
-    out << "pitch: ";
-    rosidl_generator_traits::value_to_yaml(msg.pitch, out);
-    out << ", ";
-  }
-
   // member: judge_system_data
   {
     out << "judge_system_data: ";
@@ -88,65 +44,6 @@ inline void to_block_style_yaml(
   const SerialReceiveData & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: header
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "header:\n";
-    to_block_style_yaml(msg.header, out, indentation + 2);
-  }
-
-  // member: mode
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.mode, out);
-    out << "\n";
-  }
-
-  // member: bullet_speed
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "bullet_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.bullet_speed, out);
-    out << "\n";
-  }
-
-  // member: roll
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "roll: ";
-    rosidl_generator_traits::value_to_yaml(msg.roll, out);
-    out << "\n";
-  }
-
-  // member: yaw
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "yaw: ";
-    rosidl_generator_traits::value_to_yaml(msg.yaw, out);
-    out << "\n";
-  }
-
-  // member: pitch
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "pitch: ";
-    rosidl_generator_traits::value_to_yaml(msg.pitch, out);
-    out << "\n";
-  }
-
   // member: judge_system_data
   {
     if (indentation > 0) {
@@ -203,11 +100,11 @@ inline const char * name<rm_interfaces::msg::SerialReceiveData>()
 
 template<>
 struct has_fixed_size<rm_interfaces::msg::SerialReceiveData>
-  : std::integral_constant<bool, has_fixed_size<rm_interfaces::msg::JudgeSystemData>::value && has_fixed_size<std_msgs::msg::Header>::value> {};
+  : std::integral_constant<bool, has_fixed_size<rm_interfaces::msg::JudgeSystemData>::value> {};
 
 template<>
 struct has_bounded_size<rm_interfaces::msg::SerialReceiveData>
-  : std::integral_constant<bool, has_bounded_size<rm_interfaces::msg::JudgeSystemData>::value && has_bounded_size<std_msgs::msg::Header>::value> {};
+  : std::integral_constant<bool, has_bounded_size<rm_interfaces::msg::JudgeSystemData>::value> {};
 
 template<>
 struct is_message<rm_interfaces::msg::SerialReceiveData>

@@ -13,17 +13,11 @@
 
 
 // Include directives for member types
-// Member `operator_command`
-#include "rm_interfaces/msg/operator_command.h"
-// Member `operator_command`
-#include "rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_c.h"
 // Member `heroposition`
 // Member `standard_3position`
-// Member `standard_4position`
 #include "rm_interfaces/msg/point2d.h"
 // Member `heroposition`
 // Member `standard_3position`
-// Member `standard_4position`
 #include "rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
@@ -45,97 +39,7 @@ void rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__Ju
   rm_interfaces__msg__JudgeSystemData__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[22] = {
-  {
-    "game_status",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, game_status),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "remaining_time",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, remaining_time),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "blood",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, blood),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "outpost_hp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, outpost_hp),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "is_lowpower",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, is_lowpower),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
+static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[7] = {
   {
     "hp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
@@ -155,170 +59,8 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
     NULL  // resize(index) function pointer
   },
   {
-    "shut_num",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, shut_num),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "qs_hp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, qs_hp),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "current_hp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, current_hp),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "center_gain_point",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, center_gain_point),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "friendly_supply_non_zone_exchange",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, friendly_supply_non_zone_exchange),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "stage_remain_time",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, stage_remain_time),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "game_type",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, game_type),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "game_progress",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, game_progress),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "dm_qs_hp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, dm_qs_hp),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
     "zone_status",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -326,6 +68,24 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
     0,  // array size
     false,  // is upper bound
     offsetof(rm_interfaces__msg__JudgeSystemData, zone_status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "is_attacted",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rm_interfaces__msg__JudgeSystemData, is_attacted),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -371,24 +131,6 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
     NULL  // resize(index) function pointer
   },
   {
-    "operator_command",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, operator_command),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
     "heroposition",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
@@ -423,31 +165,13 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Jud
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "standard_4position",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__JudgeSystemData, standard_4position),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_members = {
   "rm_interfaces__msg",  // message namespace
   "JudgeSystemData",  // message name
-  22,  // number of fields
+  7,  // number of fields
   sizeof(rm_interfaces__msg__JudgeSystemData),
   false,  // has_any_key_member_
   rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array,  // message members
@@ -469,13 +193,9 @@ static rosidl_message_type_support_t rm_interfaces__msg__JudgeSystemData__rosidl
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rm_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, JudgeSystemData)() {
-  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[18].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, OperatorCommand)();
-  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[19].members_ =
+  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, Point2d)();
-  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[20].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, Point2d)();
-  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[21].members_ =
+  rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, Point2d)();
   if (!rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_type_support_handle.typesupport_identifier) {
     rm_interfaces__msg__JudgeSystemData__rosidl_typesupport_introspection_c__JudgeSystemData_message_type_support_handle.typesupport_identifier =

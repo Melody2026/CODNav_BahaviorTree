@@ -20,20 +20,12 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'header'
-#include "std_msgs/msg/detail/header__struct.h"
 // Member 'judge_system_data'
 #include "rm_interfaces/msg/detail/judge_system_data__struct.h"
 
 /// Struct defined in msg/SerialReceiveData in the package rm_interfaces.
 typedef struct rm_interfaces__msg__SerialReceiveData
 {
-  std_msgs__msg__Header header;
-  uint8_t mode;
-  float bullet_speed;
-  float roll;
-  float yaw;
-  float pitch;
   rm_interfaces__msg__JudgeSystemData judge_system_data;
 } rm_interfaces__msg__SerialReceiveData;
 

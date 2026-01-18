@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_cpp/rm_interfaces/msg/shoot_fire_target.hpp

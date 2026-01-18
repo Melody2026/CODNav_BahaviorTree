@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/limit_angle__type_support.h

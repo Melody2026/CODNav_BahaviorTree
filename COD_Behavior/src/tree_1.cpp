@@ -1,8 +1,9 @@
 //
 // Created by ysl on 2025/12/11.
 //
-#include "../include/cod_behavior/tree_1_action.h"
 #include "behaviortree_cpp/loggers/groot2_publisher.h"
+#include "cod_behavior/action.h"
+#include "cod_behavior/condition.h"
 
 int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
@@ -38,17 +39,14 @@ int main(int argc, char **argv) {
             return std::make_unique<WriteToBlackboard>(name, config, global_node_);
         }
     );
-    factory.registerBuilder<CheckNavArrived>(
-        "CheckNavArrived",
-        [&](const std::string &name, const BT::NodeConfig &config) {
-            return std::make_unique<CheckNavArrived>(name, config, global_node_);
-        }
-    );
-    factory.registerNodeType<test>("test");
+
     factory.registerNodeType<HpCondition>("HpCondition");
+    factory.registerNodeType<ZsCondition>("ZsCondition");
     factory.registerNodeType<IsPatrolCondition>("IsPatrolCondition");
     factory.registerNodeType<GetNextPatrolPose>("GetNextPatrolPose");
     factory.registerNodeType<UpdataPatrolIndex>("UpdataPatrolIndex");
+    factory.registerNodeType<Rapid_spin>("Rapid_spin");
+
 
     const std::string cod_bt = "/home/ysl/ros2_ws/COD_Behavior/cod_bt/tree_1.xml";
 
@@ -69,6 +67,7 @@ int main(int argc, char **argv) {
         blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("position", pose_map);
         blackboard->set<double>("hp", 0.0);
         blackboard->set<bool>("zone_status", false);
+        blackboard->set<bool>("is_attacked", false);
 
         std::vector<geometry_msgs::msg::PoseStamped> patrol_points;
         patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.first"));

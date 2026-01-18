@@ -39,10 +39,7 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_typesupport_fastrtps_c/rm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h \
- /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/operator_command__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /opt/ros/jazzy/include/fastcdr/fastcdr/Cdr.h /usr/include/c++/13/array \
  /usr/include/c++/13/compare /usr/include/c++/13/initializer_list \
@@ -232,6 +229,4 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__functions.h \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h
+ /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h

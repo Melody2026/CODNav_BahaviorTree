@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "rm_interfaces/msg/detail/point2d__functions.h"
+#include "rm_interfaces/msg/detail/point2d__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/point2d__struct.h"
-#include "rm_interfaces/msg/detail/point2d__type_support.h"
-#include "rm_interfaces/msg/detail/point2d__functions.h"
 
 #ifdef __cplusplus
 extern "C"

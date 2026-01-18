@@ -313,68 +313,14 @@ message(STATUS "Execute custom install script")
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/rm_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/rm_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Armor.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Armor.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Armors.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Armors.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Target.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Target.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/RuneTarget.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/RuneTarget.json" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Point2d.json" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Point2d.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/GimbalCmd.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/GimbalCmd.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ChassisCmd.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ChassisCmd.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugLight.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugLight.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugLights.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugLights.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugArmor.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugArmor.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugArmors.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugArmors.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugRuneAngle.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/DebugRuneAngle.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Measurement.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Measurement.json" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/JudgeSystemData.json" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/JudgeSystemData.json" "DESTINATION" "share/rm_interfaces/msg")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/OperatorCommand.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/OperatorCommand.json" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/SerialReceiveData.json" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/SerialReceiveData.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/EkfP.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/EkfP.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Want.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/Want.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/LimitAngle.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/LimitAngle.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ShootFireTarget.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ShootFireTarget.json" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ShootFireTargets.json" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/msg/ShootFireTargets.json" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/srv/SetMode.json" "DESTINATION" "share/rm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_type_description/rm_interfaces/srv/SetMode.json" "DESTINATION" "share/rm_interfaces/srv")
@@ -424,134 +370,26 @@ include("/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/ament_cmake_symlink
 # install("TARGETS" "rm_interfaces_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/rm_interfaces")
 include("/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Armor.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Armor.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Armors.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Armors.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Target.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Target.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/RuneTarget.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/RuneTarget.idl" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Point2d.idl" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Point2d.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/GimbalCmd.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/GimbalCmd.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ChassisCmd.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ChassisCmd.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugLight.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugLight.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugLights.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugLights.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugArmor.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugArmor.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugArmors.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugArmors.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugRuneAngle.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/DebugRuneAngle.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Measurement.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Measurement.idl" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/JudgeSystemData.idl" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/JudgeSystemData.idl" "DESTINATION" "share/rm_interfaces/msg")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/OperatorCommand.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/OperatorCommand.idl" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/SerialReceiveData.idl" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/SerialReceiveData.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/EkfP.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/EkfP.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Want.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/Want.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/LimitAngle.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/LimitAngle.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ShootFireTarget.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ShootFireTarget.idl" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ShootFireTargets.idl" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/msg/ShootFireTargets.idl" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/srv/SetMode.idl" "DESTINATION" "share/rm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_adapter/rm_interfaces/srv/SetMode.idl" "DESTINATION" "share/rm_interfaces/srv")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Armor.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Armor.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Armors.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Armors.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Target.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Target.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/RuneTarget.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/RuneTarget.msg" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Point2d.msg" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Point2d.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/GimbalCmd.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/GimbalCmd.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ChassisCmd.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ChassisCmd.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugLight.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugLight.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugLights.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugLights.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugArmor.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugArmor.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugArmors.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugArmors.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugRuneAngle.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/DebugRuneAngle.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Measurement.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Measurement.msg" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/JudgeSystemData.msg" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/JudgeSystemData.msg" "DESTINATION" "share/rm_interfaces/msg")
 
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/OperatorCommand.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/OperatorCommand.msg" "DESTINATION" "share/rm_interfaces/msg")
-
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/SerialReceiveData.msg" "DESTINATION" "share/rm_interfaces/msg")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/SerialReceiveData.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/EkfP.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/EkfP.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Want.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/Want.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/LimitAngle.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/LimitAngle.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTarget.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTarget.msg" "DESTINATION" "share/rm_interfaces/msg")
-
-# install(FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTargets.msg" "DESTINATION" "share/rm_interfaces/msg")
-ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTargets.msg" "DESTINATION" "share/rm_interfaces/msg")
 
 # install(FILES "/home/ysl/ros2_ws/rm_interfaces/srv/SetMode.srv" "DESTINATION" "share/rm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/ysl/ros2_ws/rm_interfaces" FILES "/home/ysl/ros2_ws/rm_interfaces/srv/SetMode.srv" "DESTINATION" "share/rm_interfaces/srv")

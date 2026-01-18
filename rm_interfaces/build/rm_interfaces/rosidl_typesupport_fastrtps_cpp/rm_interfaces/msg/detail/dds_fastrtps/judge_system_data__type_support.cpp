@@ -26,41 +26,6 @@ namespace msg
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const rm_interfaces::msg::OperatorCommand &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  rm_interfaces::msg::OperatorCommand &);
-size_t get_serialized_size(
-  const rm_interfaces::msg::OperatorCommand &,
-  size_t current_alignment);
-size_t
-max_serialized_size_OperatorCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-bool cdr_serialize_key(
-  const rm_interfaces::msg::OperatorCommand &,
-  eprosima::fastcdr::Cdr &);
-size_t get_serialized_size_key(
-  const rm_interfaces::msg::OperatorCommand &,
-  size_t current_alignment);
-size_t
-max_serialized_size_key_OperatorCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace rm_interfaces
-
-namespace rm_interfaces
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
   const rm_interfaces::msg::Point2d &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
@@ -91,8 +56,6 @@ max_serialized_size_key_Point2d(
 
 // functions for rm_interfaces::msg::Point2d already declared above
 
-// functions for rm_interfaces::msg::Point2d already declared above
-
 
 namespace rm_interfaces
 {
@@ -110,64 +73,20 @@ cdr_serialize(
   const rm_interfaces::msg::JudgeSystemData & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: game_status
-  cdr << ros_message.game_status;
-
-  // Member: remaining_time
-  cdr << ros_message.remaining_time;
-
-  // Member: blood
-  cdr << ros_message.blood;
-
-  // Member: outpost_hp
-  cdr << ros_message.outpost_hp;
-
-  // Member: is_lowpower
-  cdr << ros_message.is_lowpower;
-
   // Member: hp
   cdr << ros_message.hp;
 
-  // Member: shut_num
-  cdr << ros_message.shut_num;
-
-  // Member: qs_hp
-  cdr << ros_message.qs_hp;
-
-  // Member: current_hp
-  cdr << ros_message.current_hp;
-
-  // Member: center_gain_point
-  cdr << ros_message.center_gain_point;
-
-  // Member: friendly_supply_non_zone_exchange
-  cdr << ros_message.friendly_supply_non_zone_exchange;
-
-  // Member: stage_remain_time
-  cdr << ros_message.stage_remain_time;
-
-  // Member: game_type
-  cdr << ros_message.game_type;
-
-  // Member: game_progress
-  cdr << ros_message.game_progress;
-
-  // Member: dm_qs_hp
-  cdr << ros_message.dm_qs_hp;
-
   // Member: zone_status
-  cdr << ros_message.zone_status;
+  cdr << (ros_message.zone_status ? true : false);
+
+  // Member: is_attacted
+  cdr << (ros_message.is_attacted ? true : false);
 
   // Member: position_x
   cdr << ros_message.position_x;
 
   // Member: position_y
   cdr << ros_message.position_y;
-
-  // Member: operator_command
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.operator_command,
-    cdr);
 
   // Member: heroposition
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
@@ -179,11 +98,6 @@ cdr_serialize(
     ros_message.standard_3position,
     cdr);
 
-  // Member: standard_4position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.standard_4position,
-    cdr);
-
   return true;
 }
 
@@ -193,63 +107,28 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rm_interfaces::msg::JudgeSystemData & ros_message)
 {
-  // Member: game_status
-  cdr >> ros_message.game_status;
-
-  // Member: remaining_time
-  cdr >> ros_message.remaining_time;
-
-  // Member: blood
-  cdr >> ros_message.blood;
-
-  // Member: outpost_hp
-  cdr >> ros_message.outpost_hp;
-
-  // Member: is_lowpower
-  cdr >> ros_message.is_lowpower;
-
   // Member: hp
   cdr >> ros_message.hp;
 
-  // Member: shut_num
-  cdr >> ros_message.shut_num;
-
-  // Member: qs_hp
-  cdr >> ros_message.qs_hp;
-
-  // Member: current_hp
-  cdr >> ros_message.current_hp;
-
-  // Member: center_gain_point
-  cdr >> ros_message.center_gain_point;
-
-  // Member: friendly_supply_non_zone_exchange
-  cdr >> ros_message.friendly_supply_non_zone_exchange;
-
-  // Member: stage_remain_time
-  cdr >> ros_message.stage_remain_time;
-
-  // Member: game_type
-  cdr >> ros_message.game_type;
-
-  // Member: game_progress
-  cdr >> ros_message.game_progress;
-
-  // Member: dm_qs_hp
-  cdr >> ros_message.dm_qs_hp;
-
   // Member: zone_status
-  cdr >> ros_message.zone_status;
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.zone_status = tmp ? true : false;
+  }
+
+  // Member: is_attacted
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.is_attacted = tmp ? true : false;
+  }
 
   // Member: position_x
   cdr >> ros_message.position_x;
 
   // Member: position_y
   cdr >> ros_message.position_y;
-
-  // Member: operator_command
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.operator_command);
 
   // Member: heroposition
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
@@ -258,10 +137,6 @@ cdr_deserialize(
   // Member: standard_3position
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.standard_3position);
-
-  // Member: standard_4position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.standard_4position);
 
   return true;
 }
@@ -280,41 +155,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: game_status
-  {
-    size_t item_size = sizeof(ros_message.game_status);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: remaining_time
-  {
-    size_t item_size = sizeof(ros_message.remaining_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: blood
-  {
-    size_t item_size = sizeof(ros_message.blood);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: outpost_hp
-  {
-    size_t item_size = sizeof(ros_message.outpost_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: is_lowpower
-  {
-    size_t item_size = sizeof(ros_message.is_lowpower);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: hp
   {
     size_t item_size = sizeof(ros_message.hp);
@@ -322,72 +162,16 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: shut_num
-  {
-    size_t item_size = sizeof(ros_message.shut_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: qs_hp
-  {
-    size_t item_size = sizeof(ros_message.qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: current_hp
-  {
-    size_t item_size = sizeof(ros_message.current_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: center_gain_point
-  {
-    size_t item_size = sizeof(ros_message.center_gain_point);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: friendly_supply_non_zone_exchange
-  {
-    size_t item_size = sizeof(ros_message.friendly_supply_non_zone_exchange);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: stage_remain_time
-  {
-    size_t item_size = sizeof(ros_message.stage_remain_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: game_type
-  {
-    size_t item_size = sizeof(ros_message.game_type);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: game_progress
-  {
-    size_t item_size = sizeof(ros_message.game_progress);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: dm_qs_hp
-  {
-    size_t item_size = sizeof(ros_message.dm_qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: zone_status
   {
     size_t item_size = sizeof(ros_message.zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: is_attacted
+  {
+    size_t item_size = sizeof(ros_message.is_attacted);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -406,11 +190,6 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: operator_command
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.operator_command, current_alignment);
-
   // Member: heroposition
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
@@ -420,11 +199,6 @@ get_serialized_size(
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.standard_3position, current_alignment);
-
-  // Member: standard_4position
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.standard_4position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -449,39 +223,6 @@ max_serialized_size_JudgeSystemData(
   full_bounded = true;
   is_plain = true;
 
-  // Member: game_status
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: remaining_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // Member: blood
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // Member: outpost_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // Member: is_lowpower
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
   // Member: hp
   {
     size_t array_size = 1;
@@ -489,69 +230,17 @@ max_serialized_size_JudgeSystemData(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: shut_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // Member: qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-  // Member: current_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: center_gain_point
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: friendly_supply_non_zone_exchange
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: stage_remain_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: game_type
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: game_progress
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // Member: dm_qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
   // Member: zone_status
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // Member: is_attacted
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
   // Member: position_x
   {
@@ -566,22 +255,6 @@ max_serialized_size_JudgeSystemData(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: operator_command
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_OperatorCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
   }
   // Member: heroposition
   {
@@ -600,22 +273,6 @@ max_serialized_size_JudgeSystemData(
     }
   }
   // Member: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-  // Member: standard_4position
   {
     size_t array_size = 1;
     last_member_size = 0;
@@ -640,7 +297,7 @@ max_serialized_size_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_4position) +
+      offsetof(DataType, standard_3position) +
       last_member_size
       ) == ret_val;
   }
@@ -654,64 +311,20 @@ cdr_serialize_key(
   const rm_interfaces::msg::JudgeSystemData & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: game_status
-  cdr << ros_message.game_status;
-
-  // Member: remaining_time
-  cdr << ros_message.remaining_time;
-
-  // Member: blood
-  cdr << ros_message.blood;
-
-  // Member: outpost_hp
-  cdr << ros_message.outpost_hp;
-
-  // Member: is_lowpower
-  cdr << ros_message.is_lowpower;
-
   // Member: hp
   cdr << ros_message.hp;
 
-  // Member: shut_num
-  cdr << ros_message.shut_num;
-
-  // Member: qs_hp
-  cdr << ros_message.qs_hp;
-
-  // Member: current_hp
-  cdr << ros_message.current_hp;
-
-  // Member: center_gain_point
-  cdr << ros_message.center_gain_point;
-
-  // Member: friendly_supply_non_zone_exchange
-  cdr << ros_message.friendly_supply_non_zone_exchange;
-
-  // Member: stage_remain_time
-  cdr << ros_message.stage_remain_time;
-
-  // Member: game_type
-  cdr << ros_message.game_type;
-
-  // Member: game_progress
-  cdr << ros_message.game_progress;
-
-  // Member: dm_qs_hp
-  cdr << ros_message.dm_qs_hp;
-
   // Member: zone_status
-  cdr << ros_message.zone_status;
+  cdr << (ros_message.zone_status ? true : false);
+
+  // Member: is_attacted
+  cdr << (ros_message.is_attacted ? true : false);
 
   // Member: position_x
   cdr << ros_message.position_x;
 
   // Member: position_y
   cdr << ros_message.position_y;
-
-  // Member: operator_command
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
-    ros_message.operator_command,
-    cdr);
 
   // Member: heroposition
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
@@ -721,11 +334,6 @@ cdr_serialize_key(
   // Member: standard_3position
   rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
     ros_message.standard_3position,
-    cdr);
-
-  // Member: standard_4position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
-    ros_message.standard_4position,
     cdr);
 
   return true;
@@ -744,41 +352,6 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: game_status
-  {
-    size_t item_size = sizeof(ros_message.game_status);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: remaining_time
-  {
-    size_t item_size = sizeof(ros_message.remaining_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: blood
-  {
-    size_t item_size = sizeof(ros_message.blood);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: outpost_hp
-  {
-    size_t item_size = sizeof(ros_message.outpost_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: is_lowpower
-  {
-    size_t item_size = sizeof(ros_message.is_lowpower);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: hp
   {
     size_t item_size = sizeof(ros_message.hp);
@@ -786,72 +359,16 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: shut_num
-  {
-    size_t item_size = sizeof(ros_message.shut_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: qs_hp
-  {
-    size_t item_size = sizeof(ros_message.qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: current_hp
-  {
-    size_t item_size = sizeof(ros_message.current_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: center_gain_point
-  {
-    size_t item_size = sizeof(ros_message.center_gain_point);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: friendly_supply_non_zone_exchange
-  {
-    size_t item_size = sizeof(ros_message.friendly_supply_non_zone_exchange);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: stage_remain_time
-  {
-    size_t item_size = sizeof(ros_message.stage_remain_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: game_type
-  {
-    size_t item_size = sizeof(ros_message.game_type);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: game_progress
-  {
-    size_t item_size = sizeof(ros_message.game_progress);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: dm_qs_hp
-  {
-    size_t item_size = sizeof(ros_message.dm_qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Member: zone_status
   {
     size_t item_size = sizeof(ros_message.zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: is_attacted
+  {
+    size_t item_size = sizeof(ros_message.is_attacted);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -870,11 +387,6 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: operator_command
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
-    ros_message.operator_command, current_alignment);
-
   // Member: heroposition
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
@@ -884,11 +396,6 @@ get_serialized_size_key(
   current_alignment +=
     rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
     ros_message.standard_3position, current_alignment);
-
-  // Member: standard_4position
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
-    ros_message.standard_4position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -912,44 +419,6 @@ max_serialized_size_key_JudgeSystemData(
   full_bounded = true;
   is_plain = true;
 
-  // Member: game_status
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: remaining_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: blood
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: outpost_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: is_lowpower
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Member: hp
   {
     size_t array_size = 1;
@@ -958,78 +427,18 @@ max_serialized_size_key_JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: shut_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Member: current_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: center_gain_point
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: friendly_supply_non_zone_exchange
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: stage_remain_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: game_type
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: game_progress
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: dm_qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
   // Member: zone_status
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: is_attacted
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Member: position_x
@@ -1046,23 +455,6 @@ max_serialized_size_key_JudgeSystemData(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: operator_command
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_OperatorCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
   }
 
   // Member: heroposition
@@ -1099,23 +491,6 @@ max_serialized_size_key_JudgeSystemData(
     }
   }
 
-  // Member: standard_4position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1124,7 +499,7 @@ max_serialized_size_key_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_4position) +
+      offsetof(DataType, standard_3position) +
       last_member_size
       ) == ret_val;
   }

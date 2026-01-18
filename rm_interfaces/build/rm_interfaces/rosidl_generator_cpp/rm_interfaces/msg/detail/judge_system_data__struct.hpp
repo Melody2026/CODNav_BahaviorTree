@@ -19,11 +19,8 @@
 
 
 // Include directives for member types
-// Member 'operator_command'
-#include "rm_interfaces/msg/detail/operator_command__struct.hpp"
 // Member 'heroposition'
 // Member 'standard_3position'
-// Member 'standard_4position'
 #include "rm_interfaces/msg/detail/point2d__struct.hpp"
 
 #ifndef _WIN32
@@ -45,228 +42,75 @@ struct JudgeSystemData_
   using Type = JudgeSystemData_<ContainerAllocator>;
 
   explicit JudgeSystemData_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : operator_command(_init),
-    heroposition(_init),
-    standard_3position(_init),
-    standard_4position(_init)
+  : heroposition(_init),
+    standard_3position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->game_status = 0;
-      this->remaining_time = 0;
-      this->blood = 0;
-      this->outpost_hp = 0;
-      this->is_lowpower = 0;
       this->hp = 0.0f;
-      this->shut_num = 0;
-      this->qs_hp = 0;
-      this->current_hp = 0;
-      this->center_gain_point = 0;
-      this->friendly_supply_non_zone_exchange = 0;
-      this->stage_remain_time = 0;
-      this->game_type = 0;
-      this->game_progress = 0;
-      this->dm_qs_hp = 0;
-      this->zone_status = 0l;
+      this->zone_status = false;
+      this->is_attacted = false;
       this->position_x = 0.0f;
       this->position_y = 0.0f;
     }
   }
 
   explicit JudgeSystemData_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : operator_command(_alloc, _init),
-    heroposition(_alloc, _init),
-    standard_3position(_alloc, _init),
-    standard_4position(_alloc, _init)
+  : heroposition(_alloc, _init),
+    standard_3position(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->game_status = 0;
-      this->remaining_time = 0;
-      this->blood = 0;
-      this->outpost_hp = 0;
-      this->is_lowpower = 0;
       this->hp = 0.0f;
-      this->shut_num = 0;
-      this->qs_hp = 0;
-      this->current_hp = 0;
-      this->center_gain_point = 0;
-      this->friendly_supply_non_zone_exchange = 0;
-      this->stage_remain_time = 0;
-      this->game_type = 0;
-      this->game_progress = 0;
-      this->dm_qs_hp = 0;
-      this->zone_status = 0l;
+      this->zone_status = false;
+      this->is_attacted = false;
       this->position_x = 0.0f;
       this->position_y = 0.0f;
     }
   }
 
   // field types and members
-  using _game_status_type =
-    uint8_t;
-  _game_status_type game_status;
-  using _remaining_time_type =
-    int16_t;
-  _remaining_time_type remaining_time;
-  using _blood_type =
-    int16_t;
-  _blood_type blood;
-  using _outpost_hp_type =
-    int16_t;
-  _outpost_hp_type outpost_hp;
-  using _is_lowpower_type =
-    uint8_t;
-  _is_lowpower_type is_lowpower;
   using _hp_type =
     float;
   _hp_type hp;
-  using _shut_num_type =
-    int16_t;
-  _shut_num_type shut_num;
-  using _qs_hp_type =
-    int16_t;
-  _qs_hp_type qs_hp;
-  using _current_hp_type =
-    uint8_t;
-  _current_hp_type current_hp;
-  using _center_gain_point_type =
-    uint8_t;
-  _center_gain_point_type center_gain_point;
-  using _friendly_supply_non_zone_exchange_type =
-    uint8_t;
-  _friendly_supply_non_zone_exchange_type friendly_supply_non_zone_exchange;
-  using _stage_remain_time_type =
-    uint8_t;
-  _stage_remain_time_type stage_remain_time;
-  using _game_type_type =
-    uint8_t;
-  _game_type_type game_type;
-  using _game_progress_type =
-    uint8_t;
-  _game_progress_type game_progress;
-  using _dm_qs_hp_type =
-    int16_t;
-  _dm_qs_hp_type dm_qs_hp;
   using _zone_status_type =
-    int32_t;
+    bool;
   _zone_status_type zone_status;
+  using _is_attacted_type =
+    bool;
+  _is_attacted_type is_attacted;
   using _position_x_type =
     float;
   _position_x_type position_x;
   using _position_y_type =
     float;
   _position_y_type position_y;
-  using _operator_command_type =
-    rm_interfaces::msg::OperatorCommand_<ContainerAllocator>;
-  _operator_command_type operator_command;
   using _heroposition_type =
     rm_interfaces::msg::Point2d_<ContainerAllocator>;
   _heroposition_type heroposition;
   using _standard_3position_type =
     rm_interfaces::msg::Point2d_<ContainerAllocator>;
   _standard_3position_type standard_3position;
-  using _standard_4position_type =
-    rm_interfaces::msg::Point2d_<ContainerAllocator>;
-  _standard_4position_type standard_4position;
 
   // setters for named parameter idiom
-  Type & set__game_status(
-    const uint8_t & _arg)
-  {
-    this->game_status = _arg;
-    return *this;
-  }
-  Type & set__remaining_time(
-    const int16_t & _arg)
-  {
-    this->remaining_time = _arg;
-    return *this;
-  }
-  Type & set__blood(
-    const int16_t & _arg)
-  {
-    this->blood = _arg;
-    return *this;
-  }
-  Type & set__outpost_hp(
-    const int16_t & _arg)
-  {
-    this->outpost_hp = _arg;
-    return *this;
-  }
-  Type & set__is_lowpower(
-    const uint8_t & _arg)
-  {
-    this->is_lowpower = _arg;
-    return *this;
-  }
   Type & set__hp(
     const float & _arg)
   {
     this->hp = _arg;
     return *this;
   }
-  Type & set__shut_num(
-    const int16_t & _arg)
-  {
-    this->shut_num = _arg;
-    return *this;
-  }
-  Type & set__qs_hp(
-    const int16_t & _arg)
-  {
-    this->qs_hp = _arg;
-    return *this;
-  }
-  Type & set__current_hp(
-    const uint8_t & _arg)
-  {
-    this->current_hp = _arg;
-    return *this;
-  }
-  Type & set__center_gain_point(
-    const uint8_t & _arg)
-  {
-    this->center_gain_point = _arg;
-    return *this;
-  }
-  Type & set__friendly_supply_non_zone_exchange(
-    const uint8_t & _arg)
-  {
-    this->friendly_supply_non_zone_exchange = _arg;
-    return *this;
-  }
-  Type & set__stage_remain_time(
-    const uint8_t & _arg)
-  {
-    this->stage_remain_time = _arg;
-    return *this;
-  }
-  Type & set__game_type(
-    const uint8_t & _arg)
-  {
-    this->game_type = _arg;
-    return *this;
-  }
-  Type & set__game_progress(
-    const uint8_t & _arg)
-  {
-    this->game_progress = _arg;
-    return *this;
-  }
-  Type & set__dm_qs_hp(
-    const int16_t & _arg)
-  {
-    this->dm_qs_hp = _arg;
-    return *this;
-  }
   Type & set__zone_status(
-    const int32_t & _arg)
+    const bool & _arg)
   {
     this->zone_status = _arg;
+    return *this;
+  }
+  Type & set__is_attacted(
+    const bool & _arg)
+  {
+    this->is_attacted = _arg;
     return *this;
   }
   Type & set__position_x(
@@ -281,12 +125,6 @@ struct JudgeSystemData_
     this->position_y = _arg;
     return *this;
   }
-  Type & set__operator_command(
-    const rm_interfaces::msg::OperatorCommand_<ContainerAllocator> & _arg)
-  {
-    this->operator_command = _arg;
-    return *this;
-  }
   Type & set__heroposition(
     const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
   {
@@ -297,12 +135,6 @@ struct JudgeSystemData_
     const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
   {
     this->standard_3position = _arg;
-    return *this;
-  }
-  Type & set__standard_4position(
-    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
-  {
-    this->standard_4position = _arg;
     return *this;
   }
 
@@ -348,52 +180,13 @@ struct JudgeSystemData_
   // comparison operators
   bool operator==(const JudgeSystemData_ & other) const
   {
-    if (this->game_status != other.game_status) {
-      return false;
-    }
-    if (this->remaining_time != other.remaining_time) {
-      return false;
-    }
-    if (this->blood != other.blood) {
-      return false;
-    }
-    if (this->outpost_hp != other.outpost_hp) {
-      return false;
-    }
-    if (this->is_lowpower != other.is_lowpower) {
-      return false;
-    }
     if (this->hp != other.hp) {
       return false;
     }
-    if (this->shut_num != other.shut_num) {
-      return false;
-    }
-    if (this->qs_hp != other.qs_hp) {
-      return false;
-    }
-    if (this->current_hp != other.current_hp) {
-      return false;
-    }
-    if (this->center_gain_point != other.center_gain_point) {
-      return false;
-    }
-    if (this->friendly_supply_non_zone_exchange != other.friendly_supply_non_zone_exchange) {
-      return false;
-    }
-    if (this->stage_remain_time != other.stage_remain_time) {
-      return false;
-    }
-    if (this->game_type != other.game_type) {
-      return false;
-    }
-    if (this->game_progress != other.game_progress) {
-      return false;
-    }
-    if (this->dm_qs_hp != other.dm_qs_hp) {
-      return false;
-    }
     if (this->zone_status != other.zone_status) {
+      return false;
+    }
+    if (this->is_attacted != other.is_attacted) {
       return false;
     }
     if (this->position_x != other.position_x) {
@@ -402,16 +195,10 @@ struct JudgeSystemData_
     if (this->position_y != other.position_y) {
       return false;
     }
-    if (this->operator_command != other.operator_command) {
-      return false;
-    }
     if (this->heroposition != other.heroposition) {
       return false;
     }
     if (this->standard_3position != other.standard_3position) {
-      return false;
-    }
-    if (this->standard_4position != other.standard_4position) {
       return false;
     }
     return true;

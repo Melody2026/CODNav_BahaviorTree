@@ -1,27 +1,9 @@
 {
   "package_name": "rm_interfaces",
   "non_idl_tuples": [
-    "/home/ysl/ros2_ws/rm_interfaces:msg/Armor.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/Armors.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/Target.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/RuneTarget.msg",
     "/home/ysl/ros2_ws/rm_interfaces:msg/Point2d.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/GimbalCmd.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/ChassisCmd.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/DebugLight.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/DebugLights.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/DebugArmor.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/DebugArmors.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/DebugRuneAngle.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/Measurement.msg",
     "/home/ysl/ros2_ws/rm_interfaces:msg/JudgeSystemData.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/OperatorCommand.msg",
     "/home/ysl/ros2_ws/rm_interfaces:msg/SerialReceiveData.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/EkfP.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/Want.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/LimitAngle.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/ShootFireTarget.msg",
-    "/home/ysl/ros2_ws/rm_interfaces:msg/ShootFireTargets.msg",
     "/home/ysl/ros2_ws/rm_interfaces:srv/SetMode.srv"
   ]
 }

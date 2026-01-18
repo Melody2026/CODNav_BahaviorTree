@@ -16,10 +16,6 @@
 #include "rm_interfaces/msg/detail/serial_receive_data__struct.h"
 #include "rm_interfaces/msg/detail/serial_receive_data__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool std_msgs__msg__header__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * std_msgs__msg__header__convert_to_py(void * raw_ros_message);
 bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_message);
 
@@ -56,62 +52,6 @@ bool rm_interfaces__msg__serial_receive_data__convert_from_py(PyObject * _pymsg,
     assert(strncmp("rm_interfaces.msg._serial_receive_data.SerialReceiveData", full_classname_dest, 56) == 0);
   }
   rm_interfaces__msg__SerialReceiveData * ros_message = _ros_message;
-  {  // header
-    PyObject * field = PyObject_GetAttrString(_pymsg, "header");
-    if (!field) {
-      return false;
-    }
-    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->header)) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_DECREF(field);
-  }
-  {  // mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "mode");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->mode = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // bullet_speed
-    PyObject * field = PyObject_GetAttrString(_pymsg, "bullet_speed");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->bullet_speed = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // roll
-    PyObject * field = PyObject_GetAttrString(_pymsg, "roll");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->roll = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // yaw
-    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->yaw = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // pitch
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pitch");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->pitch = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // judge_system_data
     PyObject * field = PyObject_GetAttrString(_pymsg, "judge_system_data");
     if (!field) {
@@ -145,75 +85,6 @@ PyObject * rm_interfaces__msg__serial_receive_data__convert_to_py(void * raw_ros
     }
   }
   rm_interfaces__msg__SerialReceiveData * ros_message = (rm_interfaces__msg__SerialReceiveData *)raw_ros_message;
-  {  // header
-    PyObject * field = NULL;
-    field = std_msgs__msg__header__convert_to_py(&ros_message->header);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "header", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // mode
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->mode);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "mode", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // bullet_speed
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->bullet_speed);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "bullet_speed", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // roll
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->roll);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "roll", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // yaw
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->yaw);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pitch
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->pitch);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pitch", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // judge_system_data
     PyObject * field = NULL;
     field = rm_interfaces__msg__judge_system_data__convert_to_py(&ros_message->judge_system_data);

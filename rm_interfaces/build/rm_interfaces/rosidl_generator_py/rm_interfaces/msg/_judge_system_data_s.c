@@ -16,10 +16,6 @@
 #include "rm_interfaces/msg/detail/judge_system_data__struct.h"
 #include "rm_interfaces/msg/detail/judge_system_data__functions.h"
 
-bool rm_interfaces__msg__operator_command__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * rm_interfaces__msg__operator_command__convert_to_py(void * raw_ros_message);
-bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
 bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
 bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
@@ -58,51 +54,6 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     assert(strncmp("rm_interfaces.msg._judge_system_data.JudgeSystemData", full_classname_dest, 52) == 0);
   }
   rm_interfaces__msg__JudgeSystemData * ros_message = _ros_message;
-  {  // game_status
-    PyObject * field = PyObject_GetAttrString(_pymsg, "game_status");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->game_status = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // remaining_time
-    PyObject * field = PyObject_GetAttrString(_pymsg, "remaining_time");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->remaining_time = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // blood
-    PyObject * field = PyObject_GetAttrString(_pymsg, "blood");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->blood = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // outpost_hp
-    PyObject * field = PyObject_GetAttrString(_pymsg, "outpost_hp");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->outpost_hp = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // is_lowpower
-    PyObject * field = PyObject_GetAttrString(_pymsg, "is_lowpower");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->is_lowpower = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
   {  // hp
     PyObject * field = PyObject_GetAttrString(_pymsg, "hp");
     if (!field) {
@@ -112,94 +63,22 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     ros_message->hp = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // shut_num
-    PyObject * field = PyObject_GetAttrString(_pymsg, "shut_num");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->shut_num = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // qs_hp
-    PyObject * field = PyObject_GetAttrString(_pymsg, "qs_hp");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->qs_hp = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // current_hp
-    PyObject * field = PyObject_GetAttrString(_pymsg, "current_hp");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->current_hp = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // center_gain_point
-    PyObject * field = PyObject_GetAttrString(_pymsg, "center_gain_point");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->center_gain_point = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // friendly_supply_non_zone_exchange
-    PyObject * field = PyObject_GetAttrString(_pymsg, "friendly_supply_non_zone_exchange");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->friendly_supply_non_zone_exchange = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // stage_remain_time
-    PyObject * field = PyObject_GetAttrString(_pymsg, "stage_remain_time");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->stage_remain_time = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // game_type
-    PyObject * field = PyObject_GetAttrString(_pymsg, "game_type");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->game_type = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // game_progress
-    PyObject * field = PyObject_GetAttrString(_pymsg, "game_progress");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->game_progress = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
-  {  // dm_qs_hp
-    PyObject * field = PyObject_GetAttrString(_pymsg, "dm_qs_hp");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->dm_qs_hp = (int16_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
   {  // zone_status
     PyObject * field = PyObject_GetAttrString(_pymsg, "zone_status");
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->zone_status = (int32_t)PyLong_AsLong(field);
+    assert(PyBool_Check(field));
+    ros_message->zone_status = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // is_attacted
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_attacted");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->is_attacted = (Py_True == field);
     Py_DECREF(field);
   }
   {  // position_x
@@ -220,17 +99,6 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     ros_message->position_y = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // operator_command
-    PyObject * field = PyObject_GetAttrString(_pymsg, "operator_command");
-    if (!field) {
-      return false;
-    }
-    if (!rm_interfaces__msg__operator_command__convert_from_py(field, &ros_message->operator_command)) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_DECREF(field);
-  }
   {  // heroposition
     PyObject * field = PyObject_GetAttrString(_pymsg, "heroposition");
     if (!field) {
@@ -248,17 +116,6 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
       return false;
     }
     if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->standard_3position)) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_DECREF(field);
-  }
-  {  // standard_4position
-    PyObject * field = PyObject_GetAttrString(_pymsg, "standard_4position");
-    if (!field) {
-      return false;
-    }
-    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->standard_4position)) {
       Py_DECREF(field);
       return false;
     }
@@ -286,61 +143,6 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
     }
   }
   rm_interfaces__msg__JudgeSystemData * ros_message = (rm_interfaces__msg__JudgeSystemData *)raw_ros_message;
-  {  // game_status
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->game_status);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "game_status", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // remaining_time
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->remaining_time);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "remaining_time", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // blood
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->blood);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "blood", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // outpost_hp
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->outpost_hp);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "outpost_hp", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // is_lowpower
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->is_lowpower);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "is_lowpower", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // hp
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->hp);
@@ -352,110 +154,22 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // shut_num
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->shut_num);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "shut_num", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // qs_hp
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->qs_hp);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "qs_hp", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // current_hp
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->current_hp);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "current_hp", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // center_gain_point
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->center_gain_point);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "center_gain_point", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // friendly_supply_non_zone_exchange
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->friendly_supply_non_zone_exchange);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "friendly_supply_non_zone_exchange", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // stage_remain_time
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->stage_remain_time);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "stage_remain_time", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // game_type
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->game_type);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "game_type", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // game_progress
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->game_progress);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "game_progress", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // dm_qs_hp
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->dm_qs_hp);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "dm_qs_hp", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // zone_status
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->zone_status);
+    field = PyBool_FromLong(ros_message->zone_status ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "zone_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // is_attacted
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->is_attacted ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "is_attacted", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -484,20 +198,6 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // operator_command
-    PyObject * field = NULL;
-    field = rm_interfaces__msg__operator_command__convert_to_py(&ros_message->operator_command);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "operator_command", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // heroposition
     PyObject * field = NULL;
     field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->heroposition);
@@ -520,20 +220,6 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "standard_3position", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // standard_4position
-    PyObject * field = NULL;
-    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->standard_4position);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "standard_4position", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

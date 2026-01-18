@@ -13,10 +13,6 @@
 
 
 // Include directives for member types
-// Member `header`
-#include "std_msgs/msg/header.h"
-// Member `header`
-#include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
 // Member `judge_system_data`
 #include "rm_interfaces/msg/judge_system_data.h"
 // Member `judge_system_data`
@@ -41,115 +37,7 @@ void rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__
   rm_interfaces__msg__SerialReceiveData__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_member_array[7] = {
-  {
-    "header",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, header),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "mode",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, mode),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "bullet_speed",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, bullet_speed),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "roll",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, roll),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "yaw",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, yaw),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "pitch",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rm_interfaces__msg__SerialReceiveData, pitch),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
+static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_member_array[1] = {
   {
     "judge_system_data",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -173,7 +61,7 @@ static rosidl_typesupport_introspection_c__MessageMember rm_interfaces__msg__Ser
 static const rosidl_typesupport_introspection_c__MessageMembers rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_members = {
   "rm_interfaces__msg",  // message namespace
   "SerialReceiveData",  // message name
-  7,  // number of fields
+  1,  // number of fields
   sizeof(rm_interfaces__msg__SerialReceiveData),
   false,  // has_any_key_member_
   rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_member_array,  // message members
@@ -196,8 +84,6 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rm_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, SerialReceiveData)() {
   rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
-  rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rm_interfaces, msg, JudgeSystemData)();
   if (!rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_type_support_handle.typesupport_identifier) {
     rm_interfaces__msg__SerialReceiveData__rosidl_typesupport_introspection_c__SerialReceiveData_message_type_support_handle.typesupport_identifier =

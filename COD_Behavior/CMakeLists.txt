@@ -21,6 +21,7 @@ find_package(rm_interfaces REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
 add_executable(tree_1 src/tree_1.cpp)
+add_executable(test_1 src/test110.cpp)
 
 
 ament_target_dependencies(tree_1
@@ -34,12 +35,18 @@ ament_target_dependencies(tree_1
         tf2_geometry_msgs
 )
 
+ament_target_dependencies(test_1
+        rclcpp
+        rm_interfaces
+)
+
 
 include_directories(
         include
 )
 
 install(TARGETS tree_1
+        test_1
         DESTINATION lib/${PROJECT_NAME}
 )
 

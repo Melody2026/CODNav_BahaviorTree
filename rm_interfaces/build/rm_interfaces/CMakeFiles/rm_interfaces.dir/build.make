@@ -66,27 +66,9 @@ include CMakeFiles/rm_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/rm_interfaces.dir/progress.make
 
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Armor.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Armors.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Target.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/RuneTarget.msg
 CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Point2d.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/GimbalCmd.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/ChassisCmd.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/DebugLight.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/DebugLights.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/DebugArmor.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/DebugArmors.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/DebugRuneAngle.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Measurement.msg
 CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/JudgeSystemData.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/OperatorCommand.msg
 CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/SerialReceiveData.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/EkfP.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/Want.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/LimitAngle.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTarget.msg
-CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/msg/ShootFireTargets.msg
 CMakeFiles/rm_interfaces: /home/ysl/ros2_ws/rm_interfaces/srv/SetMode.srv
 CMakeFiles/rm_interfaces: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 CMakeFiles/rm_interfaces: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl

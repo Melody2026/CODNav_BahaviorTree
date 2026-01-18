@@ -36,43 +36,9 @@ extern "C"
 {
 #endif
 
-#include "rm_interfaces/msg/detail/operator_command__functions.h"  // operator_command
-#include "rm_interfaces/msg/detail/point2d__functions.h"  // heroposition, standard_3position, standard_4position
+#include "rm_interfaces/msg/detail/point2d__functions.h"  // heroposition, standard_3position
 
 // forward declare type support functions
-
-bool cdr_serialize_rm_interfaces__msg__OperatorCommand(
-  const rm_interfaces__msg__OperatorCommand * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-bool cdr_deserialize_rm_interfaces__msg__OperatorCommand(
-  eprosima::fastcdr::Cdr & cdr,
-  rm_interfaces__msg__OperatorCommand * ros_message);
-
-size_t get_serialized_size_rm_interfaces__msg__OperatorCommand(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_rm_interfaces__msg__OperatorCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-bool cdr_serialize_key_rm_interfaces__msg__OperatorCommand(
-  const rm_interfaces__msg__OperatorCommand * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-size_t get_serialized_size_key_rm_interfaces__msg__OperatorCommand(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_key_rm_interfaces__msg__OperatorCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rm_interfaces, msg, OperatorCommand)();
 
 bool cdr_serialize_rm_interfaces__msg__Point2d(
   const rm_interfaces__msg__Point2d * ros_message,
@@ -116,84 +82,19 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
   const rm_interfaces__msg__JudgeSystemData * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: game_status
-  {
-    cdr << ros_message->game_status;
-  }
-
-  // Field name: remaining_time
-  {
-    cdr << ros_message->remaining_time;
-  }
-
-  // Field name: blood
-  {
-    cdr << ros_message->blood;
-  }
-
-  // Field name: outpost_hp
-  {
-    cdr << ros_message->outpost_hp;
-  }
-
-  // Field name: is_lowpower
-  {
-    cdr << ros_message->is_lowpower;
-  }
-
   // Field name: hp
   {
     cdr << ros_message->hp;
   }
 
-  // Field name: shut_num
-  {
-    cdr << ros_message->shut_num;
-  }
-
-  // Field name: qs_hp
-  {
-    cdr << ros_message->qs_hp;
-  }
-
-  // Field name: current_hp
-  {
-    cdr << ros_message->current_hp;
-  }
-
-  // Field name: center_gain_point
-  {
-    cdr << ros_message->center_gain_point;
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    cdr << ros_message->friendly_supply_non_zone_exchange;
-  }
-
-  // Field name: stage_remain_time
-  {
-    cdr << ros_message->stage_remain_time;
-  }
-
-  // Field name: game_type
-  {
-    cdr << ros_message->game_type;
-  }
-
-  // Field name: game_progress
-  {
-    cdr << ros_message->game_progress;
-  }
-
-  // Field name: dm_qs_hp
-  {
-    cdr << ros_message->dm_qs_hp;
-  }
-
   // Field name: zone_status
   {
-    cdr << ros_message->zone_status;
+    cdr << (ros_message->zone_status ? true : false);
+  }
+
+  // Field name: is_attacted
+  {
+    cdr << (ros_message->is_attacted ? true : false);
   }
 
   // Field name: position_x
@@ -204,12 +105,6 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
   // Field name: position_y
   {
     cdr << ros_message->position_y;
-  }
-
-  // Field name: operator_command
-  {
-    cdr_serialize_rm_interfaces__msg__OperatorCommand(
-      &ros_message->operator_command, cdr);
   }
 
   // Field name: heroposition
@@ -224,12 +119,6 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
       &ros_message->standard_3position, cdr);
   }
 
-  // Field name: standard_4position
-  {
-    cdr_serialize_rm_interfaces__msg__Point2d(
-      &ros_message->standard_4position, cdr);
-  }
-
   return true;
 }
 
@@ -238,84 +127,23 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
   eprosima::fastcdr::Cdr & cdr,
   rm_interfaces__msg__JudgeSystemData * ros_message)
 {
-  // Field name: game_status
-  {
-    cdr >> ros_message->game_status;
-  }
-
-  // Field name: remaining_time
-  {
-    cdr >> ros_message->remaining_time;
-  }
-
-  // Field name: blood
-  {
-    cdr >> ros_message->blood;
-  }
-
-  // Field name: outpost_hp
-  {
-    cdr >> ros_message->outpost_hp;
-  }
-
-  // Field name: is_lowpower
-  {
-    cdr >> ros_message->is_lowpower;
-  }
-
   // Field name: hp
   {
     cdr >> ros_message->hp;
   }
 
-  // Field name: shut_num
-  {
-    cdr >> ros_message->shut_num;
-  }
-
-  // Field name: qs_hp
-  {
-    cdr >> ros_message->qs_hp;
-  }
-
-  // Field name: current_hp
-  {
-    cdr >> ros_message->current_hp;
-  }
-
-  // Field name: center_gain_point
-  {
-    cdr >> ros_message->center_gain_point;
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    cdr >> ros_message->friendly_supply_non_zone_exchange;
-  }
-
-  // Field name: stage_remain_time
-  {
-    cdr >> ros_message->stage_remain_time;
-  }
-
-  // Field name: game_type
-  {
-    cdr >> ros_message->game_type;
-  }
-
-  // Field name: game_progress
-  {
-    cdr >> ros_message->game_progress;
-  }
-
-  // Field name: dm_qs_hp
-  {
-    cdr >> ros_message->dm_qs_hp;
-  }
-
   // Field name: zone_status
   {
-    cdr >> ros_message->zone_status;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->zone_status = tmp ? true : false;
+  }
+
+  // Field name: is_attacted
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->is_attacted = tmp ? true : false;
   }
 
   // Field name: position_x
@@ -328,11 +156,6 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
     cdr >> ros_message->position_y;
   }
 
-  // Field name: operator_command
-  {
-    cdr_deserialize_rm_interfaces__msg__OperatorCommand(cdr, &ros_message->operator_command);
-  }
-
   // Field name: heroposition
   {
     cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->heroposition);
@@ -341,11 +164,6 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
   // Field name: standard_3position
   {
     cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->standard_3position);
-  }
-
-  // Field name: standard_4position
-  {
-    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->standard_4position);
   }
 
   return true;
@@ -366,41 +184,6 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: game_status
-  {
-    size_t item_size = sizeof(ros_message->game_status);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: remaining_time
-  {
-    size_t item_size = sizeof(ros_message->remaining_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: blood
-  {
-    size_t item_size = sizeof(ros_message->blood);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: outpost_hp
-  {
-    size_t item_size = sizeof(ros_message->outpost_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: is_lowpower
-  {
-    size_t item_size = sizeof(ros_message->is_lowpower);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: hp
   {
     size_t item_size = sizeof(ros_message->hp);
@@ -408,72 +191,16 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: shut_num
-  {
-    size_t item_size = sizeof(ros_message->shut_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: qs_hp
-  {
-    size_t item_size = sizeof(ros_message->qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: current_hp
-  {
-    size_t item_size = sizeof(ros_message->current_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: center_gain_point
-  {
-    size_t item_size = sizeof(ros_message->center_gain_point);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    size_t item_size = sizeof(ros_message->friendly_supply_non_zone_exchange);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: stage_remain_time
-  {
-    size_t item_size = sizeof(ros_message->stage_remain_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: game_type
-  {
-    size_t item_size = sizeof(ros_message->game_type);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: game_progress
-  {
-    size_t item_size = sizeof(ros_message->game_progress);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: dm_qs_hp
-  {
-    size_t item_size = sizeof(ros_message->dm_qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: zone_status
   {
     size_t item_size = sizeof(ros_message->zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: is_attacted
+  {
+    size_t item_size = sizeof(ros_message->is_attacted);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -492,10 +219,6 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: operator_command
-  current_alignment += get_serialized_size_rm_interfaces__msg__OperatorCommand(
-    &(ros_message->operator_command), current_alignment);
-
   // Field name: heroposition
   current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
     &(ros_message->heroposition), current_alignment);
@@ -503,10 +226,6 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
   // Field name: standard_3position
   current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
     &(ros_message->standard_3position), current_alignment);
-
-  // Field name: standard_4position
-  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
-    &(ros_message->standard_4position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -530,44 +249,6 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: game_status
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: remaining_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: blood
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: outpost_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: is_lowpower
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Field name: hp
   {
     size_t array_size = 1;
@@ -576,78 +257,18 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: shut_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: current_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: center_gain_point
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: stage_remain_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: game_type
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: game_progress
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: dm_qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
   // Field name: zone_status
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: is_attacted
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Field name: position_x
@@ -664,24 +285,6 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: operator_command
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_rm_interfaces__msg__OperatorCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
   }
 
   // Field name: heroposition
@@ -703,24 +306,6 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
   }
 
   // Field name: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Field name: standard_4position
   {
     size_t array_size = 1;
     last_member_size = 0;
@@ -747,7 +332,7 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_4position) +
+      offsetof(DataType, standard_3position) +
       last_member_size
       ) == ret_val;
   }
@@ -759,84 +344,19 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
   const rm_interfaces__msg__JudgeSystemData * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: game_status
-  {
-    cdr << ros_message->game_status;
-  }
-
-  // Field name: remaining_time
-  {
-    cdr << ros_message->remaining_time;
-  }
-
-  // Field name: blood
-  {
-    cdr << ros_message->blood;
-  }
-
-  // Field name: outpost_hp
-  {
-    cdr << ros_message->outpost_hp;
-  }
-
-  // Field name: is_lowpower
-  {
-    cdr << ros_message->is_lowpower;
-  }
-
   // Field name: hp
   {
     cdr << ros_message->hp;
   }
 
-  // Field name: shut_num
-  {
-    cdr << ros_message->shut_num;
-  }
-
-  // Field name: qs_hp
-  {
-    cdr << ros_message->qs_hp;
-  }
-
-  // Field name: current_hp
-  {
-    cdr << ros_message->current_hp;
-  }
-
-  // Field name: center_gain_point
-  {
-    cdr << ros_message->center_gain_point;
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    cdr << ros_message->friendly_supply_non_zone_exchange;
-  }
-
-  // Field name: stage_remain_time
-  {
-    cdr << ros_message->stage_remain_time;
-  }
-
-  // Field name: game_type
-  {
-    cdr << ros_message->game_type;
-  }
-
-  // Field name: game_progress
-  {
-    cdr << ros_message->game_progress;
-  }
-
-  // Field name: dm_qs_hp
-  {
-    cdr << ros_message->dm_qs_hp;
-  }
-
   // Field name: zone_status
   {
-    cdr << ros_message->zone_status;
+    cdr << (ros_message->zone_status ? true : false);
+  }
+
+  // Field name: is_attacted
+  {
+    cdr << (ros_message->is_attacted ? true : false);
   }
 
   // Field name: position_x
@@ -849,12 +369,6 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
     cdr << ros_message->position_y;
   }
 
-  // Field name: operator_command
-  {
-    cdr_serialize_key_rm_interfaces__msg__OperatorCommand(
-      &ros_message->operator_command, cdr);
-  }
-
   // Field name: heroposition
   {
     cdr_serialize_key_rm_interfaces__msg__Point2d(
@@ -865,12 +379,6 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
   {
     cdr_serialize_key_rm_interfaces__msg__Point2d(
       &ros_message->standard_3position, cdr);
-  }
-
-  // Field name: standard_4position
-  {
-    cdr_serialize_key_rm_interfaces__msg__Point2d(
-      &ros_message->standard_4position, cdr);
   }
 
   return true;
@@ -891,41 +399,6 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: game_status
-  {
-    size_t item_size = sizeof(ros_message->game_status);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: remaining_time
-  {
-    size_t item_size = sizeof(ros_message->remaining_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: blood
-  {
-    size_t item_size = sizeof(ros_message->blood);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: outpost_hp
-  {
-    size_t item_size = sizeof(ros_message->outpost_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: is_lowpower
-  {
-    size_t item_size = sizeof(ros_message->is_lowpower);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: hp
   {
     size_t item_size = sizeof(ros_message->hp);
@@ -933,72 +406,16 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: shut_num
-  {
-    size_t item_size = sizeof(ros_message->shut_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: qs_hp
-  {
-    size_t item_size = sizeof(ros_message->qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: current_hp
-  {
-    size_t item_size = sizeof(ros_message->current_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: center_gain_point
-  {
-    size_t item_size = sizeof(ros_message->center_gain_point);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    size_t item_size = sizeof(ros_message->friendly_supply_non_zone_exchange);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: stage_remain_time
-  {
-    size_t item_size = sizeof(ros_message->stage_remain_time);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: game_type
-  {
-    size_t item_size = sizeof(ros_message->game_type);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: game_progress
-  {
-    size_t item_size = sizeof(ros_message->game_progress);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: dm_qs_hp
-  {
-    size_t item_size = sizeof(ros_message->dm_qs_hp);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
   // Field name: zone_status
   {
     size_t item_size = sizeof(ros_message->zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: is_attacted
+  {
+    size_t item_size = sizeof(ros_message->is_attacted);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -1017,10 +434,6 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: operator_command
-  current_alignment += get_serialized_size_key_rm_interfaces__msg__OperatorCommand(
-    &(ros_message->operator_command), current_alignment);
-
   // Field name: heroposition
   current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
     &(ros_message->heroposition), current_alignment);
@@ -1028,10 +441,6 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: standard_3position
   current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
     &(ros_message->standard_3position), current_alignment);
-
-  // Field name: standard_4position
-  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
-    &(ros_message->standard_4position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -1053,44 +462,6 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: game_status
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: remaining_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: blood
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: outpost_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: is_lowpower
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Field name: hp
   {
     size_t array_size = 1;
@@ -1099,78 +470,18 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: shut_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
-  // Field name: current_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: center_gain_point
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: friendly_supply_non_zone_exchange
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: stage_remain_time
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: game_type
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: game_progress
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Field name: dm_qs_hp
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint16_t);
-    current_alignment += array_size * sizeof(uint16_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
-  }
-
   // Field name: zone_status
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: is_attacted
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   // Field name: position_x
@@ -1187,24 +498,6 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: operator_command
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_key_rm_interfaces__msg__OperatorCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
   }
 
   // Field name: heroposition
@@ -1243,24 +536,6 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     }
   }
 
-  // Field name: standard_4position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_key_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -1269,7 +544,7 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_4position) +
+      offsetof(DataType, standard_3position) +
       last_member_size
       ) == ret_val;
   }

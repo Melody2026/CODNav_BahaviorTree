@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "rm_interfaces/msg/detail/serial_receive_data__struct.h"
 #include "rm_interfaces/msg/detail/serial_receive_data__functions.h"
 #include "rm_interfaces/msg/detail/serial_receive_data__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

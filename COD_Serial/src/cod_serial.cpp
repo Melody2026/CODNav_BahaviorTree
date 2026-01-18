@@ -169,7 +169,7 @@ private:
             }
 
             if (floats.size() >= 2) {
-                msg.judge_system_data.zone_status = static_cast<int>(floats[1]);
+                msg.judge_system_data.zone_status = static_cast<bool>(floats[1]);
                 RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
             }
 
@@ -190,7 +190,8 @@ private:
         } else {
             // 如果没有新数据，使用默认值
             msg.judge_system_data.hp = 200.0;
-            msg.judge_system_data.zone_status = 1;
+            msg.judge_system_data.zone_status = true;
+            msg.judge_system_data.is_attacted = true;
             msg.judge_system_data.position_x = 3.0;
             msg.judge_system_data.position_y = 4.0;
             RCLCPP_INFO(this->get_logger(), "使用默认值...........................");

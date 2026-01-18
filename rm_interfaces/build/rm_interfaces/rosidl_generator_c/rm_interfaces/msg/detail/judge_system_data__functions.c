@@ -12,11 +12,8 @@
 
 
 // Include directives for member types
-// Member `operator_command`
-#include "rm_interfaces/msg/detail/operator_command__functions.h"
 // Member `heroposition`
 // Member `standard_3position`
-// Member `standard_4position`
 #include "rm_interfaces/msg/detail/point2d__functions.h"
 
 bool
@@ -25,29 +22,11 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
   if (!msg) {
     return false;
   }
-  // game_status
-  // remaining_time
-  // blood
-  // outpost_hp
-  // is_lowpower
   // hp
-  // shut_num
-  // qs_hp
-  // current_hp
-  // center_gain_point
-  // friendly_supply_non_zone_exchange
-  // stage_remain_time
-  // game_type
-  // game_progress
-  // dm_qs_hp
   // zone_status
+  // is_attacted
   // position_x
   // position_y
-  // operator_command
-  if (!rm_interfaces__msg__OperatorCommand__init(&msg->operator_command)) {
-    rm_interfaces__msg__JudgeSystemData__fini(msg);
-    return false;
-  }
   // heroposition
   if (!rm_interfaces__msg__Point2d__init(&msg->heroposition)) {
     rm_interfaces__msg__JudgeSystemData__fini(msg);
@@ -55,11 +34,6 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
   }
   // standard_3position
   if (!rm_interfaces__msg__Point2d__init(&msg->standard_3position)) {
-    rm_interfaces__msg__JudgeSystemData__fini(msg);
-    return false;
-  }
-  // standard_4position
-  if (!rm_interfaces__msg__Point2d__init(&msg->standard_4position)) {
     rm_interfaces__msg__JudgeSystemData__fini(msg);
     return false;
   }
@@ -72,32 +46,15 @@ rm_interfaces__msg__JudgeSystemData__fini(rm_interfaces__msg__JudgeSystemData * 
   if (!msg) {
     return;
   }
-  // game_status
-  // remaining_time
-  // blood
-  // outpost_hp
-  // is_lowpower
   // hp
-  // shut_num
-  // qs_hp
-  // current_hp
-  // center_gain_point
-  // friendly_supply_non_zone_exchange
-  // stage_remain_time
-  // game_type
-  // game_progress
-  // dm_qs_hp
   // zone_status
+  // is_attacted
   // position_x
   // position_y
-  // operator_command
-  rm_interfaces__msg__OperatorCommand__fini(&msg->operator_command);
   // heroposition
   rm_interfaces__msg__Point2d__fini(&msg->heroposition);
   // standard_3position
   rm_interfaces__msg__Point2d__fini(&msg->standard_3position);
-  // standard_4position
-  rm_interfaces__msg__Point2d__fini(&msg->standard_4position);
 }
 
 bool
@@ -106,68 +63,16 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   if (!lhs || !rhs) {
     return false;
   }
-  // game_status
-  if (lhs->game_status != rhs->game_status) {
-    return false;
-  }
-  // remaining_time
-  if (lhs->remaining_time != rhs->remaining_time) {
-    return false;
-  }
-  // blood
-  if (lhs->blood != rhs->blood) {
-    return false;
-  }
-  // outpost_hp
-  if (lhs->outpost_hp != rhs->outpost_hp) {
-    return false;
-  }
-  // is_lowpower
-  if (lhs->is_lowpower != rhs->is_lowpower) {
-    return false;
-  }
   // hp
   if (lhs->hp != rhs->hp) {
     return false;
   }
-  // shut_num
-  if (lhs->shut_num != rhs->shut_num) {
-    return false;
-  }
-  // qs_hp
-  if (lhs->qs_hp != rhs->qs_hp) {
-    return false;
-  }
-  // current_hp
-  if (lhs->current_hp != rhs->current_hp) {
-    return false;
-  }
-  // center_gain_point
-  if (lhs->center_gain_point != rhs->center_gain_point) {
-    return false;
-  }
-  // friendly_supply_non_zone_exchange
-  if (lhs->friendly_supply_non_zone_exchange != rhs->friendly_supply_non_zone_exchange) {
-    return false;
-  }
-  // stage_remain_time
-  if (lhs->stage_remain_time != rhs->stage_remain_time) {
-    return false;
-  }
-  // game_type
-  if (lhs->game_type != rhs->game_type) {
-    return false;
-  }
-  // game_progress
-  if (lhs->game_progress != rhs->game_progress) {
-    return false;
-  }
-  // dm_qs_hp
-  if (lhs->dm_qs_hp != rhs->dm_qs_hp) {
-    return false;
-  }
   // zone_status
   if (lhs->zone_status != rhs->zone_status) {
+    return false;
+  }
+  // is_attacted
+  if (lhs->is_attacted != rhs->is_attacted) {
     return false;
   }
   // position_x
@@ -176,12 +81,6 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   }
   // position_y
   if (lhs->position_y != rhs->position_y) {
-    return false;
-  }
-  // operator_command
-  if (!rm_interfaces__msg__OperatorCommand__are_equal(
-      &(lhs->operator_command), &(rhs->operator_command)))
-  {
     return false;
   }
   // heroposition
@@ -196,12 +95,6 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   {
     return false;
   }
-  // standard_4position
-  if (!rm_interfaces__msg__Point2d__are_equal(
-      &(lhs->standard_4position), &(rhs->standard_4position)))
-  {
-    return false;
-  }
   return true;
 }
 
@@ -213,48 +106,16 @@ rm_interfaces__msg__JudgeSystemData__copy(
   if (!input || !output) {
     return false;
   }
-  // game_status
-  output->game_status = input->game_status;
-  // remaining_time
-  output->remaining_time = input->remaining_time;
-  // blood
-  output->blood = input->blood;
-  // outpost_hp
-  output->outpost_hp = input->outpost_hp;
-  // is_lowpower
-  output->is_lowpower = input->is_lowpower;
   // hp
   output->hp = input->hp;
-  // shut_num
-  output->shut_num = input->shut_num;
-  // qs_hp
-  output->qs_hp = input->qs_hp;
-  // current_hp
-  output->current_hp = input->current_hp;
-  // center_gain_point
-  output->center_gain_point = input->center_gain_point;
-  // friendly_supply_non_zone_exchange
-  output->friendly_supply_non_zone_exchange = input->friendly_supply_non_zone_exchange;
-  // stage_remain_time
-  output->stage_remain_time = input->stage_remain_time;
-  // game_type
-  output->game_type = input->game_type;
-  // game_progress
-  output->game_progress = input->game_progress;
-  // dm_qs_hp
-  output->dm_qs_hp = input->dm_qs_hp;
   // zone_status
   output->zone_status = input->zone_status;
+  // is_attacted
+  output->is_attacted = input->is_attacted;
   // position_x
   output->position_x = input->position_x;
   // position_y
   output->position_y = input->position_y;
-  // operator_command
-  if (!rm_interfaces__msg__OperatorCommand__copy(
-      &(input->operator_command), &(output->operator_command)))
-  {
-    return false;
-  }
   // heroposition
   if (!rm_interfaces__msg__Point2d__copy(
       &(input->heroposition), &(output->heroposition)))
@@ -264,12 +125,6 @@ rm_interfaces__msg__JudgeSystemData__copy(
   // standard_3position
   if (!rm_interfaces__msg__Point2d__copy(
       &(input->standard_3position), &(output->standard_3position)))
-  {
-    return false;
-  }
-  // standard_4position
-  if (!rm_interfaces__msg__Point2d__copy(
-      &(input->standard_4position), &(output->standard_4position)))
   {
     return false;
   }

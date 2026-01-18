@@ -9,13 +9,23 @@
           <Inverter>
             <WriteToBlackboard Position="{position}"
                                Hp="{hp}"
-                               Zone_status="{zone_status}"/>
+                               Zone_status="{zone_status}"
+                               Is_attacted="{is_attacted}"/>
           </Inverter>
-          <Sequence>
-            <HpCondition Hp="{hp}"/>
-            <SendNav2Goal goal_pose="{home_position}"/>
-          </Sequence>
-          <SendNav2Goal goal_pose="{main_position}"/>
+          <ReactiveFallback>
+            <Sequence>
+              <HpCondition Hp="{hp}"/>
+              <SendNav2Goal goal_pose="{home_position}"/>
+            </Sequence>
+            <Rapid_spin Is_attacted="{is_attacted}"/>
+            <Inverter>
+              <Fallback>
+                <ZsCondition Zone_status="{zone_status}"/>
+                <SendNav2Goal goal_pose="{home_position}"/>
+              </Fallback>
+            </Inverter>
+          </ReactiveFallback>
+          <Rapid_spin Is_attacted="{is_attacted}"/>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>
@@ -47,6 +57,10 @@
       <input_port name="Hp"/>
       <input_port name="Zone_status"/>
     </Condition>
+    <Action ID="Rapid_spin"
+            editable="true">
+      <input_port name="Is_attacted"/>
+    </Action>
     <Action ID="SendNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>
@@ -55,10 +69,15 @@
             editable="true"/>
     <Action ID="WriteToBlackboard"
             editable="true">
-      <inout_port name="Position"/>
-      <inout_port name="Hp"/>
+      <output_port name="Position"/>
+      <output_port name="Hp"/>
       <output_port name="Zone_status"/>
+      <output_port name="Is_attacted"/>
     </Action>
+    <Condition ID="ZsCondition"
+               editable="true">
+      <input_port name="Zone_status"/>
+    </Condition>
   </TreeNodesModel>
 
 </root>

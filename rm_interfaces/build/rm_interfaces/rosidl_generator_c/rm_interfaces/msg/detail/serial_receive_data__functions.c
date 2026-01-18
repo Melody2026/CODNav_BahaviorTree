@@ -12,8 +12,6 @@
 
 
 // Include directives for member types
-// Member `header`
-#include "std_msgs/msg/detail/header__functions.h"
 // Member `judge_system_data`
 #include "rm_interfaces/msg/detail/judge_system_data__functions.h"
 
@@ -23,16 +21,6 @@ rm_interfaces__msg__SerialReceiveData__init(rm_interfaces__msg__SerialReceiveDat
   if (!msg) {
     return false;
   }
-  // header
-  if (!std_msgs__msg__Header__init(&msg->header)) {
-    rm_interfaces__msg__SerialReceiveData__fini(msg);
-    return false;
-  }
-  // mode
-  // bullet_speed
-  // roll
-  // yaw
-  // pitch
   // judge_system_data
   if (!rm_interfaces__msg__JudgeSystemData__init(&msg->judge_system_data)) {
     rm_interfaces__msg__SerialReceiveData__fini(msg);
@@ -47,13 +35,6 @@ rm_interfaces__msg__SerialReceiveData__fini(rm_interfaces__msg__SerialReceiveDat
   if (!msg) {
     return;
   }
-  // header
-  std_msgs__msg__Header__fini(&msg->header);
-  // mode
-  // bullet_speed
-  // roll
-  // yaw
-  // pitch
   // judge_system_data
   rm_interfaces__msg__JudgeSystemData__fini(&msg->judge_system_data);
 }
@@ -62,32 +43,6 @@ bool
 rm_interfaces__msg__SerialReceiveData__are_equal(const rm_interfaces__msg__SerialReceiveData * lhs, const rm_interfaces__msg__SerialReceiveData * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // header
-  if (!std_msgs__msg__Header__are_equal(
-      &(lhs->header), &(rhs->header)))
-  {
-    return false;
-  }
-  // mode
-  if (lhs->mode != rhs->mode) {
-    return false;
-  }
-  // bullet_speed
-  if (lhs->bullet_speed != rhs->bullet_speed) {
-    return false;
-  }
-  // roll
-  if (lhs->roll != rhs->roll) {
-    return false;
-  }
-  // yaw
-  if (lhs->yaw != rhs->yaw) {
-    return false;
-  }
-  // pitch
-  if (lhs->pitch != rhs->pitch) {
     return false;
   }
   // judge_system_data
@@ -107,22 +62,6 @@ rm_interfaces__msg__SerialReceiveData__copy(
   if (!input || !output) {
     return false;
   }
-  // header
-  if (!std_msgs__msg__Header__copy(
-      &(input->header), &(output->header)))
-  {
-    return false;
-  }
-  // mode
-  output->mode = input->mode;
-  // bullet_speed
-  output->bullet_speed = input->bullet_speed;
-  // roll
-  output->roll = input->roll;
-  // yaw
-  output->yaw = input->yaw;
-  // pitch
-  output->pitch = input->pitch;
   // judge_system_data
   if (!rm_interfaces__msg__JudgeSystemData__copy(
       &(input->judge_system_data), &(output->judge_system_data)))
