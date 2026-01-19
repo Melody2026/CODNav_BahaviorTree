@@ -127,7 +127,7 @@ public:
     static BT::PortsList providedPorts() {
         return {
             BT::OutputPort<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("Position"),
-            BT::OutputPort<double>("Hp"),
+            BT::OutputPort<float>("Hp"),
             BT::OutputPort<bool>("Zone_status"),
             BT::OutputPort<bool>("Is_attacted")
         };
@@ -135,7 +135,7 @@ public:
 
     //设置参数
     std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
-    double hp;
+    float hp;
     bool zone_status;
     bool is_attacted;
 
@@ -163,7 +163,7 @@ public:
     }
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
-        hp = static_cast<double>(msg->judge_system_data.hp);
+        hp = static_cast<float>(msg->judge_system_data.hp);
         zone_status = msg->judge_system_data.zone_status;
         is_attacted = msg->judge_system_data.is_attacted;
         //英雄，步兵，哨兵的位置坐标 后面根据消息做修改
@@ -244,7 +244,7 @@ public:
     static BT::PortsList providedPorts() { return{BT::InputPort<bool>("Is_attacted")};}
 
     BT::NodeStatus tick() override {
-        auto is_attacted_ = getInput<double>("Is_attacted");
+        auto is_attacted_ = getInput<bool>("Is_attacted");
 
         if (!is_attacted_) {
             throw BT::RuntimeError(
@@ -254,6 +254,8 @@ public:
         bool is_attacted = is_attacted_.value();
         if (is_attacted) {
             std::cout <<"Rapid_spin is started................."<<std::endl;
+        }else {
+            std::cout <<"Rapid_spin is stopped................."<<std::endl;
         }
         return BT::NodeStatus::FAILURE;
     }

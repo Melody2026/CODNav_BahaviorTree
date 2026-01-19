@@ -13,15 +13,20 @@
                                Is_attacted="{is_attacted}"/>
           </Inverter>
           <ReactiveFallback>
-            <Sequence>
+            <ReactiveSequence>
               <HpCondition Hp="{hp}"/>
-              <SendNav2Goal goal_pose="{home_position}"/>
-            </Sequence>
+              <Sequence>
+                <SendNav2Goal goal_pose="{home_position}"/>
+                <Inverter>
+                  <Sleep msec="25"/>
+                </Inverter>
+              </Sequence>
+            </ReactiveSequence>
             <Rapid_spin Is_attacted="{is_attacted}"/>
             <Inverter>
               <Fallback>
                 <ZsCondition Zone_status="{zone_status}"/>
-                <SendNav2Goal goal_pose="{home_position}"/>
+                <SendNav2Goal goal_pose="{main_position}"/>
               </Fallback>
             </Inverter>
           </ReactiveFallback>

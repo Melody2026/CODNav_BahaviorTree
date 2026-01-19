@@ -47,7 +47,6 @@ int main(int argc, char **argv) {
     factory.registerNodeType<UpdataPatrolIndex>("UpdataPatrolIndex");
     factory.registerNodeType<Rapid_spin>("Rapid_spin");
 
-
     const std::string cod_bt = "/home/ysl/ros2_ws/COD_Behavior/cod_bt/tree_1.xml";
 
     try {
@@ -65,7 +64,7 @@ int main(int argc, char **argv) {
 
         std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
         blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("position", pose_map);
-        blackboard->set<double>("hp", 0.0);
+        blackboard->set<float>("hp", 0.0);
         blackboard->set<bool>("zone_status", false);
         blackboard->set<bool>("is_attacked", false);
 
