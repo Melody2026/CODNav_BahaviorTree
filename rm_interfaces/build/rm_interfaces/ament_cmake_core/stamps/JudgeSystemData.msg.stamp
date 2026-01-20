@@ -1,7 +1,4 @@
 float32 hp
 bool zone_status
-bool is_attacted
-float32 position_x
-float32 position_y
-Point2d heroposition
-Point2d standard_3position
+bool is_defence
+bool is_attack

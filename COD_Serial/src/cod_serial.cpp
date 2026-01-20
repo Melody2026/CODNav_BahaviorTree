@@ -26,14 +26,6 @@ public:
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(50),
             std::bind(&sendmsg::timer_callback, this));
-        
-        // 尝试打开串口
-        if (uart_.open()) {
-            RCLCPP_INFO(this->get_logger(), "串口打开成功");
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "串口打开失败");
-        }
-
     }
 
 private:
@@ -47,26 +39,22 @@ private:
             msg.judge_system_data.hp = hp;
             RCLCPP_INFO(this->get_logger(), "发布hp: %f", msg.judge_system_data.hp);
 
-            msg.judge_system_data.is_attacted = is_attacted;
-            RCLCPP_INFO(this->get_logger(), "发布is_attacted: %d", msg.judge_system_data.is_attacted);
-
             msg.judge_system_data.zone_status = zone_status;
             RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
 
-            msg.judge_system_data.position_x = position_x;
-            RCLCPP_INFO(this->get_logger(), "发布position_x: %f", msg.judge_system_data.position_x);
+            msg.judge_system_data.is_defence = is_defence;
+            RCLCPP_INFO(this->get_logger(), "发布is_defence: %d", msg.judge_system_data.is_defence);
 
-            msg.judge_system_data.position_y = position_y;
-            RCLCPP_INFO(this->get_logger(), "发布position_y: %f", msg.judge_system_data.position_y);
+            msg.judge_system_data.is_attack = is_attack;
+            RCLCPP_INFO(this->get_logger(), "发布is_attack: %d", msg.judge_system_data.is_attack);
 
         } else {
             // 如果没有新数据，使用默认值
-            msg.judge_system_data.hp = 70.0;
-            msg.judge_system_data.zone_status = false;
-            msg.judge_system_data.is_attacted = true;
-            msg.judge_system_data.position_x = 3.0;
-            msg.judge_system_data.position_y = 4.0;
-            RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
+            // msg.judge_system_data.hp = 400.0;
+            // msg.judge_system_data.zone_status = false;
+            // msg.judge_system_data.is_defence = false;
+            // msg.judge_system_data.is_attack = false;
+            // RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
         }
 
         // 发布消息
@@ -77,11 +65,11 @@ private:
     rclcpp::Publisher<rm_interfaces::msg::SerialReceiveData>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
     UartTransporter uart_= UartTransporter("/dev/ttyACM0",115200);
-    float hp;
-    bool is_attacted;
-    bool zone_status;
-    float position_x;
-    float position_y;
+    float hp = 400;
+    bool zone_status = false;
+    bool is_defence = false;
+    bool is_attack = false;
+
     bool receiveData(UartTransporter &uart) {
         uint8_t package[20];
         uint8_t header=0xfe;
@@ -93,10 +81,9 @@ private:
         if (uart.read(package, sizeof(package)) == sizeof(package)) {
             if (header == package[0]) {
                 zone_status = package[1];
-                is_attacted = package[2];
+                is_defence = package[2];
+                is_attack = package[3];
                 std::memcpy(&hp,&package[5],sizeof(float));
-                std::memcpy(&position_x,&package[9],sizeof(float));
-                std::memcpy(&position_y,&package[13],sizeof(float));
                 return true;
             }else {
                 std::cout << "Failed to open serial port\n";

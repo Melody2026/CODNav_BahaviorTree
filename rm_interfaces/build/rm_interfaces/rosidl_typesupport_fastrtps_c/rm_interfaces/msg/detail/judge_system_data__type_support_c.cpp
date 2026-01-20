@@ -36,42 +36,8 @@ extern "C"
 {
 #endif
 
-#include "rm_interfaces/msg/detail/point2d__functions.h"  // heroposition, standard_3position
 
 // forward declare type support functions
-
-bool cdr_serialize_rm_interfaces__msg__Point2d(
-  const rm_interfaces__msg__Point2d * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-bool cdr_deserialize_rm_interfaces__msg__Point2d(
-  eprosima::fastcdr::Cdr & cdr,
-  rm_interfaces__msg__Point2d * ros_message);
-
-size_t get_serialized_size_rm_interfaces__msg__Point2d(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_rm_interfaces__msg__Point2d(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-bool cdr_serialize_key_rm_interfaces__msg__Point2d(
-  const rm_interfaces__msg__Point2d * ros_message,
-  eprosima::fastcdr::Cdr & cdr);
-
-size_t get_serialized_size_key_rm_interfaces__msg__Point2d(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_key_rm_interfaces__msg__Point2d(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, rm_interfaces, msg, Point2d)();
 
 
 using _JudgeSystemData__ros_msg_type = rm_interfaces__msg__JudgeSystemData;
@@ -92,31 +58,14 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
     cdr << (ros_message->zone_status ? true : false);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
-    cdr << (ros_message->is_attacted ? true : false);
+    cdr << (ros_message->is_defence ? true : false);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
-    cdr << ros_message->position_x;
-  }
-
-  // Field name: position_y
-  {
-    cdr << ros_message->position_y;
-  }
-
-  // Field name: heroposition
-  {
-    cdr_serialize_rm_interfaces__msg__Point2d(
-      &ros_message->heroposition, cdr);
-  }
-
-  // Field name: standard_3position
-  {
-    cdr_serialize_rm_interfaces__msg__Point2d(
-      &ros_message->standard_3position, cdr);
+    cdr << (ros_message->is_attack ? true : false);
   }
 
   return true;
@@ -139,31 +88,18 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
     ros_message->zone_status = tmp ? true : false;
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->is_attacted = tmp ? true : false;
+    ros_message->is_defence = tmp ? true : false;
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
-    cdr >> ros_message->position_x;
-  }
-
-  // Field name: position_y
-  {
-    cdr >> ros_message->position_y;
-  }
-
-  // Field name: heroposition
-  {
-    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->heroposition);
-  }
-
-  // Field name: standard_3position
-  {
-    cdr_deserialize_rm_interfaces__msg__Point2d(cdr, &ros_message->standard_3position);
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->is_attack = tmp ? true : false;
   }
 
   return true;
@@ -198,34 +134,19 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
-    size_t item_size = sizeof(ros_message->is_attacted);
+    size_t item_size = sizeof(ros_message->is_defence);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
-    size_t item_size = sizeof(ros_message->position_x);
+    size_t item_size = sizeof(ros_message->is_attack);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-
-  // Field name: position_y
-  {
-    size_t item_size = sizeof(ros_message->position_y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: heroposition
-  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
-    &(ros_message->heroposition), current_alignment);
-
-  // Field name: standard_3position
-  current_alignment += get_serialized_size_rm_interfaces__msg__Point2d(
-    &(ros_message->standard_3position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -264,63 +185,18 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: position_y
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: heroposition
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Field name: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
 
@@ -332,7 +208,7 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_3position) +
+      offsetof(DataType, is_attack) +
       last_member_size
       ) == ret_val;
   }
@@ -354,31 +230,14 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
     cdr << (ros_message->zone_status ? true : false);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
-    cdr << (ros_message->is_attacted ? true : false);
+    cdr << (ros_message->is_defence ? true : false);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
-    cdr << ros_message->position_x;
-  }
-
-  // Field name: position_y
-  {
-    cdr << ros_message->position_y;
-  }
-
-  // Field name: heroposition
-  {
-    cdr_serialize_key_rm_interfaces__msg__Point2d(
-      &ros_message->heroposition, cdr);
-  }
-
-  // Field name: standard_3position
-  {
-    cdr_serialize_key_rm_interfaces__msg__Point2d(
-      &ros_message->standard_3position, cdr);
+    cdr << (ros_message->is_attack ? true : false);
   }
 
   return true;
@@ -413,34 +272,19 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
-    size_t item_size = sizeof(ros_message->is_attacted);
+    size_t item_size = sizeof(ros_message->is_defence);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
-    size_t item_size = sizeof(ros_message->position_x);
+    size_t item_size = sizeof(ros_message->is_attack);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-
-  // Field name: position_y
-  {
-    size_t item_size = sizeof(ros_message->position_y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: heroposition
-  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
-    &(ros_message->heroposition), current_alignment);
-
-  // Field name: standard_3position
-  current_alignment += get_serialized_size_key_rm_interfaces__msg__Point2d(
-    &(ros_message->standard_3position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -477,63 +321,18 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: is_attacted
+  // Field name: is_defence
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Field name: position_x
+  // Field name: is_attack
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: position_y
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: heroposition
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_key_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Field name: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_key_rm_interfaces__msg__Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -544,7 +343,7 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_3position) +
+      offsetof(DataType, is_attack) +
       last_member_size
       ) == ret_val;
   }

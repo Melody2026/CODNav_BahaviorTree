@@ -24,15 +24,15 @@ namespace msg
 namespace builder
 {
 
-class Init_JudgeSystemData_standard_3position
+class Init_JudgeSystemData_is_attack
 {
 public:
-  explicit Init_JudgeSystemData_standard_3position(::rm_interfaces::msg::JudgeSystemData & msg)
+  explicit Init_JudgeSystemData_is_attack(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  ::rm_interfaces::msg::JudgeSystemData standard_3position(::rm_interfaces::msg::JudgeSystemData::_standard_3position_type arg)
+  ::rm_interfaces::msg::JudgeSystemData is_attack(::rm_interfaces::msg::JudgeSystemData::_is_attack_type arg)
   {
-    msg_.standard_3position = std::move(arg);
+    msg_.is_attack = std::move(arg);
     return std::move(msg_);
   }
 
@@ -40,64 +40,16 @@ private:
   ::rm_interfaces::msg::JudgeSystemData msg_;
 };
 
-class Init_JudgeSystemData_heroposition
+class Init_JudgeSystemData_is_defence
 {
 public:
-  explicit Init_JudgeSystemData_heroposition(::rm_interfaces::msg::JudgeSystemData & msg)
+  explicit Init_JudgeSystemData_is_defence(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  Init_JudgeSystemData_standard_3position heroposition(::rm_interfaces::msg::JudgeSystemData::_heroposition_type arg)
+  Init_JudgeSystemData_is_attack is_defence(::rm_interfaces::msg::JudgeSystemData::_is_defence_type arg)
   {
-    msg_.heroposition = std::move(arg);
-    return Init_JudgeSystemData_standard_3position(msg_);
-  }
-
-private:
-  ::rm_interfaces::msg::JudgeSystemData msg_;
-};
-
-class Init_JudgeSystemData_position_y
-{
-public:
-  explicit Init_JudgeSystemData_position_y(::rm_interfaces::msg::JudgeSystemData & msg)
-  : msg_(msg)
-  {}
-  Init_JudgeSystemData_heroposition position_y(::rm_interfaces::msg::JudgeSystemData::_position_y_type arg)
-  {
-    msg_.position_y = std::move(arg);
-    return Init_JudgeSystemData_heroposition(msg_);
-  }
-
-private:
-  ::rm_interfaces::msg::JudgeSystemData msg_;
-};
-
-class Init_JudgeSystemData_position_x
-{
-public:
-  explicit Init_JudgeSystemData_position_x(::rm_interfaces::msg::JudgeSystemData & msg)
-  : msg_(msg)
-  {}
-  Init_JudgeSystemData_position_y position_x(::rm_interfaces::msg::JudgeSystemData::_position_x_type arg)
-  {
-    msg_.position_x = std::move(arg);
-    return Init_JudgeSystemData_position_y(msg_);
-  }
-
-private:
-  ::rm_interfaces::msg::JudgeSystemData msg_;
-};
-
-class Init_JudgeSystemData_is_attacted
-{
-public:
-  explicit Init_JudgeSystemData_is_attacted(::rm_interfaces::msg::JudgeSystemData & msg)
-  : msg_(msg)
-  {}
-  Init_JudgeSystemData_position_x is_attacted(::rm_interfaces::msg::JudgeSystemData::_is_attacted_type arg)
-  {
-    msg_.is_attacted = std::move(arg);
-    return Init_JudgeSystemData_position_x(msg_);
+    msg_.is_defence = std::move(arg);
+    return Init_JudgeSystemData_is_attack(msg_);
   }
 
 private:
@@ -110,10 +62,10 @@ public:
   explicit Init_JudgeSystemData_zone_status(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  Init_JudgeSystemData_is_attacted zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
+  Init_JudgeSystemData_is_defence zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
   {
     msg_.zone_status = std::move(arg);
-    return Init_JudgeSystemData_is_attacted(msg_);
+    return Init_JudgeSystemData_is_defence(msg_);
   }
 
 private:

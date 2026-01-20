@@ -17,11 +17,6 @@
 #include "rm_interfaces/msg/detail/judge_system_data__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
-// Include directives for member types
-// Member 'heroposition'
-// Member 'standard_3position'
-#include "rm_interfaces/msg/detail/point2d__traits.hpp"
-
 namespace rm_interfaces
 {
 
@@ -47,38 +42,17 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: is_attacted
+  // member: is_defence
   {
-    out << "is_attacted: ";
-    rosidl_generator_traits::value_to_yaml(msg.is_attacted, out);
+    out << "is_defence: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_defence, out);
     out << ", ";
   }
 
-  // member: position_x
+  // member: is_attack
   {
-    out << "position_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.position_x, out);
-    out << ", ";
-  }
-
-  // member: position_y
-  {
-    out << "position_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.position_y, out);
-    out << ", ";
-  }
-
-  // member: heroposition
-  {
-    out << "heroposition: ";
-    to_flow_style_yaml(msg.heroposition, out);
-    out << ", ";
-  }
-
-  // member: standard_3position
-  {
-    out << "standard_3position: ";
-    to_flow_style_yaml(msg.standard_3position, out);
+    out << "is_attack: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_attack, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -107,52 +81,24 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: is_attacted
+  // member: is_defence
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "is_attacted: ";
-    rosidl_generator_traits::value_to_yaml(msg.is_attacted, out);
+    out << "is_defence: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_defence, out);
     out << "\n";
   }
 
-  // member: position_x
+  // member: is_attack
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "position_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.position_x, out);
+    out << "is_attack: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_attack, out);
     out << "\n";
-  }
-
-  // member: position_y
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "position_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.position_y, out);
-    out << "\n";
-  }
-
-  // member: heroposition
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "heroposition:\n";
-    to_block_style_yaml(msg.heroposition, out, indentation + 2);
-  }
-
-  // member: standard_3position
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "standard_3position:\n";
-    to_block_style_yaml(msg.standard_3position, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
@@ -202,11 +148,11 @@ inline const char * name<rm_interfaces::msg::JudgeSystemData>()
 
 template<>
 struct has_fixed_size<rm_interfaces::msg::JudgeSystemData>
-  : std::integral_constant<bool, has_fixed_size<rm_interfaces::msg::Point2d>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<rm_interfaces::msg::JudgeSystemData>
-  : std::integral_constant<bool, has_bounded_size<rm_interfaces::msg::Point2d>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<rm_interfaces::msg::JudgeSystemData>

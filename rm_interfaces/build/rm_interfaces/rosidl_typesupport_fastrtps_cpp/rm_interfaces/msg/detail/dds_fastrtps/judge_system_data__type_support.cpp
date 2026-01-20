@@ -19,43 +19,6 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace rm_interfaces
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const rm_interfaces::msg::Point2d &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  rm_interfaces::msg::Point2d &);
-size_t get_serialized_size(
-  const rm_interfaces::msg::Point2d &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Point2d(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-bool cdr_serialize_key(
-  const rm_interfaces::msg::Point2d &,
-  eprosima::fastcdr::Cdr &);
-size_t get_serialized_size_key(
-  const rm_interfaces::msg::Point2d &,
-  size_t current_alignment);
-size_t
-max_serialized_size_key_Point2d(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace rm_interfaces
-
-// functions for rm_interfaces::msg::Point2d already declared above
-
 
 namespace rm_interfaces
 {
@@ -79,24 +42,11 @@ cdr_serialize(
   // Member: zone_status
   cdr << (ros_message.zone_status ? true : false);
 
-  // Member: is_attacted
-  cdr << (ros_message.is_attacted ? true : false);
+  // Member: is_defence
+  cdr << (ros_message.is_defence ? true : false);
 
-  // Member: position_x
-  cdr << ros_message.position_x;
-
-  // Member: position_y
-  cdr << ros_message.position_y;
-
-  // Member: heroposition
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.heroposition,
-    cdr);
-
-  // Member: standard_3position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.standard_3position,
-    cdr);
+  // Member: is_attack
+  cdr << (ros_message.is_attack ? true : false);
 
   return true;
 }
@@ -117,26 +67,19 @@ cdr_deserialize(
     ros_message.zone_status = tmp ? true : false;
   }
 
-  // Member: is_attacted
+  // Member: is_defence
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message.is_attacted = tmp ? true : false;
+    ros_message.is_defence = tmp ? true : false;
   }
 
-  // Member: position_x
-  cdr >> ros_message.position_x;
-
-  // Member: position_y
-  cdr >> ros_message.position_y;
-
-  // Member: heroposition
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.heroposition);
-
-  // Member: standard_3position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.standard_3position);
+  // Member: is_attack
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.is_attack = tmp ? true : false;
+  }
 
   return true;
 }
@@ -169,36 +112,19 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: is_attacted
+  // Member: is_defence
   {
-    size_t item_size = sizeof(ros_message.is_attacted);
+    size_t item_size = sizeof(ros_message.is_defence);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: position_x
+  // Member: is_attack
   {
-    size_t item_size = sizeof(ros_message.position_x);
+    size_t item_size = sizeof(ros_message.is_attack);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-
-  // Member: position_y
-  {
-    size_t item_size = sizeof(ros_message.position_y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: heroposition
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.heroposition, current_alignment);
-
-  // Member: standard_3position
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.standard_3position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -236,57 +162,17 @@ max_serialized_size_JudgeSystemData(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: is_attacted
+  // Member: is_defence
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // Member: position_x
+  // Member: is_attack
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: position_y
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // Member: heroposition
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-  // Member: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -297,7 +183,7 @@ max_serialized_size_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_3position) +
+      offsetof(DataType, is_attack) +
       last_member_size
       ) == ret_val;
   }
@@ -317,24 +203,11 @@ cdr_serialize_key(
   // Member: zone_status
   cdr << (ros_message.zone_status ? true : false);
 
-  // Member: is_attacted
-  cdr << (ros_message.is_attacted ? true : false);
+  // Member: is_defence
+  cdr << (ros_message.is_defence ? true : false);
 
-  // Member: position_x
-  cdr << ros_message.position_x;
-
-  // Member: position_y
-  cdr << ros_message.position_y;
-
-  // Member: heroposition
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
-    ros_message.heroposition,
-    cdr);
-
-  // Member: standard_3position
-  rm_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
-    ros_message.standard_3position,
-    cdr);
+  // Member: is_attack
+  cdr << (ros_message.is_attack ? true : false);
 
   return true;
 }
@@ -366,36 +239,19 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: is_attacted
+  // Member: is_defence
   {
-    size_t item_size = sizeof(ros_message.is_attacted);
+    size_t item_size = sizeof(ros_message.is_defence);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: position_x
+  // Member: is_attack
   {
-    size_t item_size = sizeof(ros_message.position_x);
+    size_t item_size = sizeof(ros_message.is_attack);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-
-  // Member: position_y
-  {
-    size_t item_size = sizeof(ros_message.position_y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Member: heroposition
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
-    ros_message.heroposition, current_alignment);
-
-  // Member: standard_3position
-  current_alignment +=
-    rm_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
-    ros_message.standard_3position, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -434,61 +290,18 @@ max_serialized_size_key_JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: is_attacted
+  // Member: is_defence
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: position_x
+  // Member: is_attack
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: position_y
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: heroposition
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Member: standard_3position
-  {
-    size_t array_size = 1;
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        rm_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_key_Point2d(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -499,7 +312,7 @@ max_serialized_size_key_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, standard_3position) +
+      offsetof(DataType, is_attack) +
       last_member_size
       ) == ret_val;
   }

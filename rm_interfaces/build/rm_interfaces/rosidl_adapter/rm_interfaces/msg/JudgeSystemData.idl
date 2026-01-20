@@ -2,7 +2,6 @@
 // with input from rm_interfaces/msg/JudgeSystemData.msg
 // generated code does not contain a copyright notice
 
-#include "rm_interfaces/msg/Point2d.idl"
 
 module rm_interfaces {
   module msg {
@@ -11,15 +10,9 @@ module rm_interfaces {
 
       boolean zone_status;
 
-      boolean is_attacted;
+      boolean is_defence;
 
-      float position_x;
-
-      float position_y;
-
-      rm_interfaces::msg::Point2d heroposition;
-
-      rm_interfaces::msg::Point2d standard_3position;
+      boolean is_attack;
     };
   };
 };

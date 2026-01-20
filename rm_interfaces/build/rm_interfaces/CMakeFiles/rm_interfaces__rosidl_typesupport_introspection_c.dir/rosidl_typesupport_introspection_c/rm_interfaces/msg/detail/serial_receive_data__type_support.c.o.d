@@ -75,7 +75,6 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/judge_system_data.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h \

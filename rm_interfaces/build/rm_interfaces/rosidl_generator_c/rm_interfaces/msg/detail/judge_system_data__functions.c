@@ -11,11 +11,6 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `heroposition`
-// Member `standard_3position`
-#include "rm_interfaces/msg/detail/point2d__functions.h"
-
 bool
 rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * msg)
 {
@@ -24,19 +19,8 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
   }
   // hp
   // zone_status
-  // is_attacted
-  // position_x
-  // position_y
-  // heroposition
-  if (!rm_interfaces__msg__Point2d__init(&msg->heroposition)) {
-    rm_interfaces__msg__JudgeSystemData__fini(msg);
-    return false;
-  }
-  // standard_3position
-  if (!rm_interfaces__msg__Point2d__init(&msg->standard_3position)) {
-    rm_interfaces__msg__JudgeSystemData__fini(msg);
-    return false;
-  }
+  // is_defence
+  // is_attack
   return true;
 }
 
@@ -48,13 +32,8 @@ rm_interfaces__msg__JudgeSystemData__fini(rm_interfaces__msg__JudgeSystemData * 
   }
   // hp
   // zone_status
-  // is_attacted
-  // position_x
-  // position_y
-  // heroposition
-  rm_interfaces__msg__Point2d__fini(&msg->heroposition);
-  // standard_3position
-  rm_interfaces__msg__Point2d__fini(&msg->standard_3position);
+  // is_defence
+  // is_attack
 }
 
 bool
@@ -71,28 +50,12 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   if (lhs->zone_status != rhs->zone_status) {
     return false;
   }
-  // is_attacted
-  if (lhs->is_attacted != rhs->is_attacted) {
+  // is_defence
+  if (lhs->is_defence != rhs->is_defence) {
     return false;
   }
-  // position_x
-  if (lhs->position_x != rhs->position_x) {
-    return false;
-  }
-  // position_y
-  if (lhs->position_y != rhs->position_y) {
-    return false;
-  }
-  // heroposition
-  if (!rm_interfaces__msg__Point2d__are_equal(
-      &(lhs->heroposition), &(rhs->heroposition)))
-  {
-    return false;
-  }
-  // standard_3position
-  if (!rm_interfaces__msg__Point2d__are_equal(
-      &(lhs->standard_3position), &(rhs->standard_3position)))
-  {
+  // is_attack
+  if (lhs->is_attack != rhs->is_attack) {
     return false;
   }
   return true;
@@ -110,24 +73,10 @@ rm_interfaces__msg__JudgeSystemData__copy(
   output->hp = input->hp;
   // zone_status
   output->zone_status = input->zone_status;
-  // is_attacted
-  output->is_attacted = input->is_attacted;
-  // position_x
-  output->position_x = input->position_x;
-  // position_y
-  output->position_y = input->position_y;
-  // heroposition
-  if (!rm_interfaces__msg__Point2d__copy(
-      &(input->heroposition), &(output->heroposition)))
-  {
-    return false;
-  }
-  // standard_3position
-  if (!rm_interfaces__msg__Point2d__copy(
-      &(input->standard_3position), &(output->standard_3position)))
-  {
-    return false;
-  }
+  // is_defence
+  output->is_defence = input->is_defence;
+  // is_attack
+  output->is_attack = input->is_attack;
   return true;
 }
 

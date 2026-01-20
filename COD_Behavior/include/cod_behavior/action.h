@@ -134,9 +134,10 @@ public:
     }
 
     //设置参数
-    float hp;
-    bool zone_status;
-    bool is_attacted;
+    float hp = 400;
+    bool zone_status = false;
+    bool is_defence = false;
+    bool is_attack = false;
 
     BT::NodeStatus tick() override {
         // 处理回调
@@ -147,18 +148,17 @@ public:
         //写入黑板
         setOutput("Hp", hp);
         setOutput("Zone_status", zone_status);
-        setOutput("Is_attacted", is_attacted);
-
-        std::cout << "zone_status:" << zone_status << std::endl;
-        std::cout<<"Is_attacted:"<<is_attacted<<std::endl;
+        setOutput("Is_defence", is_defence);
+        setOutput("Is_attack", is_attack);
 
         return BT::NodeStatus::SUCCESS;
     }
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
-        hp = static_cast<float>(msg->judge_system_data.hp);
+        hp = msg->judge_system_data.hp;
         zone_status = msg->judge_system_data.zone_status;
-        is_attacted = msg->judge_system_data.is_attacted;
+        is_defence = msg->judge_system_data.is_defence;
+        is_attack = msg->judge_system_data.is_attack;
         is_ReadInterface_ = true;
         RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }
@@ -168,56 +168,3 @@ private:
     rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr sub_;
     bool is_ReadInterface_;
 };
-
-class GetNextPatrolPose : public BT::SyncActionNode {
-public:
-    GetNextPatrolPose(const std::string &name, const BT::NodeConfiguration &config)
-        : SyncActionNode(name, config) { std::cout << "GetNextPatrolPose: start" << std::endl; }
-
-    static BT::PortsList providedPorts() {
-        return {
-            BT::OutputPort<geometry_msgs::msg::PoseStamped>("Patrol_pose")
-        };
-    }
-
-    BT::NodeStatus tick() override {
-        auto bb = config().blackboard;
-
-        std::vector<geometry_msgs::msg::PoseStamped> patrol_points;
-        int index = 0;
-
-        if (!bb->get("patrol_points", patrol_points) ||
-            !bb->get("patrol_index", index) ||
-            patrol_points.empty()) {
-            return BT::NodeStatus::FAILURE;
-            }
-
-        index = index % patrol_points.size();
-        setOutput("Patrol_pose", patrol_points[index]);
-        std::cout << "GetNextPatrolPose: success" << std::endl;
-        return BT::NodeStatus::SUCCESS;
-    }
-};
-
-class UpdataPatrolIndex : public BT::SyncActionNode {
-public:
-    UpdataPatrolIndex(const std::string &name, const BT::NodeConfiguration &config)
-        : SyncActionNode(name, config) {}
-
-    static BT::PortsList providedPorts() { return {}; }
-
-    BT::NodeStatus tick() override {
-        auto bb = config().blackboard;
-
-        int index = 0;
-        if (!bb->get("patrol_index", index)) {
-            return BT::NodeStatus::FAILURE;
-        }
-
-        bb->set<int>("patrol_index", index + 1);
-
-        std::cout << "UpdataPatrolIndex: success" << std::endl;
-        return BT::NodeStatus::SUCCESS;
-    }
-};
-

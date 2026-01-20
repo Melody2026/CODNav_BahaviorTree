@@ -51,10 +51,6 @@ class Metaclass_JudgeSystemData(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__judge_system_data
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__judge_system_data
 
-            from rm_interfaces.msg import Point2d
-            if Point2d.__class__._TYPE_SUPPORT is None:
-                Point2d.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -70,22 +66,16 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
     __slots__ = [
         '_hp',
         '_zone_status',
-        '_is_attacted',
-        '_position_x',
-        '_position_y',
-        '_heroposition',
-        '_standard_3position',
+        '_is_defence',
+        '_is_attack',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'hp': 'float',
         'zone_status': 'boolean',
-        'is_attacted': 'boolean',
-        'position_x': 'float',
-        'position_y': 'float',
-        'heroposition': 'rm_interfaces/Point2d',
-        'standard_3position': 'rm_interfaces/Point2d',
+        'is_defence': 'boolean',
+        'is_attack': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -94,10 +84,7 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'Point2d'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['rm_interfaces', 'msg'], 'Point2d'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -111,13 +98,8 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.hp = kwargs.get('hp', float())
         self.zone_status = kwargs.get('zone_status', bool())
-        self.is_attacted = kwargs.get('is_attacted', bool())
-        self.position_x = kwargs.get('position_x', float())
-        self.position_y = kwargs.get('position_y', float())
-        from rm_interfaces.msg import Point2d
-        self.heroposition = kwargs.get('heroposition', Point2d())
-        from rm_interfaces.msg import Point2d
-        self.standard_3position = kwargs.get('standard_3position', Point2d())
+        self.is_defence = kwargs.get('is_defence', bool())
+        self.is_attack = kwargs.get('is_attack', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -153,15 +135,9 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
             return False
         if self.zone_status != other.zone_status:
             return False
-        if self.is_attacted != other.is_attacted:
+        if self.is_defence != other.is_defence:
             return False
-        if self.position_x != other.position_x:
-            return False
-        if self.position_y != other.position_y:
-            return False
-        if self.heroposition != other.heroposition:
-            return False
-        if self.standard_3position != other.standard_3position:
+        if self.is_attack != other.is_attack:
             return False
         return True
 
@@ -199,72 +175,27 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         self._zone_status = value
 
     @builtins.property
-    def is_attacted(self):
-        """Message field 'is_attacted'."""
-        return self._is_attacted
+    def is_defence(self):
+        """Message field 'is_defence'."""
+        return self._is_defence
 
-    @is_attacted.setter
-    def is_attacted(self, value):
+    @is_defence.setter
+    def is_defence(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, bool), \
-                "The 'is_attacted' field must be of type 'bool'"
-        self._is_attacted = value
+                "The 'is_defence' field must be of type 'bool'"
+        self._is_defence = value
 
     @builtins.property
-    def position_x(self):
-        """Message field 'position_x'."""
-        return self._position_x
+    def is_attack(self):
+        """Message field 'is_attack'."""
+        return self._is_attack
 
-    @position_x.setter
-    def position_x(self, value):
+    @is_attack.setter
+    def is_attack(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'position_x' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'position_x' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._position_x = value
-
-    @builtins.property
-    def position_y(self):
-        """Message field 'position_y'."""
-        return self._position_y
-
-    @position_y.setter
-    def position_y(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'position_y' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'position_y' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._position_y = value
-
-    @builtins.property
-    def heroposition(self):
-        """Message field 'heroposition'."""
-        return self._heroposition
-
-    @heroposition.setter
-    def heroposition(self, value):
-        if self._check_fields:
-            from rm_interfaces.msg import Point2d
-            assert \
-                isinstance(value, Point2d), \
-                "The 'heroposition' field must be a sub message of type 'Point2d'"
-        self._heroposition = value
-
-    @builtins.property
-    def standard_3position(self):
-        """Message field 'standard_3position'."""
-        return self._standard_3position
-
-    @standard_3position.setter
-    def standard_3position(self, value):
-        if self._check_fields:
-            from rm_interfaces.msg import Point2d
-            assert \
-                isinstance(value, Point2d), \
-                "The 'standard_3position' field must be a sub message of type 'Point2d'"
-        self._standard_3position = value
+                isinstance(value, bool), \
+                "The 'is_attack' field must be of type 'bool'"
+        self._is_attack = value

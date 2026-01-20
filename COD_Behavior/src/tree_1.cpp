@@ -71,7 +71,7 @@ int main(int argc, char **argv) {
         blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position1", ap_goal1);
         blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position2", ap_goal2);
 
-        blackboard->set<float>("hp", 0.0);
+        blackboard->set<float>("hp", 400.0);
         blackboard->set<bool>("zone_status", false);
         blackboard->set<bool>("is_defence", false);
         blackboard->set<bool>("is_attack", false);

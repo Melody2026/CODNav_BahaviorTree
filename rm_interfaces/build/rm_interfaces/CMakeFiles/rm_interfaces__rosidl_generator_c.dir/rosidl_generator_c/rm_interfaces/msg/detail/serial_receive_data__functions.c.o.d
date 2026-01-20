@@ -68,7 +68,6 @@ CMakeFiles/rm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rm_interface
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /usr/include/assert.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \

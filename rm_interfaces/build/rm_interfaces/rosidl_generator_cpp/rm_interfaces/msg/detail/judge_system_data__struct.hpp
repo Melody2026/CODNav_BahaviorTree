@@ -18,11 +18,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'heroposition'
-// Member 'standard_3position'
-#include "rm_interfaces/msg/detail/point2d__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__rm_interfaces__msg__JudgeSystemData __attribute__((deprecated))
 #else
@@ -42,32 +37,27 @@ struct JudgeSystemData_
   using Type = JudgeSystemData_<ContainerAllocator>;
 
   explicit JudgeSystemData_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : heroposition(_init),
-    standard_3position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->hp = 0.0f;
       this->zone_status = false;
-      this->is_attacted = false;
-      this->position_x = 0.0f;
-      this->position_y = 0.0f;
+      this->is_defence = false;
+      this->is_attack = false;
     }
   }
 
   explicit JudgeSystemData_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : heroposition(_alloc, _init),
-    standard_3position(_alloc, _init)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->hp = 0.0f;
       this->zone_status = false;
-      this->is_attacted = false;
-      this->position_x = 0.0f;
-      this->position_y = 0.0f;
+      this->is_defence = false;
+      this->is_attack = false;
     }
   }
 
@@ -78,21 +68,12 @@ struct JudgeSystemData_
   using _zone_status_type =
     bool;
   _zone_status_type zone_status;
-  using _is_attacted_type =
+  using _is_defence_type =
     bool;
-  _is_attacted_type is_attacted;
-  using _position_x_type =
-    float;
-  _position_x_type position_x;
-  using _position_y_type =
-    float;
-  _position_y_type position_y;
-  using _heroposition_type =
-    rm_interfaces::msg::Point2d_<ContainerAllocator>;
-  _heroposition_type heroposition;
-  using _standard_3position_type =
-    rm_interfaces::msg::Point2d_<ContainerAllocator>;
-  _standard_3position_type standard_3position;
+  _is_defence_type is_defence;
+  using _is_attack_type =
+    bool;
+  _is_attack_type is_attack;
 
   // setters for named parameter idiom
   Type & set__hp(
@@ -107,34 +88,16 @@ struct JudgeSystemData_
     this->zone_status = _arg;
     return *this;
   }
-  Type & set__is_attacted(
+  Type & set__is_defence(
     const bool & _arg)
   {
-    this->is_attacted = _arg;
+    this->is_defence = _arg;
     return *this;
   }
-  Type & set__position_x(
-    const float & _arg)
+  Type & set__is_attack(
+    const bool & _arg)
   {
-    this->position_x = _arg;
-    return *this;
-  }
-  Type & set__position_y(
-    const float & _arg)
-  {
-    this->position_y = _arg;
-    return *this;
-  }
-  Type & set__heroposition(
-    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
-  {
-    this->heroposition = _arg;
-    return *this;
-  }
-  Type & set__standard_3position(
-    const rm_interfaces::msg::Point2d_<ContainerAllocator> & _arg)
-  {
-    this->standard_3position = _arg;
+    this->is_attack = _arg;
     return *this;
   }
 
@@ -186,19 +149,10 @@ struct JudgeSystemData_
     if (this->zone_status != other.zone_status) {
       return false;
     }
-    if (this->is_attacted != other.is_attacted) {
+    if (this->is_defence != other.is_defence) {
       return false;
     }
-    if (this->position_x != other.position_x) {
-      return false;
-    }
-    if (this->position_y != other.position_y) {
-      return false;
-    }
-    if (this->heroposition != other.heroposition) {
-      return false;
-    }
-    if (this->standard_3position != other.standard_3position) {
+    if (this->is_attack != other.is_attack) {
       return false;
     }
     return true;

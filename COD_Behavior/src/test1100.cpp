@@ -14,7 +14,7 @@ public:
 
         // 创建定时器，每 500ms 调用一次回调函数
         timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(500),
+            std::chrono::milliseconds(50),
             std::bind(&sendmsg::timer_callback, this));
     }
 
@@ -23,12 +23,12 @@ private:
         // 创建要发布的消息
         auto msg = rm_interfaces::msg::SerialReceiveData();
 
-        msg.judge_system_data.hp = 200.0;
+        msg.judge_system_data.hp = 400.0;
         msg.judge_system_data.zone_status = true;
-        // msg.judge_system_data.position_x = 3.0;
-        // msg.judge_system_data.position_y = 4.0;
-        msg.judge_system_data.is_attacted = false;
-        RCLCPP_INFO(this->get_logger(), "使用hp = 200.0      zone_status = true      is_attacted = false...........................");
+        msg.judge_system_data.is_defence = false;
+        msg.judge_system_data.is_attack = false;
+
+        RCLCPP_INFO(this->get_logger(), "使用hp = 400.0      zone_status = true      is_defence = false         is_attack = false...........................\n");
 
         // 发布消息
         publisher_->publish(msg);
@@ -47,14 +47,17 @@ int main(int argc, char *argv[]) {
 
     // 创建 sendmsg 节点，传入 CODSerial 对象
     auto node = std::make_shared<sendmsg>();
-    // 循环读取串口数据，直到 ROS2 关闭
-    while (rclcpp::ok()) {
-        // 添加适当延迟，避免过度占用 CPU
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    }
 
     // 运行 ROS2 节点
-    rclcpp::spin(node);
+    while (rclcpp::ok()) {
+        // 处理ROS2事件，包括定时器回调
+        rclcpp::spin_some(node);
+
+        // 这里可以添加其他自定义任务
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+    // 运行 ROS2 节点
+    //rclcpp::spin(node);
 
     // 关闭 ROS2
     rclcpp::shutdown();

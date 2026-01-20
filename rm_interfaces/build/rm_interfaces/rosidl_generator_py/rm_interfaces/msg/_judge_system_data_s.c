@@ -16,10 +16,6 @@
 #include "rm_interfaces/msg/detail/judge_system_data__struct.h"
 #include "rm_interfaces/msg/detail/judge_system_data__functions.h"
 
-bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
-bool rm_interfaces__msg__point2d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * rm_interfaces__msg__point2d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -72,53 +68,22 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     ros_message->zone_status = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // is_attacted
-    PyObject * field = PyObject_GetAttrString(_pymsg, "is_attacted");
+  {  // is_defence
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_defence");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->is_attacted = (Py_True == field);
+    ros_message->is_defence = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // position_x
-    PyObject * field = PyObject_GetAttrString(_pymsg, "position_x");
+  {  // is_attack
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_attack");
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->position_x = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // position_y
-    PyObject * field = PyObject_GetAttrString(_pymsg, "position_y");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->position_y = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // heroposition
-    PyObject * field = PyObject_GetAttrString(_pymsg, "heroposition");
-    if (!field) {
-      return false;
-    }
-    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->heroposition)) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_DECREF(field);
-  }
-  {  // standard_3position
-    PyObject * field = PyObject_GetAttrString(_pymsg, "standard_3position");
-    if (!field) {
-      return false;
-    }
-    if (!rm_interfaces__msg__point2d__convert_from_py(field, &ros_message->standard_3position)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyBool_Check(field));
+    ros_message->is_attack = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -165,61 +130,22 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // is_attacted
+  {  // is_defence
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->is_attacted ? 1 : 0);
+    field = PyBool_FromLong(ros_message->is_defence ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "is_attacted", field);
+      int rc = PyObject_SetAttrString(_pymessage, "is_defence", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // position_x
+  {  // is_attack
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->position_x);
+    field = PyBool_FromLong(ros_message->is_attack ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "position_x", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // position_y
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->position_y);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "position_y", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // heroposition
-    PyObject * field = NULL;
-    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->heroposition);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "heroposition", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // standard_3position
-    PyObject * field = NULL;
-    field = rm_interfaces__msg__point2d__convert_to_py(&ros_message->standard_3position);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "standard_3position", field);
+      int rc = PyObject_SetAttrString(_pymessage, "is_attack", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

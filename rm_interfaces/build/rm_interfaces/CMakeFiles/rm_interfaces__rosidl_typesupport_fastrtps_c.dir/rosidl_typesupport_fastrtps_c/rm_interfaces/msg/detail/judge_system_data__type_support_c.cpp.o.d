@@ -39,7 +39,6 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_typesupport_fastrtps_c/rm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h \
  /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
  /opt/ros/jazzy/include/fastcdr/fastcdr/Cdr.h /usr/include/c++/13/array \
  /usr/include/c++/13/compare /usr/include/c++/13/initializer_list \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -227,5 +226,4 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
  /usr/include/c++/13/stdlib.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h
+ /home/ysl/ros2_ws/rm_interfaces/build/rm_interfaces/rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h
