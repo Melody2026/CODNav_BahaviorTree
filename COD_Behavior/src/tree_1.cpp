@@ -42,10 +42,9 @@ int main(int argc, char **argv) {
 
     factory.registerNodeType<HpCondition>("HpCondition");
     factory.registerNodeType<ZsCondition>("ZsCondition");
-    factory.registerNodeType<IsPatrolCondition>("IsPatrolCondition");
-    factory.registerNodeType<GetNextPatrolPose>("GetNextPatrolPose");
-    factory.registerNodeType<UpdataPatrolIndex>("UpdataPatrolIndex");
-    factory.registerNodeType<Rapid_spin>("Rapid_spin");
+    factory.registerNodeType<StayHome>("StayHome");
+    factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
+    factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
 
     const std::string cod_bt = "/home/ysl/ros2_ws/COD_Behavior/cod_bt/tree_1.xml";
 
@@ -59,21 +58,23 @@ int main(int argc, char **argv) {
         // 初始化黑板数据（保持你的逻辑）
         auto maingoal = loadPoseStamped(global_node_, "nav_pose.main");
         auto homegoal = loadPoseStamped(global_node_, "nav_pose.home");
+        auto dp_goal1 = loadPoseStamped(global_node_, "D_patrol_pose.first");
+        auto dp_goal2 = loadPoseStamped(global_node_, "D_patrol_pose.second");
+        auto ap_goal1 = loadPoseStamped(global_node_, "A_patrol_pose.first");
+        auto ap_goal2 = loadPoseStamped(global_node_, "A_patrol_pose.second");
+
+
         blackboard->set<geometry_msgs::msg::PoseStamped>("main_position", maingoal);
         blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position1", dp_goal1);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position2", dp_goal2);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position1", ap_goal1);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position2", ap_goal2);
 
-        std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
-        blackboard->set<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("position", pose_map);
         blackboard->set<float>("hp", 0.0);
         blackboard->set<bool>("zone_status", false);
-        blackboard->set<bool>("is_attacked", false);
-
-        std::vector<geometry_msgs::msg::PoseStamped> patrol_points;
-        patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.first"));
-        patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.second"));
-        patrol_points.push_back(loadPoseStamped(global_node_, "patrol_pose.third"));
-        blackboard->set<std::vector<geometry_msgs::msg::PoseStamped> >("patrol_points", patrol_points);
-        blackboard->set<int>("patrol_index", 0);
+        blackboard->set<bool>("is_defence", false);
+        blackboard->set<bool>("is_attack", false);
 
         BT::Groot2Publisher publisher(tree, 5555);
 

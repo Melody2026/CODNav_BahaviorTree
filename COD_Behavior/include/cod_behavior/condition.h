@@ -56,16 +56,13 @@ public:
     }
 };
 
-class IsPatrolCondition : public BT::ConditionNode {
+class StayHome : public BT::ConditionNode {
 public:
-    IsPatrolCondition(const std::string &name, const BT::NodeConfiguration &config)
-        : BT::ConditionNode(name, config) { std::cout << "IsPatrolCondition: start" << std::endl; }
+    StayHome(const std::string &name, const BT::NodeConfiguration &config)
+        : BT::ConditionNode(name, config) {}
 
     static BT::PortsList providedPorts() {
-        return {
-            BT::InputPort<float>("Hp"),
-            BT::InputPort<bool>("Zone_status")
-        };
+        return {BT::InputPort<float>("Hp")};
     }
 
     BT::NodeStatus tick() override {
@@ -76,25 +73,65 @@ public:
                 "missing input [Hp]: ", hp_.error()
             );
         }
-        std::cout << "Hp:" << hp_.value() << std::endl;
-
-        auto zone_status_ = getInput<bool>("Zone_status");
-        if (!zone_status_) {
-            throw BT::RuntimeError(
-                "missing input [Zone_status]: ", zone_status_.error()
-            );
+        float hp = hp_.value();
+        std::cout << "hp:" << hp << std::endl;
+        if (hp >= 350) {
+            std::cout << "hp >= 350\n";
+            return BT::NodeStatus::SUCCESS;
         }
 
+        return BT::NodeStatus::RUNNING;
+    }
+};
 
-        bool zone_status = zone_status_.value();
-        float hp = hp_.value();
-        std::cout << "zone_status:" << zone_status << std::endl;
-        std::cout << "hp:" << hp << std::endl;
+class DefencePatrolConditioin : public BT::ConditionNode {
+public:
+    DefencePatrolConditioin(const std::string &name, const BT::NodeConfiguration &config)
+        : BT::ConditionNode(name, config) {}
 
-        if (hp > 50)
-            return BT::NodeStatus::SUCCESS;
-        return BT::NodeStatus::FAILURE;
+    static BT::PortsList providedPorts() {
+        return {BT::InputPort<bool>("Is_defence")};
     }
 
-private:
+    BT::NodeStatus tick() override {
+        auto is_defence_ = getInput<bool>("Is_defence");
+
+        if (!is_defence_) {
+            throw BT::RuntimeError(
+                "missing input [Is_defence]: ", is_defence_.error()
+            );
+        }
+        bool is_defence = is_defence_.value();
+        if (is_defence) {
+            std::cout << "is_defence:True......." <<std::endl;
+            return BT::NodeStatus::SUCCESS;
+        }
+        return BT::NodeStatus::FAILURE;
+    }
+};
+
+class AttackPatrolCondition : public BT::ConditionNode {
+public:
+    AttackPatrolCondition(const std::string &name, const BT::NodeConfiguration &config)
+        : BT::ConditionNode(name, config) {}
+
+    static BT::PortsList providedPorts() {
+        return {BT::InputPort<bool>("Is_attack")};
+    }
+
+    BT::NodeStatus tick() override {
+        auto is_attack_ = getInput<bool>("Is_attack");
+
+        if (!is_attack_) {
+            throw BT::RuntimeError(
+                "missing input [Is_defence]: ", is_attack_.error()
+            );
+        }
+        bool is_attack = is_attack_.value();
+        if (is_attack) {
+            std::cout << "is_attack:True......." <<std::endl;
+            return BT::NodeStatus::SUCCESS;
+        }
+        return BT::NodeStatus::FAILURE;
+    }
 };

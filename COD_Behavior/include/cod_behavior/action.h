@@ -126,15 +126,14 @@ public:
 
     static BT::PortsList providedPorts() {
         return {
-            BT::OutputPort<std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> >("Position"),
             BT::OutputPort<float>("Hp"),
             BT::OutputPort<bool>("Zone_status"),
-            BT::OutputPort<bool>("Is_attacted")
+            BT::OutputPort<bool>("Is_defence"),
+            BT::OutputPort<bool>("Is_attack"),
         };
     }
 
     //设置参数
-    std::unordered_map<std::string, geometry_msgs::msg::PoseStamped> pose_map;
     float hp;
     bool zone_status;
     bool is_attacted;
@@ -146,18 +145,12 @@ public:
             return BT::NodeStatus::FAILURE;
 
         //写入黑板
-        setOutput("Position", pose_map);
         setOutput("Hp", hp);
         setOutput("Zone_status", zone_status);
         setOutput("Is_attacted", is_attacted);
 
         std::cout << "zone_status:" << zone_status << std::endl;
         std::cout<<"Is_attacted:"<<is_attacted<<std::endl;
-        std::cout<<"Position........................"<<std::endl;
-        // std::cout<<"heroposition:"<<pose_map["heroposition"].pose.position.x<<","<<pose_map["heroposition"].pose.position.y<<std::endl;
-        // std::cout<<"standard_3position:"<<pose_map["standard_3position"].pose.position.x<<","<<pose_map["standard_3position"].pose.position.y<<std::endl;
-        // std::cout<<"standard_4position:"<<pose_map["standard_4position"].pose.position.x<<","<<pose_map["standard_4position"].pose.position.y<<std::endl;
-        std::cout<<"position:"<<pose_map["position"].pose.position.x<<","<<pose_map["position"].pose.position.y<<std::endl;
 
         return BT::NodeStatus::SUCCESS;
     }
@@ -166,14 +159,6 @@ public:
         hp = static_cast<float>(msg->judge_system_data.hp);
         zone_status = msg->judge_system_data.zone_status;
         is_attacted = msg->judge_system_data.is_attacted;
-        //英雄，步兵，哨兵的位置坐标 后面根据消息做修改
-        pose_map["heroposition"].pose.position.x = msg->judge_system_data.heroposition.x;
-        pose_map["heroposition"].pose.position.y = msg->judge_system_data.heroposition.y;
-        pose_map["standard_3position"].pose.position.x = msg->judge_system_data.standard_3position.x;
-        pose_map["standard_3position"].pose.position.y = msg->judge_system_data.standard_3position.y;
-        pose_map["position"].pose.position.x = msg->judge_system_data.position_x;
-        pose_map["position"].pose.position.y = msg->judge_system_data.position_y;
-
         is_ReadInterface_ = true;
         RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }
@@ -236,27 +221,3 @@ public:
     }
 };
 
-class Rapid_spin : public BT::SyncActionNode {
-public:
-    Rapid_spin(const std::string &name, const BT::NodeConfiguration &config)
-        : SyncActionNode(name, config) {}
-
-    static BT::PortsList providedPorts() { return{BT::InputPort<bool>("Is_attacted")};}
-
-    BT::NodeStatus tick() override {
-        auto is_attacted_ = getInput<bool>("Is_attacted");
-
-        if (!is_attacted_) {
-            throw BT::RuntimeError(
-                "missing input [Is_attacted]: ", is_attacted_.error()
-            );
-        }
-        bool is_attacted = is_attacted_.value();
-        if (is_attacted) {
-            std::cout <<"Rapid_spin is started................."<<std::endl;
-        }else {
-            std::cout <<"Rapid_spin is stopped................."<<std::endl;
-        }
-        return BT::NodeStatus::FAILURE;
-    }
-};
