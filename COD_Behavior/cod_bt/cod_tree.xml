@@ -20,22 +20,12 @@
                 <StayHome Hp="{hp}"/>
               </Sequence>
             </Sequence>
-            <ReactiveSequence>
-              <DefencePatrolConditioin Is_defence="{is_defence}"/>
-              <SendNav2Goal goal_pose="{dp_position1}"/>
-              <SendNav2Goal goal_pose="{dp_position2}"/>
-            </ReactiveSequence>
             <Inverter>
               <Fallback>
                 <ZsCondition Zone_status="{zone_status}"/>
                 <SendNav2Goal goal_pose="{main_position}"/>
               </Fallback>
             </Inverter>
-            <ReactiveSequence>
-              <AttackPatrolCondition Is_attack="{is_attack}"/>
-              <SendNav2Goal goal_pose="{ap_position1}"/>
-              <SendNav2Goal goal_pose="{ap_position2}"/>
-            </ReactiveSequence>
           </ReactiveFallback>
           <AlwaysSuccess/>
         </ReactiveFallback>
@@ -45,14 +35,6 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Condition ID="AttackPatrolCondition"
-               editable="true">
-      <input_port name="Is_attack"/>
-    </Condition>
-    <Condition ID="DefencePatrolConditioin"
-               editable="true">
-      <input_port name="Is_defence"/>
-    </Condition>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
