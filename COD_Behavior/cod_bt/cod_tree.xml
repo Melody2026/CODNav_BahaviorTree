@@ -20,22 +20,22 @@
                 <StayHome Hp="{hp}"/>
               </Sequence>
             </Sequence>
-            <Sequence>
+            <ReactiveSequence>
               <DefencePatrolConditioin Is_defence="{is_defence}"/>
               <SendNav2Goal goal_pose="{dp_position1}"/>
               <SendNav2Goal goal_pose="{dp_position2}"/>
-            </Sequence>
+            </ReactiveSequence>
             <Inverter>
               <Fallback>
                 <ZsCondition Zone_status="{zone_status}"/>
                 <SendNav2Goal goal_pose="{main_position}"/>
               </Fallback>
             </Inverter>
-            <Sequence>
+            <ReactiveSequence>
               <AttackPatrolCondition Is_attack="{is_attack}"/>
               <SendNav2Goal goal_pose="{ap_position1}"/>
               <SendNav2Goal goal_pose="{ap_position2}"/>
-            </Sequence>
+            </ReactiveSequence>
           </ReactiveFallback>
           <AlwaysSuccess/>
         </ReactiveFallback>

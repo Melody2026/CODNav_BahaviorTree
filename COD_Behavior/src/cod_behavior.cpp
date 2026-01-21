@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
     factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
     factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
 
-    const std::string cod_bt = "/home/ysl/ros2_ws/COD_Behavior/cod_bt/tree_1.xml";
+    const std::string cod_bt = "COD_Behavior/cod_bt/cod_tree.xml";
 
     try {
         auto tree = factory.createTreeFromFile(cod_bt);

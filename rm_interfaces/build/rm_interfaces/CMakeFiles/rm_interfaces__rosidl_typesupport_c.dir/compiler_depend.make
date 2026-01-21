@@ -5,7 +5,6 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_inter
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h \
-  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -182,7 +181,6 @@ CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_inter
 
 CMakeFiles/rm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rm_interfaces/msg/serial_receive_data__type_support.cpp.o: rosidl_typesupport_c/rm_interfaces/msg/serial_receive_data__type_support.cpp \
   rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__struct.h \
-  rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__struct.h \
   rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__type_support.h \
@@ -382,6 +380,8 @@ rosidl_typesupport_c/rm_interfaces/msg/serial_receive_data__type_support.cpp:
 
 rosidl_generator_c/rm_interfaces/msg/detail/point2d__type_support.h:
 
+rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h:
+
 rosidl_generator_c/rm_interfaces/msg/detail/point2d__functions.h:
 
 rosidl_generator_c/rm_interfaces/srv/detail/set_mode__type_support.h:
@@ -425,6 +425,12 @@ rosidl_generator_c/rm_interfaces/srv/detail/set_mode__functions.h:
 rosidl_typesupport_c/rm_interfaces/msg/point2d__type_support.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -470,12 +476,6 @@ rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__functions.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
 
-/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
-
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h:
@@ -512,17 +512,15 @@ rosidl_generator_c/rm_interfaces/msg/detail/judge_system_data__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-rosidl_generator_c/rm_interfaces/msg/detail/point2d__struct.h:
-
 /opt/ros/jazzy/include/rcutils/rcutils/macros.h:
 
 /usr/include/stdlib.h:
 
+rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
-rosidl_generator_c/rm_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
@@ -578,9 +576,9 @@ rosidl_generator_c/rm_interfaces/msg/detail/serial_receive_data__functions.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
-
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 

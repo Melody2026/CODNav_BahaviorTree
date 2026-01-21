@@ -17,7 +17,6 @@
 // sendmsg 类
 class sendmsg : public rclcpp::Node {
 public:
-    // 构造函数接受 CODSerial 对象的指针
     sendmsg()
         : Node("sendmsg") {
         // 创建发布器，发布到 SerialReceiveData 话题，队列大小为 10
@@ -29,47 +28,7 @@ public:
     }
 
 private:
-    void timer_callback() {
-
-        // 创建要发布的消息
-        auto msg = rm_interfaces::msg::SerialReceiveData();
-
-        if (receiveData(uart_)) {
-            // 根据实际需求将浮点数映射到消息字段
-            msg.judge_system_data.hp = hp;
-            RCLCPP_INFO(this->get_logger(), "发布hp: %f", msg.judge_system_data.hp);
-
-            msg.judge_system_data.zone_status = zone_status;
-            RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
-
-            msg.judge_system_data.is_defence = is_defence;
-            RCLCPP_INFO(this->get_logger(), "发布is_defence: %d", msg.judge_system_data.is_defence);
-
-            msg.judge_system_data.is_attack = is_attack;
-            RCLCPP_INFO(this->get_logger(), "发布is_attack: %d", msg.judge_system_data.is_attack);
-
-        } else {
-            // 如果没有新数据，使用默认值
-            // msg.judge_system_data.hp = 400.0;
-            // msg.judge_system_data.zone_status = false;
-            // msg.judge_system_data.is_defence = false;
-            // msg.judge_system_data.is_attack = false;
-            // RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
-        }
-
-        // 发布消息
-        publisher_->publish(msg);
-    }
-
-    // 成员变量
-    rclcpp::Publisher<rm_interfaces::msg::SerialReceiveData>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
-    UartTransporter uart_= UartTransporter("/dev/ttyACM0",115200);
-    float hp = 400;
-    bool zone_status = false;
-    bool is_defence = false;
-    bool is_attack = false;
-
+    //接收串口消息
     bool receiveData(UartTransporter &uart) {
         uint8_t package[20];
         uint8_t header=0xfe;
@@ -93,6 +52,47 @@ private:
         }
         return false;
     }
+
+    void timer_callback() {
+
+        // 创建要发布的消息
+        auto msg = rm_interfaces::msg::SerialReceiveData();
+
+        if (receiveData(uart_)) {
+            // 根据实际需求将浮点数映射到消息字段
+            msg.judge_system_data.hp = hp;
+            RCLCPP_INFO(this->get_logger(), "发布hp: %f", msg.judge_system_data.hp);
+
+            msg.judge_system_data.zone_status = zone_status;
+            RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
+
+            msg.judge_system_data.is_defence = is_defence;
+            RCLCPP_INFO(this->get_logger(), "发布is_defence: %d", msg.judge_system_data.is_defence);
+
+            msg.judge_system_data.is_attack = is_attack;
+            RCLCPP_INFO(this->get_logger(), "发布is_attack: %d", msg.judge_system_data.is_attack);
+
+        } else {
+            //如果没有新数据，使用默认值
+            msg.judge_system_data.hp = 400.0;
+            msg.judge_system_data.zone_status = false;
+            msg.judge_system_data.is_defence = false;
+            msg.judge_system_data.is_attack = false;
+            RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
+        }
+
+        // 发布消息
+        publisher_->publish(msg);
+    }
+
+    // 成员变量
+    rclcpp::Publisher<rm_interfaces::msg::SerialReceiveData>::SharedPtr publisher_;
+    rclcpp::TimerBase::SharedPtr timer_;
+    UartTransporter uart_= UartTransporter("/dev/ttyACM0",115200);
+    float hp = 400.0;
+    bool zone_status = false;
+    bool is_defence = false;
+    bool is_attack = false;
 };
 
 // 主函数
@@ -111,8 +111,6 @@ int main(int argc, char *argv[]) {
         // 这里可以添加其他自定义任务
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
-    // 运行 ROS2 节点
-    //rclcpp::spin(node);
 
     // 关闭 ROS2
     rclcpp::shutdown();

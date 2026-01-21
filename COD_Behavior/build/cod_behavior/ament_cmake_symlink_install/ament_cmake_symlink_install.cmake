@@ -309,3 +309,51 @@ endfunction()
 message(STATUS "Execute custom install script")
 
 # begin of custom install code
+
+# install("TARGETS" "tree_1" "test_1" "test_2" "test_3" "test_4" "test_5" "DESTINATION" "lib/cod_behavior")
+include("/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_directory("/home/ysl/ros2_ws/COD_Behavior" DIRECTORY "launch" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cod_behavior" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cod_behavior" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_behavior" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cod_behavior" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+
+# install(FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cod_behavior/environment")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cod_behavior/environment")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cod_behavior/environment")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cod_behavior/environment")
+
+# install(FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cod_behavior/environment")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cod_behavior/environment")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cod_behavior/environment")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cod_behavior/environment")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cod_behavior")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/packages/cod_behavior" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_index/share/ament_index/resource_index/packages/cod_behavior" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_core/cod_behaviorConfig.cmake" "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_core/cod_behaviorConfig-version.cmake" "DESTINATION" "share/cod_behavior/cmake")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_core/cod_behaviorConfig.cmake" "/home/ysl/ros2_ws/COD_Behavior/build/cod_behavior/ament_cmake_core/cod_behaviorConfig-version.cmake" "DESTINATION" "share/cod_behavior/cmake")
+
+# install(FILES "/home/ysl/ros2_ws/COD_Behavior/package.xml" "DESTINATION" "share/cod_behavior")
+ament_cmake_symlink_install_files("/home/ysl/ros2_ws/COD_Behavior" FILES "/home/ysl/ros2_ws/COD_Behavior/package.xml" "DESTINATION" "share/cod_behavior")
