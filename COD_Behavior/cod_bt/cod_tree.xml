@@ -21,10 +21,10 @@
               </Sequence>
             </Sequence>
             <Inverter>
-              <Fallback>
+              <ReactiveFallback>
                 <ZsCondition Zone_status="{zone_status}"/>
                 <SendNav2Goal goal_pose="{main_position}"/>
-              </Fallback>
+              </ReactiveFallback>
             </Inverter>
           </ReactiveFallback>
           <AlwaysSuccess/>
