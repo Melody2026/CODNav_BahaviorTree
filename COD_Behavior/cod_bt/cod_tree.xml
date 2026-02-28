@@ -10,22 +10,35 @@
             <WriteToBlackboard Hp="{hp}"
                                Zone_status="{zone_status}"
                                Is_defence="{is_defence}"
-                               Is_attack="{is_attack}"/>
+                               Is_attack="{is_attack}"
+                               Self_status="{self_status}"
+                               Is_recover="{is_recover}"
+                               Hero_hp="{hero_hp}"
+                               Sentinel_hp="{sentinel_hp}"
+                               Infantry_hp="{infantry_hp}"/>
           </Inverter>
           <ReactiveFallback>
-            <Sequence>
+            <AsyncSequence>
               <HpCondition Hp="{hp}"/>
               <Sequence>
                 <SendNav2Goal goal_pose="{home_position}"/>
                 <StayHome Hp="{hp}"/>
               </Sequence>
-            </Sequence>
+            </AsyncSequence>
+            <AsyncSequence>
+              <DefencePatrolConditioin Is_defence="{is_defence}"/>
+              <SendNav2Goal goal_pose="{dp_position1}"/>
+            </AsyncSequence>
             <Inverter>
               <ReactiveFallback>
                 <ZsCondition Zone_status="{zone_status}"/>
                 <SendNav2Goal goal_pose="{main_position}"/>
               </ReactiveFallback>
             </Inverter>
+            <AsyncSequence>
+              <AttackPatrolCondition Is_attack="{is_attack}"/>
+              <SendNav2Goal goal_pose="{ap_position1}"/>
+            </AsyncSequence>
           </ReactiveFallback>
           <AlwaysSuccess/>
         </ReactiveFallback>
@@ -35,6 +48,14 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Condition ID="AttackPatrolCondition"
+               editable="true">
+      <input_port name="Is_attack"/>
+    </Condition>
+    <Condition ID="DefencePatrolConditioin"
+               editable="true">
+      <input_port name="Is_defence"/>
+    </Condition>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
@@ -53,6 +74,11 @@
       <output_port name="Zone_status"/>
       <output_port name="Is_defence"/>
       <output_port name="Is_attack"/>
+      <output_port name="Self_status"/>
+      <output_port name="Is_recover"/>
+      <output_port name="Hero_hp"/>
+      <output_port name="Sentinel_hp"/>
+      <output_port name="Infantry_hp"/>
     </Action>
     <Condition ID="ZsCondition"
                editable="true">

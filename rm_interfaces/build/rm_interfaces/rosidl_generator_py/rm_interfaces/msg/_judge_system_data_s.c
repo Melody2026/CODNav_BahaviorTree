@@ -59,13 +59,49 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     ros_message->hp = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // herohp
+    PyObject * field = PyObject_GetAttrString(_pymsg, "herohp");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->herohp = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // sentinelhp
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sentinelhp");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->sentinelhp = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // infantryhp
+    PyObject * field = PyObject_GetAttrString(_pymsg, "infantryhp");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->infantryhp = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // zone_status
     PyObject * field = PyObject_GetAttrString(_pymsg, "zone_status");
     if (!field) {
       return false;
     }
+    assert(PyLong_Check(field));
+    ros_message->zone_status = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // self_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "self_status");
+    if (!field) {
+      return false;
+    }
     assert(PyBool_Check(field));
-    ros_message->zone_status = (Py_True == field);
+    ros_message->self_status = (Py_True == field);
     Py_DECREF(field);
   }
   {  // is_defence
@@ -84,6 +120,15 @@ bool rm_interfaces__msg__judge_system_data__convert_from_py(PyObject * _pymsg, v
     }
     assert(PyBool_Check(field));
     ros_message->is_attack = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // is_recover
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_recover");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->is_recover = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -119,11 +164,55 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
       }
     }
   }
+  {  // herohp
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->herohp);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "herohp", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // sentinelhp
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->sentinelhp);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "sentinelhp", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // infantryhp
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->infantryhp);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "infantryhp", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // zone_status
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->zone_status ? 1 : 0);
+    field = PyLong_FromUnsignedLong(ros_message->zone_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "zone_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // self_status
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->self_status ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "self_status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -146,6 +235,17 @@ PyObject * rm_interfaces__msg__judge_system_data__convert_to_py(void * raw_ros_m
     field = PyBool_FromLong(ros_message->is_attack ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "is_attack", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // is_recover
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->is_recover ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "is_recover", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

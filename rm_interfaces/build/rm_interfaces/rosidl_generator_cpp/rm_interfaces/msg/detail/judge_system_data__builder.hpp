@@ -24,16 +24,32 @@ namespace msg
 namespace builder
 {
 
+class Init_JudgeSystemData_is_recover
+{
+public:
+  explicit Init_JudgeSystemData_is_recover(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  ::rm_interfaces::msg::JudgeSystemData is_recover(::rm_interfaces::msg::JudgeSystemData::_is_recover_type arg)
+  {
+    msg_.is_recover = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
 class Init_JudgeSystemData_is_attack
 {
 public:
   explicit Init_JudgeSystemData_is_attack(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  ::rm_interfaces::msg::JudgeSystemData is_attack(::rm_interfaces::msg::JudgeSystemData::_is_attack_type arg)
+  Init_JudgeSystemData_is_recover is_attack(::rm_interfaces::msg::JudgeSystemData::_is_attack_type arg)
   {
     msg_.is_attack = std::move(arg);
-    return std::move(msg_);
+    return Init_JudgeSystemData_is_recover(msg_);
   }
 
 private:
@@ -56,16 +72,80 @@ private:
   ::rm_interfaces::msg::JudgeSystemData msg_;
 };
 
+class Init_JudgeSystemData_self_status
+{
+public:
+  explicit Init_JudgeSystemData_self_status(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_is_defence self_status(::rm_interfaces::msg::JudgeSystemData::_self_status_type arg)
+  {
+    msg_.self_status = std::move(arg);
+    return Init_JudgeSystemData_is_defence(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
 class Init_JudgeSystemData_zone_status
 {
 public:
   explicit Init_JudgeSystemData_zone_status(::rm_interfaces::msg::JudgeSystemData & msg)
   : msg_(msg)
   {}
-  Init_JudgeSystemData_is_defence zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
+  Init_JudgeSystemData_self_status zone_status(::rm_interfaces::msg::JudgeSystemData::_zone_status_type arg)
   {
     msg_.zone_status = std::move(arg);
-    return Init_JudgeSystemData_is_defence(msg_);
+    return Init_JudgeSystemData_self_status(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_infantryhp
+{
+public:
+  explicit Init_JudgeSystemData_infantryhp(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_zone_status infantryhp(::rm_interfaces::msg::JudgeSystemData::_infantryhp_type arg)
+  {
+    msg_.infantryhp = std::move(arg);
+    return Init_JudgeSystemData_zone_status(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_sentinelhp
+{
+public:
+  explicit Init_JudgeSystemData_sentinelhp(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_infantryhp sentinelhp(::rm_interfaces::msg::JudgeSystemData::_sentinelhp_type arg)
+  {
+    msg_.sentinelhp = std::move(arg);
+    return Init_JudgeSystemData_infantryhp(msg_);
+  }
+
+private:
+  ::rm_interfaces::msg::JudgeSystemData msg_;
+};
+
+class Init_JudgeSystemData_herohp
+{
+public:
+  explicit Init_JudgeSystemData_herohp(::rm_interfaces::msg::JudgeSystemData & msg)
+  : msg_(msg)
+  {}
+  Init_JudgeSystemData_sentinelhp herohp(::rm_interfaces::msg::JudgeSystemData::_herohp_type arg)
+  {
+    msg_.herohp = std::move(arg);
+    return Init_JudgeSystemData_sentinelhp(msg_);
   }
 
 private:
@@ -78,10 +158,10 @@ public:
   Init_JudgeSystemData_hp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_JudgeSystemData_zone_status hp(::rm_interfaces::msg::JudgeSystemData::_hp_type arg)
+  Init_JudgeSystemData_herohp hp(::rm_interfaces::msg::JudgeSystemData::_hp_type arg)
   {
     msg_.hp = std::move(arg);
-    return Init_JudgeSystemData_zone_status(msg_);
+    return Init_JudgeSystemData_herohp(msg_);
   }
 
 private:

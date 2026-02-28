@@ -127,17 +127,27 @@ public:
     static BT::PortsList providedPorts() {
         return {
             BT::OutputPort<float>("Hp"),
+            BT::OutputPort<float>("Hero_hp"),
+            BT::OutputPort<float>("Sentinel_hp"),
+            BT::OutputPort<float>("Infantry_hp"),
             BT::OutputPort<bool>("Zone_status"),
+            BT::OutputPort<bool>("Self_status"),
+            BT::OutputPort<bool>("Is_recover"),
             BT::OutputPort<bool>("Is_defence"),
             BT::OutputPort<bool>("Is_attack"),
         };
     }
 
     //设置参数
-    float hp = 400;
-    bool zone_status = false;
+    float hp = 400.0;
+    float herohp = 350.0;
+    float sentinelhp = 400.0;
+    float infantryhp = 300.0;
+    bool self_status = false;
     bool is_defence = false;
     bool is_attack = false;
+    bool is_recover = false;
+    bool zone_status = false;
 
     BT::NodeStatus tick() override {
         // 处理回调
@@ -147,20 +157,30 @@ public:
 
         //写入黑板
         setOutput("Hp", hp);
-        setOutput("Zone_status", zone_status);
+        setOutput("Hero_hp", herohp);
+        setOutput("Sentinel_hp", sentinelhp);
+        setOutput("Infantry_hp", infantryhp);
+        setOutput("Self_status", self_status);
         setOutput("Is_defence", is_defence);
         setOutput("Is_attack", is_attack);
+        setOutput("Is_recover", is_recover);
+        setOutput("Zone_status", zone_status);
 
         return BT::NodeStatus::SUCCESS;
     }
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
         hp = msg->judge_system_data.hp;
-        zone_status = msg->judge_system_data.zone_status;
+        herohp = msg->judge_system_data.herohp;
+        sentinelhp = msg->judge_system_data.sentinelhp;
+        infantryhp = msg->judge_system_data.infantryhp;
+        self_status = msg->judge_system_data.self_status;
         is_defence = msg->judge_system_data.is_defence;
         is_attack = msg->judge_system_data.is_attack;
+        is_recover = msg->judge_system_data.is_recover;
+        zone_status = msg->judge_system_data.zone_status;
+
         is_ReadInterface_ = true;
-        RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }
 
 private:

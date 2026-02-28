@@ -8,11 +8,21 @@ module rm_interfaces {
     struct JudgeSystemData {
       float hp;
 
-      boolean zone_status;
+      float herohp;
+
+      float sentinelhp;
+
+      float infantryhp;
+
+      uint8 zone_status;
+
+      boolean self_status;
 
       boolean is_defence;
 
       boolean is_attack;
+
+      boolean is_recover;
     };
   };
 };

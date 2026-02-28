@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
     factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
     factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
 
-    const std::string cod_bt = "COD_Behavior/cod_bt/cod_tree.xml";
+    const std::string cod_bt = global_node_->get_parameter("cod_bt_path").as_string();
 
     try {
         auto tree = factory.createTreeFromFile(cod_bt);
@@ -72,7 +72,12 @@ int main(int argc, char **argv) {
         blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position2", ap_goal2);
 
         blackboard->set<float>("hp", 400.0);
+        blackboard->set<float>("herohp", 350.0);
+        blackboard->set<float>("sentinelhp", 400.0);
+        blackboard->set<float>("infantryhp", 300.0);
         blackboard->set<bool>("zone_status", false);
+        blackboard->set<bool>("self_status", false);
+        blackboard->set<bool>("is_recover", false);
         blackboard->set<bool>("is_defence", false);
         blackboard->set<bool>("is_attack", false);
 

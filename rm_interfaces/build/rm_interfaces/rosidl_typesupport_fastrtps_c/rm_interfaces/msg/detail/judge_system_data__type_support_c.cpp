@@ -53,9 +53,29 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
     cdr << ros_message->hp;
   }
 
+  // Field name: herohp
+  {
+    cdr << ros_message->herohp;
+  }
+
+  // Field name: sentinelhp
+  {
+    cdr << ros_message->sentinelhp;
+  }
+
+  // Field name: infantryhp
+  {
+    cdr << ros_message->infantryhp;
+  }
+
   // Field name: zone_status
   {
-    cdr << (ros_message->zone_status ? true : false);
+    cdr << ros_message->zone_status;
+  }
+
+  // Field name: self_status
+  {
+    cdr << (ros_message->self_status ? true : false);
   }
 
   // Field name: is_defence
@@ -66,6 +86,11 @@ bool cdr_serialize_rm_interfaces__msg__JudgeSystemData(
   // Field name: is_attack
   {
     cdr << (ros_message->is_attack ? true : false);
+  }
+
+  // Field name: is_recover
+  {
+    cdr << (ros_message->is_recover ? true : false);
   }
 
   return true;
@@ -81,11 +106,31 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
     cdr >> ros_message->hp;
   }
 
+  // Field name: herohp
+  {
+    cdr >> ros_message->herohp;
+  }
+
+  // Field name: sentinelhp
+  {
+    cdr >> ros_message->sentinelhp;
+  }
+
+  // Field name: infantryhp
+  {
+    cdr >> ros_message->infantryhp;
+  }
+
   // Field name: zone_status
+  {
+    cdr >> ros_message->zone_status;
+  }
+
+  // Field name: self_status
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->zone_status = tmp ? true : false;
+    ros_message->self_status = tmp ? true : false;
   }
 
   // Field name: is_defence
@@ -100,6 +145,13 @@ bool cdr_deserialize_rm_interfaces__msg__JudgeSystemData(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->is_attack = tmp ? true : false;
+  }
+
+  // Field name: is_recover
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->is_recover = tmp ? true : false;
   }
 
   return true;
@@ -127,9 +179,37 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: herohp
+  {
+    size_t item_size = sizeof(ros_message->herohp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: sentinelhp
+  {
+    size_t item_size = sizeof(ros_message->sentinelhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: infantryhp
+  {
+    size_t item_size = sizeof(ros_message->infantryhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: zone_status
   {
     size_t item_size = sizeof(ros_message->zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: self_status
+  {
+    size_t item_size = sizeof(ros_message->self_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -144,6 +224,13 @@ size_t get_serialized_size_rm_interfaces__msg__JudgeSystemData(
   // Field name: is_attack
   {
     size_t item_size = sizeof(ros_message->is_attack);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: is_recover
+  {
+    size_t item_size = sizeof(ros_message->is_recover);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -178,7 +265,38 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Field name: herohp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: sentinelhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: infantryhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: self_status
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -199,6 +317,13 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: is_recover
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -208,7 +333,7 @@ size_t max_serialized_size_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, is_attack) +
+      offsetof(DataType, is_recover) +
       last_member_size
       ) == ret_val;
   }
@@ -225,9 +350,29 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
     cdr << ros_message->hp;
   }
 
+  // Field name: herohp
+  {
+    cdr << ros_message->herohp;
+  }
+
+  // Field name: sentinelhp
+  {
+    cdr << ros_message->sentinelhp;
+  }
+
+  // Field name: infantryhp
+  {
+    cdr << ros_message->infantryhp;
+  }
+
   // Field name: zone_status
   {
-    cdr << (ros_message->zone_status ? true : false);
+    cdr << ros_message->zone_status;
+  }
+
+  // Field name: self_status
+  {
+    cdr << (ros_message->self_status ? true : false);
   }
 
   // Field name: is_defence
@@ -238,6 +383,11 @@ bool cdr_serialize_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: is_attack
   {
     cdr << (ros_message->is_attack ? true : false);
+  }
+
+  // Field name: is_recover
+  {
+    cdr << (ros_message->is_recover ? true : false);
   }
 
   return true;
@@ -265,9 +415,37 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Field name: herohp
+  {
+    size_t item_size = sizeof(ros_message->herohp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: sentinelhp
+  {
+    size_t item_size = sizeof(ros_message->sentinelhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: infantryhp
+  {
+    size_t item_size = sizeof(ros_message->infantryhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: zone_status
   {
     size_t item_size = sizeof(ros_message->zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: self_status
+  {
+    size_t item_size = sizeof(ros_message->self_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -282,6 +460,13 @@ size_t get_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
   // Field name: is_attack
   {
     size_t item_size = sizeof(ros_message->is_attack);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: is_recover
+  {
+    size_t item_size = sizeof(ros_message->is_recover);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -314,7 +499,38 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Field name: herohp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: sentinelhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: infantryhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Field name: self_status
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -335,6 +551,13 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: is_recover
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -343,7 +566,7 @@ size_t max_serialized_size_key_rm_interfaces__msg__JudgeSystemData(
     using DataType = rm_interfaces__msg__JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, is_attack) +
+      offsetof(DataType, is_recover) +
       last_member_size
       ) == ret_val;
   }
