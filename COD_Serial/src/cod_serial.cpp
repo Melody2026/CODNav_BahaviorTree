@@ -30,8 +30,8 @@ public:
 private:
     //接收串口消息
     bool receiveData(UartTransporter &uart) {
-        uint8_t package[20];
-        uint8_t header=0xfe;
+        uint8_t package[26];
+        uint8_t header=0xff;
         if (!uart.open()) {
             std::cout << "Failed to open serial port" << std::endl;
             return false;
@@ -39,14 +39,11 @@ private:
         // 读取数据
         if (uart.read(package, sizeof(package)) == sizeof(package)) {
             if (header == package[0]) {
-                self_status = package[1];
-                is_recover = package[2];
-                zone_status = package[3];
-                is_defence = package[4];
-                std::memcpy(&hp,&package[5],2);
-                std::memcpy(&herohp,&package[7],2);
-                std::memcpy(&sentinelhp,&package[9],2);
-                std::memcpy(&infantryhp,&package[11],2);
+                self_status = package[14];
+                is_recover = package[15];
+                zone_status = package[16];
+                is_defence = package[17];
+                std::memcpy(&hp,&package[18],2);
 
                 return true;
             }else {
@@ -67,9 +64,6 @@ private:
             // 根据实际需求将浮点数映射到消息字段
             msg.judge_system_data.hp = hp;
             RCLCPP_INFO(this->get_logger(), "发布hp: %f", msg.judge_system_data.hp);
-            msg.judge_system_data.herohp = herohp;
-            msg.judge_system_data.sentinelhp = sentinelhp;
-            msg.judge_system_data.infantryhp = infantryhp;
 
             msg.judge_system_data.zone_status = zone_status;
             RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
@@ -100,9 +94,6 @@ private:
     rclcpp::TimerBase::SharedPtr timer_;
     UartTransporter uart_= UartTransporter("/dev/ttyACM0",115200);
     float hp = 400.0;
-    float herohp = 350.0;
-    float sentinelhp = 400.0;
-    float infantryhp = 300.0;
     bool self_status = false;
     bool is_defence = false;
     bool is_attack = false;

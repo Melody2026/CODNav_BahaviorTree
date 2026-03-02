@@ -62,26 +62,22 @@ public:
                 // 导航成功完成
                 RCLCPP_INFO(logger(), "Success!!!");
                 return BT::NodeStatus::SUCCESS; // 返回成功状态
-                break;
 
             case rclcpp_action::ResultCode::ABORTED:
                 // 导航被中止（通常是由于严重错误）
                 RCLCPP_INFO(logger(), "Goal was aborted");
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
 
             case rclcpp_action::ResultCode::CANCELED:
                 // 导航被取消（通常是被用户或系统取消）
                 RCLCPP_INFO(logger(), "Goal was canceled");
                 std::cout << "Goal was canceled" << '\n';
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
 
             default:
                 // 未知的结果码
                 RCLCPP_INFO(logger(), "Unknown result code");
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
         }
     }
 
@@ -108,6 +104,105 @@ public:
     }
 };
 
+// 多点导航行为树节点：从 CSV 文件加载航点，通过 Nav2 的 follow_waypoints action 下发
+class FollowWaypointsAction : public BT::RosActionNode<nav2_msgs::action::FollowWaypoints> {
+public:
+    FollowWaypointsAction(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosActionNode<nav2_msgs::action::FollowWaypoints>(name, conf, params)
+    {
+    }
+
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<std::string>("waypoint_file", "航点 CSV 文件的绝对路径"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系 ID，默认为 map"),
+            BT::OutputPort<int>("current_waypoint", "当前正在前往的航点索引"),
+        });
+    }
+
+    bool setGoal(Goal &goal) override {
+        auto file_res = getInput<std::string>("waypoint_file");
+        if (!file_res) {
+            RCLCPP_ERROR(logger(), "读取端口 [waypoint_file] 时出错: %s", file_res.error().c_str());
+            return false;
+        }
+        const std::string &waypoint_file = file_res.value();
+
+        auto frame_res = getInput<std::string>("frame_id");
+        const std::string &frame_id = (frame_res && !frame_res.value().empty()) ? frame_res.value() : "map";
+
+        std::vector<geometry_msgs::msg::PoseStamped> waypoints;
+        if (!loadWaypointsFromCSV(waypoint_file, waypoints, frame_id)) {
+            RCLCPP_ERROR(logger(), "无法从文件加载航点: %s", waypoint_file.c_str());
+            return false;
+        }
+
+        if (waypoints.empty()) {
+            RCLCPP_ERROR(logger(), "FollowWaypointsAction: 航点列表为空，取消发送 goal");
+            return false;
+        }
+
+        // Ensure header frame_id and stamp for each waypoint
+        rclcpp::Time now = rclcpp::Clock().now();
+        for (auto &wp : waypoints) {
+            if (wp.header.frame_id.empty()) wp.header.frame_id = frame_id;
+            wp.header.stamp = now;
+        }
+
+        goal.poses = waypoints;
+        RCLCPP_INFO(logger(), "FollowWaypointsAction: 已加载 %lu 个航点，准备下发", static_cast<unsigned long>(waypoints.size()));
+        for (size_t i = 0; i < waypoints.size(); ++i) {
+            RCLCPP_INFO(logger(), "  航点[%lu]: [%.2f, %.2f]",
+                        static_cast<unsigned long>(i), waypoints[i].pose.position.x, waypoints[i].pose.position.y);
+        }
+        return true;
+    }
+
+    void onHalt() override {
+        RCLCPP_WARN(logger(), "FollowWaypointsAction: 多点导航已被中断");
+    }
+
+    BT::NodeStatus onResultReceived(const WrappedResult &wr) override {
+        RCLCPP_INFO(logger(), "FollowWaypointsAction: 所有航点导航完成!");
+        if (wr.result && !wr.result->missed_waypoints.empty()) {
+            {
+                std::ostringstream oss;
+                oss << "  有 " << wr.result->missed_waypoints.size() << " 个航点未到达:";
+                std::string msg = oss.str();
+                RCLCPP_WARN(logger(), "%s", msg.c_str());
+            }
+            for (const auto &wp : wr.result->missed_waypoints) {
+                std::ostringstream oss_idx;
+                oss_idx << "    未到达航点索引: " << wp.index;
+                std::string msg_idx = oss_idx.str();
+                RCLCPP_WARN(logger(), "%s", msg_idx.c_str());
+            }
+             // 根据需求，将未到达视为失败
+             return BT::NodeStatus::FAILURE;
+         }
+
+        RCLCPP_INFO(logger(), "  所有航点均已成功到达");
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    BT::NodeStatus onFeedback(
+        const std::shared_ptr<const nav2_msgs::action::FollowWaypoints::Feedback> feedback) override {
+        // 将反馈日志降为 DEBUG，避免频繁 INFO 污染日志
+        RCLCPP_DEBUG(logger(), "FollowWaypointsAction: 正在前往航点 %u", static_cast<unsigned>(feedback->current_waypoint));
+        // 将当前航点索引写回黑板
+        setOutput("current_waypoint", static_cast<int>(feedback->current_waypoint));
+        return BT::NodeStatus::RUNNING;
+    }
+
+    BT::NodeStatus onFailure(BT::ActionNodeErrorCode error) override {
+        RCLCPP_ERROR_STREAM(logger(), "FollowWaypointsAction 失败，错误码: " << BT::toStr(error));
+        return BT::NodeStatus::FAILURE;
+    }
+};
+
 //通过接收的消息将有用的消息写入黑板实现共享
 class WriteToBlackboard : public BT::SyncActionNode {
 public:
@@ -127,9 +222,6 @@ public:
     static BT::PortsList providedPorts() {
         return {
             BT::OutputPort<float>("Hp"),
-            BT::OutputPort<float>("Hero_hp"),
-            BT::OutputPort<float>("Sentinel_hp"),
-            BT::OutputPort<float>("Infantry_hp"),
             BT::OutputPort<bool>("Zone_status"),
             BT::OutputPort<bool>("Self_status"),
             BT::OutputPort<bool>("Is_recover"),
@@ -140,9 +232,6 @@ public:
 
     //设置参数
     float hp = 400.0;
-    float herohp = 350.0;
-    float sentinelhp = 400.0;
-    float infantryhp = 300.0;
     bool self_status = false;
     bool is_defence = false;
     bool is_attack = false;
@@ -157,9 +246,6 @@ public:
 
         //写入黑板
         setOutput("Hp", hp);
-        setOutput("Hero_hp", herohp);
-        setOutput("Sentinel_hp", sentinelhp);
-        setOutput("Infantry_hp", infantryhp);
         setOutput("Self_status", self_status);
         setOutput("Is_defence", is_defence);
         setOutput("Is_attack", is_attack);
@@ -171,9 +257,6 @@ public:
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
         hp = msg->judge_system_data.hp;
-        herohp = msg->judge_system_data.herohp;
-        sentinelhp = msg->judge_system_data.sentinelhp;
-        infantryhp = msg->judge_system_data.infantryhp;
         self_status = msg->judge_system_data.self_status;
         is_defence = msg->judge_system_data.is_defence;
         is_attack = msg->judge_system_data.is_attack;

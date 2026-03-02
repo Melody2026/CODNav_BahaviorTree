@@ -26,12 +26,25 @@ int main(int argc, char **argv) {
     // 创建行为树工厂
     BT::BehaviorTreeFactory factory;
 
+    // FollowWaypoints 使用独立的 RosNodeParams，action name 不同
+    BT::RosNodeParams follow_wp_params;
+    follow_wp_params.nh = global_node_;
+    follow_wp_params.default_port_value = "/follow_waypoints";
+    follow_wp_params.server_timeout = std::chrono::milliseconds(5000);
+    follow_wp_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
+
     // 注册自定义节点（保持你的注册逻辑）
     factory.registerBuilder<SendNav2Goal>(
         "SendNav2Goal",
         [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<SendNav2Goal>(name, config, params);
         }
+    );
+    factory.registerBuilder<FollowWaypointsAction>(
+    "FollowWaypointsAction",
+    [&](const std::string &name, const BT::NodeConfig &config) {
+        return std::make_unique<FollowWaypointsAction>(name, config, follow_wp_params);
+    }
     );
     factory.registerBuilder<WriteToBlackboard>(
         "WriteToBlackboard",
@@ -72,14 +85,12 @@ int main(int argc, char **argv) {
         blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position2", ap_goal2);
 
         blackboard->set<float>("hp", 400.0);
-        blackboard->set<float>("herohp", 350.0);
-        blackboard->set<float>("sentinelhp", 400.0);
-        blackboard->set<float>("infantryhp", 300.0);
         blackboard->set<bool>("zone_status", false);
         blackboard->set<bool>("self_status", false);
         blackboard->set<bool>("is_recover", false);
         blackboard->set<bool>("is_defence", false);
         blackboard->set<bool>("is_attack", false);
+        blackboard->set<int>("wp_idx", 0);
 
         BT::Groot2Publisher publisher(tree, 5555);
 

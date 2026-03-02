@@ -1,5 +1,0 @@
-source;share/cod_behavior/local_setup.bash
-source;share/cod_behavior/local_setup.dsv
-source;share/cod_behavior/local_setup.ps1
-source;share/cod_behavior/local_setup.sh
-source;share/cod_behavior/local_setup.zsh
