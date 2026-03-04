@@ -1,7 +1,4 @@
 float32 hp
-float32 herohp
-float32 sentinelhp
-float32 infantryhp
 bool zone_status
 bool self_status
 bool is_defence

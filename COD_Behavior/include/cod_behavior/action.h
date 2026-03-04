@@ -49,9 +49,28 @@ public:
     }
 
     // 当节点被中断时调用
-    void onHalt() override {
-        // 记录日志信息，表示节点已被中断
+     void onHalt() override {
         RCLCPP_INFO(logger(), "SendGoalAction has been halted.");
+
+        // 行为树库的 RosActionNode 在 onHalt 中通常会尝试取消 Goal。
+        // 如果 Goal 句柄已失效（例如服务器重启或超时），这会抛出 UnknownGoalHandleError。
+        // 我们必须捕获这个异常以防止节点崩溃。
+
+        try {
+            // 调用基类的 onHalt 执行标准的取消流程
+            // 注意：在某些 behavior_tree_ros2 版本中，基类方法名为 onHalt
+            BT::RosActionNode<nav2_msgs::action::NavigateToPose>::onHalt();
+        }
+        catch (const rclcpp_action::exceptions::UnknownGoalHandleError & e) {
+            RCLCPP_WARN(logger(), "Ignored UnknownGoalHandleError during halt: %s", e.what());
+            // 忽略错误，继续执行清理逻辑
+        }
+        catch (const std::exception & e) {
+            RCLCPP_ERROR(logger(), "Exception caught during halt: %s", e.what());
+        }
+
+        // 如果需要额外的自定义清理逻辑，可以在这里添加
+        // 例如：重置某些局部标志位
     }
 
     // 当收到action结果时调用
@@ -174,12 +193,12 @@ public:
                 std::string msg = oss.str();
                 RCLCPP_WARN(logger(), "%s", msg.c_str());
             }
-            for (const auto &wp : wr.result->missed_waypoints) {
+            /*for (const auto &wp : wr.result->missed_waypoints) {
                 std::ostringstream oss_idx;
                 oss_idx << "    未到达航点索引: " << wp.index;
                 std::string msg_idx = oss_idx.str();
                 RCLCPP_WARN(logger(), "%s", msg_idx.c_str());
-            }
+            }*/
              // 根据需求，将未到达视为失败
              return BT::NodeStatus::FAILURE;
          }
@@ -223,20 +242,20 @@ public:
         return {
             BT::OutputPort<float>("Hp"),
             BT::OutputPort<bool>("Zone_status"),
-            BT::OutputPort<bool>("Self_status"),
-            BT::OutputPort<bool>("Is_recover"),
             BT::OutputPort<bool>("Is_defence"),
             BT::OutputPort<bool>("Is_attack"),
+            BT::OutputPort<bool>("Self_status"),
+            BT::OutputPort<bool>("Is_recover"),
         };
     }
 
     //设置参数
-    float hp = 400.0;
-    bool self_status = false;
+    float hp = 400;
+    bool zone_status = false;
     bool is_defence = false;
     bool is_attack = false;
-    bool is_recover = false;
-    bool zone_status = false;
+	bool self_status = false;
+	bool is_recover = false;
 
     BT::NodeStatus tick() override {
         // 处理回调
@@ -246,24 +265,25 @@ public:
 
         //写入黑板
         setOutput("Hp", hp);
-        setOutput("Self_status", self_status);
+        setOutput("Zone_status", zone_status);
         setOutput("Is_defence", is_defence);
         setOutput("Is_attack", is_attack);
+        setOutput("Self_status", self_status);
         setOutput("Is_recover", is_recover);
-        setOutput("Zone_status", zone_status);
 
         return BT::NodeStatus::SUCCESS;
     }
 
     void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
         hp = msg->judge_system_data.hp;
-        self_status = msg->judge_system_data.self_status;
+        zone_status = msg->judge_system_data.zone_status;
         is_defence = msg->judge_system_data.is_defence;
         is_attack = msg->judge_system_data.is_attack;
+        self_status = msg->judge_system_data.self_status;
         is_recover = msg->judge_system_data.is_recover;
-        zone_status = msg->judge_system_data.zone_status;
 
         is_ReadInterface_ = true;
+        RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }
 
 private:

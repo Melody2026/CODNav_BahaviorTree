@@ -39,12 +39,11 @@ private:
         // 读取数据
         if (uart.read(package, sizeof(package)) == sizeof(package)) {
             if (header == package[0]) {
-                self_status = package[14];
-                is_recover = package[15];
+                is_recover = package[14];
+                self_status = package[15];
                 zone_status = package[16];
                 is_defence = package[17];
-                std::memcpy(&hp,&package[18],2);
-
+                std::memcpy(&hp,&package[18],sizeof(float));
                 return true;
             }else {
                 std::cout << "Failed to open serial port\n";
@@ -86,7 +85,7 @@ private:
         }
 
         // 发布消息
-        //publisher_->publish(msg);
+        publisher_->publish(msg);
     }
 
     // 成员变量

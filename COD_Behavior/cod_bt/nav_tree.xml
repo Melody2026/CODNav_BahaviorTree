@@ -3,7 +3,9 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <SendNav2Goal goal_pose="{main_position}"/>
+      <FollowWaypointsAction waypoint_file="/home/cod-sentry/ysl/cod_-rm2026_-behavior-tree/COD_Behavior/launch/sim1.csv"
+                             frame_id="map"
+                             current_waypoint="{wp_idx}"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -37,6 +39,12 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Action ID="FollowWaypointsAction"
+            editable="true">
+      <input_port name="waypoint_file"/>
+      <input_port name="frame_id"/>
+      <output_port name="current_waypoint"/>
+    </Action>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
