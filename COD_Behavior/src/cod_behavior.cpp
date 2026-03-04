@@ -34,17 +34,31 @@ int main(int argc, char **argv) {
     follow_wp_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
 
     // 注册自定义节点（保持你的注册逻辑）
+
     factory.registerBuilder<SendNav2Goal>(
         "SendNav2Goal",
         [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<SendNav2Goal>(name, config, params);
         }
     );
+
     factory.registerBuilder<FollowWaypointsAction>(
     "FollowWaypointsAction",
     [&](const std::string &name, const BT::NodeConfig &config) {
         return std::make_unique<FollowWaypointsAction>(name, config, follow_wp_params);
     }
+    );
+
+    // PubNav2Goal 使用话题发布导航目标点
+    BT::RosNodeParams pub_goal_params;
+    pub_goal_params.nh = global_node_;
+    pub_goal_params.default_port_value = "/goal_pose";  // Nav2 默认目标点话题
+
+    factory.registerBuilder<PubNav2Goal>(
+        "PubNav2Goal",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<PubNav2Goal>(name, config, pub_goal_params);
+        }
     );
     factory.registerBuilder<WriteToBlackboard>(
         "WriteToBlackboard",

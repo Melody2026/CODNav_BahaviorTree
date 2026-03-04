@@ -1,5 +1,63 @@
 #pragma once
 #include "include.h"
+#include "behaviortree_ros2/bt_topic_pub_node.hpp"
+
+/**
+ * @brief 通过话题发布Nav2目标点的行为树节点
+ *
+ * 该节点通过发布 geometry_msgs::msg::PoseStamped 消息到指定话题来设置导航目标。
+ * 默认话题为 /goal_pose，这是 Nav2 的标准目标点输入话题。
+ */
+class PubNav2Goal : public BT::RosTopicPubNode<geometry_msgs::msg::PoseStamped> {
+public:
+    // 构造函数
+    PubNav2Goal(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosTopicPubNode<geometry_msgs::msg::PoseStamped>(name, conf, params)
+    {
+    }
+
+    // 定义节点需要的输入端口
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose", "导航目标位置"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系ID，默认为map")
+        });
+    }
+
+    // 设置要发布的消息
+    bool setMessage(geometry_msgs::msg::PoseStamped &msg) override {
+        // 从输入端口获取目标位置
+        auto res = getInput<geometry_msgs::msg::PoseStamped>("goal_pose");
+        if (!res) {
+            RCLCPP_ERROR(node_->get_logger(), "读取端口[goal_pose]时出错: %s", res.error().c_str());
+            return false;
+        }
+
+        msg = res.value();
+
+        // 设置frame_id（如果未设置则使用输入端口的值）
+        if (msg.header.frame_id.empty()) {
+            auto frame_res = getInput<std::string>("frame_id");
+            msg.header.frame_id = (frame_res && !frame_res.value().empty()) ? frame_res.value() : "map";
+        }
+
+        // 设置时间戳为当前时间
+        msg.header.stamp = rclcpp::Clock().now();
+
+        // 输出调试信息
+        RCLCPP_INFO(node_->get_logger(),
+            "PubNav2Goal: 发布目标点 [%.2f, %.2f, %.2f] frame: %s",
+            msg.pose.position.x,
+            msg.pose.position.y,
+            msg.pose.position.z,
+            msg.header.frame_id.c_str());
+
+        return true;
+    }
+};
 
 class SendNav2Goal : public BT::RosActionNode<nav2_msgs::action::NavigateToPose> {
 public:
