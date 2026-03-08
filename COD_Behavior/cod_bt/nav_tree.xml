@@ -3,8 +3,9 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <PubNav2Goal goal_pose="{main_position}"
-                   frame_id="map"/>
+      <FollowWaypointsAction waypoint_file="/home/cod-sentry/ysl/cod_-rm2026_-behavior-tree/COD_Behavior/launch/main.csv"
+                             frame_id="map"
+                             current_waypoint="{wp_idx}"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -18,10 +19,11 @@
           <ReactiveFallback>
             <Sequence>
               <HpCondition Hp="{hp}"/>
-              <Sequence>
-                <SendNav2Goal goal_pose="{home_position}"/>
-                <HpCondition Hp="{hp}"/>
-              </Sequence>
+              <ReactiveSequence>
+                <PubNav2Goal goal_pose="{home_position}"
+                             frame_id="map"/>
+                <StayHome Hp="{hp}"/>
+              </ReactiveSequence>
             </Sequence>
             <Inverter>
               <ReactiveFallback>
@@ -39,6 +41,12 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Action ID="FollowWaypointsAction"
+            editable="true">
+      <input_port name="waypoint_file"/>
+      <input_port name="frame_id"/>
+      <output_port name="current_waypoint"/>
+    </Action>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
@@ -48,10 +56,10 @@
       <input_port name="goal_pose"/>
       <input_port name="frame_id"/>
     </Action>
-    <Action ID="SendNav2Goal"
-            editable="true">
-      <input_port name="goal_pose"/>
-    </Action>
+    <Condition ID="StayHome"
+               editable="true">
+      <input_port name="Hp"/>
+    </Condition>
     <Action ID="WriteToBlackboard"
             editable="true">
       <output_port name="Hp"/>

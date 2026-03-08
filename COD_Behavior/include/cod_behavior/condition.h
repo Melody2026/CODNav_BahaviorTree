@@ -74,8 +74,8 @@ public:
             );
         }
         float hp = hp_.value();
-        if (hp >= 350) {
-            std::cout << "hp >= 350\n";
+        if (hp >= 300) {
+            std::cout << "hp >= 300\n";
             return BT::NodeStatus::SUCCESS;
         }
 

@@ -33,6 +33,13 @@ int main(int argc, char **argv) {
     follow_wp_params.server_timeout = std::chrono::milliseconds(5000);
     follow_wp_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
 
+    // NavigateThroughPoses 穿越导航
+    BT::RosNodeParams nav_through_params;
+    nav_through_params.nh = global_node_;
+    nav_through_params.default_port_value = "/navigate_through_poses";
+    nav_through_params.server_timeout = std::chrono::milliseconds(5000);
+    nav_through_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
+
     // 注册自定义节点（保持你的注册逻辑）
 
     factory.registerBuilder<SendNav2Goal>(
@@ -47,6 +54,12 @@ int main(int argc, char **argv) {
     [&](const std::string &name, const BT::NodeConfig &config) {
         return std::make_unique<FollowWaypointsAction>(name, config, follow_wp_params);
     }
+    );
+    factory.registerBuilder<NavigateThroughPosesAction>(
+        "NavigateThroughPosesAction",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<NavigateThroughPosesAction>(name, config, nav_through_params);
+        }
     );
 
     // PubNav2Goal 使用话题发布导航目标点

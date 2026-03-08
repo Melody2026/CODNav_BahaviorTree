@@ -6,6 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
+#include "nav2_msgs/action/navigate_through_poses.hpp"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "std_msgs/msg/int32.hpp"

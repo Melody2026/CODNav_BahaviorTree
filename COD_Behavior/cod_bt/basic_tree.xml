@@ -3,7 +3,8 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <SendNav2Goal goal_pose="{main_position}"/>
+      <PubNav2Goal goal_pose="{main_position}"
+                   frame_id="map"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -17,15 +18,17 @@
           <ReactiveFallback>
             <Sequence>
               <HpCondition Hp="{hp}"/>
-              <Sequence>
-                <SendNav2Goal goal_pose="{home_position}"/>
+              <ReactiveSequence>
+                <PubNav2Goal goal_pose="{home_position}"
+                             frame_id="map"/>
                 <StayHome Hp="{hp}"/>
-              </Sequence>
+              </ReactiveSequence>
             </Sequence>
             <Inverter>
               <ReactiveFallback>
                 <ZsCondition Zone_status="{zone_status}"/>
-                <SendNav2Goal goal_pose="{main_position}"/>
+                <PubNav2Goal goal_pose="{main_position}"
+                             frame_id="map"/>
               </ReactiveFallback>
             </Inverter>
           </ReactiveFallback>
@@ -41,9 +44,10 @@
                editable="true">
       <input_port name="Hp"/>
     </Condition>
-    <Action ID="SendNav2Goal"
+    <Action ID="PubNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>
+      <input_port name="frame_id"/>
     </Action>
     <Condition ID="StayHome"
                editable="true">

@@ -1,13 +1,13 @@
 cod_behavior:
   ros__parameters:
     cod_bt_path:
-      "COD_Behavior/cod_bt/nav_tree.xml"
+      "COD_Behavior/cod_bt/basic_tree.xml"
     nav_pose:
       home:
         frame_id: "map"
         position:
-          x: 0.0
-          y: 0.0
+          x: -0.3
+          y: 0.2
           z: 0.0
         orientation:
           w: 1.0

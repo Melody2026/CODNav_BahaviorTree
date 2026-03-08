@@ -270,12 +270,85 @@ public:
         // 将反馈日志降为 DEBUG，避免频繁 INFO 污染日志
         RCLCPP_DEBUG(logger(), "FollowWaypointsAction: 正在前往航点 %u", static_cast<unsigned>(feedback->current_waypoint));
         // 将当前航点索引写回黑板
+        std::cout<<"set......................................."<<std::endl;
         setOutput("current_waypoint", static_cast<int>(feedback->current_waypoint));
+        std::cout<<"ste111111111111111........................"<<std::endl;
         return BT::NodeStatus::RUNNING;
     }
 
     BT::NodeStatus onFailure(BT::ActionNodeErrorCode error) override {
         RCLCPP_ERROR_STREAM(logger(), "FollowWaypointsAction 失败，错误码: " << BT::toStr(error));
+        return BT::NodeStatus::FAILURE;
+    }
+};
+
+// 穿越导航行为树节点：从 CSV 加载航点，通过 Nav2 的 navigate_through_poses action
+// 规划一条平滑路径穿越所有航点，不在中间航点停留，适合巡逻/快速穿越场景
+class NavigateThroughPosesAction : public BT::RosActionNode<nav2_msgs::action::NavigateThroughPoses> {
+public:
+    NavigateThroughPosesAction(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosActionNode<nav2_msgs::action::NavigateThroughPoses>(name, conf, params)
+    {
+    }
+
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<std::string>("waypoint_file", "航点 CSV 文件的绝对路径"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系 ID，默认为 map"),
+            BT::OutputPort<double>("distance_remaining", "到目标的剩余距离"),
+            BT::OutputPort<int>("poses_remaining", "剩余未穿越的航点数"),
+        });
+    }
+
+    bool setGoal(Goal &goal) override {
+        auto file_res = getInput<std::string>("waypoint_file");
+        if (!file_res) {
+            throw BT::RuntimeError("读取端口 [waypoint_file] 时出错: ", file_res.error());
+        }
+        const std::string &waypoint_file = file_res.value();
+
+        auto frame_res = getInput<std::string>("frame_id");
+        std::string frame_id = frame_res ? frame_res.value() : "map";
+
+        std::vector<geometry_msgs::msg::PoseStamped> waypoints;
+        if (!loadWaypointsFromCSV(waypoint_file, waypoints, frame_id)) {
+            RCLCPP_ERROR(logger(), "无法从文件加载航点: %s", waypoint_file.c_str());
+            return false;
+        }
+
+        goal.poses = waypoints;
+        RCLCPP_INFO(logger(), "NavigateThroughPosesAction: 已加载 %zu 个航点，准备穿越导航", waypoints.size());
+        for (size_t i = 0; i < waypoints.size(); ++i) {
+            RCLCPP_INFO(logger(), "  航点[%zu]: [%.2f, %.2f]",
+                        i, waypoints[i].pose.position.x, waypoints[i].pose.position.y);
+        }
+        return true;
+    }
+
+    void onHalt() override {
+        RCLCPP_WARN(logger(), "NavigateThroughPosesAction: 穿越导航已被中断");
+    }
+
+    BT::NodeStatus onResultReceived(const WrappedResult & /*wr*/) override {
+        RCLCPP_INFO(logger(), "NavigateThroughPosesAction: 穿越导航完成!");
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    BT::NodeStatus onFeedback(
+        const std::shared_ptr<const nav2_msgs::action::NavigateThroughPoses::Feedback> feedback) override {
+        RCLCPP_INFO(logger(), "NavigateThroughPosesAction: 剩余距离 %.2f, 剩余航点 %d",
+                     feedback->distance_remaining,
+                     feedback->number_of_poses_remaining);
+        setOutput("distance_remaining", static_cast<double>(feedback->distance_remaining));
+        setOutput("poses_remaining", feedback->number_of_poses_remaining);
+        return BT::NodeStatus::RUNNING;
+    }
+
+    BT::NodeStatus onFailure(BT::ActionNodeErrorCode error) override {
+        RCLCPP_ERROR(logger(), "NavigateThroughPosesAction 失败，错误码: %s", BT::toStr(error));
         return BT::NodeStatus::FAILURE;
     }
 };
