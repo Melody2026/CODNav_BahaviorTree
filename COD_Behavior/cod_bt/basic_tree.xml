@@ -15,23 +15,25 @@
                                Self_status="{self_status}"
                                Is_recover="{is_recover}"/>
           </Inverter>
-          <ReactiveFallback>
-            <Sequence>
-              <HpCondition Hp="{hp}"/>
-              <ReactiveSequence>
-                <PubNav2Goal goal_pose="{home_position}"
-                             frame_id="map"/>
-                <StayHome Hp="{hp}"/>
-              </ReactiveSequence>
-            </Sequence>
+          <Sequence>
+            <HpCondition Hp="{hp}"/>
+            <ReactiveSequence>
+              <PubNav2Goal goal_pose="{home_position}"
+                           frame_id="map"/>
+              <StayHome Hp="{hp}"/>
+            </ReactiveSequence>
+          </Sequence>
+          <ReactiveSequence>
             <Inverter>
-              <ReactiveFallback>
-                <ZsCondition Zone_status="{zone_status}"/>
-                <PubNav2Goal goal_pose="{main_position}"
-                             frame_id="map"/>
-              </ReactiveFallback>
+              <ZsCondition Zone_status="{zone_status}"/>
             </Inverter>
-          </ReactiveFallback>
+            <PubNav2Goal goal_pose="{main_position}"
+                         frame_id="map"/>
+          </ReactiveSequence>
+          <Sequence>
+            <SendNav2Goal goal_pose="{ap_position1}"/>
+            <SendNav2Goal goal_pose="{ap_position2}"/>
+          </Sequence>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>
@@ -48,6 +50,10 @@
             editable="true">
       <input_port name="goal_pose"/>
       <input_port name="frame_id"/>
+    </Action>
+    <Action ID="SendNav2Goal"
+            editable="true">
+      <input_port name="goal_pose"/>
     </Action>
     <Condition ID="StayHome"
                editable="true">

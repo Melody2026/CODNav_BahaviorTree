@@ -97,6 +97,8 @@ int main(int argc, char **argv) {
 
         // 初始化黑板数据（保持你的逻辑）
         auto maingoal = loadPoseStamped(global_node_, "nav_pose.main");
+        auto maingoal1 = loadPoseStamped(global_node_, "nav_pose.main1");
+
         auto homegoal = loadPoseStamped(global_node_, "nav_pose.home");
         auto dp_goal1 = loadPoseStamped(global_node_, "D_patrol_pose.first");
         auto dp_goal2 = loadPoseStamped(global_node_, "D_patrol_pose.second");
@@ -105,6 +107,8 @@ int main(int argc, char **argv) {
 
 
         blackboard->set<geometry_msgs::msg::PoseStamped>("main_position", maingoal);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("main1_position", maingoal1);
+
         blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
         blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position1", dp_goal1);
         blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position2", dp_goal2);

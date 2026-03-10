@@ -1,13 +1,13 @@
 cod_behavior:
   ros__parameters:
     cod_bt_path:
-      "COD_Behavior/cod_bt/basic_tree.xml"
+      "COD_Behavior/cod_bt/test.xml"
     nav_pose:
       home:
         frame_id: "map"
         position:
-          x: -0.3
-          y: 0.2
+          x: 0.0
+          y: 0.0
           z: 0.0
         orientation:
           w: 1.0
@@ -15,8 +15,17 @@ cod_behavior:
       main:
         frame_id: "map"
         position:
+          x: 4.0
+          y: -3.43582
+          z: 0.0
+        orientation:
+          w: 1.0
+
+      main1:
+        frame_id: "map"
+        position:
           x: 4.7
-          y: -1.0
+          y: 2.0
           z: 0.0
         orientation:
           w: 1.0
@@ -44,8 +53,8 @@ cod_behavior:
       first:
         frame_id: "map"
         position:
-          x: -2.0
-          y: 1.0
+          x: 4.0
+          y: -3.43582
           z: 0.0
         orientation:
           w: 1.0
@@ -53,8 +62,8 @@ cod_behavior:
       second:
         frame_id: "map"
         position:
-          x: 2.0
-          y: 1.0
+          x: 0.317783
+          y: -3.43582
           z: 0.0
         orientation:
           w: 1.0
