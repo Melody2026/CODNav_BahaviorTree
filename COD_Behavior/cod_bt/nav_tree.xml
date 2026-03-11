@@ -3,10 +3,9 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <NavigateThroughPosesAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wp/sim2.csv"
+      <NavigateThroughPosesAction waypoint_file="/home/ysl/ros2_ws/cod_-rm2026_-behavior-tree/COD_Behavior/launch/main.csv"
                                   frame_id="map"
-                                  distance_remaining="{distance}"
-                                  poses_remaining="{wp_idx}"/>
+                                  current_waypoint="{wp_idx}"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -50,8 +49,7 @@
             editable="true">
       <input_port name="waypoint_file"/>
       <input_port name="frame_id"/>
-      <output_port name="distance_remaining"/>
-      <output_port name="poses_remaining"/>
+      <output_port name="current_waypoint"/>
     </Action>
     <Action ID="PubNav2Goal"
             editable="true">
