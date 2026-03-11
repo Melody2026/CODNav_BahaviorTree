@@ -53,7 +53,7 @@ cod_behavior:
       first:
         frame_id: "map"
         position:
-          x: 4.0
+          x: 1.0
           y: -3.43582
           z: 0.0
         orientation:

@@ -3,9 +3,10 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <FollowWaypointsAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wp/sim2.csv"
-                             frame_id="map"
-                             current_waypoint="{wp_idx}"/>
+      <NavigateThroughPosesAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wp/sim2.csv"
+                                  frame_id="map"
+                                  distance_remaining="{distance}"
+                                  poses_remaining="{wp_idx}"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -41,16 +42,17 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="FollowWaypointsAction"
-            editable="true">
-      <input_port name="waypoint_file"/>
-      <input_port name="frame_id"/>
-      <output_port name="current_waypoint"/>
-    </Action>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
     </Condition>
+    <Action ID="NavigateThroughPosesAction"
+            editable="true">
+      <input_port name="waypoint_file"/>
+      <input_port name="frame_id"/>
+      <output_port name="distance_remaining"/>
+      <output_port name="poses_remaining"/>
+    </Action>
     <Action ID="PubNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>

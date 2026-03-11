@@ -23,10 +23,11 @@ public:
     static BT::PortsList providedPorts() {
         return providedBasicPorts({
             BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose", "导航目标位置"),
-            BT::InputPort<std::string>("frame_id", "map", "坐标系ID，默认为map")
+            BT::InputPort<std::string>("frame_id", "map", "坐标系ID，默认为map"),
+            BT::InputPort<unsigned>("min_pub_interval_ms")
+
         });
     }
-
     // 设置要发布的消息
     bool setMessage(geometry_msgs::msg::PoseStamped &msg) override {
         // 从输入端口获取目标位置
@@ -292,6 +293,8 @@ public:
         const BT::RosNodeParams &params)
         : RosActionNode<nav2_msgs::action::NavigateThroughPoses>(name, conf, params)
     {
+        std::cout<<"set......................................."<<std::endl;
+
     }
 
     static BT::PortsList providedPorts() {

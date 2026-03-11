@@ -121,8 +121,9 @@ int main(int argc, char **argv) {
         blackboard->set<bool>("is_recover", false);
         blackboard->set<bool>("is_defence", false);
         blackboard->set<bool>("is_attack", false);
+        blackboard->set<double>("distance", 0);
         blackboard->set<int>("wp_idx", 0);
-
+        
         BT::Groot2Publisher publisher(tree, 5555);
 
         // ========== 核心：单线程主循环（同时处理 ROS 回调 + 行为树） ==========
