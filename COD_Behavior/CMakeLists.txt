@@ -21,12 +21,11 @@ find_package(rm_interfaces REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(behaviortree_ros2 REQUIRED)
 
-add_executable(tree_1 src/cod_behavior.cpp)
-add_executable(test_1 src/test1100.cpp)
-add_executable(test_2 src/t0100.cpp)
-add_executable(test_3 src/t0000.cpp)
-add_executable(test_4 src/t1000.cpp)
-add_executable(test_5 src/te000.cpp)
+add_executable(tree_1 test/cod_behavior.cpp)
+add_executable(test_1 test/test_GoZone.cpp)
+add_executable(test_2 test/test_OnZone.cpp)
+add_executable(test_3 test/test_LowHp.cpp)
+add_executable(test_4 test/test_Recover.cpp)
 
 ament_target_dependencies(tree_1
         rclcpp
@@ -56,10 +55,6 @@ ament_target_dependencies(test_4
         rclcpp
         rm_interfaces
 )
-ament_target_dependencies(test_5
-        rclcpp
-        rm_interfaces
-)
 
 include_directories(
         include
@@ -70,7 +65,6 @@ install(TARGETS tree_1
         test_2
         test_3
         test_4
-        test_5
         DESTINATION lib/${PROJECT_NAME}
 )
 

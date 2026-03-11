@@ -1,7 +1,7 @@
 cod_behavior:
   ros__parameters:
     cod_bt_path:
-      "COD_Behavior/cod_bt/nav_tree.xml"
+      "COD_Behavior/cod_bt/MultipleNav_tree.xml"
     nav_pose:
       home:
         frame_id: "map"
