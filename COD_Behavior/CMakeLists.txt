@@ -21,7 +21,7 @@ find_package(rm_interfaces REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(behaviortree_ros2 REQUIRED)
 
-add_executable(tree_1 test/cod_behavior.cpp)
+add_executable(tree_1 src/cod_behavior.cpp)
 add_executable(test_1 test/test_GoZone.cpp)
 add_executable(test_2 test/test_OnZone.cpp)
 add_executable(test_3 test/test_LowHp.cpp)

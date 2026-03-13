@@ -21,7 +21,7 @@ public:
         }
         float hp = hp_.value();
         std::cout << "hp:" << hp << std::endl;
-        if (hp < 150) {
+        if (hp < 210) {
             std::cout << "hp < 150\n";
             return BT::NodeStatus::SUCCESS;
         }
@@ -74,7 +74,7 @@ public:
             );
         }
         float hp = hp_.value();
-        if (hp >= 300) {
+        if (hp >= 350) {
             std::cout << "hp >= 300\n";
             return BT::NodeStatus::SUCCESS;
         }

@@ -77,8 +77,8 @@ source install/setup.bash
 # 主决策模式（行为树 + 串口通信）也是单点导航模式
 ros2 launch cod_behavior cod.launch.py
 
-# 多点导航模式
-ros2 launch cod_behavior MultipleNav.launch.py
+# 多点导航模式（行为树 + 串口通信）
+ros2 launch cod_behavior multiplenav.launch.py
 ```
 
 ### 单独运行节点
@@ -87,7 +87,7 @@ ros2 launch cod_behavior MultipleNav.launch.py
 # 仅运行行为树节点（需手动指定参数）
 ros2 run cod_behavior tree_1
 
-# 运行测试节点
+# 运行测试节点（模拟裁判系统发布消息）
 ros2 run cod_behavior test_1
 ```
 
@@ -106,11 +106,11 @@ cod_behavior:
   ros__parameters:
     cod_bt_path: "COD_Behavior/cod_bt/cod_tree.xml"  # 行为树文件路径
     nav_pose:
-      home:                    # 回城点
+      home:                    #补给区位置坐标
         frame_id: "map"
         position: { x: 0.0, y: 0.0, z: 0.0 }
         orientation: { w: 1.0 }
-      main:                    # 中心增益点
+      main:                    #中心增益点位置坐标（可根据实际场地更改）
         frame_id: "map"
         position: { x: 4.0, y: -3.4, z: 0.0 }
         orientation: { w: 1.0 }
@@ -137,7 +137,7 @@ id,pose_x,pose_y,pose_z,rot_x,rot_y,rot_z,rot_w,command,
 ```bash
 # 在目标机器（如 NUC / Jetson）上克隆并编译
 cd ~/ros2_ws/src
-git clone https://gitee.com/codnavgation/cod_-rm2026_-behavior-tree.git -b test1 #用于目前备赛调试
+git clone https://gitee.com/codnavgation/cod_-rm2026_-behavior-tree.git -b test1 #用于当前备赛调试，最终比赛用的是master分支
 cd ~/ros2_ws
 colcon build --symlink-install
 source install/setup.bash
