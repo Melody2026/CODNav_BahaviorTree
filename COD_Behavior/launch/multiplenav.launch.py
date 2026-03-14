@@ -8,7 +8,7 @@ def generate_launch_description():
     nav_pose_yaml = PathJoinSubstitution([
         FindPackageShare("cod_behavior"),
         "launch",
-        "nav_pose.yaml"
+        "multiplenav_pose.yaml"
     ])
 
     serial_node = Node(

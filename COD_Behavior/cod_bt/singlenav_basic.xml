@@ -33,9 +33,6 @@
                          frame_id="map"
                          min_pub_interval_ms="500"/>
           </ReactiveSequence>
-          <PubNav2Goal goal_pose="{ap_position1}"
-                       frame_id="map"
-                       min_pub_interval_ms="500"/>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>

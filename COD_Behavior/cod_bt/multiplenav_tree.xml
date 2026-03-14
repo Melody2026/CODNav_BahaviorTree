@@ -3,7 +3,7 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <NavigateThroughPosesAction waypoint_file="/home/ysl/ros2_ws/cod_-rm2026_-behavior-tree/COD_Behavior/launch/main.csv"
+      <NavigateThroughPosesAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/rmul26.csv"
                                   frame_id="map"
                                   current_waypoint="{wp_idx}"/>
       <KeepRunningUntilFailure>
@@ -20,7 +20,8 @@
             <HpCondition Hp="{hp}"/>
             <ReactiveSequence>
               <PubNav2Goal goal_pose="{home_position}"
-                           frame_id="map"/>
+                           frame_id="map"
+                           min_pub_interval_ms="500"/>
               <StayHome Hp="{hp}"/>
             </ReactiveSequence>
           </Sequence>
@@ -29,10 +30,12 @@
               <ZsCondition Zone_status="{zone_status}"/>
             </Inverter>
             <PubNav2Goal goal_pose="{main_position}"
-                         frame_id="map"/>
+                         frame_id="map"
+                         min_pub_interval_ms="500"/>
           </ReactiveSequence>
           <PubNav2Goal goal_pose="{main1_position}"
-                       frame_id="map"/>
+                       frame_id="map"
+                       min_pub_interval_ms="500"/>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>
@@ -55,6 +58,7 @@
             editable="true">
       <input_port name="goal_pose"/>
       <input_port name="frame_id"/>
+      <input_port name="min_pub_interval_ms"/>
     </Action>
     <Condition ID="StayHome"
                editable="true">

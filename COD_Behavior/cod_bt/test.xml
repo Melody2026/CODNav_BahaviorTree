@@ -5,7 +5,7 @@
     <Sequence>
       <PubNav2Goal goal_pose="{main_position}"
                    frame_id="map"
-                   min_pub_interval_ms="1000"/>
+                   min_pub_interval_ms="500"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -21,13 +21,13 @@
             <ReactiveSequence>
               <PubNav2Goal goal_pose="{home_position}"
                            frame_id="map"
-                           min_pub_interval_ms="1000"/>
+                           min_pub_interval_ms="500"/>
               <StayHome Hp="{hp}"/>
             </ReactiveSequence>
           </Sequence>
           <PubNav2Goal goal_pose="{main1_position}"
                        frame_id="map"
-                       min_pub_interval_ms="1000"/>
+                       min_pub_interval_ms="500"/>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>

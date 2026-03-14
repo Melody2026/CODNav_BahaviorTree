@@ -29,9 +29,9 @@
             <Inverter>
               <ZsCondition Zone_status="{zone_status}"/>
             </Inverter>
-            <PubNav2Goal goal_pose="{main_position}"
-                         frame_id="map"
-                         min_pub_interval_ms="500"/>
+            <FollowWaypointsAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/patrol.csv"
+                                   frame_id="map"
+                                   current_waypoint="{wp_idx}"/>
           </ReactiveSequence>
           <PubNav2Goal goal_pose="{ap_position1}"
                        frame_id="map"
@@ -44,6 +44,12 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Action ID="FollowWaypointsAction"
+            editable="true">
+      <input_port name="waypoint_file"/>
+      <input_port name="frame_id"/>
+      <output_port name="current_waypoint"/>
+    </Action>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
