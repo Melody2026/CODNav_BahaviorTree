@@ -41,7 +41,7 @@
                                       wait_times="{wait_times}"
                                       wp_idx="{wp_idx}"
                                       current_goal="{current_goal}"
-                                      current_wait_sec="{current_wait_sec}"/>
+                                      current_wait_sec="5.0"/>
                   <ReactiveSequence>
                     <PubNav2Goal goal_pose="{current_goal}"
                                  frame_id="map"
@@ -49,7 +49,7 @@
                     <WaitUntilReached goal_pose="{current_goal}"
                                       tolerance="0.5"/>
                   </ReactiveSequence>
-                  <WaitDuration duration_sec="{current_wait_sec}"/>
+                  <WaitDuration duration_sec="5.0"/>
                   <NextWaypoint wp_idx="{wp_idx}"
                                 total_waypoints="{total_wp}"/>
                 </Sequence>
@@ -67,14 +67,6 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="LoadWaypoints"
-            editable="true">
-      <input_port name="waypoint_file"/>
-      <input_port name="frame_id"/>
-      <output_port name="waypoints"/>
-      <output_port name="wait_times"/>
-      <output_port name="total_waypoints"/>
-    </Action>
     <Action ID="GetCurrentWaypoint"
             editable="true">
       <input_port name="waypoints"/>
@@ -83,24 +75,23 @@
       <output_port name="current_goal"/>
       <output_port name="current_wait_sec"/>
     </Action>
-    <Action ID="WaitDuration"
+    <Condition ID="HpCondition"
+               editable="true">
+      <input_port name="Hp"/>
+    </Condition>
+    <Action ID="LoadWaypoints"
             editable="true">
-      <input_port name="duration_sec"/>
-    </Action>
-    <Action ID="WaitUntilReached"
-            editable="true">
-      <input_port name="goal_pose"/>
-      <input_port name="tolerance"/>
+      <input_port name="waypoint_file"/>
+      <input_port name="frame_id"/>
+      <output_port name="waypoints"/>
+      <output_port name="wait_times"/>
+      <output_port name="total_waypoints"/>
     </Action>
     <Action ID="NextWaypoint"
             editable="true">
       <inout_port name="wp_idx"/>
       <input_port name="total_waypoints"/>
     </Action>
-    <Condition ID="HpCondition"
-               editable="true">
-      <input_port name="Hp"/>
-    </Condition>
     <Action ID="PubNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>
@@ -111,6 +102,15 @@
                editable="true">
       <input_port name="Hp"/>
     </Condition>
+    <Action ID="WaitDuration"
+            editable="true">
+      <input_port name="duration_sec"/>
+    </Action>
+    <Action ID="WaitUntilReached"
+            editable="true">
+      <input_port name="goal_pose"/>
+      <input_port name="tolerance"/>
+    </Action>
     <Action ID="WriteToBlackboard"
             editable="true">
       <output_port name="Hp"/>

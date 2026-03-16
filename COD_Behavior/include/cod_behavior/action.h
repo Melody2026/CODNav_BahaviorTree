@@ -627,7 +627,7 @@ public:
 
     static BT::PortsList providedPorts() {
         return {
-            BT::InputPort<double>("duration_sec", 0.0, "等待时长 (秒)，0 则跳过"),
+            BT::InputPort<double>("duration_sec", 5.0, "等待时长 (秒)，0 则跳过"),
         };
     }
 
