@@ -86,6 +86,18 @@ int main(int argc, char **argv) {
     factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
     factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
 
+    // PubNav2Goal 巡逻方案节点
+    factory.registerNodeType<LoadWaypoints>("LoadWaypoints");
+    factory.registerNodeType<GetCurrentWaypoint>("GetCurrentWaypoint");
+    factory.registerNodeType<NextWaypoint>("NextWaypoint");
+    factory.registerNodeType<WaitDuration>("WaitDuration");
+    factory.registerBuilder<WaitUntilReached>(
+        "WaitUntilReached",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<WaitUntilReached>(name, config, global_node_);
+        }
+    );
+
     const std::string cod_bt = global_node_->get_parameter("cod_bt_path").as_string();
 
     try {

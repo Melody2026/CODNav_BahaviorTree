@@ -29,9 +29,32 @@
             <Inverter>
               <ZsCondition Zone_status="{zone_status}"/>
             </Inverter>
-            <FollowWaypointsAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/patrol.csv"
-                                   frame_id="map"
-                                   current_waypoint="{wp_idx}"/>
+            <Sequence>
+              <LoadWaypoints waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/patrol.csv"
+                             frame_id="map"
+                             waypoints="{waypoints}"
+                             wait_times="{wait_times}"
+                             total_waypoints="{total_wp}"/>
+              <KeepRunningUntilFailure>
+                <Sequence>
+                  <GetCurrentWaypoint waypoints="{waypoints}"
+                                      wait_times="{wait_times}"
+                                      wp_idx="{wp_idx}"
+                                      current_goal="{current_goal}"
+                                      current_wait_sec="{current_wait_sec}"/>
+                  <ReactiveSequence>
+                    <PubNav2Goal goal_pose="{current_goal}"
+                                 frame_id="map"
+                                 min_pub_interval_ms="500"/>
+                    <WaitUntilReached goal_pose="{current_goal}"
+                                      tolerance="0.5"/>
+                  </ReactiveSequence>
+                  <WaitDuration duration_sec="{current_wait_sec}"/>
+                  <NextWaypoint wp_idx="{wp_idx}"
+                                total_waypoints="{total_wp}"/>
+                </Sequence>
+              </KeepRunningUntilFailure>
+            </Sequence>
           </ReactiveSequence>
           <PubNav2Goal goal_pose="{ap_position1}"
                        frame_id="map"
@@ -44,11 +67,35 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="FollowWaypointsAction"
+    <Action ID="LoadWaypoints"
             editable="true">
       <input_port name="waypoint_file"/>
       <input_port name="frame_id"/>
-      <output_port name="current_waypoint"/>
+      <output_port name="waypoints"/>
+      <output_port name="wait_times"/>
+      <output_port name="total_waypoints"/>
+    </Action>
+    <Action ID="GetCurrentWaypoint"
+            editable="true">
+      <input_port name="waypoints"/>
+      <input_port name="wait_times"/>
+      <input_port name="wp_idx"/>
+      <output_port name="current_goal"/>
+      <output_port name="current_wait_sec"/>
+    </Action>
+    <Action ID="WaitDuration"
+            editable="true">
+      <input_port name="duration_sec"/>
+    </Action>
+    <Action ID="WaitUntilReached"
+            editable="true">
+      <input_port name="goal_pose"/>
+      <input_port name="tolerance"/>
+    </Action>
+    <Action ID="NextWaypoint"
+            editable="true">
+      <inout_port name="wp_idx"/>
+      <input_port name="total_waypoints"/>
     </Action>
     <Condition ID="HpCondition"
                editable="true">
