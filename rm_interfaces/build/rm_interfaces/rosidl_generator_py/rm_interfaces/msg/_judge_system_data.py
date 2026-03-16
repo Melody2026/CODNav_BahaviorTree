@@ -65,23 +65,38 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
 
     __slots__ = [
         '_hp',
+        '_herohp',
+        '_sentinelhp',
+        '_infantryhp',
         '_zone_status',
+        '_self_status',
         '_is_defence',
         '_is_attack',
+        '_is_recover',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
         'hp': 'float',
-        'zone_status': 'boolean',
+        'herohp': 'float',
+        'sentinelhp': 'float',
+        'infantryhp': 'float',
+        'zone_status': 'uint8',
+        'self_status': 'boolean',
         'is_defence': 'boolean',
         'is_attack': 'boolean',
+        'is_recover': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -97,9 +112,14 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.hp = kwargs.get('hp', float())
-        self.zone_status = kwargs.get('zone_status', bool())
+        self.herohp = kwargs.get('herohp', float())
+        self.sentinelhp = kwargs.get('sentinelhp', float())
+        self.infantryhp = kwargs.get('infantryhp', float())
+        self.zone_status = kwargs.get('zone_status', int())
+        self.self_status = kwargs.get('self_status', bool())
         self.is_defence = kwargs.get('is_defence', bool())
         self.is_attack = kwargs.get('is_attack', bool())
+        self.is_recover = kwargs.get('is_recover', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -133,11 +153,21 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
             return False
         if self.hp != other.hp:
             return False
+        if self.herohp != other.herohp:
+            return False
+        if self.sentinelhp != other.sentinelhp:
+            return False
+        if self.infantryhp != other.infantryhp:
+            return False
         if self.zone_status != other.zone_status:
+            return False
+        if self.self_status != other.self_status:
             return False
         if self.is_defence != other.is_defence:
             return False
         if self.is_attack != other.is_attack:
+            return False
+        if self.is_recover != other.is_recover:
             return False
         return True
 
@@ -162,6 +192,51 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
         self._hp = value
 
     @builtins.property
+    def herohp(self):
+        """Message field 'herohp'."""
+        return self._herohp
+
+    @herohp.setter
+    def herohp(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'herohp' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'herohp' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._herohp = value
+
+    @builtins.property
+    def sentinelhp(self):
+        """Message field 'sentinelhp'."""
+        return self._sentinelhp
+
+    @sentinelhp.setter
+    def sentinelhp(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'sentinelhp' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'sentinelhp' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._sentinelhp = value
+
+    @builtins.property
+    def infantryhp(self):
+        """Message field 'infantryhp'."""
+        return self._infantryhp
+
+    @infantryhp.setter
+    def infantryhp(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'infantryhp' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'infantryhp' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._infantryhp = value
+
+    @builtins.property
     def zone_status(self):
         """Message field 'zone_status'."""
         return self._zone_status
@@ -170,9 +245,24 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
     def zone_status(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, bool), \
-                "The 'zone_status' field must be of type 'bool'"
+                isinstance(value, int), \
+                "The 'zone_status' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'zone_status' field must be an unsigned integer in [0, 255]"
         self._zone_status = value
+
+    @builtins.property
+    def self_status(self):
+        """Message field 'self_status'."""
+        return self._self_status
+
+    @self_status.setter
+    def self_status(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, bool), \
+                "The 'self_status' field must be of type 'bool'"
+        self._self_status = value
 
     @builtins.property
     def is_defence(self):
@@ -199,3 +289,16 @@ class JudgeSystemData(metaclass=Metaclass_JudgeSystemData):
                 isinstance(value, bool), \
                 "The 'is_attack' field must be of type 'bool'"
         self._is_attack = value
+
+    @builtins.property
+    def is_recover(self):
+        """Message field 'is_recover'."""
+        return self._is_recover
+
+    @is_recover.setter
+    def is_recover(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, bool), \
+                "The 'is_recover' field must be of type 'bool'"
+        self._is_recover = value

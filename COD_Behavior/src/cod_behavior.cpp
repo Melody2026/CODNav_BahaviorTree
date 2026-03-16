@@ -26,11 +26,51 @@ int main(int argc, char **argv) {
     // 创建行为树工厂
     BT::BehaviorTreeFactory factory;
 
+    // FollowWaypoints 使用独立的 RosNodeParams，action name 不同
+    BT::RosNodeParams follow_wp_params;
+    follow_wp_params.nh = global_node_;
+    follow_wp_params.default_port_value = "/follow_waypoints";
+    follow_wp_params.server_timeout = std::chrono::milliseconds(5000);
+    follow_wp_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
+
+    // NavigateThroughPoses 穿越导航
+    BT::RosNodeParams nav_through_params;
+    nav_through_params.nh = global_node_;
+    nav_through_params.default_port_value = "/navigate_through_poses";
+    nav_through_params.server_timeout = std::chrono::milliseconds(5000);
+    nav_through_params.wait_for_server_timeout = std::chrono::milliseconds(10000);
+
     // 注册自定义节点（保持你的注册逻辑）
+
     factory.registerBuilder<SendNav2Goal>(
         "SendNav2Goal",
         [&](const std::string &name, const BT::NodeConfig &config) {
             return std::make_unique<SendNav2Goal>(name, config, params);
+        }
+    );
+
+    factory.registerBuilder<FollowWaypointsAction>(
+    "FollowWaypointsAction",
+    [&](const std::string &name, const BT::NodeConfig &config) {
+        return std::make_unique<FollowWaypointsAction>(name, config, follow_wp_params);
+    }
+    );
+    factory.registerBuilder<NavigateThroughPosesAction>(
+        "NavigateThroughPosesAction",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<NavigateThroughPosesAction>(name, config, nav_through_params);
+        }
+    );
+
+    // PubNav2Goal 使用话题发布导航目标点
+    BT::RosNodeParams pub_goal_params;
+    pub_goal_params.nh = global_node_;
+    pub_goal_params.default_port_value = "/goal_pose";  // Nav2 默认目标点话题
+
+    factory.registerBuilder<PubNav2Goal>(
+        "PubNav2Goal",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<PubNav2Goal>(name, config, pub_goal_params);
         }
     );
     factory.registerBuilder<WriteToBlackboard>(
@@ -46,7 +86,7 @@ int main(int argc, char **argv) {
     factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
     factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
 
-    const std::string cod_bt = "COD_Behavior/cod_bt/cod_tree.xml";
+    const std::string cod_bt = global_node_->get_parameter("cod_bt_path").as_string();
 
     try {
         auto tree = factory.createTreeFromFile(cod_bt);
@@ -57,6 +97,8 @@ int main(int argc, char **argv) {
 
         // 初始化黑板数据（保持你的逻辑）
         auto maingoal = loadPoseStamped(global_node_, "nav_pose.main");
+        auto maingoal1 = loadPoseStamped(global_node_, "nav_pose.main1");
+
         auto homegoal = loadPoseStamped(global_node_, "nav_pose.home");
         auto dp_goal1 = loadPoseStamped(global_node_, "D_patrol_pose.first");
         auto dp_goal2 = loadPoseStamped(global_node_, "D_patrol_pose.second");
@@ -65,6 +107,8 @@ int main(int argc, char **argv) {
 
 
         blackboard->set<geometry_msgs::msg::PoseStamped>("main_position", maingoal);
+        blackboard->set<geometry_msgs::msg::PoseStamped>("main1_position", maingoal1);
+
         blackboard->set<geometry_msgs::msg::PoseStamped>("home_position", homegoal);
         blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position1", dp_goal1);
         blackboard->set<geometry_msgs::msg::PoseStamped>("dp_position2", dp_goal2);
@@ -73,9 +117,13 @@ int main(int argc, char **argv) {
 
         blackboard->set<float>("hp", 400.0);
         blackboard->set<bool>("zone_status", false);
+        blackboard->set<bool>("self_status", false);
+        blackboard->set<bool>("is_recover", false);
         blackboard->set<bool>("is_defence", false);
         blackboard->set<bool>("is_attack", false);
-
+        blackboard->set<double>("distance", 0);
+        blackboard->set<int>("wp_idx", 0);
+        
         BT::Groot2Publisher publisher(tree, 5555);
 
         // ========== 核心：单线程主循环（同时处理 ROS 回调 + 行为树） ==========

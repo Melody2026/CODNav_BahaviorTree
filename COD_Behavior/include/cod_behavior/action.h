@@ -1,5 +1,64 @@
 #pragma once
 #include "include.h"
+#include "behaviortree_ros2/bt_topic_pub_node.hpp"
+
+/**
+ * @brief 通过话题发布Nav2目标点的行为树节点
+ *
+ * 该节点通过发布 geometry_msgs::msg::PoseStamped 消息到指定话题来设置导航目标。
+ * 默认话题为 /goal_pose，这是 Nav2 的标准目标点输入话题。
+ */
+class PubNav2Goal : public BT::RosTopicPubNode<geometry_msgs::msg::PoseStamped> {
+public:
+    // 构造函数
+    PubNav2Goal(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosTopicPubNode<geometry_msgs::msg::PoseStamped>(name, conf, params)
+    {
+    }
+
+    // 定义节点需要的输入端口
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<geometry_msgs::msg::PoseStamped>("goal_pose", "导航目标位置"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系ID，默认为map"),
+            BT::InputPort<unsigned>("min_pub_interval_ms")
+
+        });
+    }
+    // 设置要发布的消息
+    bool setMessage(geometry_msgs::msg::PoseStamped &msg) override {
+        // 从输入端口获取目标位置
+        auto res = getInput<geometry_msgs::msg::PoseStamped>("goal_pose");
+        if (!res) {
+            RCLCPP_ERROR(node_->get_logger(), "读取端口[goal_pose]时出错: %s", res.error().c_str());
+            return false;
+        }
+
+        msg = res.value();
+
+        // 设置frame_id（如果未设置则使用输入端口的值）
+        if (msg.header.frame_id.empty()) {
+            auto frame_res = getInput<std::string>("frame_id");
+            msg.header.frame_id = (frame_res && !frame_res.value().empty()) ? frame_res.value() : "map";
+        }
+
+        // 设置时间戳为当前时间
+        msg.header.stamp = rclcpp::Clock().now();
+
+        // 输出调试信息
+        RCLCPP_INFO(node_->get_logger(),
+            "PubNav2Goal: 发布目标点 [%.2f, %.2f, %.2f] frame: %s",
+            msg.pose.position.x,
+            msg.pose.position.y,
+            msg.pose.position.z,
+            msg.header.frame_id.c_str());
+
+        return true;
+    }
+};
 
 class SendNav2Goal : public BT::RosActionNode<nav2_msgs::action::NavigateToPose> {
 public:
@@ -49,9 +108,28 @@ public:
     }
 
     // 当节点被中断时调用
-    void onHalt() override {
-        // 记录日志信息，表示节点已被中断
+     void onHalt() override {
         RCLCPP_INFO(logger(), "SendGoalAction has been halted.");
+
+        // 行为树库的 RosActionNode 在 onHalt 中通常会尝试取消 Goal。
+        // 如果 Goal 句柄已失效（例如服务器重启或超时），这会抛出 UnknownGoalHandleError。
+        // 我们必须捕获这个异常以防止节点崩溃。
+
+        try {
+            // 调用基类的 onHalt 执行标准的取消流程
+            // 注意：在某些 behavior_tree_ros2 版本中，基类方法名为 onHalt
+            BT::RosActionNode<nav2_msgs::action::NavigateToPose>::onHalt();
+        }
+        catch (const rclcpp_action::exceptions::UnknownGoalHandleError & e) {
+            RCLCPP_WARN(logger(), "Ignored UnknownGoalHandleError during halt: %s", e.what());
+            // 忽略错误，继续执行清理逻辑
+        }
+        catch (const std::exception & e) {
+            RCLCPP_ERROR(logger(), "Exception caught during halt: %s", e.what());
+        }
+
+        // 如果需要额外的自定义清理逻辑，可以在这里添加
+        // 例如：重置某些局部标志位
     }
 
     // 当收到action结果时调用
@@ -62,26 +140,22 @@ public:
                 // 导航成功完成
                 RCLCPP_INFO(logger(), "Success!!!");
                 return BT::NodeStatus::SUCCESS; // 返回成功状态
-                break;
 
             case rclcpp_action::ResultCode::ABORTED:
                 // 导航被中止（通常是由于严重错误）
                 RCLCPP_INFO(logger(), "Goal was aborted");
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
 
             case rclcpp_action::ResultCode::CANCELED:
                 // 导航被取消（通常是被用户或系统取消）
                 RCLCPP_INFO(logger(), "Goal was canceled");
                 std::cout << "Goal was canceled" << '\n';
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
 
             default:
                 // 未知的结果码
                 RCLCPP_INFO(logger(), "Unknown result code");
                 return BT::NodeStatus::FAILURE; // 返回失败状态
-                break;
         }
     }
 
@@ -108,6 +182,201 @@ public:
     }
 };
 
+// 多点导航行为树节点：从 CSV 文件加载航点，通过 Nav2 的 follow_waypoints action 下发
+class FollowWaypointsAction : public BT::RosActionNode<nav2_msgs::action::FollowWaypoints> {
+public:
+    FollowWaypointsAction(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosActionNode<nav2_msgs::action::FollowWaypoints>(name, conf, params)
+    {
+    }
+
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<std::string>("waypoint_file", "航点 CSV 文件的绝对路径"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系 ID，默认为 map"),
+            BT::OutputPort<int>("current_waypoint", "当前正在前往的航点索引"),
+        });
+    }
+
+    bool setGoal(Goal &goal) override {
+        auto file_res = getInput<std::string>("waypoint_file");
+        if (!file_res) {
+            RCLCPP_ERROR(logger(), "读取端口 [waypoint_file] 时出错: %s", file_res.error().c_str());
+            return false;
+        }
+        const std::string &waypoint_file = file_res.value();
+
+        auto frame_res = getInput<std::string>("frame_id");
+        const std::string &frame_id = (frame_res && !frame_res.value().empty()) ? frame_res.value() : "map";
+
+        std::vector<geometry_msgs::msg::PoseStamped> waypoints;
+        if (!loadWaypointsFromCSV(waypoint_file, waypoints, frame_id)) {
+            RCLCPP_ERROR(logger(), "无法从文件加载航点: %s", waypoint_file.c_str());
+            return false;
+        }
+
+        if (waypoints.empty()) {
+            RCLCPP_ERROR(logger(), "FollowWaypointsAction: 航点列表为空，取消发送 goal");
+            return false;
+        }
+
+        // Ensure header frame_id and stamp for each waypoint
+        rclcpp::Time now = rclcpp::Clock().now();
+        for (auto &wp : waypoints) {
+            if (wp.header.frame_id.empty()) wp.header.frame_id = frame_id;
+            wp.header.stamp = now;
+        }
+
+        goal.poses = waypoints;
+        RCLCPP_INFO(logger(), "FollowWaypointsAction: 已加载 %lu 个航点，准备下发", static_cast<unsigned long>(waypoints.size()));
+        for (size_t i = 0; i < waypoints.size(); ++i) {
+            RCLCPP_INFO(logger(), "  航点[%lu]: [%.2f, %.2f]",
+                        static_cast<unsigned long>(i), waypoints[i].pose.position.x, waypoints[i].pose.position.y);
+        }
+        return true;
+    }
+
+    void onHalt() override {
+        RCLCPP_WARN(logger(), "FollowWaypointsAction: 多点导航已被中断");
+    }
+
+    BT::NodeStatus onResultReceived(const WrappedResult &wr) override {
+        RCLCPP_INFO(logger(), "FollowWaypointsAction: 所有航点导航完成!");
+        if (wr.result && !wr.result->missed_waypoints.empty()) {
+            {
+                std::ostringstream oss;
+                oss << "  有 " << wr.result->missed_waypoints.size() << " 个航点未到达:";
+                std::string msg = oss.str();
+                RCLCPP_WARN(logger(), "%s", msg.c_str());
+            }
+            /*for (const auto &wp : wr.result->missed_waypoints) {
+                std::ostringstream oss_idx;
+                oss_idx << "    未到达航点索引: " << wp.index;
+                std::string msg_idx = oss_idx.str();
+                RCLCPP_WARN(logger(), "%s", msg_idx.c_str());
+            }*/
+             // 根据需求，将未到达视为失败
+             return BT::NodeStatus::FAILURE;
+         }
+
+        RCLCPP_INFO(logger(), "  所有航点均已成功到达");
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    BT::NodeStatus onFeedback(
+        const std::shared_ptr<const nav2_msgs::action::FollowWaypoints::Feedback> feedback) override {
+        // 将反馈日志降为 DEBUG，避免频繁 INFO 污染日志
+        RCLCPP_DEBUG(logger(), "FollowWaypointsAction: 正在前往航点 %u", static_cast<unsigned>(feedback->current_waypoint));
+        // 将当前航点索引写回黑板
+        std::cout<<"set......................................."<<std::endl;
+        setOutput("current_waypoint", static_cast<int>(feedback->current_waypoint));
+        std::cout<<"ste111111111111111........................"<<std::endl;
+        return BT::NodeStatus::RUNNING;
+    }
+
+    BT::NodeStatus onFailure(BT::ActionNodeErrorCode error) override {
+        RCLCPP_ERROR_STREAM(logger(), "FollowWaypointsAction 失败，错误码: " << BT::toStr(error));
+        return BT::NodeStatus::FAILURE;
+    }
+};
+
+// 穿越导航行为树节点：从 CSV 加载航点，通过 Nav2 的 navigate_through_poses action
+// 规划一条平滑路径穿越所有航点，不在中间航点停留，适合巡逻/快速穿越场景
+class NavigateThroughPosesAction : public BT::RosActionNode<nav2_msgs::action::NavigateThroughPoses> {
+public:
+    NavigateThroughPosesAction(
+        const std::string &name,
+        const BT::NodeConfiguration &conf,
+        const BT::RosNodeParams &params)
+        : RosActionNode<nav2_msgs::action::NavigateThroughPoses>(name, conf, params),
+          total_waypoints_(0)
+    {
+    }
+
+    static BT::PortsList providedPorts() {
+        return providedBasicPorts({
+            BT::InputPort<std::string>("waypoint_file", "航点 CSV 文件的绝对路径"),
+            BT::InputPort<std::string>("frame_id", "map", "坐标系 ID，默认为 map"),
+            BT::OutputPort<int>("current_waypoint", "当前正在前往的航点索引"),
+        });
+    }
+
+    bool setGoal(Goal &goal) override {
+        auto file_res = getInput<std::string>("waypoint_file");
+        if (!file_res) {
+            RCLCPP_ERROR(logger(), "读取端口 [waypoint_file] 时出错: %s", file_res.error().c_str());
+            return false;
+        }
+        const std::string &waypoint_file = file_res.value();
+
+        auto frame_res = getInput<std::string>("frame_id");
+        const std::string &frame_id = (frame_res && !frame_res.value().empty()) ? frame_res.value() : "map";
+
+        std::vector<geometry_msgs::msg::PoseStamped> waypoints;
+        if (!loadWaypointsFromCSV(waypoint_file, waypoints, frame_id)) {
+            RCLCPP_ERROR(logger(), "无法从文件加载航点: %s", waypoint_file.c_str());
+            return false;
+        }
+
+        if (waypoints.empty()) {
+            RCLCPP_ERROR(logger(), "NavigateThroughPosesAction: 航点列表为空，取消发送 goal");
+            return false;
+        }
+
+        // 设置每个航点的 frame_id 和时间戳
+        rclcpp::Time now = rclcpp::Clock().now();
+        for (auto &wp : waypoints) {
+            if (wp.header.frame_id.empty()) wp.header.frame_id = frame_id;
+            wp.header.stamp = now;
+        }
+
+        total_waypoints_ = static_cast<int>(waypoints.size());
+        goal.poses = waypoints;
+
+        RCLCPP_INFO(logger(), "NavigateThroughPosesAction: 已加载 %d 个航点，准备穿越导航", total_waypoints_);
+        for (size_t i = 0; i < waypoints.size(); ++i) {
+            RCLCPP_INFO(logger(), "  航点[%zu]: [%.2f, %.2f]",
+                        i, waypoints[i].pose.position.x, waypoints[i].pose.position.y);
+        }
+        return true;
+    }
+
+    void onHalt() override {
+        RCLCPP_WARN(logger(), "NavigateThroughPosesAction: 穿越导航已被中断");
+    }
+
+    BT::NodeStatus onResultReceived(const WrappedResult &wr) override {
+        RCLCPP_INFO(logger(), "NavigateThroughPosesAction: 穿越导航完成!");
+        if (wr.code != rclcpp_action::ResultCode::SUCCEEDED) {
+            RCLCPP_WARN(logger(), "  穿越导航未成功，结果码: %d", static_cast<int>(wr.code));
+            return BT::NodeStatus::FAILURE;
+        }
+        RCLCPP_INFO(logger(), "  所有航点均已成功穿越");
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    BT::NodeStatus onFeedback(
+        const std::shared_ptr<const nav2_msgs::action::NavigateThroughPoses::Feedback> feedback) override {
+        int remaining = feedback->number_of_poses_remaining;
+        int current = total_waypoints_ - remaining;
+        RCLCPP_DEBUG(logger(), "NavigateThroughPosesAction: 正在前往航点 %d/%d",
+                     current, total_waypoints_);
+        setOutput("current_waypoint", current);
+        return BT::NodeStatus::RUNNING;
+    }
+
+    BT::NodeStatus onFailure(BT::ActionNodeErrorCode error) override {
+        RCLCPP_ERROR_STREAM(logger(), "NavigateThroughPosesAction 失败，错误码: " << BT::toStr(error));
+        return BT::NodeStatus::FAILURE;
+    }
+
+private:
+    int total_waypoints_;
+};
+
 //通过接收的消息将有用的消息写入黑板实现共享
 class WriteToBlackboard : public BT::SyncActionNode {
 public:
@@ -130,6 +399,8 @@ public:
             BT::OutputPort<bool>("Zone_status"),
             BT::OutputPort<bool>("Is_defence"),
             BT::OutputPort<bool>("Is_attack"),
+            BT::OutputPort<bool>("Self_status"),
+            BT::OutputPort<bool>("Is_recover"),
         };
     }
 
@@ -138,6 +409,8 @@ public:
     bool zone_status = false;
     bool is_defence = false;
     bool is_attack = false;
+	bool self_status = false;
+	bool is_recover = false;
 
     BT::NodeStatus tick() override {
         // 处理回调
@@ -150,6 +423,8 @@ public:
         setOutput("Zone_status", zone_status);
         setOutput("Is_defence", is_defence);
         setOutput("Is_attack", is_attack);
+        setOutput("Self_status", self_status);
+        setOutput("Is_recover", is_recover);
 
         return BT::NodeStatus::SUCCESS;
     }
@@ -159,6 +434,9 @@ public:
         zone_status = msg->judge_system_data.zone_status;
         is_defence = msg->judge_system_data.is_defence;
         is_attack = msg->judge_system_data.is_attack;
+        self_status = msg->judge_system_data.self_status;
+        is_recover = msg->judge_system_data.is_recover;
+
         is_ReadInterface_ = true;
         RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
     }

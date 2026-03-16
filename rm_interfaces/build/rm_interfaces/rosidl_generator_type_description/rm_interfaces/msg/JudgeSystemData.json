@@ -14,7 +14,47 @@
           "default_value": ""
         },
         {
+          "name": "herohp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "sentinelhp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "infantryhp",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "zone_status",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "self_status",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -42,6 +82,16 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "is_recover",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -50,7 +100,7 @@
   "type_hashes": [
     {
       "type_name": "rm_interfaces/msg/JudgeSystemData",
-      "hash_string": "RIHS01_bf254b635fbfbf39bc21a385ada2ceaf1a4140b2b442745fed6fc3aaa9924b41"
+      "hash_string": "RIHS01_4fa2724baa9fa0183b862bae1efac84bee29b755861d934651b42ae8f1a0a251"
     }
   ]
 }

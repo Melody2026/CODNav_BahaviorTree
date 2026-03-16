@@ -42,9 +42,14 @@ struct JudgeSystemData_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->hp = 0.0f;
-      this->zone_status = false;
+      this->herohp = 0.0f;
+      this->sentinelhp = 0.0f;
+      this->infantryhp = 0.0f;
+      this->zone_status = 0;
+      this->self_status = false;
       this->is_defence = false;
       this->is_attack = false;
+      this->is_recover = false;
     }
   }
 
@@ -55,9 +60,14 @@ struct JudgeSystemData_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->hp = 0.0f;
-      this->zone_status = false;
+      this->herohp = 0.0f;
+      this->sentinelhp = 0.0f;
+      this->infantryhp = 0.0f;
+      this->zone_status = 0;
+      this->self_status = false;
       this->is_defence = false;
       this->is_attack = false;
+      this->is_recover = false;
     }
   }
 
@@ -65,15 +75,30 @@ struct JudgeSystemData_
   using _hp_type =
     float;
   _hp_type hp;
+  using _herohp_type =
+    float;
+  _herohp_type herohp;
+  using _sentinelhp_type =
+    float;
+  _sentinelhp_type sentinelhp;
+  using _infantryhp_type =
+    float;
+  _infantryhp_type infantryhp;
   using _zone_status_type =
-    bool;
+    uint8_t;
   _zone_status_type zone_status;
+  using _self_status_type =
+    bool;
+  _self_status_type self_status;
   using _is_defence_type =
     bool;
   _is_defence_type is_defence;
   using _is_attack_type =
     bool;
   _is_attack_type is_attack;
+  using _is_recover_type =
+    bool;
+  _is_recover_type is_recover;
 
   // setters for named parameter idiom
   Type & set__hp(
@@ -82,10 +107,34 @@ struct JudgeSystemData_
     this->hp = _arg;
     return *this;
   }
+  Type & set__herohp(
+    const float & _arg)
+  {
+    this->herohp = _arg;
+    return *this;
+  }
+  Type & set__sentinelhp(
+    const float & _arg)
+  {
+    this->sentinelhp = _arg;
+    return *this;
+  }
+  Type & set__infantryhp(
+    const float & _arg)
+  {
+    this->infantryhp = _arg;
+    return *this;
+  }
   Type & set__zone_status(
-    const bool & _arg)
+    const uint8_t & _arg)
   {
     this->zone_status = _arg;
+    return *this;
+  }
+  Type & set__self_status(
+    const bool & _arg)
+  {
+    this->self_status = _arg;
     return *this;
   }
   Type & set__is_defence(
@@ -98,6 +147,12 @@ struct JudgeSystemData_
     const bool & _arg)
   {
     this->is_attack = _arg;
+    return *this;
+  }
+  Type & set__is_recover(
+    const bool & _arg)
+  {
+    this->is_recover = _arg;
     return *this;
   }
 
@@ -146,13 +201,28 @@ struct JudgeSystemData_
     if (this->hp != other.hp) {
       return false;
     }
+    if (this->herohp != other.herohp) {
+      return false;
+    }
+    if (this->sentinelhp != other.sentinelhp) {
+      return false;
+    }
+    if (this->infantryhp != other.infantryhp) {
+      return false;
+    }
     if (this->zone_status != other.zone_status) {
+      return false;
+    }
+    if (this->self_status != other.self_status) {
       return false;
     }
     if (this->is_defence != other.is_defence) {
       return false;
     }
     if (this->is_attack != other.is_attack) {
+      return false;
+    }
+    if (this->is_recover != other.is_recover) {
       return false;
     }
     return true;

@@ -30,7 +30,47 @@
             "default_value": ""
           },
           {
+            "name": "herohp",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sentinelhp",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "infantryhp",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
             "name": "zone_status",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "self_status",
             "type": {
               "type_id": 15,
               "capacity": 0,
@@ -58,6 +98,16 @@
               "nested_type_name": ""
             },
             "default_value": ""
+          },
+          {
+            "name": "is_recover",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
           }
         ]
       }
@@ -66,11 +116,11 @@
   "type_hashes": [
     {
       "type_name": "rm_interfaces/msg/SerialReceiveData",
-      "hash_string": "RIHS01_647f8bcac62ba9fb995a919b4d1e4d6ed7a1cc4ba263e9cfce833335b0a7b588"
+      "hash_string": "RIHS01_01cf8220a21b5794a50100f758e5485d1d6d36d0c2ff68b67438f1c15056fdfe"
     },
     {
       "type_name": "rm_interfaces/msg/JudgeSystemData",
-      "hash_string": "RIHS01_bf254b635fbfbf39bc21a385ada2ceaf1a4140b2b442745fed6fc3aaa9924b41"
+      "hash_string": "RIHS01_4fa2724baa9fa0183b862bae1efac84bee29b755861d934651b42ae8f1a0a251"
     }
   ]
 }

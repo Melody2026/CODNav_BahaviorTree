@@ -30,8 +30,8 @@ public:
 private:
     //接收串口消息
     bool receiveData(UartTransporter &uart) {
-        uint8_t package[20];
-        uint8_t header=0xfe;
+        uint8_t package[26];
+        uint8_t header=0xff;
         if (!uart.open()) {
             std::cout << "Failed to open serial port" << std::endl;
             return false;
@@ -39,10 +39,11 @@ private:
         // 读取数据
         if (uart.read(package, sizeof(package)) == sizeof(package)) {
             if (header == package[0]) {
-                zone_status = package[1];
-                is_defence = package[2];
-                is_attack = package[3];
-                std::memcpy(&hp,&package[5],sizeof(float));
+                is_recover = package[14];
+                self_status = package[15];
+                zone_status = package[16];
+                is_defence = package[17];
+                std::memcpy(&hp,&package[18],sizeof(float));
                 return true;
             }else {
                 std::cout << "Failed to open serial port\n";
@@ -65,20 +66,22 @@ private:
 
             msg.judge_system_data.zone_status = zone_status;
             RCLCPP_INFO(this->get_logger(), "发布zone_status: %d", msg.judge_system_data.zone_status);
+            msg.judge_system_data.self_status = self_status;
 
             msg.judge_system_data.is_defence = is_defence;
             RCLCPP_INFO(this->get_logger(), "发布is_defence: %d", msg.judge_system_data.is_defence);
 
             msg.judge_system_data.is_attack = is_attack;
             RCLCPP_INFO(this->get_logger(), "发布is_attack: %d", msg.judge_system_data.is_attack);
+            msg.judge_system_data.is_recover = is_recover;
 
         } else {
-            //如果没有新数据，使用默认值
-            msg.judge_system_data.hp = 400.0;
-            msg.judge_system_data.zone_status = false;
-            msg.judge_system_data.is_defence = false;
-            msg.judge_system_data.is_attack = false;
-            RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
+              //如果没有新数据，使用默认值
+              // msg.judge_system_data.hp = 400.0;
+              // msg.judge_system_data.zone_status = false;
+              // msg.judge_system_data.is_defence = false;
+              // msg.judge_system_data.is_attack = false;
+              // RCLCPP_INFO(this->get_logger(), "使用默认值...........................");
         }
 
         // 发布消息
@@ -90,9 +93,11 @@ private:
     rclcpp::TimerBase::SharedPtr timer_;
     UartTransporter uart_= UartTransporter("/dev/ttyACM0",115200);
     float hp = 400.0;
-    bool zone_status = false;
+    bool self_status = false;
     bool is_defence = false;
     bool is_attack = false;
+    bool is_recover = false;
+    bool zone_status = false;
 };
 
 // 主函数

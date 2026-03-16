@@ -23,9 +23,14 @@ extern "C"
 typedef struct rm_interfaces__msg__JudgeSystemData
 {
   float hp;
-  bool zone_status;
+  float herohp;
+  float sentinelhp;
+  float infantryhp;
+  uint8_t zone_status;
+  bool self_status;
   bool is_defence;
   bool is_attack;
+  bool is_recover;
 } rm_interfaces__msg__JudgeSystemData;
 
 // Struct for a sequence of rm_interfaces__msg__JudgeSystemData.

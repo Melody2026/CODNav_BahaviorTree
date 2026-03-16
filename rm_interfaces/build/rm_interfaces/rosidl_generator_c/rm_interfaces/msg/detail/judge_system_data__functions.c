@@ -18,9 +18,14 @@ rm_interfaces__msg__JudgeSystemData__init(rm_interfaces__msg__JudgeSystemData * 
     return false;
   }
   // hp
+  // herohp
+  // sentinelhp
+  // infantryhp
   // zone_status
+  // self_status
   // is_defence
   // is_attack
+  // is_recover
   return true;
 }
 
@@ -31,9 +36,14 @@ rm_interfaces__msg__JudgeSystemData__fini(rm_interfaces__msg__JudgeSystemData * 
     return;
   }
   // hp
+  // herohp
+  // sentinelhp
+  // infantryhp
   // zone_status
+  // self_status
   // is_defence
   // is_attack
+  // is_recover
 }
 
 bool
@@ -46,8 +56,24 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   if (lhs->hp != rhs->hp) {
     return false;
   }
+  // herohp
+  if (lhs->herohp != rhs->herohp) {
+    return false;
+  }
+  // sentinelhp
+  if (lhs->sentinelhp != rhs->sentinelhp) {
+    return false;
+  }
+  // infantryhp
+  if (lhs->infantryhp != rhs->infantryhp) {
+    return false;
+  }
   // zone_status
   if (lhs->zone_status != rhs->zone_status) {
+    return false;
+  }
+  // self_status
+  if (lhs->self_status != rhs->self_status) {
     return false;
   }
   // is_defence
@@ -56,6 +82,10 @@ rm_interfaces__msg__JudgeSystemData__are_equal(const rm_interfaces__msg__JudgeSy
   }
   // is_attack
   if (lhs->is_attack != rhs->is_attack) {
+    return false;
+  }
+  // is_recover
+  if (lhs->is_recover != rhs->is_recover) {
     return false;
   }
   return true;
@@ -71,12 +101,22 @@ rm_interfaces__msg__JudgeSystemData__copy(
   }
   // hp
   output->hp = input->hp;
+  // herohp
+  output->herohp = input->herohp;
+  // sentinelhp
+  output->sentinelhp = input->sentinelhp;
+  // infantryhp
+  output->infantryhp = input->infantryhp;
   // zone_status
   output->zone_status = input->zone_status;
+  // self_status
+  output->self_status = input->self_status;
   // is_defence
   output->is_defence = input->is_defence;
   // is_attack
   output->is_attack = input->is_attack;
+  // is_recover
+  output->is_recover = input->is_recover;
   return true;
 }
 

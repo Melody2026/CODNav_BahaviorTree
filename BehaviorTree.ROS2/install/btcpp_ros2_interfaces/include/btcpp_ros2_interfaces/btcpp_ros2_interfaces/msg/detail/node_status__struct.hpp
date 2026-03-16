@@ -1,1 +1,0 @@
-/home/ysl/ros2_ws/COD_Behavior/BehaviorTree.ROS2/build/btcpp_ros2_interfaces/rosidl_generator_cpp/btcpp_ros2_interfaces/msg/detail/node_status__struct.hpp

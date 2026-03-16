@@ -39,14 +39,29 @@ cdr_serialize(
   // Member: hp
   cdr << ros_message.hp;
 
+  // Member: herohp
+  cdr << ros_message.herohp;
+
+  // Member: sentinelhp
+  cdr << ros_message.sentinelhp;
+
+  // Member: infantryhp
+  cdr << ros_message.infantryhp;
+
   // Member: zone_status
-  cdr << (ros_message.zone_status ? true : false);
+  cdr << ros_message.zone_status;
+
+  // Member: self_status
+  cdr << (ros_message.self_status ? true : false);
 
   // Member: is_defence
   cdr << (ros_message.is_defence ? true : false);
 
   // Member: is_attack
   cdr << (ros_message.is_attack ? true : false);
+
+  // Member: is_recover
+  cdr << (ros_message.is_recover ? true : false);
 
   return true;
 }
@@ -60,11 +75,23 @@ cdr_deserialize(
   // Member: hp
   cdr >> ros_message.hp;
 
+  // Member: herohp
+  cdr >> ros_message.herohp;
+
+  // Member: sentinelhp
+  cdr >> ros_message.sentinelhp;
+
+  // Member: infantryhp
+  cdr >> ros_message.infantryhp;
+
   // Member: zone_status
+  cdr >> ros_message.zone_status;
+
+  // Member: self_status
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message.zone_status = tmp ? true : false;
+    ros_message.self_status = tmp ? true : false;
   }
 
   // Member: is_defence
@@ -79,6 +106,13 @@ cdr_deserialize(
     uint8_t tmp;
     cdr >> tmp;
     ros_message.is_attack = tmp ? true : false;
+  }
+
+  // Member: is_recover
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.is_recover = tmp ? true : false;
   }
 
   return true;
@@ -105,9 +139,37 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Member: herohp
+  {
+    size_t item_size = sizeof(ros_message.herohp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: sentinelhp
+  {
+    size_t item_size = sizeof(ros_message.sentinelhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: infantryhp
+  {
+    size_t item_size = sizeof(ros_message.infantryhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Member: zone_status
   {
     size_t item_size = sizeof(ros_message.zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: self_status
+  {
+    size_t item_size = sizeof(ros_message.self_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -122,6 +184,13 @@ get_serialized_size(
   // Member: is_attack
   {
     size_t item_size = sizeof(ros_message.is_attack);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: is_recover
+  {
+    size_t item_size = sizeof(ros_message.is_recover);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -156,7 +225,34 @@ max_serialized_size_JudgeSystemData(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // Member: herohp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: sentinelhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // Member: infantryhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // Member: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // Member: self_status
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -174,6 +270,12 @@ max_serialized_size_JudgeSystemData(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
+  // Member: is_recover
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -183,7 +285,7 @@ max_serialized_size_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, is_attack) +
+      offsetof(DataType, is_recover) +
       last_member_size
       ) == ret_val;
   }
@@ -200,14 +302,29 @@ cdr_serialize_key(
   // Member: hp
   cdr << ros_message.hp;
 
+  // Member: herohp
+  cdr << ros_message.herohp;
+
+  // Member: sentinelhp
+  cdr << ros_message.sentinelhp;
+
+  // Member: infantryhp
+  cdr << ros_message.infantryhp;
+
   // Member: zone_status
-  cdr << (ros_message.zone_status ? true : false);
+  cdr << ros_message.zone_status;
+
+  // Member: self_status
+  cdr << (ros_message.self_status ? true : false);
 
   // Member: is_defence
   cdr << (ros_message.is_defence ? true : false);
 
   // Member: is_attack
   cdr << (ros_message.is_attack ? true : false);
+
+  // Member: is_recover
+  cdr << (ros_message.is_recover ? true : false);
 
   return true;
 }
@@ -232,9 +349,37 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
+  // Member: herohp
+  {
+    size_t item_size = sizeof(ros_message.herohp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: sentinelhp
+  {
+    size_t item_size = sizeof(ros_message.sentinelhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: infantryhp
+  {
+    size_t item_size = sizeof(ros_message.infantryhp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Member: zone_status
   {
     size_t item_size = sizeof(ros_message.zone_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: self_status
+  {
+    size_t item_size = sizeof(ros_message.self_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -249,6 +394,13 @@ get_serialized_size_key(
   // Member: is_attack
   {
     size_t item_size = sizeof(ros_message.is_attack);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: is_recover
+  {
+    size_t item_size = sizeof(ros_message.is_recover);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -283,7 +435,38 @@ max_serialized_size_key_JudgeSystemData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Member: herohp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: sentinelhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: infantryhp
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Member: zone_status
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: self_status
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -304,6 +487,13 @@ max_serialized_size_key_JudgeSystemData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Member: is_recover
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -312,7 +502,7 @@ max_serialized_size_key_JudgeSystemData(
     using DataType = rm_interfaces::msg::JudgeSystemData;
     is_plain =
       (
-      offsetof(DataType, is_attack) +
+      offsetof(DataType, is_recover) +
       last_member_size
       ) == ret_val;
   }

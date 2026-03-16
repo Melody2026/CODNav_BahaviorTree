@@ -1,4 +1,9 @@
 float32 hp
-bool zone_status
+float32 herohp
+float32 sentinelhp
+float32 infantryhp
+uint8 zone_status
+bool self_status
 bool is_defence
 bool is_attack
+bool is_recover
