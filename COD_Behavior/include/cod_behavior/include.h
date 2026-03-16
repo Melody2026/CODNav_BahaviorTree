@@ -8,6 +8,8 @@
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "nav2_msgs/action/navigate_through_poses.hpp"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2_ros/buffer.h>
+#include <tf2_ros/transform_listener.h>
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "std_msgs/msg/int32.hpp"
 #include <rm_interfaces/msg/serial_receive_data.hpp>
@@ -42,11 +44,13 @@ loadPoseStamped(
 }
 
 // 从 waypoint_editor 生成的 CSV 文件中加载航点列表
-// CSV 格式: id,pose_x,pose_y,pose_z,rot_x,rot_y,rot_z,rot_w,command...
+// CSV 格式: id,pose_x,pose_y,pose_z,rot_x,rot_y,rot_z,rot_w,command,wait_sec
+// wait_sec 列可选，缺省为 0（不等待）
 inline bool loadWaypointsFromCSV(
     const std::string &filename,
     std::vector<geometry_msgs::msg::PoseStamped> &waypoints,
-    const std::string &frame_id = "map") {
+    const std::string &frame_id = "map",
+    std::vector<double> *wait_times = nullptr) {
         std::ifstream file(filename);
         if (!file.is_open()) {
                 return false;
@@ -87,6 +91,15 @@ inline bool loadWaypointsFromCSV(
                         pose.pose.orientation.w = std::stod(tokens[7]);
 
                         waypoints.push_back(pose);
+
+                        // 第 9 列 (index 9) 为 wait_sec，可选
+                        if (wait_times) {
+                                double wt = 0.0;
+                                if (tokens.size() > 9 && !tokens[9].empty()) {
+                                        wt = std::stod(tokens[9]);
+                                }
+                                wait_times->push_back(wt);
+                        }
                 } catch (const std::exception &) {
                         continue;
                 }

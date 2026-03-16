@@ -1,7 +1,7 @@
 cod_behavior:
   ros__parameters:
     cod_bt_path:
-      "COD_Behavior/cod_bt/singlenav_basic.xml"
+      "COD_Behavior/cod_bt/singlenav_tree.xml"
     nav_pose:
       home:  #补给区位置坐标
         frame_id: "map"

@@ -19,6 +19,7 @@ find_package(rclcpp_action REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rm_interfaces REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
 find_package(behaviortree_ros2 REQUIRED)
 
 add_executable(tree_1 src/cod_behavior.cpp)
@@ -36,6 +37,7 @@ ament_target_dependencies(tree_1
         behaviortree_cpp
         rm_interfaces
         tf2_geometry_msgs
+        tf2_ros
         behaviortree_ros2
 )
 
