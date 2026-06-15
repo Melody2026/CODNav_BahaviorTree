@@ -3,7 +3,7 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <NavigateThroughPosesAction waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/rmul26.csv"
+      <NavigateThroughPosesAction waypoint_file="/home/melodywu/ros2_ws/src/cod_-rm2026_-behavior-tree/COD_Behavior/launch/home.csv"
                                   frame_id="map"
                                   current_waypoint="{wp_idx}"/>
       <KeepRunningUntilFailure>

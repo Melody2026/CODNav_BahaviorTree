@@ -3,9 +3,7 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <NavigateThroughPosesAction waypoint_file="/home/melodywu/ros2_ws/src/cod_-rm2026_-behavior-tree/COD_Behavior/launch/home.csv"
-                                  frame_id="map"
-                                  current_waypoint="{wp_idx}"/>
+      <AlwaysSuccess/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -33,24 +31,20 @@
                          frame_id="map"
                          min_pub_interval_ms="500"/>
           </ReactiveSequence>
+          <PubNav2Goal goal_pose="{main1_position}"
+                       frame_id="map"
+                       min_pub_interval_ms="500"/>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>
     </Sequence>
   </BehaviorTree>
 
-  <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
     </Condition>
-    <Action ID="NavigateThroughPosesAction"
-            editable="true">
-      <input_port name="waypoint_file"/>
-      <input_port name="frame_id"/>
-      <output_port name="current_waypoint"/>
-    </Action>
     <Action ID="PubNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>

@@ -11,6 +11,12 @@ def generate_launch_description():
         "cod_pose.yaml"
     ])
 
+    behavior_tree_xml = PathJoinSubstitution([
+        FindPackageShare("cod_behavior"),
+        "cod_bt",
+        "singlenav_tree.xml"
+    ])
+
     serial_node = Node(
         package="cod_serial",
         executable="cod_serial",
@@ -23,7 +29,10 @@ def generate_launch_description():
         executable="tree_1",
         name="cod_behavior",
         output="screen",
-        parameters=[nav_pose_yaml]
+        parameters=[
+            nav_pose_yaml,
+            {"cod_bt_path": behavior_tree_xml}
+        ]
     )
 
     return LaunchDescription([

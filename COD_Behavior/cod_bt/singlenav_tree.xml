@@ -30,7 +30,7 @@
               <ZsCondition Zone_status="{zone_status}"/>
             </Inverter>
             <Sequence>
-              <LoadWaypoints waypoint_file="/home/cod-sentry/dyx_ws/cod-sentry/src/cod_bringup/wps/patrol.csv"
+              <LoadWaypoints waypoint_file="/home/melodywu/ros2_ws/src/cod_-rm2026_-behavior-tree/COD_Behavior/launch/main.csv"
                              frame_id="map"
                              waypoints="{waypoints}"
                              wait_times="{wait_times}"
