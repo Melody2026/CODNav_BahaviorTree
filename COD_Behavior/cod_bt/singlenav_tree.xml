@@ -14,7 +14,8 @@
                                Is_defence="{is_defence}"
                                Is_attack="{is_attack}"
                                Self_status="{self_status}"
-                               Is_recover="{is_recover}"/>
+                               Is_recover="{is_recover}"
+                               MatchStarted="{match_started}"/>
           </Inverter>
           <Sequence>
             <HpCondition Hp="{hp}"/>
@@ -119,6 +120,7 @@
       <output_port name="Is_attack"/>
       <output_port name="Self_status"/>
       <output_port name="Is_recover"/>
+      <output_port name="MatchStarted"/>
     </Action>
     <Condition ID="ZsCondition"
                editable="true">

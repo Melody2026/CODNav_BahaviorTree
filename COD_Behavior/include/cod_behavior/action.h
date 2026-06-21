@@ -386,9 +386,12 @@ public:
         : BT::SyncActionNode(name, config),
           global_node_(global_node),
           is_ReadInterface_(false) {
-        sub_ = global_node_->create_subscription<rm_interfaces::msg::SerialReceiveData>(
+        serial_sub_ = global_node_->create_subscription<rm_interfaces::msg::SerialReceiveData>(
             "/SerialReceiveData", 10,
-            std::bind(&WriteToBlackboard::callback, this, std::placeholders::_1));
+            std::bind(&WriteToBlackboard::serialCallback, this, std::placeholders::_1));
+        sentry_state_sub_ = global_node_->create_subscription<sentry_msg::msg::SentryMsg>(
+            "/sentry_state", 10,
+            std::bind(&WriteToBlackboard::sentryStateCallback, this, std::placeholders::_1));
     }
 
 
@@ -400,6 +403,8 @@ public:
             BT::OutputPort<bool>("Is_attack"),
             BT::OutputPort<bool>("Self_status"),
             BT::OutputPort<bool>("Is_recover"),
+            // 供后续日志录制节点等消费者使用的比赛开始信号。
+            BT::OutputPort<bool>("MatchStarted"),
         };
     }
 
@@ -410,6 +415,7 @@ public:
     bool is_attack = false;
 	bool self_status = false;
     bool is_recover = false;
+    bool match_started = false;
 
     BT::NodeStatus tick() override {
         if (!is_ReadInterface_)
@@ -422,25 +428,35 @@ public:
         setOutput("Is_attack", is_attack);
         setOutput("Self_status", self_status);
         setOutput("Is_recover", is_recover);
+        setOutput("MatchStarted", match_started);
 
         return BT::NodeStatus::SUCCESS;
     }
 
-    void callback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
-        hp = msg->judge_system_data.hp;
+    void serialCallback(const rm_interfaces::msg::SerialReceiveData::SharedPtr msg) {
         zone_status = msg->judge_system_data.zone_status;
         is_defence = msg->judge_system_data.is_defence;
         is_attack = msg->judge_system_data.is_attack;
         self_status = msg->judge_system_data.self_status;
         is_recover = msg->judge_system_data.is_recover;
 
+    }
+
+    void sentryStateCallback(const sentry_msg::msg::SentryMsg::SharedPtr msg) {
+        hp = static_cast<float>(msg->self_hp);
+        match_started = msg->match_started;
+
         is_ReadInterface_ = true;
-        RCLCPP_INFO(global_node_->get_logger(), "Callback hp = %f", hp);
+        RCLCPP_INFO(global_node_->get_logger(),
+                    "sentry_state: hp = %u, match_started = %s",
+                    static_cast<unsigned int>(msg->self_hp),
+                    match_started ? "true" : "false");
     }
 
 private:
     std::shared_ptr<rclcpp::Node> global_node_;
-    rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr sub_;
+    rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr serial_sub_;
+    rclcpp::Subscription<sentry_msg::msg::SentryMsg>::SharedPtr sentry_state_sub_;
     bool is_ReadInterface_;
 };
 

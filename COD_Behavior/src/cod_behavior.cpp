@@ -128,6 +128,7 @@ int main(int argc, char **argv) {
         blackboard->set<geometry_msgs::msg::PoseStamped>("ap_position2", ap_goal2);
 
         blackboard->set<float>("hp", 400.0);
+        blackboard->set<bool>("match_started", false);
         blackboard->set<bool>("zone_status", false);
         blackboard->set<bool>("self_status", false);
         blackboard->set<bool>("is_recover", false);

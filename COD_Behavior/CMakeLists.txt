@@ -18,6 +18,7 @@ find_package(example_interfaces REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rm_interfaces REQUIRED)
+find_package(sentry_msg REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(behaviortree_ros2 REQUIRED)
@@ -36,6 +37,7 @@ ament_target_dependencies(tree_1
         geometry_msgs
         behaviortree_cpp
         rm_interfaces
+        sentry_msg
         tf2_geometry_msgs
         tf2_ros
         behaviortree_ros2

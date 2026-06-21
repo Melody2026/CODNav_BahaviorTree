@@ -3,9 +3,9 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <NavigateThroughPosesAction waypoint_file="/home/melodywu/ros2_ws/src/cod_-rm2026_-behavior-tree/COD_Behavior/launch/home.csv"
-                                  frame_id="map"
-                                  current_waypoint="{wp_idx}"/>
+      <PubNav2Goal goal_pose="{main_position}"
+                   frame_id="map"
+                   min_pub_interval_ms="500"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -26,14 +26,30 @@
               <StayHome Hp="{hp}"/>
             </ReactiveSequence>
           </Sequence>
-          <ReactiveSequence>
-            <Inverter>
-              <ZsCondition Zone_status="{zone_status}"/>
-            </Inverter>
-            <PubNav2Goal goal_pose="{main_position}"
-                         frame_id="map"
-                         min_pub_interval_ms="500"/>
-          </ReactiveSequence>
+          <Sequence>
+            <ReactiveSequence>
+              <!-- HpCondition 在低血量时返回 SUCCESS；取反后仅高血量允许前压。 -->
+              <Inverter>
+                <HpCondition Hp="{hp}"/>
+              </Inverter>
+              <PubNav2Goal goal_pose="{ap_position1}"
+                           frame_id="map"
+                           min_pub_interval_ms="500"/>
+              <WaitUntilReached goal_pose="{ap_position1}"
+                                tolerance="0.2"/>
+            </ReactiveSequence>
+            <ReactiveSequence>
+              <!-- 每次 tick 都先检查血量，低血量会停止该目标的发布。 -->
+              <Inverter>
+                <HpCondition Hp="{hp}"/>
+              </Inverter>
+              <PubNav2Goal goal_pose="{ap_position2}"
+                           frame_id="map"
+                           min_pub_interval_ms="500"/>
+              <WaitUntilReached goal_pose="{ap_position2}"
+                                tolerance="0.2"/>
+            </ReactiveSequence>
+          </Sequence>
           <AlwaysSuccess/>
         </ReactiveFallback>
       </KeepRunningUntilFailure>
@@ -46,12 +62,6 @@
                editable="true">
       <input_port name="Hp"/>
     </Condition>
-    <Action ID="NavigateThroughPosesAction"
-            editable="true">
-      <input_port name="waypoint_file"/>
-      <input_port name="frame_id"/>
-      <output_port name="current_waypoint"/>
-    </Action>
     <Action ID="PubNav2Goal"
             editable="true">
       <input_port name="goal_pose"/>
@@ -62,6 +72,11 @@
                editable="true">
       <input_port name="Hp"/>
     </Condition>
+    <Action ID="WaitUntilReached"
+            editable="true">
+      <input_port name="goal_pose"/>
+      <input_port name="tolerance"/>
+    </Action>
     <Action ID="WriteToBlackboard"
             editable="true">
       <output_port name="Hp"/>
@@ -72,10 +87,6 @@
       <output_port name="Is_recover"/>
       <output_port name="MatchStarted"/>
     </Action>
-    <Condition ID="ZsCondition"
-               editable="true">
-      <input_port name="Zone_status"/>
-    </Condition>
   </TreeNodesModel>
 
 </root>

@@ -13,6 +13,7 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "std_msgs/msg/int32.hpp"
 #include <rm_interfaces/msg/serial_receive_data.hpp>
+#include <sentry_msg/msg/sentry_msg.hpp>
 #include <coroutine>
 #include <unordered_map>
 #include <chrono>
