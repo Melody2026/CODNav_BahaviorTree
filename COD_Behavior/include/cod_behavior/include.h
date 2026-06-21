@@ -22,7 +22,8 @@
 #include <fstream>
 #include <sstream>
 
-#include <../../BehaviorTree.ROS2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp>
+//#include <../../BehaviorTree.ROS2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp>
+#include <behaviortree_ros2/bt_action_node.hpp>
 //读取自定义的航点函数
 geometry_msgs::msg::PoseStamped
 loadPoseStamped(

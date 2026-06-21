@@ -22,12 +22,15 @@ find_package(sentry_msg REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(behaviortree_ros2 REQUIRED)
+find_package(rcl_interfaces REQUIRED)
+find_package(std_msgs REQUIRED)
 
 add_executable(tree_1 src/cod_behavior.cpp)
 add_executable(test_1 test/test_GoZone.cpp)
 add_executable(test_2 test/test_OnZone.cpp)
 add_executable(test_3 test/test_LowHp.cpp)
 add_executable(test_4 test/test_Recover.cpp)
+add_executable(log_recorder src/log_recorder.cpp)
 
 ament_target_dependencies(tree_1
         rclcpp
@@ -60,6 +63,13 @@ ament_target_dependencies(test_4
         rm_interfaces
 )
 
+ament_target_dependencies(log_recorder
+        rclcpp
+        sentry_msg
+        rcl_interfaces
+        std_msgs
+)
+
 include_directories(
         include
 )
@@ -69,6 +79,7 @@ install(TARGETS tree_1
         test_2
         test_3
         test_4
+        log_recorder
         DESTINATION lib/${PROJECT_NAME}
 )
 
