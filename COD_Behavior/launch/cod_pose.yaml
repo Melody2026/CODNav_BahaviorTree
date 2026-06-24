@@ -62,7 +62,7 @@ cod_behavior:
       second:  #前压位置坐标2
         frame_id: "map"
         position:
-          x: -2.401
+          x: -1.401
           y: -1.277
           z: 0.0
         orientation:

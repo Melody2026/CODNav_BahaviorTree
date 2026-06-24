@@ -418,8 +418,11 @@ public:
     bool match_started = false;
 
     BT::NodeStatus tick() override {
-        if (!is_ReadInterface_)
+        if (!is_ReadInterface_) {
+            RCLCPP_INFO(global_node_->get_logger(),
+                    "WriteToBlackboard failed");
             return BT::NodeStatus::FAILURE;
+        }
 
         //写入黑板
         setOutput("Hp", hp);
@@ -429,6 +432,10 @@ public:
         setOutput("Self_status", self_status);
         setOutput("Is_recover", is_recover);
         setOutput("MatchStarted", match_started);
+
+        RCLCPP_INFO(global_node_->get_logger(),
+                    "WriteToBlackboard succeeded: Hp=%.1f, Zone_status=%d, Is_defence=%d, Is_attack=%d, Self_status=%d, Is_recover=%d, MatchStarted=%d",
+                    hp, zone_status, is_defence, is_attack, self_status, is_recover, match_started);
 
         return BT::NodeStatus::SUCCESS;
     }
@@ -447,10 +454,6 @@ public:
         match_started = msg->match_started;
 
         is_ReadInterface_ = true;
-        RCLCPP_INFO(global_node_->get_logger(),
-                    "sentry_state: hp = %u, match_started = %s",
-                    static_cast<unsigned int>(msg->self_hp),
-                    match_started ? "true" : "false");
     }
 
 private:
