@@ -75,7 +75,7 @@ ros2 launch nav2_bringup bringup_launch.py
 source install/setup.bash
 
 # 主决策模式（行为树 + 串口通信）也是单点导航模式
-ros2 launch cod_behavior cod.launch.py
+ros2 launch cod_behavior cod.launch.py 
 
 # 多点导航模式（行为树 + 串口通信）
 ros2 launch cod_behavior multiplenav.launch.py

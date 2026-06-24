@@ -15,8 +15,8 @@ cod_behavior:
       main:  #中心增益区位置坐标1
         frame_id: "map"
         position:
-          x: 5.05161
-          y: -2.56074
+          x: -2.247
+          y: -0.592
           z: 0.0
         orientation:
           w: 1.0
@@ -53,8 +53,8 @@ cod_behavior:
       first:  #前压位置坐标1
         frame_id: "map"
         position:
-          x: 3.05161
-          y: -4.0
+          x: -0.352
+          y: -1.618
           z: 0.0
         orientation:
           w: 1.0
@@ -62,8 +62,8 @@ cod_behavior:
       second:  #前压位置坐标2
         frame_id: "map"
         position:
-          x: 1.05161
-          y: -4.0
+          x: -2.401
+          y: -1.277
           z: 0.0
         orientation:
           w: 1.0

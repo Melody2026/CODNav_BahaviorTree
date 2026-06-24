@@ -3,9 +3,6 @@
       main_tree_to_execute="Main_tree">
   <BehaviorTree ID="Main_tree">
     <Sequence>
-      <PubNav2Goal goal_pose="{main_position}"
-                   frame_id="map"
-                   min_pub_interval_ms="500"/>
       <KeepRunningUntilFailure>
         <ReactiveFallback>
           <Inverter>
@@ -28,7 +25,6 @@
           </Sequence>
           <Sequence>
             <ReactiveSequence>
-              <!-- HpCondition 在低血量时返回 SUCCESS；取反后仅高血量允许前压。 -->
               <Inverter>
                 <HpCondition Hp="{hp}"/>
               </Inverter>
@@ -39,7 +35,6 @@
                                 tolerance="0.2"/>
             </ReactiveSequence>
             <ReactiveSequence>
-              <!-- 每次 tick 都先检查血量，低血量会停止该目标的发布。 -->
               <Inverter>
                 <HpCondition Hp="{hp}"/>
               </Inverter>
