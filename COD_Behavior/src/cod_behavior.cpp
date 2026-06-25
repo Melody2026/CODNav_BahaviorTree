@@ -97,6 +97,12 @@ int main(int argc, char **argv) {
     factory.registerNodeType<StayHome>("StayHome");
     factory.registerNodeType<DefencePatrolConditioin>("DefencePatrolConditioin");
     factory.registerNodeType<AttackPatrolCondition>("AttackPatrolCondition");
+    factory.registerBuilder<BaseLinkInRectangle>(
+        "BaseLinkInRectangle",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<BaseLinkInRectangle>(name, config, global_node_);
+        }
+    );
 
     // PubNav2Goal 巡逻方案节点
     factory.registerNodeType<LoadWaypoints>("LoadWaypoints");

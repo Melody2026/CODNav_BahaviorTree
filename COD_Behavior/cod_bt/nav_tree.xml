@@ -20,11 +20,21 @@
               <PubNav2Goal goal_pose="{home_position}"
                            frame_id="map"
                            min_pub_interval_ms="500"/>
-              <PubSlowState slow_state="false"/>
+              <PubSlowState slow_state="0"/>
               <StayHome Hp="{hp}"/>
             </ReactiveSequence>
           </Sequence>
           <Sequence>
+            <Fallback>
+              <Sequence>
+                <BaseLinkInRectangle point1="{ap_position1}"
+                                     point2="{ap_position2}"
+                                     target_frame="map"
+                                     base_frame="base_link"/>
+                <PubSlowState slow_state="2"/>
+              </Sequence>
+              <PubSlowState slow_state="1"/>
+            </Fallback>
             <ReactiveSequence>
               <Inverter>
                 <HpCondition Hp="{hp}"/>
@@ -54,6 +64,13 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
+    <Condition ID="BaseLinkInRectangle"
+               editable="true">
+      <input_port name="point1"/>
+      <input_port name="point2"/>
+      <input_port name="target_frame"/>
+      <input_port name="base_frame"/>
+    </Condition>
     <Condition ID="HpCondition"
                editable="true">
       <input_port name="Hp"/>
@@ -63,6 +80,10 @@
       <input_port name="goal_pose"/>
       <input_port name="frame_id"/>
       <input_port name="min_pub_interval_ms"/>
+    </Action>
+    <Action ID="PubSlowState"
+            editable="true">
+      <input_port name="slow_state"/>
     </Action>
     <Condition ID="StayHome"
                editable="true">
@@ -82,10 +103,6 @@
       <output_port name="Self_status"/>
       <output_port name="Is_recover"/>
       <output_port name="MatchStarted"/>
-    </Action>
-    <Action ID="PubSlowState" 
-            editable="true">
-      <input_port name="slow_state"/>
     </Action>
   </TreeNodesModel>
 

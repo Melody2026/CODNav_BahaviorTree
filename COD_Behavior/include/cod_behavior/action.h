@@ -2,30 +2,30 @@
 #include "include.h"
 #include "behaviortree_ros2/bt_topic_pub_node.hpp"
 
-class PubSlowState : public BT::RosTopicPubNode<std_msgs::msg::Bool> {
+class PubSlowState : public BT::RosTopicPubNode<std_msgs::msg::Int32> {
 public:
     PubSlowState(
         const std::string &name,
         const BT::NodeConfiguration &conf,
         const BT::RosNodeParams &params
-    ) : RosTopicPubNode<std_msgs::msg::Bool>(name, conf, params)
+    ) : RosTopicPubNode<std_msgs::msg::Int32>(name, conf, params)
     {
     }
 
     static BT::PortsList providedPorts() {
         return providedBasicPorts({
-            BT::InputPort<bool>("slow_state", "是否进入慢速模式"),
+            BT::InputPort<int>("slow_state", "是否进入慢速模式"),
         });
     }
 
-    bool setMessage(std_msgs::msg::Bool &msg) override {
-        auto res = getInput<bool>("slow_state");
+    bool setMessage(std_msgs::msg::Int32 &msg) override {
+        auto res = getInput<int>("slow_state");
         if (!res) {
             RCLCPP_ERROR(node_->get_logger(), "读取端口[slow_state]时出错: %s", res.error().c_str());
             return false;
         }
         msg.data = res.value();
-        RCLCPP_INFO(node_->get_logger(), "PubSlowState: 发布慢速模式状态: %s", msg.data ? "true" : "false");
+        RCLCPP_INFO(node_->get_logger(), "PubSlowState: 发布慢速模式状态: %d", msg.data);
         return true;
     }
 };
