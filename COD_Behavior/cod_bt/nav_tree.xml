@@ -20,6 +20,7 @@
               <PubNav2Goal goal_pose="{home_position}"
                            frame_id="map"
                            min_pub_interval_ms="500"/>
+              <PubSlowState slow_state="false"/>
               <StayHome Hp="{hp}"/>
             </ReactiveSequence>
           </Sequence>
@@ -81,6 +82,10 @@
       <output_port name="Self_status"/>
       <output_port name="Is_recover"/>
       <output_port name="MatchStarted"/>
+    </Action>
+    <Action ID="PubSlowState" 
+            editable="true">
+      <input_port name="slow_state"/>
     </Action>
   </TreeNodesModel>
 

@@ -73,6 +73,18 @@ int main(int argc, char **argv) {
             return std::make_unique<PubNav2Goal>(name, config, pub_goal_params);
         }
     );
+
+    BT::RosNodeParams slow_pub_params;
+    slow_pub_params.nh = global_node_;
+    slow_pub_params.default_port_value = "/slow_state";  // Nav2 默认目标点话题
+
+    factory.registerBuilder<PubSlowState>(
+        "PubSlowState",
+        [&](const std::string &name, const BT::NodeConfig &config) {
+            return std::make_unique<PubSlowState>(name, config, slow_pub_params);
+        }
+    );
+    
     factory.registerBuilder<WriteToBlackboard>(
         "WriteToBlackboard",
         [&](const std::string &name, const BT::NodeConfig &config) {

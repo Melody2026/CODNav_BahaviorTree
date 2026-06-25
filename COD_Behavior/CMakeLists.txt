@@ -33,6 +33,7 @@ add_executable(test_4 test/test_Recover.cpp)
 add_executable(log_recorder src/log_recorder.cpp)
 
 ament_target_dependencies(tree_1
+        std_msgs
         rclcpp
         nav2_msgs
         example_interfaces

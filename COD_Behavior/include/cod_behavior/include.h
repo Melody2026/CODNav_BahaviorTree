@@ -5,6 +5,7 @@
 #include <behaviortree_cpp/tree_node.h>
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "std_msgs/msg/bool.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "nav2_msgs/action/navigate_through_poses.hpp"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
